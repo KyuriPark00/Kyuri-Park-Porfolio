@@ -1,0 +1,13 @@
+// Entry point to compile all partials
+
+// main.scss
+@import 'base/_variables'; // variables.scss
+@import 'base/_mixins';    // mixins.scss
+@import 'base/_global';    // global.scss
+@import 'layout/grid';
+@import 'layout/mediaqueries';
+@import 'components/nav';
+@import 'components/lightbox';
+@import 'pages/home';
+@import 'pages/about';
+
