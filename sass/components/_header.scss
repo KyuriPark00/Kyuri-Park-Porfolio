@@ -1,0 +1,484 @@
+@use '../abstracts' as a;
+
+/* 2. ---Main Nav--- */
+#sticky-nav-con {
+  // position: sticky;
+  top: 0px;
+  background-color: transparent;
+}
+
+#main-nav .toggle_button {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 40px;
+  display: none;
+}
+
+#mobile_dropdown_menu {
+  display: none;
+  position: absolute;
+  right: -300px;
+  top: 70px;
+  width: 300px;
+  height: 0px;
+  background-color: rgb(18, 18, 18);
+  overflow: hidden;
+  transition: right 0.5s ease;
+}
+
+#mobile_dropdown_menu li {
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#mobile_dropdown_menu ul li a {
+  color: #5B5B5B;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Lightbox */
+#burger-con {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* Styling for the UL inside the lightbox */
+#burger-con ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  list-style: none;
+}
+
+#burger-con ul li a {
+  color: white;
+  font-weight: 900;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#close-btn {
+  position: absolute;
+  transform: rotate(90deg);
+  top: 0px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+/* Show lightbox when toggled */
+#burger-con.show {
+  display: flex;
+}
+
+#burger-con.show ul {
+  display: flex; /* Make sure UL is flex or block when lightbox is active */
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-nav ul li a:hover {
+  color: #1E1E1E;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+  position: relative;
+  margin-top: -35px;
+  /* 이걸로 위아래 위치 조정 */
+}
+
+#main-nav ul li a {
+  display: block;
+  margin-right: 10px;
+  font-size: 25px;
+  text-align: center;
+  color: #efefef;
+}
+
+/* profile-box */
+#profile-box {
+  text-align: center;
+  margin-top: 10%;
+}
+
+#profile-box h2 {
+  color: #1E1E1E;
+  font-weight: 900;
+}
+
+#profile-box p {
+  margin-top: 4%;
+}
+
+/* projects-box */
+#projects-box {
+  text-align: center;
+}
+
+#projects-box h2 {
+  margin-top: 8%;
+  color:#1E1E1E
+}
+
+#projects-box h3 {
+  color: #EB4E00;
+}
+
+#projects-1, #projects-2, #projects-3, #projects-4 {
+  width: 100%;
+  height: 200px;
+  background-color: #5B5B5B;
+  
+}
+
+/* ------------ About page ------------ */
+
+
+/* --------------- Skill ------------------- */
+#skill-con {
+  /* background-color: black; */
+  position: relative;
+  text-align: center;
+  top: 900px;
+} 
+
+#skill-con h2 {
+  color:#1E1E1E;
+  font-size: 40px;
+}
+
+#skill-con h3 {
+  color: #EB4E00;
+  margin-bottom: 25%;
+  font-size: 30px;
+}
+
+#skill-wrap {
+  margin-top: 5%;
+  /* background-color: #fff; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#skill-wrap p {
+  line-height: 50px;
+  font-size: 25px;
+}
+
+/* ---Mobile Library Grid Style--- */
+@media screen and (min-width: 480px) {
+
+  #main-nav .toggle_button {
+    display: block; /* Show hamburger button */
+    color: black;
+  }
+
+  #logo {
+      margin-top: 15%;
+  }
+
+  #mobile_dropdown_menu {
+    display: none;
+    position: fixed;
+    right: -300px;
+    top: 70px;
+    width: 300px;
+    height: 100vh;
+    background-color: rgb(18, 18, 18);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+
+  #mobile_dropdown_menu.show {
+    height: 100vh;
+    display: block;
+  }
+
+  #mobile_dropdown_menu.hide {
+    animation: slideOut 0.5s ease-in-out forwards;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideOut {
+    from {
+      transform: translateX(-100%);
+      opacity: 1;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+
+  #burger-con {
+    top: 0px;
+    display: none; /* Hidden by default */
+  }
+
+  #burger-con ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #burger-con.show {
+    display: flex; /* Display the lightbox when active */
+  }
+
+  /* Hide the regular nav menu outside the lightbox on mobile */
+  #main-nav ul {
+    display: none;
+  }
+
+  /* ------------ About page ------------ */
+  #about-name {
+      font-size: 40px;
+      position: absolute;
+      left: 5%;
+      top: 23%;
+      line-height: 70px;
+  }
+  
+  #about-img {
+      position: absolute;
+      left: 30%;
+      width: 320px;
+  }
+
+  #about-text {
+      font-size: 14px;
+      position: relative;
+      top: 400px;
+  }
+
+  #about-text p {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+}  
+/* ---Tablet Library Grid Styles--- */
+@media screen and (min-width: 768px) {
+  #main-header {
+    height: 90px;
+  }
+
+  #main-nav ul li a:hover {
+      color: #1E1E1E;
+    }
+
+    #main-nav {
+      margin-top: 16%;
+    }
+  
+  #main-nav ul li a {
+    display: block;
+    margin-right: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #5B5B5B;
+  }
+
+  #main-nav .toggle_button {
+    display: none;
+  }
+  #mobile_dropdown_menu {
+    display: none;
+  }
+
+  #burger-con {
+    display: flex; /* Display regular menu on larger screens */
+    background-color: transparent; /* No lightbox for larger screens */
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+
+  #close-btn {
+    display: none;
+  }
+
+  #burger-con ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  #burger-con ul li,
+  #burger-con ul li:first-child {
+    border: none;
+    display: inline;
+  }
+
+  #burger-con ul li {
+    /* margin-right: 30px; */
+    font-size: 19px;
+  }
+  /* ------------ About page ------------ */
+  #about-box {
+    display: flex;
+    margin-top: 5%;
+  }
+
+  #about-name {
+      font-size: 65px;  
+      position: absolute;
+      left: 20%;
+      top: 30%;
+      line-height: 120px;
+  }
+  
+  #about-img {
+      position: absolute;
+      left: 40%;
+      width: 500px;
+  }
+
+  #about-text {
+      font-size: 24px;
+      position: relative;
+      top: 620px;
+  }
+
+  #about-text p {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+}
+/* hero-main */
+
+/* ---Desktop Library Grid Styles--- */
+@media screen and (min-width: 1200px) {
+  #main-header {
+    height: 110px;
+  }
+
+  #logo {
+      margin-top: 25%;
+  }
+
+  #main-nav {
+    margin-top: 16%;
+  }
+
+  #main-nav ul {
+      margin-left: 10px;
+  }
+
+  #main-nav ul li a {
+      font-weight: 700;
+  }
+
+  #main-nav ul li {
+    display: block;
+    margin-right: 38px;
+    font-size: 24px;
+    text-align: center;
+    color: #5B5B5B;
+
+  }
+
+  #main-nav ul li:last-child {
+      margin-right: 0;
+  }
+
+  #close-btn {
+    display: none; /* No close button on larger screens */
+  }
+
+  #burger-con {
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+  }
+
+  #burger-con ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #burger-con ul li {
+    font-size: 22px;
+  }
+  /* ------------ About page ------------ */
+  #about-box {
+    display: flex;
+    margin-top: 5%;
+  }
+
+  #about-name {
+      font-size: 70px;
+      position: absolute;
+      left: 7%;
+      top: 40%;
+      line-height: 130px;
+  }
+  
+  #about-img {
+      position: absolute;
+      left: 23%;
+      width: 600px;
+  }
+
+  #about-text {
+      font-size: 26px;
+      position: absolute;
+      width: 450px;
+      right: 8%;
+      top: 45%;
+  }
+
+  #about-text p {
+    margin-bottom: 8%;
+  }
+
+  #about-text p:first-child {
+    position: relative;
+    right: 18%;
+  }
+
+  #about-text p:last-child {
+    position: relative;
+    left: 10%;
+  }
+
+}
+

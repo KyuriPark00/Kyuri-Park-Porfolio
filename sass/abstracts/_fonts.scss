@@ -1,0 +1,5 @@
+// import mixins file to use, save it in the "m" namespace
+@use 'mixins' as m;
+
+// Include Noto Serif font using the fontFace mixin
+@include m.fontFace('Noto Serif', '../fonts/NotoSerif-Regular');

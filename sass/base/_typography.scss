@@ -1,0 +1,28 @@
+//import variables file and save it in "v" namespace
+@use '../abstracts/variables' as v;
+
+body {
+    font-family: v.$body-font-family;
+    .hidden {
+        display: none;
+    }
+    background-color: v.$secondary-color;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    color: v.$primary-color;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  input,
+  textarea {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  
