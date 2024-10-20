@@ -1,4 +1,0 @@
-// Mixins for reusability
-@mixin transition($property, $duration, $ease) {
-    transition: $property $duration $ease;
-  }

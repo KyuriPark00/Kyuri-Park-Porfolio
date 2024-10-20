@@ -1,13 +1,9 @@
-// Entry point to compile all partials
+@charset "UTF-8";
 
-// main.scss
-@import 'base/_variables'; // variables.scss
-@import 'base/_mixins';    // mixins.scss
-@import 'base/_global';    // global.scss
-@import 'layout/grid';
-@import 'layout/mediaqueries';
-@import 'components/nav';
-@import 'components/lightbox';
-@import 'pages/home';
-@import 'pages/about';
+//have to include all of these otherwise main.css will be empty
+//We do not create styles in here
 
+@use 'abstracts';
+@use 'base';
+@use 'components';
+@use 'pages';
