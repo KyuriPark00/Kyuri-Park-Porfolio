@@ -1,0 +1,39 @@
+@use '../abstracts' as a;
+
+#profile-box {
+  text-align: center;
+  margin-top: 10%;
+
+  h2 {
+    color: a.$accent-color;
+    font-weight: 900;
+  }
+
+  p {
+    margin-top: 4%;
+    font-weight: 600;
+  }
+}
+
+/* projects-box */
+#projects-box {
+  text-align: center;
+
+  h2 {
+    margin-top: 8%;
+    color: #1E1E1E;
+  }
+
+  h3 {
+    color: a.$orange-color;
+  }
+}
+
+#projects-1,
+#projects-2,
+#projects-3,
+#projects-4 {
+  width: 100%;
+  height: 200px;
+  background-color: a.$primary-color;
+}
