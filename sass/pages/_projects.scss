@@ -15,25 +15,105 @@
   }
 }
 
-/* projects-box */
+// ------ Project-box -------
 #projects-box {
+
+  div {
+    position: relative; /* overlay를 위해 position 설정 */
+
+    img {
+      border-radius: 1.5;
+      transition: transform 0.3s ease, filter 0.3s ease; /* 애니메이션 추가 */
+    }
+
+    .overlay {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0; /* 기본적으로 숨김 */
+      transition: opacity 0.3s ease;
+      border-radius: 1.5%; /* 이미지와 동일한 모서리 둥글기 */
+    }
+
+    &:hover {
+      img {
+        border-radius: 1.5;
+        transform: scale(1.1); /* 이미지 확대 */
+        filter: brightness(30%); /* 이미지 밝기 감소 */
+      }
+
+      .overlay {
+        opacity: 1; /* 텍스트와 배경 보이기 */
+      }
+    }
+  }
+}
+
+// Video Custom
+:root {
+  --plyr-color-main: #008993; /* 메인 색상 */
+  --plyr-control-icon-size: 18px; /* 아이콘 크기 */
+  --plyr-control-spacing: 12px; /* 컨트롤 간 간격 */
+  --plyr-control-radius: 10px; /* 컨트롤 모서리 둥글기 */
+  --plyr-font-family: "Arial", sans-serif; /* 폰트 */
+}
+
+#demo-reel-con {
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 80px;
+}
+
+// Resume
+#resume {
   text-align: center;
+  margin: 100px 0;
 
   h2 {
-    margin-top: 8%;
-    color: #1E1E1E;
+    color: a.$accent-color;
+    font-weight: 900;
+    margin-bottom: 20px;
   }
 
-  h3 {
-    color: a.$orange-color;
+  .download-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: a.$main-blue; /* 버튼 색상 */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: a.$orange-color; /* hover 색상 */
+      transform: scale(1.05); /* 확대 효과 */
+    }
+
+    &:active {
+      transform: scale(0.95); /* 클릭 효과 */
+    }
   }
 }
 
-#projects-1,
-#projects-2,
-#projects-3,
-#projects-4 {
-  width: 100%;
-  height: 200px;
-  background-color: a.$primary-color;
+#scroll-section {
+  position: relative;
+  text-align: center;
+  margin-top: 50px;  /* 상단 여백 */
 }
+
+
+
