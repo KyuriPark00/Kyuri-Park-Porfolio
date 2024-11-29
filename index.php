@@ -1,10 +1,13 @@
 <?php
-include __DIR__ . '/includes/connect.php'; // 데이터베이스 연결 포함
+  // Include the connection file
+  include('includes/connect.php');
 
-// Projects 테이블에서 데이터 가져오기
-$sql = "SELECT id, title FROM Projects LIMIT 4"; // 최대 4개의 프로젝트 제목 가져오기
-$result = $conn->query($sql);
+  // Fetch projects from the database
+  $query = "SELECT * FROM projects ORDER BY year DESC";
+  $projects_result = $conn->query($query);
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,19 +27,14 @@ $result = $conn->query($sql);
   </head>
   <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
+    
     <!-- Main Nav -->
     <div id="sticky-nav-con">
       <header class="grid-con" id="main-header">
-        <div
-          id="logo"
-          class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8"
-        >
+        <div id="logo" class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8">
           <img src="images/logo.svg" alt="KP Logo" />
         </div>
-        <nav
-          id="main-nav"
-          class="col-start-5 col-end-6 m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9"
-        >
+        <nav id="main-nav" class="col-start-5 col-end-6 m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9">
           <div id="burger-con">
             <h2 class="hidden">Main Nav</h2>
             <ul>
@@ -59,35 +57,58 @@ $result = $conn->query($sql);
       </header>
     </div>
 
-    <!-- Profile Section -->
     <section id="profile-box" class="grid-con">
-        <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-            <h2>It’s Kyuri,<br> Your Favorite Front-end Developer!</h2>
-            <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
-        </div>
-    </section>
+      <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
+        <h2>It’s Kyuri,<br> Your Favorite Front-end Developer!</h2>
+        <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
+      </div>
+    </section> 
 
-    <!-- Projects Section -->
     <section id="projects-box" class="grid-con">
-        <div class="col-start-3 col-end-4 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-            <h2>Projects</h2>
-        </div>
+      <?php
+        // Grid column counter (1-based)
+        $column_counter = 1;
 
-        <?php if ($result->num_rows > 0): ?>
-            <?php $count = 1; ?>
-            <?php while ($project = $result->fetch_assoc()): ?>
-                <div class="project col-start-1 col-end-6 m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7 <?php echo ($count == 4) ? 'col-span-full' : ''; ?>">
-                    <h3><?php echo htmlspecialchars($project['title']); ?></h3>
-                    <div id="projects-<?php echo $project['id']; ?>">image</div>
-                    <a href="project_detail.php?id=<?php echo $project['id']; ?>">View Details</a>
-                </div>
-                <?php $count++; ?>
-            <?php endwhile; ?>
-        <?php else: ?>
-            <p>No projects to display.</p>
-        <?php endif; ?>
+        while ($project = $projects_result->fetch_assoc()) {
+          // Fetch media (images/videos) for each project
+          $media_query = "SELECT * FROM media WHERE project_id = " . $project['id'];
+          $media_result = $conn->query($media_query);
+
+          // Dynamic class assignment for grid layout (alternate columns for 2 thumbnails per row)
+          $grid_start = ($column_counter % 2 === 1) ? 1 : 8;
+          $grid_end = ($column_counter % 2 === 1) ? 7 : 14;
+
+          echo '<div class="col-span-full m-col-start-' . $grid_start . ' m-col-end-' . $grid_end . ' l-col-start-' . $grid_start . ' l-col-end-' . $grid_end . '">';
+          echo '<a href="' . $project['project_link'] . '" class="project_link">';
+          echo '<img class="thumnail_image" src="images/' . $project['thumbnail_image'] . '" alt="thumbnail of ' . $project['title'] . '">';
+          echo '<div class="overlay">';
+          echo '<h3 class="title">' . $project['title'] . '</h3>';
+          echo '<p class="short_description">' . $project['short_description'] . '</p>';
+          echo '</div></a></div>';
+
+          $column_counter++;
+        }
+      ?>
     </section>
-    
+
+
+    <section id="demo-reel-con" class="grid-con">
+      <div id="player-container" class="col-span-full">
+        <video class="player" controls preload="metadata" poster="images/demoreel-thumnail.jpg">
+          <source src="video/video.mp4" type="video/mp4">
+          <source src="video/video.webm" type="video/webm">
+          <p>Uh Oh, your browser does not support this Video!</p>
+        </video>
+      </div> 
+    </section>
+
+    <section id="resume">
+      <h2>Thank You</h2>
+      <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn">
+        Download Resume
+      </a>
+    </section>
+
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -96,5 +117,6 @@ $result = $conn->query($sql);
 </html>
 
 <?php
-$conn->close(); // 데이터베이스 연결 종료
+  // Close the database connection
+  $conn->close();
 ?>
