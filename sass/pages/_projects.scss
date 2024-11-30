@@ -8,15 +8,71 @@
     color: a.$accent-color;
     font-weight: 900;
   }
+}
 
-  p {
-    margin-top: 4%;
-    font-weight: 600;
+// Demo reel 
+
+// Video Custom
+:root {
+  --plyr-color-main: #008993; /* 메인 색상 */
+  --plyr-control-icon-size: 18px; /* 아이콘 크기 */
+  --plyr-control-spacing: 12px; /* 컨트롤 간 간격 */
+  --plyr-control-radius: 10px; /* 컨트롤 모서리 둥글기 */
+  --plyr-font-family: "Arial", sans-serif; /* 폰트 */
+}
+
+#demo-reel-con {
+  padding: 50px;
+  #player-container {
+    border-radius: 15px;; 
+    overflow: hidden; 
+
+    .player {
+      border-radius: 15px;; 
+    }
   }
+
+  #demo-reel-description {
+    h2 {
+      font-weight: 700;
+      color: a.$main-blue;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    #social-media-con {
+      button {
+        background-color: transparent;
+        border: solid 2px a.$main-blue;
+        border-radius: 10px;
+        font-family: a.$body-font-family;
+        font-weight: 500;
+        color: a.$main-blue;
+        transition: all 0.3s ease;  
+
+        &:hover {
+          background-color: a.$main-blue;
+          color: #fff;
+          border-radius: 10px;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  
 }
 
 // ------ Project-box -------
 #projects-box {
+
+  #project-heading {
+    color: a.$main-blue;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+  }
 
   div {
     position: relative; /* overlay를 위해 position 설정 */
@@ -42,7 +98,7 @@
       text-align: center;
       opacity: 0; /* 기본적으로 숨김 */
       transition: opacity 0.3s ease;
-      border-radius: 2%; /* 이미지와 동일한 모서리 둥글기 */
+      border-radius: 15px;; /* 이미지와 동일한 모서리 둥글기 */
     }
 
     &:hover {
@@ -59,20 +115,6 @@
   }
 }
 
-// Video Custom
-:root {
-  --plyr-color-main: #008993; /* 메인 색상 */
-  --plyr-control-icon-size: 18px; /* 아이콘 크기 */
-  --plyr-control-spacing: 12px; /* 컨트롤 간 간격 */
-  --plyr-control-radius: 10px; /* 컨트롤 모서리 둥글기 */
-  --plyr-font-family: "Arial", sans-serif; /* 폰트 */
-}
-
-#demo-reel-con {
-  padding-right: 50px;
-  padding-left: 50px;
-  padding-top: 80px;
-}
 
 // Resume
 #resume {
@@ -109,11 +151,6 @@
   }
 }
 
-#scroll-section {
-  position: relative;
-  text-align: center;
-  margin-top: 50px;  /* 상단 여백 */
-}
 
 
 
