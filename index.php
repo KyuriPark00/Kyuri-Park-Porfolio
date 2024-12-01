@@ -140,6 +140,10 @@
       </a>
     </section>
 
+    <footer>
+      <p>© 2024 Kyuri Park. All Rights Reserved.</p>
+    </footer>
+
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>

@@ -15,6 +15,11 @@ for this library we will stick with pixels */
  */
 
 /* --- 1. General Styles - scales images, videos to size of container --- */
+.case-study-body {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
 img,
 embed,
 object,
@@ -34,8 +39,6 @@ html {
 }
 
 /* ---Mini CSS reset--- */
-
-
 
 p,
 h1,
