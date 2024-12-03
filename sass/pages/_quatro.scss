@@ -54,3 +54,58 @@
         }
     }
 }
+
+#design-principal-box {
+    display: flex;
+
+    .design-principal {
+        background-color: #D7F3F5;
+
+        p {
+            font-weight: 500;
+            text-align: left;
+        }
+    }
+}
+
+#logo-specs-con {
+
+    #logo-specs-img-box {
+        img {
+            background: cover no-repeat;
+        }
+    }
+
+    p {
+        font-weight: 500;
+    }
+}
+
+#devices-con {
+    #devices-con-img-box {
+        background: cover no-repeat;
+    }
+
+    h3 {
+        text-align: left;
+        margin-bottom: 20px;
+        color: a.$primary-color !important;
+        span {
+            color: a.$main-blue;
+        }
+    }
+
+    
+
+  .entry-point {
+    color: a.$main-blue;;
+  }
+
+  .entry-point-h3 {
+    color: a.$orange-color !important;
+  }
+  p {
+    font-weight: 500;
+  }
+}
+
