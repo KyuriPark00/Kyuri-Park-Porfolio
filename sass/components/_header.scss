@@ -141,6 +141,7 @@
 
   .Heading {
     font-size: 30px !important;
+    color: a.$accent-color;
   }
   
   #main-nav .toggle_button {
@@ -302,7 +303,7 @@
     padding-left: 10px;
   }
 
-  // Quatro Page 
+  /* ------------ Quatro Page ------------ */
   #quatro-details-con {
     margin-top: 70px;
     display: block;
@@ -359,6 +360,91 @@
           max-height: 50px;
         }
     }
+}
+
+#design-principal-con {
+
+  margin-top: 70px;
+
+  #design-principal-box {
+    margin-top: 20px;
+    flex-direction: column;
+    row-gap: 30px;
+  
+   .design-principal {
+  
+      padding: 20px;
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+      }
+   }
+  }
+}
+
+#logo-specs-con {
+  margin-top: 80px;
+
+  .logo-specs-detail {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+#devices-con {
+  margin-top: 80px;
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .entry-point {
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .entry-point-h3  {
+    margin-bottom: 10px;
+  }
+}
+
+#wireframing {
+  margin-top: 80px;
+}
+
+#branding-video-con {
+  margin-top: 80px;
+
+  h2{
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
 }
 
 }  
@@ -496,73 +582,6 @@
     }
   }
 
-  // quatro
-  #quatro-details-con {
-    display: flex;
-    column-gap: 90px;
-
-    h2{
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 18px;
-    }
-
-    p {
-      font-size: 15px;
-    }
-
-
-    #quatro-team-year {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 50px;
-
-    }
-  }
-
-  #what-I-did-con {
-    padding: 0;
-    h2 {
-      font-size: 22px;
-    }
-
-    h2 {
-        margin-top: 100px;
-        margin-bottom: 20px;
-    }
-
-    .what-I-did {
-        margin-bottom: 40px;
-
-        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-          div {
-            font-size: 15px;
-          }
-            display: flex;
-            font-weight: 500;
-            column-gap: 40px;
-        }
-
-        #logo-design, #web-design, #label-design, #promotional-video {
-          div {
-            position: relative;
-            top: 12px
-          }
-        }
-
-        img {
-          max-width: 50px;
-          max-height: 50px;
-        }
-    }
-  }
-
-
   /* ------------ About page ------------ */
   #about-box {
     display: flex;
@@ -594,8 +613,150 @@
     padding-left: 10px;
   }
   
+   /* ------------ Quatro Page ------------ */
+   #quatro-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #quatro-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
+
+  #what-I-did-con {
+    padding: 0;
+    h2 {
+      font-size: 22px;
+    }
+
+    h2 {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    .what-I-did {
+        margin-bottom: 40px;
+
+        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            font-size: 18px;
+          }
+            display: flex;
+            font-weight: 500;
+            column-gap: 40px;
+        }
+
+        #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            position: relative;
+            top: 12px
+          }
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    }
+  }
+
+  #design-principal-con {
+
+    margin-top: 80px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    #design-principal-box {
+      margin-top: 20px;
+      flex-direction: column;
+      row-gap: 30px;
+    
+     .design-principal {
+    
+        padding: 20px;
+    
+        h3 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+    
+        p {
+          font-size: 18px;
+          padding: 0;
+          margin: 0;
+        }
+     }
+    }
+  }
+
+  #logo-specs-con {
+    margin-top: 80px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .logo-specs-detail {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #devices-con {
+    margin-top: 80px;
+  
+    h3 {
+      font-size: 18px;
+    }
+
+    .entry-point {
+      margin-bottom: 15px;
+      margin-top: 25px;
+    }
+  
+    .entry-point-h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+  #wireframing {
+    margin-top: 80px;
+  }
+  
 }
-/* hero-main */
+
 
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
@@ -608,7 +769,7 @@
     font-size: 40px !important;
   }
 
-  body { margin-right: 60px; margin-left: 60px;}
+  body { margin-right: 80px; margin-left: 80px;}
 
   #main-header {
     height: 110px;
@@ -735,66 +896,6 @@
     }
   }
 
-  // quatro
-  #quatro-details-con {
-    padding: 0 20px;
-    display: flex;
-    column-gap: 100px;
-
-    h2{
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    #quatro-team-year {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 70px;
-
-    }
-  }
-
-  #what-I-did-con {
-
-    margin-top: 80px;
-
-    .what-I-did {
-      margin-bottom: 40px;
-
-      #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-        div {
-          font-size: 18px;
-        }
-          display: flex;
-          font-weight: 500;
-          column-gap: 40px;
-      }
-
-      #logo-design, #web-design, #label-design {
-        div {
-          font-size: 18px;
-          position: relative;
-          top: 12px
-        }
-      }
-
-      img {
-        max-width: 50px;
-        max-height: 50px;
-      }
-    }
-  }
-
   /* ------------ About page ------------ */
   #about-box {
     display: flex;
@@ -837,5 +938,138 @@
     left: 10%;
   }
 
+  /* ------------ Quatro Page ------------ */
+  #quatro-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #quatro-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+
+  #what-I-did-con {
+
+    margin-top: 80px;
+
+    .what-I-did {
+      margin-bottom: 40px;
+
+      #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+        div {
+          font-size: 19px;
+        }
+          display: flex;
+          font-weight: 500;
+          column-gap: 40px;
+      }
+
+      #logo-design, #web-design, #label-design {
+        div {
+          font-size: 19px;
+          position: relative;
+          top: 12px
+        }
+      }
+
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+  }
+
+  #design-principal-con {
+
+    margin-top: 80px;
+  
+    #design-principal-box {
+      margin-top: 20px;
+      flex-direction: row;
+      column-gap: 60px;
+    
+     .design-principal {
+
+        width: 400px;
+        padding: 30px 40px;
+    
+        h3 {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+    
+        p {
+          font-size: 19px;
+          padding: 0;
+          margin: 0;
+        }
+     }
+    }
+  }
+
+  #logo-specs-con {
+    margin-top: 100px;
+  
+    .logo-specs-detail {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 19px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #devices-con {
+    margin-top: 100px;
+
+    p {
+      font-size: 19px;
+      margin-top: 10px;
+    }
+
+    .entry-point {
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+
+    .entry-point-h3 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  #wireframing {
+    margin-top: 100px;
+  }
 }
 
