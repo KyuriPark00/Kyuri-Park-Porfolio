@@ -142,6 +142,9 @@
 
     <footer>
       <p>© 2024 Kyuri Park. All Rights Reserved.</p>
+      <a href="#">
+          <img src="images/linkedin.png" alt="Linkedin icon">
+      </a>
     </footer>
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
