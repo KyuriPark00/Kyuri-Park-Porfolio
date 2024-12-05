@@ -438,7 +438,7 @@
   }
 }
 
-#wireframing {
+#wireframingSketches {
   margin-top: 80px;
 }
 
@@ -456,6 +456,46 @@
 
   p {
     font-size: 15px;
+  }
+}
+
+ /* ------------ Vybe Page ------------ */
+ .vybe-hero {
+  margin-top: 50px;
+  text-align: center;
+  
+  #vybe-github {
+      margin-top: 20px;
+      font-size: 15px;
+      }
+  }
+
+
+#vybe-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #vybe-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
   }
 }
 
@@ -773,10 +813,49 @@
     }
   }
 
-  #wireframing {
+  #wireframingSketches {
     margin-top: 80px;
   }
   
+  /* ------------ Vybe Page ------------ */
+
+  .vybe-hero {
+    margin-top: 50px;
+    text-align: center;
+    
+    #vybe-github {
+        margin-top: 20px;
+        font-size: 18px;
+        }
+    }
+
+   #vybe-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #vybe-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
 }
 
 
@@ -1101,8 +1180,49 @@
     }
   }
   
-  #wireframing {
+  #wireframingSketches {
     margin-top: 100px;
+  }
+
+
+  /* ------------ Vybe Page ------------ */
+
+  .vybe-hero {
+    margin-top: 50px;
+    text-align: center;
+    
+    #vybe-github {
+        margin-top: 20px;
+        font-size: 19px;
+        }
+    }
+
+  #vybe-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #vybe-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
   }
 }
 
