@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `projects` (
   `project_name` varchar(255) NOT NULL,
   `project_brief` text NOT NULL,
   `what_i_did` text NOT NULL,
-  `wireframing_sketches` text NOT NULL,
+  `wireframingSketches_sketches` text NOT NULL,
   `repo_link` varchar(255) NOT NULL,
   `start_year` date NOT NULL,
   PRIMARY KEY (`project_id`)
@@ -76,8 +76,8 @@ CREATE TABLE IF NOT EXISTS `projects` (
 -- Dumping data for table `projects`
 --
 
-INSERT INTO `projects` (`project_id`, `project_name`, `project_brief`, `what_i_did`, `wireframing_sketches`, `repo_link`, `start_year`) VALUES
-(1, 'Quatro', 'I collaborated with Stephanie to design the logo and label for Quatro, a tropical carbonated drink, focusing on a vibrant and refreshing look. We also developed a responsive website that highlights the drink\'s unique features, product details, and brand story, aiming to appeal to young adults who enjoy fruity, refreshing beverages.', 'Coding for front-end(HTML, CSS, JS)\r\nLogo Design\r\nWen Design\r\nLable Design\r\nPoster Design\r\nCreating Promotion Video\r\n\r\n', 'Wireframing', 'https://github.com/Stephaniechan2005/Chan_WingLamStephanie_Park_Kyuri_FIP', '2024-06-05'),
+INSERT INTO `projects` (`project_id`, `project_name`, `project_brief`, `what_i_did`, `wireframingSketches_sketches`, `repo_link`, `start_year`) VALUES
+(1, 'Quatro', 'I collaborated with Stephanie to design the logo and label for Quatro, a tropical carbonated drink, focusing on a vibrant and refreshing look. We also developed a responsive website that highlights the drink\'s unique features, product details, and brand story, aiming to appeal to young adults who enjoy fruity, refreshing beverages.', 'Coding for front-end(HTML, CSS, JS)\r\nLogo Design\r\nWen Design\r\nLable Design\r\nPoster Design\r\nCreating Promotion Video\r\n\r\n', 'wireframingSketches', 'https://github.com/Stephaniechan2005/Chan_WingLamStephanie_Park_Kyuri_FIP', '2024-06-05'),
 (2, 'Earbuds', 'efefef', 'efefe', 'fefeefe', 'efefefe', '0000-00-00');
 COMMIT;
 
