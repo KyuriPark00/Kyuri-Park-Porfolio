@@ -306,7 +306,7 @@
   /* ------------ Quatro Page ------------ */
 
   #quatro-hero {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     
     button {
@@ -423,6 +423,10 @@
 
 #devices-con {
   margin-top: 80px;
+  
+  h2 {
+    margin-bottom: 20px;
+  }
 
   h3 {
     font-size: 15px;
@@ -430,7 +434,7 @@
 
   .entry-point {
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   .entry-point-h3  {
@@ -459,9 +463,15 @@
   }
 }
 
+#wireframingSketches, #branding-video-con {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
  /* ------------ Vybe Page ------------ */
  .vybe-hero {
-  margin-top: 50px;
+  margin-top: 30px !important;
   text-align: center;
   
   #vybe-github {
@@ -667,7 +677,7 @@
    /* ------------ Quatro Page ------------ */
 
    #quatro-hero {
-    margin-top: 50px;
+    margin-top: 60px !important;
     text-align: center;
     
     button {
@@ -805,7 +815,7 @@
 
     .entry-point {
       margin-bottom: 15px;
-      margin-top: 25px;
+      margin-top: 50px;
     }
   
     .entry-point-h3 {
@@ -820,7 +830,7 @@
   /* ------------ Vybe Page ------------ */
 
   .vybe-hero {
-    margin-top: 50px;
+    margin-top: 60px !important;
     text-align: center;
     
     #vybe-github {
@@ -1042,7 +1052,7 @@
   /* ------------ Quatro Page ------------ */
 
   #quatro-hero {
-    margin-top: 50px;
+    margin-top: 60px !important;
     text-align: center;
     
     button {
@@ -1168,7 +1178,7 @@
 
     .entry-point {
       margin-bottom: 20px;
-      margin-top: 30px;
+      margin-top: 50px;
     }
   
     h3 {
@@ -1186,9 +1196,8 @@
 
 
   /* ------------ Vybe Page ------------ */
-
   .vybe-hero {
-    margin-top: 50px;
+    margin-top: 60px !important;
     text-align: center;
     
     #vybe-github {

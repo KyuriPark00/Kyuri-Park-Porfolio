@@ -48,6 +48,55 @@ toggleButton.addEventListener("click", () => {
     });
   });
 
+  
 
-  
-  
+// Vybe poster sliders
+// Initialize variables
+const posterSlider = document.querySelector("#image-slider");
+const prevPosterBtn = document.querySelector("#prev-btn");
+const nextPosterBtn = document.querySelector("#next-btn");
+let posterIndex = 0;
+let posterWidth;
+
+// Function to update the width dynamically
+function updatePosterWidth() {
+  posterWidth = posterSlider.clientWidth;
+  showPoster(posterIndex);
+}
+
+// Function to show a specific poster
+function showPoster(index) {
+  const newTransformValue = -index * posterWidth + "px";
+  posterSlider.style.transform = "translateX(" + newTransformValue + ")";
+}
+
+// Navigate to the next poster
+function nextPoster() {
+  posterIndex++;
+  if (posterIndex >= posterSlider.children.length) {
+    posterIndex = 0; // Loop back to the first poster
+  }
+  showPoster(posterIndex);
+}
+
+// Navigate to the previous poster
+function prevPoster() {
+  posterIndex--;
+  if (posterIndex < 0) {
+    posterIndex = posterSlider.children.length - 1; // Loop to the last poster
+  }
+  showPoster(posterIndex);
+}
+
+// Set up event listeners for buttons
+if (prevPosterBtn && nextPosterBtn) {
+  prevPosterBtn.addEventListener("click", prevPoster);
+  nextPosterBtn.addEventListener("click", nextPoster);
+}
+
+// Auto-slide functionality
+setInterval(nextPoster, 4000); // Change slides every 4 seconds
+
+// Handle window resizing
+window.addEventListener("resize", updatePosterWidth);
+updatePosterWidth();
