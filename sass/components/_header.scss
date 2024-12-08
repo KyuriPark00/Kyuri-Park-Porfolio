@@ -315,6 +315,63 @@
     }
   }
 
+  #skills-con {
+
+    position: relative;
+    top: -100px;
+
+    h2 {
+      color: a.$main-blue;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #skill-box {
+      flex-direction: column;
+      row-gap: 40px;
+      text-align: center;
+
+      .skill-details {
+        h3 {
+          font-size: 25px;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  /* ------------ Contact Page ------------ */
+  #contact-me-con {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  #contact-form-con {
+    form {
+
+      div {
+        text-align: center;
+        margin-top: 30px;
+
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
   /* ------------ Quatro Page ------------ */
   #quatro-hero {
     margin-top: 30px;
@@ -795,34 +852,64 @@
   }
 
   /* ------------ About page ------------ */
-  #about-box {
-    display: flex;
-    margin-top: 5%;
-  }
-
-  #about-name {
-      font-size: 65px;  
-      position: absolute;
-      left: 20%;
-      top: 30%;
-      line-height: 120px;
-  }
-  
-  #about-img {
-      position: absolute;
-      left: 40%;
-      width: 500px;
-  }
-
-  #about-text {
-      font-size: 24px;
+  #about-con {
+    #about-name {
       position: relative;
-      top: 620px;
+      left: 50px;
+      top: 150px;
+
+      h2{
+        font-size: 70px;
+        line-height: 90px;
+        font-weight: 500;
+      }
+
+      #about-name-icons {
+        width: 130px;
+        display: flex;
+        column-gap: 12px;
+        position: relative;
+        top: 50px;
+      }
+    }
+
+    #about-img {
+      position: relative;
+      top: 100px;
+      left: 50px;
+    }
+
+    #about-text {
+      position: relative;
+      top: 170px;
+      p{
+        padding-right: 40px;
+        margin-bottom: 10px;
+        position: relative;
+        &:first-child, &:nth-child(2){
+          left: -20px;
+        }
+
+        &:nth-child(3) {
+          left: 30px;
+        }
+
+        &:last-child {
+          left: 40px;
+        }
+      }
+    }
   }
 
-  #about-text p {
-    padding-right: 10px;
-    padding-left: 10px;
+  #skills-con {
+    position: relative;
+    top: 200px;
+
+    #skill-box {
+      flex-direction: row;
+      column-gap: 170px;
+      justify-content: center;
+    }
   }
   
    /* ------------ Quatro Page ------------ */
@@ -1199,7 +1286,6 @@
           font-weight: 500;
           font-size: 18px;
           margin-top: 10px;
-          transition: all 0.3s ease;  // 부드러운 변화를 위한 트랜지션
   
           &:hover {
             background-color: a.$main-blue;
@@ -1252,48 +1338,83 @@
       }
     }
   }
-
+  
   /* ------------ About page ------------ */
-  #about-box {
-    display: flex;
-    margin-top: 5%;
+  #about-con {
+    #about-name {
+      position: relative;
+      left: 50px;
+      top: 150px;
+
+      h2{
+        font-size: 100px;
+        line-height: 150px;
+        font-weight: 500;
+      }
+
+      #about-name-icons {
+        width: 130px;
+        display: flex;
+        column-gap: 12px;
+        position: relative;
+        top: 60px;
+      }
+    }
+
+    #about-img {
+      position: relative;
+      top: 100px;
+      left: 80px;
+    }
+
+    #about-text {
+      position: relative;
+      top: 200px;
+      p{
+        font-size: 20px;
+        padding-right: 40px;
+        margin-bottom: 30px;
+        position: relative;
+        &:first-child, &:nth-child(2){
+          left: -50px;
+        }
+
+        &:nth-child(3) {
+          left: 30px;
+        }
+
+        &:last-child {
+          left: 40px;
+        }
+      }
+    }
   }
 
-  #about-name {
-      font-size: 70px;
-      position: absolute;
-      left: 7%;
-      top: 40%;
-      line-height: 130px;
+  #skills-con {
+    position: relative;
+    top: 250px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    #skill-box {
+      flex-direction: row;
+      column-gap: 220px;
+      justify-content: center;
+
+      .skill-details {
+        h3 {
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
   }
   
-  #about-img {
-      position: absolute;
-      left: 23%;
-      width: 600px;
-  }
-
-  #about-text {
-      font-size: 26px;
-      position: absolute;
-      width: 450px;
-      right: 8%;
-      top: 45%;
-  }
-
-  #about-text p {
-    margin-bottom: 8%;
-  }
-
-  #about-text p:first-child {
-    position: relative;
-    right: 18%;
-  }
-
-  #about-text p:last-child {
-    position: relative;
-    left: 10%;
-  }
 
   /* ------------ Quatro Page ------------ */
   #quatro-hero {

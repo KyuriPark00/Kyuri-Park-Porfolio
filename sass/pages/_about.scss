@@ -16,7 +16,14 @@
 }
 
 #skills-con {
-  .skills-boxes {
-    h3 {color: a.$orange-color;}
+  h2 {
+    color: a.$main-blue;
+  }
+  #skill-box {
+    display: flex;
+    .skill-details {
+      h3 {color: a.$orange-color;}
+      p { font-weight: 600;}
+    }
   }
 }
