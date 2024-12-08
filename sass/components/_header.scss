@@ -278,33 +278,44 @@
     }
   }
   /* ------------ About page ------------ */
-  #about-name {
-      font-size: 40px;
-      position: absolute;
-      left: 5%;
-      top: 23%;
-      line-height: 70px;
-  }
-  
-  #about-img {
-      position: absolute;
-      left: 30%;
-      width: 320px;
-  }
+  #about-con {
 
-  #about-text {
-      font-size: 14px;
+    #about-name {
+
       position: relative;
-      top: 400px;
-  }
+      top: 90px;
+      left: 18px;
+      
+      h2 {
+        font-size: 50px;
+        line-height: 70px;
+      }
 
-  #about-text p {
-    padding-right: 10px;
-    padding-left: 10px;
+      #about-name-icons {
+        width: 90px;
+        display: flex;
+        column-gap: 8px;
+        position: relative;
+        top: 80px;
+      }
+
+    }
+
+    #about-img {
+      position: relative;
+      top: -200px;
+      right: -10px;
+    }
+
+    #about-text {
+     position: relative;
+     top: -180px;
+     margin: 0 auto;
+     padding: 0 10px;
+    }
   }
 
   /* ------------ Quatro Page ------------ */
-
   #quatro-hero {
     margin-top: 30px;
     text-align: center;
@@ -509,6 +520,146 @@
   }
 }
 
+#slider-wrap {
+  margin-top: 80px;
+  
+  #slider-heading {
+    margin-bottom: 20px;
+  }
+
+  #poster-details {
+    h2 {
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+  
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* ------------ Quatro Page ------------ */
+  #quatro-hero {
+    margin-top: 30px;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 15px;
+        }
+    }
+
+
+  #quatro-details-con {
+    margin-top: 70px;
+    display: block;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+
+    #quatro-team-year {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 100px;
+
+    }
+  }
+/* ------------ Industry Night Page ------------ */
+#industry-hero {
+  margin-top: 30px;
+  text-align: center;
+  
+  button {
+      margin-top: 20px;
+      font-size: 15px;
+      }
+  }
+
+
+#industry-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #industry-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+  }
+}
+
+ /* ------------ Demo Reel Page ------------ */
+ .demo-hero {
+  margin-top: 30px !important;
+  text-align: center;
+  }
+
+
+#demo-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #demo-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+  }
+}
+
+
+.storyboard-img {
+  img {
+      margin-bottom: 30px;
+  }
+}
+
 }  
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
@@ -675,7 +826,6 @@
   }
   
    /* ------------ Quatro Page ------------ */
-
    #quatro-hero {
     margin-top: 60px !important;
     text-align: center;
@@ -828,7 +978,6 @@
   }
   
   /* ------------ Vybe Page ------------ */
-
   .vybe-hero {
     margin-top: 60px !important;
     text-align: center;
@@ -866,6 +1015,103 @@
 
     }
   }
+
+  #slider-wrap {
+    margin-top: 80px;
+
+    #poster-details {
+      h2 {
+        margin-bottom: 15px;
+        margin-top: 50px;
+      }
+    
+      h3 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  /* ------------ Quatro Page ------------ */
+  #industry-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 18px;
+        }
+    }
+
+   #industry-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    #industry-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+      #industry {
+        width: 170px;
+      }
+    }
+  }
+
+  /* ------------ Demo Reel Page ------------ */
+  .demo-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    }
+
+   #demo-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #demo-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
+
+  
+.storyboard-img {
+  img {
+      margin-bottom: 40px;
+  }
+}
 }
 
 
@@ -1050,7 +1296,6 @@
   }
 
   /* ------------ Quatro Page ------------ */
-
   #quatro-hero {
     margin-top: 60px !important;
     text-align: center;
@@ -1233,5 +1478,107 @@
 
     }
   }
+
+  #slider-wrap {
+    margin-top: 100px;
+
+    #poster-details {
+      h2 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-size: 30px;
+      }
+    
+      h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  /* ------------ Industry Night Page ------------ */
+  #industry-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    #industry-github {
+        margin-top: 20px;
+        font-size: 19px;
+        }
+    }
+
+  #industry-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #industry-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+
+  
+  /* ------------ Demo Reel Page ------------ */
+  .demo-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    }
+
+  #demo-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #demo-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+    
+.storyboard-img {
+  img {
+      margin-bottom: 50px;
+  }
+}
 }
 

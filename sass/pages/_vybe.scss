@@ -43,8 +43,20 @@
 }
 
 #slider-wrap {
-    background-color: #D7F3F5;
-    padding: 40px;
+
+    #poster-details {
+      h2 {
+        color: a.$main-blue;
+      }
+
+      h3 {
+        color: a.$orange-color;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
 }
 
 #poster-slider {

@@ -1,74 +1,22 @@
 @use '../abstracts' as a;
 
-/* --- About page --- */
-
-/* --- 1. About --- */
-#about-box {
-    display: flex;
-    margin-top: 5%;
-  }
+#about-con {
 
   #about-name {
-      font-size: 70px;
-      position: absolute;
-      left: 7%;
-      top: 40%;
-      line-height: 130px;
-  }
-  
-  #about-img {
-      position: absolute;
-      left: 23%;
-      width: 600px;
+    h2 {
+      color: a.$accent-color;
+    }
   }
 
   #about-text {
-      font-size: 26px;
-      position: absolute;
-      width: 450px;
-      right: 8%;
-      top: 45%;
-
-      p {
-        margin-bottom: 8%;
-        &:first-child {
-            position: relative;
-            right: 18%;
-        }
-        &:last-child {
-            position: relative;
-            left: 10%;
-        }
-      }
+    p {
+      font-weight: 500;
+    }
   }
+}
 
-/* --- 2. Skill --- */
-#skill-con {
-  /* background-color: black; */
-  position: relative;
-  text-align: center;
-  top: 900px;
-
-  h2 {
-    color: a.$accent-color;
-    font-size: 40px;
-  }
-
-  h3 {
-    color: a.$orange-color;
-    margin-bottom: 25%;
-    font-size: 30px;
-  }
-} 
-
-#skill-wrap {
-  margin-top: 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-
-  p {
-    line-height: 50px;
-    font-size: 25px;
+#skills-con {
+  .skills-boxes {
+    h3 {color: a.$orange-color;}
   }
 }
