@@ -1,0 +1,49 @@
+@use '../abstracts' as a;  // abstracts SCSS 파일을 'a' 네임스페이스로 사용
+
+
+.thank-you-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: a.$secondary-color; // 'a' 네임스페이스로 변수 사용
+
+  .thank-you-message {
+    text-align: center;
+    color: a.$secondary-color;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: a.$accent-color;
+      font-weight: 900 !important;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: a.$accent-color;
+      font-weight: 900 !important;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background-color: a.$main-blue; // 'a' 네임스페이스로 변수 사용
+      color: a.$secondary-color;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      font-weight: 900 !important;
+
+      &:hover {
+        background-color: darken(a.$orange-color, 10%); // hover 효과 추가
+      }
+    }
+  }
+}

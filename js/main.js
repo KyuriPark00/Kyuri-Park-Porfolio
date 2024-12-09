@@ -99,4 +99,6 @@
     window.addEventListener("resize", updatePosterWidth);
     updatePosterWidth();
   });
+
+  
 })();
