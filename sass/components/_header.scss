@@ -293,9 +293,9 @@
       }
 
       #about-name-icons {
-        width: 90px;
+        width: 110px;
         display: flex;
-        column-gap: 8px;
+        column-gap: 6px;
         position: relative;
         top: 80px;
       }
@@ -317,7 +317,6 @@
   }
 
   #skills-con {
-
     position: relative;
     top: -100px;
 
@@ -341,6 +340,10 @@
         }
       }
     }
+  }
+
+  #about-footer {
+    margin-top: 50px;
   }
 
   /* ------------ Contact Page ------------ */
@@ -893,7 +896,7 @@
       }
 
       #about-name-icons {
-        width: 130px;
+        width: 150px;
         display: flex;
         column-gap: 12px;
         position: relative;
@@ -939,6 +942,11 @@
       justify-content: center;
     }
   }
+  
+  #about-footer {
+    margin-top: 350px;
+  }
+
   
    /* ------------ Quatro Page ------------ */
    #quatro-hero {
@@ -1381,7 +1389,7 @@
       }
 
       #about-name-icons {
-        width: 130px;
+        width: 200px;
         display: flex;
         column-gap: 12px;
         position: relative;
@@ -1443,6 +1451,9 @@
     }
   }
   
+  #about-footer {
+    margin-top: 400px;
+  }
 
   /* ------------ Quatro Page ------------ */
   #quatro-hero {

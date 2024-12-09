@@ -79,8 +79,8 @@
       
     <footer>
       <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-      <a href="#">
-          <img src="images/linkedin.svg" alt="Linkedin icon">
+      <a href="https://github.com/KyuriPark00">
+          <img src="images/linkedin_2.svg" alt="Linkedin icon">
       </a>
     </footer>
   
