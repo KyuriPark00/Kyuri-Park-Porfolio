@@ -55,29 +55,26 @@
       </header>
     </div>
 
-    <div class="case-study-body">
-      <section id="contact-me-con" class="grid-con">
-        <h2 class="col-span-full  m-col-start-4 m-col-end-11">Contact Me!</h2>
-        <h3 class="col-span-full  m-col-start-4 m-col-end-11">I’ll get back to you within 3 business days.</h3>
-      </section>
+    <br><br><br><br><br>
 
-      <section id="contact-form-con" class="grid-con">
-        <form action="your-server-endpoint" method="POST" class="col-span-full m-col-start-4 m-col-end-11">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your Name" required>
-          
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Your Email" required>
-          
-          <label for="email">Phone Number</label>
-          <input type="email" id="phone" name="phone" placeholder="Your Email" required>
-          
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-          
-          <div><button type="submit">Submit</button></div>
-        </form>
-      </section>
+    <div class="case-study-body">
+        <section id="contact-form-con" class="grid-con">
+            <form action="sendmail.php" method="POST" class="col-span-full m-col-start-4 m-col-end-11">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="Your First Name" required>
+
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Your Last Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="comments">Message:</label>
+            <textarea id="comments" name="comments" placeholder="Your Message" rows="5" required></textarea>
+
+            <div><button type="submit">Submit</button></div>
+            </form>
+        </section>
     </div>
       
     <footer>
@@ -87,6 +84,7 @@
       </a>
     </footer>
   
+    
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
