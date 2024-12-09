@@ -79,9 +79,9 @@ $projects_result = $conn->query($query_projects);
         <h2>2024 Demo Reel</h2>
         <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
         <div id="social-media-con">
-          <a href="#"><button>Github</button></a>
-          <a href="#"><button>Instagram</button></a>
-          <a href="#"><button>LinkedIn</button></a>
+          <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
+          <a href="https://www.instagram.com/kyuri_hailie/"><button>Instagram</button></a>
+          <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
         </div>
       </div>
     </section>
@@ -143,8 +143,8 @@ $projects_result = $conn->query($query_projects);
   
   <footer>
     <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-    <a href="#">
-      <img src="images/linkedin.svg" alt="LinkedIn icon">
+    <a href="https://github.com/KyuriPark00">
+      <img src="images/linkedin_2.svg" alt="LinkedIn icon">
     </a>
   </footer>
 

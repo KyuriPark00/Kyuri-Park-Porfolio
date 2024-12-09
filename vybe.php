@@ -215,7 +215,10 @@ while ($media = $mediaResult->fetch_assoc()) {
     </div>
 
     <footer>
-        <p>© 2024 Kyuri Park. All Rights Reserved.</p>
+      <p>© 2024 Kyuri Park. All Rights Reserved.</p>
+      <a href="https://github.com/KyuriPark00">
+        <img src="images/linkedin_2.svg" alt="LinkedIn icon">
+      </a>
     </footer>
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
