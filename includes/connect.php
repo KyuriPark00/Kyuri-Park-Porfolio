@@ -3,7 +3,7 @@
 $host = 'localhost';  // WAMP의 기본 호스트
 $username = 'root';   // WAMP 기본 사용자
 $password = '';       // 기본 비밀번호는 빈 문자열
-$dbname = 'portfolio'; // 데이터베이스 이름
+$dbname = 'newportfolio'; // 데이터베이스 이름
 
 $conn = new mysqli($host, $username, $password, $dbname);
 
