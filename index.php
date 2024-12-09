@@ -1,8 +1,7 @@
 <?php
-// Include the database connection
 include('includes/connect.php');
 
-// Fetch projects from the database
+// Fetch projects from the database 데이터베이스에서 프로젝트 테이블 페치!
 $query_projects = "SELECT * FROM projects ORDER BY year DESC";
 $projects_result = $conn->query($query_projects);
 
@@ -29,9 +28,8 @@ $projects_result = $conn->query($query_projects);
  <div id="sticky-nav-con">
       <header class="grid-con" id="main-header">
         <div id="logo" class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8">
-          <img src="images/logo.svg" alt="KP Logo" />
+          <a href="index.php"><img src="images/logo.svg" alt="KP Logo" /></a>
         </div>
-
 
         <?php
         $current_page = basename($_SERVER['PHP_SELF']); // 현재 파일 이름 가져오기
@@ -53,7 +51,7 @@ $projects_result = $conn->query($query_projects);
         <div id="mobile_dropdown_menu">
           <ul>
             <li><a href="index.php">Projects</a></li>
-            <li><a href="anout.html">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.php">Contact</a></li>
           </ul>
         </div>
@@ -86,14 +84,15 @@ $projects_result = $conn->query($query_projects);
       </div>
     </section>
 
+    
     <section id="projects-box" class="grid-con">
         <h2 id="project-heading" class="col-span-full">Case Study</h2>
         <?php
         $project_links = [
-            1 => 'quatro.php',    // Quatro
-            2 => 'vybe.php',      // Vybe
-            3 => 'industry.php',  // Industry Night
-            4 => 'demoreel.php'   // Demo Reel
+            1 => 'quatro.php',  
+            2 => 'vybe.php',    
+            3 => 'industry.php',  
+            4 => 'demoreel.php'   
         ];
 
         $column_counter = 1;
@@ -110,7 +109,7 @@ $projects_result = $conn->query($query_projects);
                 }
             }
 
-            // Get the project link based on project ID
+            // Bring the project link based on project ID
             $project_link = $project_links[$project['id']] ?? '#';
 
             $grid_start = ($column_counter % 2 === 1) ? 1 : 8;
@@ -143,7 +142,7 @@ $projects_result = $conn->query($query_projects);
   
   <footer>
     <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-    <a href="https://github.com/KyuriPark00">
+    <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
       <img src="images/linkedin_2.svg" alt="LinkedIn icon">
     </a>
   </footer>
@@ -156,6 +155,5 @@ $projects_result = $conn->query($query_projects);
 </html>
 
 <?php
-// Close the database connection
 $conn->close();
 ?>
