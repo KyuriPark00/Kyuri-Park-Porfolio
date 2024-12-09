@@ -1,50 +1,109 @@
-# Kyuri-Park-Porfolio
-This is a portfolio website created to showcase projects and skills. The site uses HTML, SCSS, and JavaScript to create a dynamic, responsive experience for users. It includes sections like "About Me" and "Projects" with hover effects, animations, and media queries for mobile responsiveness.
+# Kyuri Park's Portfolio
+<br>
 
-## Technologies Used
-* HTML5
-* SCSS
-* JavaScript
-* PHP
+<img src="images/logo-white.svg" alt="Kyuri Park Logo" width="100" /> Welcome to my portfolio! This project showcases my skills and work as a **front-end developer** and **designer**. The portfolio includes various sections to highlight my **case studies**, **demo reel**, and **contact information**. 
 
-## Installation
-1. Clone the repository:
-git clone https://github.com/YourUsername/Kyuri-Park-Portfolio.git
+## Live Preview 🚀
+Access the live version of my portfolio at [Kyuri Park Portfolio](#).
 
-2. Navigate to the project directory:
-cd Kyuri-Park-Portfolio
+---
 
-3. Compile SCSS to CSS (if using Sass CLI):
-sass --watch src/scss:dist/css
+## 📂 Project Structure
+
+### Pages 📝
+
+| Page Name       | Description                                                                 |
+|-----------------|-----------------------------------------------------------------------------|
+| `index.php`     | Landing page featuring projects and a demo reel.                            |
+| `about.html`    | Static page providing information about me.                                 |
+| `contact.php`   | Page with a form for visitors to contact me.                                |
+| `quatro.php`    | Detail page for the Quatro logo and branding project.                       |
+| `vybe.php`      | Detail page for the Vybe Pro Max earbuds project.                           |
+| `industry.php`  | Detail page for my industry experience and projects.                        |
+| `demoreel.php`  | Page showcasing my 2024 demo reel.                                          |
+| `thank_you.php` | Thank-you page displayed after form submission.                             |
+
+---
+
+## ✨ Features
+
+1. **Projects Section**:  
+   Displays a grid of projects dynamically fetched from a database, including thumbnails, titles, and short descriptions.
+
+2. **Demo Reel**:  
+   Highlights my video reel for 2024 with a description and links to my **GitHub**, **Instagram**, and **LinkedIn**. 🎥
+
+3. **Navigation**:  
+   Responsive main navigation with an active page indicator. 🧭
+
+4. **Contact Form**:  
+   Allows visitors to send messages directly from the site. ✉️
+
+5. **Resume Download**:  
+   Provides a downloadable PDF version of my resume. 📄
+
+---
+
+## 💻 Technologies Used
+
+- **Frontend**:  
+  - HTML5, CSS3, **SCSS (SASS)**, JavaScript  
+  - [GSAP](https://greensock.com/gsap/) for animations 🎞️  
+  - [Plyr](https://plyr.io/) for video playback 🎬  
+  - FontAwesome for icons ⚙️
+
+- **SASS Usage**:  
+  This project utilizes **SCSS (a SASS syntax)** for better management of styles. SCSS variables, mixins, and nesting are used to ensure the CSS is **modular**, **reusable**, and **maintainable**. 🔧
+
+  Example SCSS Variables:
+  ```scss
+  $primary-color: #5B5B5B;
+  $secondary-color: #fff;
+  $accent-color: #1E1E1E;
+  $orange-color: #EB4E00;
+  $main-blue: #008993;
+  $body-font-family: "Noto serif", serif;
+- **Backend**: 
+    - PHP 🖥️
+    - MySQL Database 🗃️
+
+## 🛠️ Tools
+
+- Google Fonts (Noto Serif) 🌐
+- GitHub for version control 🌐
+
+### Database Configuration:
+
+```php
+$servername = "localhost";
+$username = "root";
+$password = " ";
+$dbname = "newportfolio"; 
+```
 
 
-## Usage
-Open index.html in a web browser to view the portfolio. You can make modifications to the SCSS files in the src/scss folder and compile them to CSS to see live changes.
+## 📜 History
+This project was created as a personal portfolio to showcase my skills in front-end development and design. I started working on this project in 2024 and it has been continuously updated with new projects and features.
 
-## Folder Structure
-* src/ - Contains SCSS files, scripts, and HTML templates
-* abstracts/ - Variables, mixins, media queries
-* base/ - Reset and global styles
-* components/ - Reusable components like buttons, cards, etc.
-* pages/ - Styles specific to each page
+## 🎓 Credits
+Design: Kyuri Park
 
-## Development Notes
-* The SCSS is organized to include abstracts, base, components, and page-specific styles.
-* Media Queries: Located in abstracts/_mediaqueries.scss to standardize responsive design.
-* Logo Design: Baby pink handwriting typography with a flower as the dot in "I."
+Icons: FontAwesome
 
-## Contributing
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+Animations: GSAP
 
-## History
-TODO: Write history
+Video Playback: Plyr
 
-## Credits
-Kyuri Park (Hailie)
+Fonts: Google Fonts - Noto Serif
 
-## License
-This project is licensed under the MIT License.
+## 📄 License
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## 📞 Contact
+Feel free to reach out if you have any questions or opportunities! 😊
+
+Email: Hailiepark1216@gmail.com 📧
+
+LinkedIn: https://www.linkedin.com/in/hailie-park-93a6a2328/ 💼
+
+GitHub: https://github.com/KyuriPark00 🖥️
