@@ -17,7 +17,8 @@
     display: none;
   }
 
-  ul {
+  #burger-con {
+    ul {
     list-style: none;
     padding: 0;
     position: relative;
@@ -25,6 +26,7 @@
     /* 이걸로 위아래 위치 조정 */
 
     li {
+      
       a {
         display: block;
         margin-right: 10px;
@@ -44,8 +46,8 @@
       }
     }
   }
+  }
 }
-
 
 #mobile_dropdown_menu {
   display: none;
@@ -251,13 +253,20 @@
   }
 
   #projects-box {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
     padding-top: 40px;
 
+    #project-heading {
+      margin-bottom: 40px !important;
+    }
     div {
 
-      margin-top: 20px;
+      margin-top: 60px;
+
+      &:nth-of-type(1) {
+        margin-top: 0 !important;
+      }
 
       img {
         width: 100%;
@@ -278,6 +287,7 @@
       }
     }
   }
+  
   /* ------------ About page ------------ */
   #about-con {
 
@@ -342,8 +352,9 @@
     }
   }
 
+
   #about-footer {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 
   /* ------------ Contact Page ------------ */
@@ -747,8 +758,18 @@
   }
 }
 
+/* ---Tablet Library Grid Styles--- */
+.thank-you-wrapper {
+
+
+  .thank-you-message {
+      width: 400px;
+  }
+}
 
 }  
+
+
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
   .case-study-body {
@@ -862,6 +883,33 @@
     padding-left: 30px;
     padding-top: 60px;
 
+    #project-heading {
+      margin-bottom: 40px !important;
+    }
+    div {
+
+      margin-top: 0 !important;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        border-radius: 15px;;
+        height: 250px;
+      }
+
+      .overlay {
+      
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+
     div {
       img {
         width: 100%;
@@ -943,8 +991,9 @@
     }
   }
   
+
   #about-footer {
-    margin-top: 350px;
+    margin-top: 300px;
   }
 
   
@@ -1235,6 +1284,15 @@
       margin-bottom: 40px;
   }
 }
+
+/* ---Tablet Library Grid Styles--- */
+.thank-you-wrapper {
+
+  .thank-you-message {
+      width: 400px;
+  }
+}
+
 }
 
 
@@ -1450,7 +1508,7 @@
       }
     }
   }
-  
+
   #about-footer {
     margin-top: 400px;
   }

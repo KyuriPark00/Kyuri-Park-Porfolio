@@ -43,7 +43,7 @@ while ($media = $mediaResult->fetch_assoc()) {
    <div id="sticky-nav-con">
       <header class="grid-con" id="main-header">
         <div id="logo" class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8">
-          <img src="images/logo.svg" alt="KP Logo" />
+          <a href="index.php"><img src="images/logo.svg" alt="KP Logo" /></a>
         </div>
 
         <?php
@@ -137,9 +137,18 @@ while ($media = $mediaResult->fetch_assoc()) {
       </section>
     </div>
     
+    <br><br><br>
+    <br><br><br>
+
+    <div class="grid-con">
+        <button class="col-span-full" id="top-button">
+        <img src="images/top-button.png" alt="top button">
+        </button>
+    </div>
+    
     <footer>
       <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-      <a href="https://github.com/KyuriPark00">
+      <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
           <img src="images/linkedin_2.svg" alt="Linkedin icon">
       </a>
     </footer>

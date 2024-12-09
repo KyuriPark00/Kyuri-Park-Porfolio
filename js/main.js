@@ -100,5 +100,26 @@
     updatePosterWidth();
   });
 
+  document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = window.location.pathname.split("/").pop();
+    const navLinks = document.querySelectorAll("#burger-con a"); // burger-con 내부의 a 태그만 선택
   
+    navLinks.forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // Top Button(Scroll button)
+  document.addEventListener("DOMContentLoaded", function() {
+    const topButton = document.getElementById("top-button");
+
+    topButton.addEventListener("click", function(){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
 })();
