@@ -46,6 +46,7 @@
   }
 }
 
+
 #mobile_dropdown_menu {
   display: none;
   position: absolute;
@@ -716,6 +717,33 @@
       margin-bottom: 30px;
   }
 }
+
+#top-button {
+  margin: 0 auto !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  max-width: 150px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* 애니메이션 전환 추가 */
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover img {
+    opacity: 0.8; 
+    transform: scale(1.1); 
+  }
+}
+
 
 }  
 /* ---Tablet Library Grid Styles--- */

@@ -56,11 +56,30 @@
     </div>
 
     <section id="profile-box" class="grid-con">
-        <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-            <h2>It’s Kyuri,<br> Your Favorite Front-end Developer!</h2>
-            <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
-        </div>
+      <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
+        <h2>It’s Kyuri,<br> Your Favorite Front-end Developer!</h2>
+        <!-- <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p> -->
+      </div>
     </section> 
+
+    <section id="demo-reel-con" class="grid-con">
+      <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
+        <video class="player" controls preload="metadata" poster="images/demoreel-thumnail.jpg">
+          <source src="video/2024-demoreel.mp4" type="video/mp4">
+          <p>Uh Oh, your browser does not support this Video!</p>
+        </video>
+      </div> 
+
+      <div id="demo-reel-description" class="col-span-full m-col-start-8 m-col-end-14">
+        <h2>2024 Demo Reel</h2>
+        <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
+        <div id="social-media-con">
+          <a href="#"><button>Github</button></a>
+          <a href="#"><button>Instagram</button></a>
+          <a href="#"><button>LinkedIn</button></a>
+        </div>
+      </div>
+    </section>
 
     <section id="projects-box" class="grid-con">
       <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
@@ -83,9 +102,9 @@
         </a>
       </div>
     
-      <div class="col-span-full m-col-span-full l-col-span-full">
+      <div class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
         <a href="#" class="project_link">
-          <img class="thumnail_image" src="images/industrynight-thumbnail.jpg" alt="thumnail of Industry Night">
+          <img class="thumnail_image" src="images/industry-night-thumbnail.jpg" alt="thumnail of Industry Night">
           <div class="overlay">
             <h3 class="title">Industry Night</h3>
             <p class="short_description">Website / Design</p>
@@ -93,7 +112,7 @@
         </a>
       </div>
     
-      <div class="col-span-full m-col-span-full l-col-span-full">
+      <div class="col-span-full m-col-start-8 m-col-end-14 l-col-start-8 l-col-end-14">
         <a href="#"  class="project_link">
           <img class="thumnail_image" src="images/demoreel-thumnail.jpg" alt="thumnail of Demo Reel">
           <div class="overlay">
@@ -102,17 +121,6 @@
           </div>
         </a>
       </div>
-    </section>
-
-    <section id="demo-reel-con" class="grid-con">
-      <div id="player-container" class="col-span-full">
-        <video class="player" controls preload="metadata"
-        poster="images/demoreel-thumnail.jpg">
-            <source src="video/video.mp4" type="video/mp4">
-            <source src="video/video.webm" type="video/webm">
-            <p>Uh Oh, your browers does not support this Video!</p>
-        </video>
-      </div> 
     </section>
     
     <section id="resume">
