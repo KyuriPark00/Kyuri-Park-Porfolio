@@ -3,8 +3,6 @@
 
 <img src="images/logo-white.svg" alt="Kyuri Park Logo" width="100" /> Welcome to my portfolio! This project showcases my skills and work as a **front-end developer** and **designer**. The portfolio includes various sections to highlight my **case studies**, **demo reel**, and **contact information**. 
 
-## Live Preview 🚀
-Access the live version of my portfolio at [Kyuri Park Portfolio](#).
 
 ---
 
