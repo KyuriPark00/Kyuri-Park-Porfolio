@@ -25,38 +25,32 @@ $projects_result = $conn->query($query_projects);
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
  <!-- Main Nav -->
- <div id="sticky-nav-con">
-      <header class="grid-con" id="main-header">
-        <div id="logo" class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8">
-          <a href="index.php"><img src="images/logo.svg" alt="KP Logo" /></a>
-        </div>
+ <header class="grid-con">        
+        <button id="hamburger">&#9776;</button>
 
-        <?php
-        $current_page = basename($_SERVER['PHP_SELF']); // 현재 파일 이름 가져오기
-        ?>
-        <nav id="main-nav" class="col-start-5 col-end-6 m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9">
-          <div id="burger-con">
-            <h2 class="hidden">Main Nav</h2>
-            <ul>
-              <li><a href="index.php" class="<?= $current_page == 'index.php' ? 'active' : '' ?>">Projects</a></li>
-              <li><a href="about.html" class="<?= $current_page == 'about.html' ? 'active' : '' ?>">About</a></li>
-              <li><a href="contact.php" class="<?= $current_page == 'contact.php' ? 'active' : '' ?>">Contact</a></li>
-            </ul>
-          </div>
-          <div class="toggle_button">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        
-        <div id="mobile_dropdown_menu">
+        <div><a href="#"><img src="images/logo.svg" alt="KP Logo"/></a></div>
+        <nav id="desktop-nav" class="col-span-full m-col-start-11">
           <ul>
-            <li><a href="index.php">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <!-- <li><a href="#"><img src="../images/logo.svg" alt="KP Logo"/></a></li> -->
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
+        </nav>
+  </header>
+
+  <div id="menu" class="overlay">
+    <button id="close">&times;</button>
+      <div>
+        <nav>
+          <ul>
+            <li><a href="#home">Projects</a></li>
+            <li><a href="#about">Articles</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
         </div>
-      </header>
-    </div>
+  </div>
 
   <!-- Profile Section -->
   <section id="profile-box" class="grid-con">
@@ -65,7 +59,7 @@ $projects_result = $conn->query($query_projects);
     </div>
   </section>
 
-  <section id="demo-reel-con" class="grid-con">
+  <!-- <section id="demo-reel-con" class="grid-con">
       <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
         <video class="player" controls preload="metadata" poster="images/demoreel-thumnail.jpg">
           <source src="video/2024-demoreel.mp4" type="video/mp4">
@@ -82,7 +76,7 @@ $projects_result = $conn->query($query_projects);
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
         </div>
       </div>
-    </section>
+    </section> -->
 
     
     <section id="projects-box" class="grid-con">
