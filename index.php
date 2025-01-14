@@ -25,12 +25,13 @@ $projects_result = $conn->query($query_projects);
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
  <!-- Main Nav -->
- <header class="grid-con">        
+ <header>        
         <button id="hamburger">&#9776;</button>
 
-        <div><a href="#"><img src="images/logo.svg" alt="KP Logo"/></a></div>
-        <nav id="desktop-nav" class="col-span-full m-col-start-11">
-          <ul>
+        <a href="#"><img src="images/logo.svg" alt="KP Logo"/></a>
+        
+        <nav id="desktop-nav">
+          <ul>  
             <!-- <li><a href="#"><img src="../images/logo.svg" alt="KP Logo"/></a></li> -->
             <li><a href="#">Projects</a></li>
             <li><a href="#">Articles</a></li>
