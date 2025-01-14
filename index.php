@@ -26,9 +26,8 @@ $projects_result = $conn->query($query_projects);
 
  <!-- Main Nav -->
  <header>        
+        <div id="logo-con"><a href="#"><img src="images/1.png" alt="KP Logo"/></a></div>
         <button id="hamburger">&#9776;</button>
-
-        <a href="#"><img src="images/logo.svg" alt="KP Logo"/></a>
         
         <nav id="desktop-nav">
           <ul>  
