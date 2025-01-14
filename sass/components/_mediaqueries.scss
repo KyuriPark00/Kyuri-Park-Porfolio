@@ -1,0 +1,1482 @@
+@use '../abstracts' as a;
+
+
+/* ---Mobile Library Grid Style--- */
+@media screen and (min-width: 480px) {
+  .case-study-body {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .Heading {
+    font-size: 30px !important;
+    color: a.$accent-color;
+  }
+  
+  /* ------------ projects-box ------------ */
+  // demo-reel-con
+  #demo-reel-description {
+
+    margin-top: 30px;
+
+    #social-media-con {
+      button {
+        margin-right: 10px;
+        padding: 4px 10px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+  }
+
+  #projects-box {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 40px;
+
+    #project-heading {
+      margin-bottom: 40px !important;
+    }
+    div {
+
+      margin-top: 60px;
+
+      &:nth-of-type(1) {
+        margin-top: 0 !important;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 15px;;
+        height: 250px;
+      }
+
+      .overlay {
+      
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  
+  /* ------------ About page ------------ */
+  #about-con {
+
+    #about-name {
+
+      position: relative;
+      top: 90px;
+      left: 18px;
+      
+      h2 {
+        font-size: 50px;
+        line-height: 70px;
+      }
+
+      #about-name-icons {
+        width: 110px;
+        display: flex;
+        column-gap: 6px;
+        position: relative;
+        top: 80px;
+      }
+
+    }
+
+    #about-img {
+      position: relative;
+      top: -200px;
+      right: -10px;
+    }
+
+    #about-text {
+     position: relative;
+     top: -180px;
+     margin: 0 auto;
+     padding: 0 10px;
+    }
+  }
+
+  #skills-con {
+    position: relative;
+    top: -100px;
+
+    h2 {
+      color: a.$main-blue;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    #skill-box {
+      flex-direction: column;
+      row-gap: 40px;
+      text-align: center;
+
+      .skill-details {
+        h3 {
+          font-size: 25px;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+
+  #about-footer {
+    margin-top: 40px;
+  }
+
+  /* ------------ Contact Page ------------ */
+  #contact-me-con {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  #contact-form-con {
+    form {
+
+      div {
+        text-align: center;
+        margin-top: 30px;
+
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  /* ------------ Quatro Page ------------ */
+  #quatro-hero {
+    margin-top: 30px;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 15px;
+        }
+    }
+
+
+  #quatro-details-con {
+    margin-top: 70px;
+    display: block;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+
+    #quatro-team-year {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 100px;
+
+    }
+  }
+
+  #what-I-did-con {
+    padding: 0;
+    h2 {
+      font-size: 22px;
+    }
+
+    h2 {
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    .what-I-did {
+        margin-bottom: 40px;
+
+        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            font-size: 15px;
+          }
+            display: flex;
+            font-weight: 500;
+            column-gap: 40px;
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    }
+}
+
+#design-principal-con {
+
+  margin-top: 70px;
+
+  #design-principal-box {
+    margin-top: 20px;
+    flex-direction: column;
+    row-gap: 30px;
+  
+   .design-principal {
+  
+      padding: 20px;
+  
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 15px;
+        padding: 0;
+        margin: 0;
+      }
+   }
+  }
+}
+
+#logo-specs-con {
+  margin-top: 80px;
+
+  .logo-specs-detail {
+    &:first-child {
+      margin-bottom: 30px;
+    }
+    h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+#devices-con {
+  margin-top: 80px;
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .entry-point {
+    margin-bottom: 10px;
+    margin-top: 30px;
+  }
+
+  .entry-point-h3  {
+    margin-bottom: 10px;
+  }
+}
+
+#wireframingSketches {
+  margin-top: 80px;
+}
+
+#branding-video-con {
+  margin-top: 80px;
+
+  h2{
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+#wireframingSketches, #branding-video-con {
+  h2 {
+    margin-bottom: 20px;
+  }
+}
+
+ /* ------------ Vybe Page ------------ */
+ .vybe-hero {
+  margin-top: 30px !important;
+  text-align: center;
+  
+  #vybe-github {
+      margin-top: 20px;
+      font-size: 15px;
+      }
+  }
+
+
+#vybe-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #vybe-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+  }
+}
+
+#slider-wrap {
+  margin-top: 80px;
+  
+  #slider-heading {
+    margin-bottom: 20px;
+  }
+
+  #poster-details {
+    h2 {
+      margin-bottom: 10px;
+      margin-top: 30px;
+    }
+  
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/* ------------ Quatro Page ------------ */
+  #quatro-hero {
+    margin-top: 30px;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 15px;
+        }
+    }
+
+
+  #quatro-details-con {
+    margin-top: 70px;
+    display: block;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 15px;
+    }
+
+
+    #quatro-team-year {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 100px;
+
+    }
+  }
+/* ------------ Industry Night Page ------------ */
+#industry-hero {
+  margin-top: 30px;
+  text-align: center;
+  
+  button {
+      margin-top: 20px;
+      font-size: 15px;
+      }
+  }
+
+
+#industry-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #industry-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+  }
+}
+
+ /* ------------ Demo Reel Page ------------ */
+ .demo-hero {
+  margin-top: 30px !important;
+  text-align: center;
+  }
+
+
+#demo-details-con {
+  margin-top: 70px;
+  display: block;
+
+  h2{
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+
+  #demo-team-year {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+
+  }
+}
+
+
+.storyboard-img {
+  img {
+      margin-bottom: 30px;
+  }
+}
+
+#top-button {
+  margin: 0 auto !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  display: inline-block !important;
+  max-width: 150px;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* 애니메이션 전환 추가 */
+
+  img {
+    width: 100% !important;
+    height: auto !important;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover img {
+    opacity: 0.8; 
+    transform: scale(1.1); 
+  }
+}
+
+/* ---Tablet Library Grid Styles--- */
+.thank-you-wrapper {
+
+
+  .thank-you-message {
+      width: 400px;
+  }
+}
+
+}  
+
+
+/* ---Tablet Library Grid Styles--- */
+@media screen and (min-width: 768px) {
+  .case-study-body {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .Heading {
+    font-size: 30px !important;
+  }
+
+  body { margin-right: 10px; margin-left: 10px;}
+
+  // Demo-reel
+  #demo-reel-con {
+
+    margin-top: 20px;
+    #demo-reel-description {
+      margin: 0;
+
+      #social-media-con {
+
+        margin-top: 10px;
+        
+        button {
+          background-color: transparent;
+          padding: 5px 10px;
+          margin-right: 15px;
+          font-weight: 500;
+          font-size: 15px;
+          margin-top: 10px;
+          transition: all 0.3s ease;  // 부드러운 변화를 위한 트랜지션
+  
+          &:hover {
+            background-color: a.$main-blue;
+            color: #fff;
+            border-radius: 10px;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 15px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  /* ------------ projects-box ------------ */
+  #projects-box {
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 60px;
+
+    #project-heading {
+      margin-bottom: 40px !important;
+    }
+    div {
+
+      margin-top: 0 !important;
+      margin-bottom: 50px;
+
+      img {
+        width: 100%;
+        border-radius: 15px;;
+        height: 250px;
+      }
+
+      .overlay {
+      
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    div {
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 250px; /* 이미지 높이 줄이기 */
+      }
+
+      .overlay {
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  /* ------------ About page ------------ */
+  #about-con {
+    #about-name {
+      position: relative;
+      left: 50px;
+      top: 150px;
+
+      h2{
+        font-size: 70px;
+        line-height: 90px;
+        font-weight: 500;
+      }
+
+      #about-name-icons {
+        width: 150px;
+        display: flex;
+        column-gap: 12px;
+        position: relative;
+        top: 50px;
+      }
+    }
+
+    #about-img {
+      position: relative;
+      top: 100px;
+      left: 50px;
+    }
+
+    #about-text {
+      position: relative;
+      top: 170px;
+      p{
+        padding-right: 40px;
+        margin-bottom: 10px;
+        position: relative;
+        &:first-child, &:nth-child(2){
+          left: -20px;
+        }
+
+        &:nth-child(3) {
+          left: 30px;
+        }
+
+        &:last-child {
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  #skills-con {
+    position: relative;
+    top: 200px;
+
+    #skill-box {
+      flex-direction: row;
+      column-gap: 170px;
+      justify-content: center;
+    }
+  }
+  
+
+  #about-footer {
+    margin-top: 300px;
+  }
+
+  
+   /* ------------ Quatro Page ------------ */
+   #quatro-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 18px;
+        }
+    }
+
+   #quatro-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #quatro-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
+
+  #what-I-did-con {
+    padding: 0;
+    h2 {
+      font-size: 22px;
+    }
+
+    h2 {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    .what-I-did {
+        margin-bottom: 40px;
+
+        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            font-size: 18px;
+          }
+            display: flex;
+            font-weight: 500;
+            column-gap: 40px;
+        }
+
+        #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            position: relative;
+            top: 12px
+          }
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    }
+  }
+
+  #design-principal-con {
+
+    margin-top: 80px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    #design-principal-box {
+      margin-top: 20px;
+      flex-direction: column;
+      row-gap: 30px;
+    
+     .design-principal {
+    
+        padding: 20px;
+    
+        h3 {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+    
+        p {
+          font-size: 18px;
+          padding: 0;
+          margin: 0;
+        }
+     }
+    }
+  }
+
+  #logo-specs-con {
+    margin-top: 80px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .logo-specs-detail {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 18px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #devices-con {
+    margin-top: 80px;
+  
+    h3 {
+      font-size: 18px;
+    }
+
+    .entry-point {
+      margin-bottom: 15px;
+      margin-top: 50px;
+    }
+  
+    .entry-point-h3 {
+      margin-bottom: 15px;
+    }
+  }
+
+  #wireframingSketches {
+    margin-top: 80px;
+  }
+  
+  /* ------------ Vybe Page ------------ */
+  .vybe-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    #vybe-github {
+        margin-top: 20px;
+        font-size: 18px;
+        }
+    }
+
+   #vybe-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #vybe-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
+
+  #slider-wrap {
+    margin-top: 80px;
+
+    #poster-details {
+      h2 {
+        margin-bottom: 15px;
+        margin-top: 50px;
+      }
+    
+      h3 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  /* ------------ Quatro Page ------------ */
+  #industry-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 18px;
+        }
+    }
+
+   #industry-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    #industry-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+      #industry {
+        width: 170px;
+      }
+    }
+  }
+
+  /* ------------ Demo Reel Page ------------ */
+  .demo-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    }
+
+   #demo-details-con {
+    display: flex;
+    column-gap: 90px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+
+    #demo-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 50px;
+
+    }
+  }
+
+  
+.storyboard-img {
+  img {
+      margin-bottom: 40px;
+  }
+}
+
+/* ---Tablet Library Grid Styles--- */
+.thank-you-wrapper {
+
+  .thank-you-message {
+      width: 400px;
+  }
+}
+
+}
+
+
+/* ---Desktop Library Grid Styles--- */
+@media screen and (min-width: 1200px) {
+  .case-study-body {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+
+  .Heading {
+    font-size: 40px !important;
+  }
+
+  body { margin-right: 80px; margin-left: 80px;}
+  
+  //Demo reel
+  #demo-reel-con {
+
+    margin-top: 30px;
+    #demo-reel-description {
+
+      margin-top: 30px;
+
+      #social-media-con {
+
+        button {
+          background-color: transparent;
+          padding: 5px 15px;
+          margin-right: 20px;
+          font-weight: 500;
+          font-size: 18px;
+          margin-top: 10px;
+  
+          &:hover {
+            background-color: a.$main-blue;
+            color: #fff;
+            border-radius: 10px;
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  /* ------------ projects-box ------------ */
+  #projects-box {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 80px;
+  
+    div {
+
+      position: relative; 
+  
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+        border-radius: 15px;;
+        margin-top: 40px;
+        transition: transform 0.3s ease, filter 0.3s ease;
+      }
+  
+      h3 {
+        font-size: 40px !important;
+      }
+  
+      p {
+        font-size: 20px !important;
+        font-weight: 500 !important;;
+      }
+    }
+  }
+  
+  /* ------------ About page ------------ */
+  #about-con {
+    #about-name {
+      position: relative;
+      left: 50px;
+      top: 150px;
+
+      h2{
+        font-size: 100px;
+        line-height: 150px;
+        font-weight: 500;
+      }
+
+      #about-name-icons {
+        width: 200px;
+        display: flex;
+        column-gap: 12px;
+        position: relative;
+        top: 60px;
+      }
+    }
+
+    #about-img {
+      position: relative;
+      top: 100px;
+      left: 80px;
+    }
+
+    #about-text {
+      position: relative;
+      top: 200px;
+      p{
+        font-size: 20px;
+        padding-right: 40px;
+        margin-bottom: 30px;
+        position: relative;
+        &:first-child, &:nth-child(2){
+          left: -50px;
+        }
+
+        &:nth-child(3) {
+          left: 30px;
+        }
+
+        &:last-child {
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  #skills-con {
+    position: relative;
+    top: 250px;
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    #skill-box {
+      flex-direction: row;
+      column-gap: 220px;
+      justify-content: center;
+
+      .skill-details {
+        h3 {
+          margin-bottom: 30px;
+        }
+        p {
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #about-footer {
+    margin-top: 400px;
+  }
+
+  /* ------------ Quatro Page ------------ */
+  #quatro-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    button {
+        margin-top: 20px;
+        font-size: 19px;
+        }
+    }
+
+  #quatro-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #quatro-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+
+  #what-I-did-con {
+
+    margin-top: 80px;
+
+    .what-I-did {
+      margin-bottom: 40px;
+
+      #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+        div {
+          font-size: 19px;
+        }
+          display: flex;
+          font-weight: 500;
+          column-gap: 40px;
+      }
+
+      #logo-design, #web-design, #label-design {
+        div {
+          font-size: 19px;
+          position: relative;
+          top: 12px
+        }
+      }
+
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
+    }
+  }
+
+  #design-principal-con {
+
+    margin-top: 80px;
+  
+    #design-principal-box {
+      margin-top: 20px;
+      flex-direction: row;
+      column-gap: 60px;
+    
+     .design-principal {
+
+        width: 400px;
+        padding: 30px 40px;
+    
+        h3 {
+          font-size: 22px;
+          margin-bottom: 20px;
+        }
+    
+        p {
+          font-size: 19px;
+          padding: 0;
+          margin: 0;
+        }
+     }
+    }
+  }
+
+  #logo-specs-con {
+    margin-top: 100px;
+  
+    .logo-specs-detail {
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 19px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+
+  #devices-con {
+    margin-top: 100px;
+
+    p {
+      font-size: 19px;
+      margin-top: 10px;
+    }
+
+    .entry-point {
+      margin-bottom: 20px;
+      margin-top: 50px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+
+    .entry-point-h3 {
+      margin-bottom: 20px;
+    }
+  }
+  
+  #wireframingSketches {
+    margin-top: 100px;
+  }
+
+
+  /* ------------ Vybe Page ------------ */
+  .vybe-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    #vybe-github {
+        margin-top: 20px;
+        font-size: 19px;
+        }
+    }
+
+  #vybe-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #vybe-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+
+  #slider-wrap {
+    margin-top: 100px;
+
+    #poster-details {
+      h2 {
+        margin-bottom: 20px;
+        margin-top: 50px;
+        font-size: 30px;
+      }
+    
+      h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  /* ------------ Industry Night Page ------------ */
+  #industry-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    
+    #industry-github {
+        margin-top: 20px;
+        font-size: 19px;
+        }
+    }
+
+  #industry-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #industry-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+
+  
+  /* ------------ Demo Reel Page ------------ */
+  .demo-hero {
+    margin-top: 60px !important;
+    text-align: center;
+    }
+
+  #demo-details-con {
+    padding: 0 20px;
+    display: flex;
+    column-gap: 100px;
+
+    h2{
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+
+    #demo-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
+    }
+  }
+    
+.storyboard-img {
+  img {
+      margin-bottom: 50px;
+  }
+}
+}
+
