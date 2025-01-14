@@ -30,27 +30,25 @@ $projects_result = $conn->query($query_projects);
         <button id="hamburger">&#9776;</button>
         
         <nav id="desktop-nav">
-          <ul>  
-            <!-- <li><a href="#"><img src="../images/logo.svg" alt="KP Logo"/></a></li> -->
+          <ul> 
             <li><a href="#">Projects</a></li>
             <li><a href="#">Articles</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
   </header>
-
   <div id="menu" class="overlay">
-    <button id="close">&times;</button>
-      <div>
+        <button id="close">&times;</button>
         <nav>
-          <ul>
-            <li><a href="#home">Projects</a></li>
-            <li><a href="#about">Articles</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-        </div>
-  </div>
+    </div>
+
 
   <!-- Profile Section -->
   <section id="profile-box" class="grid-con">

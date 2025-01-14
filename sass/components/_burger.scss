@@ -1,7 +1,42 @@
 @use '../abstracts' as a;
 
-ul, li {
-    margin: 0;
-    padding: 0;
+header {
+    display: flex;
+    justify-content: space-between; /* Distributes space between logo and nav */
+    align-items: center;            /* Centers items vertically */
+    padding: 0 1em;
+    background-color: #60c383;
+    #logo-con a img {
+      width: 40px;
+      height: 40px;
+    }
+
+    #desktop-nav {
+        background-color: aqua;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+
+            li {
+                margin-right: 2em;
+                padding: 0;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    text-decoration: none;
+                    color: a.$accent-color;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
 }
 
