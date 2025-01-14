@@ -5,7 +5,11 @@ header {
     justify-content: space-between; /* Distributes space between logo and nav */
     align-items: center;            /* Centers items vertically */
     padding: 0 1em;
-
+    background-color: #60c383;
+    #logo-con a img {
+      width: 40px;
+      height: 40px;
+    }
 
     #desktop-nav {
         background-color: aqua;
@@ -91,6 +95,7 @@ header {
 @media screen and (min-width: 480px) {
     #hamburger{
        display: flex;
+       visibility: visible;
     }
     #desktop-nav {
        display: none;
