@@ -26,11 +26,9 @@ $projects_result = $conn->query($query_projects);
 
  <!-- Main Nav -->
  <header>
-      <!-- It's only can be shown on mobile ver -->
       <div id="logo"><a href="#"><img src="images/logo_thin.png" alt="logo"></a></div>
       <button id="hamburger">&#9776;</button>
 
-      <!-- Hidden on mobile ver -->
       <nav id="desktop-nav">
           <ul>
               <li><a href="#">Projects</a></li>
@@ -55,7 +53,15 @@ $projects_result = $conn->query($query_projects);
   <!-- Profile Section -->
   <section id="profile-box" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-      <h2>It’s Kyuri,<br>Your Favorite Front-end Developer!</h2>
+      <h2>It’s Kyuri,<br>Your Designer, Software Engineer</h2>
+      <h3>Designing with purpose, developing with precision.</h3>
+
+      <div id="professional-sns-con">
+          <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
+          <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
+          <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
+          <a href="demoreel.php"><button>Demoreel</button></a>
+      </div>
     </div>
   </section>
 
@@ -70,7 +76,7 @@ $projects_result = $conn->query($query_projects);
       <div id="demo-reel-description" class="col-span-full m-col-start-8 m-col-end-14">
         <h2>2024 Demo Reel</h2>
         <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
-        <div id="social-media-con">
+        <div id="professional-sns-con">
           <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
           <a href="https://www.instagram.com/kyuri_hailie/"><button>Instagram</button></a>
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>

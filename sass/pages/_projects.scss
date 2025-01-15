@@ -1,69 +1,42 @@
 @use '../abstracts' as a;
 
+/*-------------- Default  --------------*/
+/*-- Profile Box --*/
 #profile-box {
   text-align: center;
-  margin-top: 10%;
-
   h2 {
     color: a.$accent-color;
-    font-weight: 900;
-  }
-}
-
-// Demo reel 
-
-// Video Custom
-:root {
-  --plyr-color-main: #008993; /* 메인 색상 */
-  --plyr-control-icon-size: 18px; /* 아이콘 크기 */
-  --plyr-control-spacing: 12px; /* 컨트롤 간 간격 */
-  --plyr-control-radius: 10px; /* 컨트롤 모서리 둥글기 */
-  --plyr-font-family: "Arial", sans-serif; /* 폰트 */
-}
-
-#demo-reel-con {
-  padding: 50px;
-  #player-container {
-    border-radius: 15px;; 
-    overflow: hidden;
-    .player {
-      border-radius: 15px;; 
-    }
+    font-weight: a.$h2-weight;
+    margin: 0;
   }
 
-  #demo-reel-description {
-    h2 {
-      font-weight: 700;
+  h3 {
+    color: a.$primary-color;
+    font-weight: a.$h3-weight;
+  }
+
+  #professional-sns-con {
+    button {
+      background-color: transparent;
+      border: solid 3px a.$main-blue;
+      border-radius: 10px;
+      font-family: a.$body-font-family;
+      font-weight: a.$navButton-font-weight;
       color: a.$main-blue;
-    }
+      transition: all 0.3s ease;
+      padding: 4px 8px; 
 
-    p {
-      font-weight: 500;
-    }
-
-    #social-media-con {
-      button {
-        background-color: transparent;
-        border: solid 2px a.$main-blue;
+      &:hover {
+        background-color: a.$main-blue;
+        color: #fff;
         border-radius: 10px;
-        font-family: a.$body-font-family;
-        font-weight: 500;
-        color: a.$main-blue;
-        transition: all 0.3s ease;  
-
-        &:hover {
-          background-color: a.$main-blue;
-          color: #fff;
-          border-radius: 10px;
-          transform: scale(1.1);
-        }
+        transform: scale(1.1);
       }
     }
   }
-  
 }
 
-// ------ Project-box -------
+/*-- Project Box --*/
 #projects-box {
 
   #project-heading {
@@ -120,6 +93,84 @@
     }
   }
 }
+
+
+/*-------------- Media Queries  --------------*/
+/*-- Mobile --*/
+@media screen and (min-width: 480px) {
+  #profile-box {
+    margin-top: a.$first-sec-margin-mobile;
+  
+    h2 {
+      font-weight: a.$h2-weight;
+      font-size: a.$h2-size-mobile;
+    }
+  
+    h3 {
+      font-weight: a.$h3-weight;
+      font-size: a.$h3-size-mobile;
+      margin: 20px 0;
+    }
+  
+    #professional-sns-con {
+      button {
+        font-size: a.$navButton-font-size-mobile;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+/*-- Tablet --*/
+@media screen and (min-width: 768px) {
+  #profile-box {
+    margin-top: a.$first-sec-margin-tablet;
+  
+    h2 {
+      font-weight: a.$h2-weight;
+      font-size: a.$h2-size-tablet;
+    }
+  
+    h3 {
+      font-weight: a.$h3-weight;
+      font-size: a.$h3-size-tablet;
+      margin: 30px 0;
+    }
+  
+    #professional-sns-con {
+      button {
+        font-size: a.$navButton-font-size-tablet;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+  
+/*-- Desktop --*/
+@media screen and (min-width: 1200px) {
+  #profile-box {
+    margin-top: a.$first-sec-margin-destop;
+  
+    h2 {
+      font-weight: a.$h2-weight;
+      font-size: a.$h2-size-desktop;
+    }
+  
+    h3 {
+      font-weight: a.$h3-weight;
+      font-size: a.$h3-size-desktop;
+      margin: 30px 0;
+    }
+  
+    #professional-sns-con {
+      button {
+        font-size: a.$navButton-font-size-desktop;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
 
 
 // Resume
