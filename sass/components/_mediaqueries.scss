@@ -13,131 +13,6 @@
     color: a.$accent-color;
   }
   
-  /* ------------ professional-sns-con ------------ */
-
-  #professional-sns-con {
-    button {
-      margin-right: 10px;
-      padding: 4px 10px;
-    }
-  }
-
-  h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  p {
-      font-weight: 500;
-      margin-bottom: 20px;
-      font-size: 15px;
-  }
-}
-
-  #projects-box {
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 40px;
-
-    #project-heading {
-      margin-bottom: 40px !important;
-    }
-    div {
-
-      margin-top: 60px;
-
-      &:nth-of-type(1) {
-        margin-top: 0 !important;
-      }
-
-      img {
-        width: 100%;
-        border-radius: 15px;;
-        height: 250px;
-      }
-
-      .overlay {
-      
-        h3 {
-          font-size: 30px;
-        }
-
-        p {
-          font-size: 20px;
-          font-weight: 500;
-        }
-      }
-    }
-  
-  /* ------------ About page ------------ */
-  #about-con {
-
-    #about-name {
-
-      position: relative;
-      top: 90px;
-      left: 18px;
-      
-      h2 {
-        font-size: 50px;
-        line-height: 70px;
-      }
-
-      #about-name-icons {
-        width: 110px;
-        display: flex;
-        column-gap: 6px;
-        position: relative;
-        top: 80px;
-      }
-
-    }
-
-    #about-img {
-      position: relative;
-      top: -200px;
-      right: -10px;
-    }
-
-    #about-text {
-     position: relative;
-     top: -180px;
-     margin: 0 auto;
-     padding: 0 10px;
-    }
-  }
-
-  #skills-con {
-    position: relative;
-    top: -100px;
-
-    h2 {
-      color: a.$main-blue;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    #skill-box {
-      flex-direction: column;
-      row-gap: 40px;
-      text-align: center;
-
-      .skill-details {
-        h3 {
-          font-size: 25px;
-        }
-        p {
-          margin-top: 10px;
-          font-size: 18px;
-        }
-      }
-    }
-  }
-
-
-  #about-footer {
-    margin-top: 40px;
-  }
-
   /* ------------ Contact Page ------------ */
   #contact-me-con {
     margin-top: 40px;
@@ -571,7 +446,7 @@
     #demo-reel-description {
       margin: 0;
 
-      #professional-sns-con {
+      #professional-sns-box{
 
         margin-top: 10px;
         
@@ -606,8 +481,8 @@
     }
   }
 
-  /* ------------ projects-box ------------ */
-  #projects-box {
+  /* ------------ projects-con ------------ */
+  #projects-con {
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 60px;
@@ -659,73 +534,6 @@
     }
   }
 
-  /* ------------ About page ------------ */
-  #about-con {
-    #about-name {
-      position: relative;
-      left: 50px;
-      top: 150px;
-
-      h2{
-        font-size: 70px;
-        line-height: 90px;
-        font-weight: 500;
-      }
-
-      #about-name-icons {
-        width: 150px;
-        display: flex;
-        column-gap: 12px;
-        position: relative;
-        top: 50px;
-      }
-    }
-
-    #about-img {
-      position: relative;
-      top: 100px;
-      left: 50px;
-    }
-
-    #about-text {
-      position: relative;
-      top: 170px;
-      p{
-        padding-right: 40px;
-        margin-bottom: 10px;
-        position: relative;
-        &:first-child, &:nth-child(2){
-          left: -20px;
-        }
-
-        &:nth-child(3) {
-          left: 30px;
-        }
-
-        &:last-child {
-          left: 40px;
-        }
-      }
-    }
-  }
-
-  #skills-con {
-    position: relative;
-    top: 200px;
-
-    #skill-box {
-      flex-direction: row;
-      column-gap: 170px;
-      justify-content: center;
-    }
-  }
-  
-
-  #about-footer {
-    margin-top: 300px;
-  }
-
-  
    /* ------------ Quatro Page ------------ */
    #quatro-hero {
     margin-top: 60px !important;
@@ -1046,7 +854,7 @@
 
       margin-top: 30px;
 
-      #professional-sns-con {
+      #professional-sns-box{
 
         button {
           background-color: transparent;
@@ -1078,8 +886,8 @@
     }
   }
 
-  /* ------------ projects-box ------------ */
-  #projects-box {
+  /* ------------ projects-con ------------ */
+  #projects-con {
     padding-right: 50px;
     padding-left: 50px;
     padding-top: 80px;
@@ -1106,86 +914,6 @@
         font-weight: 500 !important;;
       }
     }
-  }
-  
-  /* ------------ About page ------------ */
-  #about-con {
-    #about-name {
-      position: relative;
-      left: 50px;
-      top: 150px;
-
-      h2{
-        font-size: 100px;
-        line-height: 150px;
-        font-weight: 500;
-      }
-
-      #about-name-icons {
-        width: 200px;
-        display: flex;
-        column-gap: 12px;
-        position: relative;
-        top: 60px;
-      }
-    }
-
-    #about-img {
-      position: relative;
-      top: 100px;
-      left: 80px;
-    }
-
-    #about-text {
-      position: relative;
-      top: 200px;
-      p{
-        font-size: 20px;
-        padding-right: 40px;
-        margin-bottom: 30px;
-        position: relative;
-        &:first-child, &:nth-child(2){
-          left: -50px;
-        }
-
-        &:nth-child(3) {
-          left: 30px;
-        }
-
-        &:last-child {
-          left: 40px;
-        }
-      }
-    }
-  }
-
-  #skills-con {
-    position: relative;
-    top: 250px;
-
-    h2 {
-      margin-bottom: 40px;
-    }
-
-    #skill-box {
-      flex-direction: row;
-      column-gap: 220px;
-      justify-content: center;
-
-      .skill-details {
-        h3 {
-          margin-bottom: 30px;
-        }
-        p {
-          font-size: 20px;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-
-  #about-footer {
-    margin-top: 400px;
   }
 
   /* ------------ Quatro Page ------------ */
