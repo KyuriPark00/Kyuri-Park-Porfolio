@@ -13,30 +13,26 @@
     color: a.$accent-color;
   }
   
-  /* ------------ projects-box ------------ */
-  // demo-reel-con
-  #demo-reel-description {
+  /* ------------ professional-sns-con ------------ */
 
-    margin-top: 30px;
-
-    #social-media-con {
-      button {
-        margin-right: 10px;
-        padding: 4px 10px;
-      }
+  #professional-sns-con {
+    button {
+      margin-right: 10px;
+      padding: 4px 10px;
     }
+  }
 
-    h2 {
-      font-size: 22px;
-      margin-bottom: 20px;
-    }
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
 
-    p {
+  p {
       font-weight: 500;
       margin-bottom: 20px;
       font-size: 15px;
-    }
   }
+}
 
   #projects-box {
     padding-right: 40px;
@@ -72,7 +68,6 @@
         }
       }
     }
-  }
   
   /* ------------ About page ------------ */
   #about-con {
@@ -576,7 +571,7 @@
     #demo-reel-description {
       margin: 0;
 
-      #social-media-con {
+      #professional-sns-con {
 
         margin-top: 10px;
         
@@ -1051,7 +1046,7 @@
 
       margin-top: 30px;
 
-      #social-media-con {
+      #professional-sns-con {
 
         button {
           background-color: transparent;

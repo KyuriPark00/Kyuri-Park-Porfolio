@@ -8,6 +8,12 @@
 }
 
 
+// heading style
+@mixin heading-style {
+  font-size: 30px;
+  font-weight: 700;
+}
+
 //flex box mixins
 
 @mixin flex-column {
