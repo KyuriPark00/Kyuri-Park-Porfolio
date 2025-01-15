@@ -1,4 +1,25 @@
-
+(() => {
+    const hamburger = document.querySelector("#hamburger");
+    const menu = document.querySelector("#menu");
+    const closeButton = document.querySelector("#close");
+    const menuLinks = document.querySelectorAll("#menu ul a");
+ 
+    function toggleMenu() {
+     menu.classList.toggle("open");
+    }
+ 
+    hamburger.addEventListener("click", toggleMenu);
+    closeButton.addEventListener("click", toggleMenu);
+ 
+    menuLinks.forEach(link => {
+     link.addEventListener("click", toggleMenu);
+    })
+ 
+ 
+   
+ })();
+ 
+ 
 // (function() {
 //   document.addEventListener("DOMContentLoaded", () => {
 //     // Menu

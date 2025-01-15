@@ -25,29 +25,31 @@ $projects_result = $conn->query($query_projects);
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
  <!-- Main Nav -->
- <header>        
-        <div id="logo-con"><a href="#"><img src="images/1.png" alt="KP Logo"/></a></div>
-        <button id="hamburger">&#9776;</button>
-        
-        <nav id="desktop-nav">
-          <ul> 
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Articles</a></li>
-            <li><a href="#">Contact</a></li>
+ <header>
+      <!-- It's only can be shown on mobile ver -->
+      <div id="logo"><a href="#"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <button id="hamburger">&#9776;</button>
+
+      <!-- Hidden on mobile ver -->
+      <nav id="desktop-nav">
+          <ul>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Contact</a></li>
           </ul>
-        </nav>
+      </nav>
   </header>
   <div id="menu" class="overlay">
-        <button id="close">&times;</button>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+      <button id="close">&times;</button>
+      <nav>
+          <ul>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+  </div>
+
 
 
   <!-- Profile Section -->

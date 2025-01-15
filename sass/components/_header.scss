@@ -1,11 +1,39 @@
 @use '../abstracts' as a;
 
+header {
+    
+    #desktop-nav {
+        ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin-right: 3em;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    text-decoration: none;
+                    color: a.$primary-color;
+                    font-weight: 700;
+                    font-size: 18px;
+                    &:hover {
+                        color: a.$accent-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /*-- Mobile --*/
 @media screen and (min-width: 480px) {
     #hamburger{
        display: flex;
-       visibility: visible;
     }
+
     #desktop-nav {
        display: none;
     }
@@ -18,7 +46,7 @@
    }
 
    #desktop-nav {
-       display: flex;
+       display: block;
    }
 }
 
@@ -30,6 +58,6 @@
    }
 
    #desktop-nav {
-       display: flex;
+       display: block;
    }
 }
