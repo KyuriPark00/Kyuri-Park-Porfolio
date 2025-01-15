@@ -1,8 +1,8 @@
 @use '../abstracts' as a;
 
 /*-------------- Default  --------------*/
-/*-- Profile Box --*/
-#profile-box {
+/*-- Profile Con --*/
+#profile-con {
   text-align: center;
   h2 {
     color: a.$accent-color;
@@ -15,7 +15,7 @@
     font-weight: a.$h3-weight;
   }
 
-  #professional-sns-con {
+  #professional-sns-box{
     button {
       background-color: transparent;
       border: solid 3px a.$main-blue;
@@ -36,8 +36,22 @@
   }
 }
 
-/*-- Project Box --*/
-#projects-box {
+/*-- About Con --*/
+#about-con {
+  background-color: a.$main-blue;
+  color: a.$secondary-color;
+
+  #full-name-box {
+    font-size: a.$h2-weight;
+  }
+
+  #profile-text-desktop {
+    display: none;
+  }
+}
+
+/*-- Project Con --*/
+#projects-con {
 
   #project-heading {
     color: a.$main-blue;
@@ -92,13 +106,69 @@
       margin-top: 10px;
     }
   }
+ 
+  #professional-sns-box{
+    button {
+      margin-right: 10px;
+      padding: 4px 10px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  p {
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 15px;
+  }
+}
+
+  #projects-con {
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 40px;
+
+    #project-heading {
+      margin-bottom: 40px !important;
+    }
+    div {
+
+      margin-top: 60px;
+
+      &:nth-of-type(1) {
+        margin-top: 0 !important;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 15px;;
+        height: 250px;
+      }
+
+      .overlay {
+      
+        h3 {
+          font-size: 30px;
+        }
+
+        p {
+          font-size: 20px;
+          font-weight: 500;
+        }
+      }
+    }
+  
 }
 
 
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
 @media screen and (min-width: 480px) {
-  #profile-box {
+  /*-- Profile Con --*/  
+  #profile-con {
     margin-top: a.$first-sec-margin-mobile;
   
     h2 {
@@ -112,18 +182,58 @@
       margin: 20px 0;
     }
   
-    #professional-sns-con {
+    #professional-sns-box{
       button {
         font-size: a.$navButton-font-size-mobile;
         margin-right: 10px;
       }
     }
   }
+  /*-- About Con --*/ 
+  #about-con {
+    margin-top: a.$first-sec-margin-mobile;
+    background-color: a.$main-blue;
+    justify-items: center;
+    
+    #full-name-box {
+      font-size: 50px;
+    }
+
+    #profile-pic-box {
+      display: flex;
+      img {
+        max-width: 250px;
+      }
+
+      #profile-text-mobile {
+        margin-top: 50px;
+        p {
+          font-size: a.$p-font-size-mobile;
+          font-weight: a.$p-font-weight-mobile;
+          margin-bottom: 20px;
+
+          &:first-of-type {
+           position: relative;
+           right: 35px;  
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  
+    #profile-text-desktop {
+      display: none;
+    }
+  }
+
 }
 
 /*-- Tablet --*/
 @media screen and (min-width: 768px) {
-  #profile-box {
+  #profile-con {
     margin-top: a.$first-sec-margin-tablet;
   
     h2 {
@@ -137,7 +247,7 @@
       margin: 30px 0;
     }
   
-    #professional-sns-con {
+    #professional-sns-box{
       button {
         font-size: a.$navButton-font-size-tablet;
         margin-right: 20px;
@@ -148,7 +258,7 @@
   
 /*-- Desktop --*/
 @media screen and (min-width: 1200px) {
-  #profile-box {
+  #profile-con {
     margin-top: a.$first-sec-margin-destop;
   
     h2 {
@@ -162,7 +272,7 @@
       margin: 30px 0;
     }
   
-    #professional-sns-con {
+    #professional-sns-box{
       button {
         font-size: a.$navButton-font-size-desktop;
         margin-right: 20px;

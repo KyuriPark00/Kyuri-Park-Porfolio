@@ -19,6 +19,8 @@ $projects_result = $conn->query($query_projects);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font Awesome CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <title>Kyuri Park</title>
 </head>
 <body>
@@ -37,7 +39,7 @@ $projects_result = $conn->query($query_projects);
           </ul>
       </nav>
   </header>
-  <div id="menu" class="overlay">
+  <d iv id="menu" class="overlay">
       <button id="close">&times;</button>
       <nav>
           <ul>
@@ -46,17 +48,15 @@ $projects_result = $conn->query($query_projects);
               <li><a href="#">Contact</a></li>
           </ul>
       </nav>
-  </div>
+  </d>
 
-
-
-  <!-- Profile Section -->
-  <section id="profile-box" class="grid-con">
+  <!-- Profile Con -->
+  <section id="profile-con" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
       <h2>It’s Kyuri,<br>Your Designer, Software Engineer</h2>
       <h3>Designing with purpose, developing with precision.</h3>
 
-      <div id="professional-sns-con">
+      <div id="professional-sns-box">
           <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
           <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
@@ -65,27 +65,36 @@ $projects_result = $conn->query($query_projects);
     </div>
   </section>
 
-  <!-- <section id="demo-reel-con" class="grid-con">
-      <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
-        <video class="player" controls preload="metadata" poster="images/demoreel-thumnail.jpg">
-          <source src="video/2024-demoreel.mp4" type="video/mp4">
-          <p>Uh Oh, your browser does not support this Video!</p>
-        </video>
-      </div> 
+  <!-- About Con -->
+  <section id="about-con">
+    <div id="full-name-box"><i>Kyuri Hailie Park</i></div>
 
-      <div id="demo-reel-description" class="col-span-full m-col-start-8 m-col-end-14">
-        <h2>2024 Demo Reel</h2>
-        <p>Based in London, ON. Looking for a captivating website? My goal is to create sites that are both visually appealing and easy to navigate. Let’s work together!</p>
-        <div id="professional-sns-con">
-          <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
-          <a href="https://www.instagram.com/kyuri_hailie/"><button>Instagram</button></a>
-          <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
+    <div id="profile-pic-box">
+      <img src="images/profilePicTransparentBG2.png" alt="Profile picture">
+      <div id="profile-text-mobile">
+        <div id="social-media">
+          <span>fa</span>
+          <span>ig</span>
+          <span>in</span>
         </div>
+        <p>I believe that a great developer should also have a strong artistic sense,</p>
+        <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
       </div>
-    </section> -->
+    </div>
 
-    
-    <section id="projects-box" class="grid-con">
+    <div id="profile-text-desktop">
+        <div id="social-media">
+            
+        </div>
+        <p>I believe that a great developer should also have a strong artistic sense,</p>
+        <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
+      </div>
+  </section>
+
+  
+
+    <!-- Project Con -->
+    <section id="projects-con" class="grid-con">
         <h2 id="project-heading" class="col-span-full">Case Study</h2>
         <?php
         $project_links = [
