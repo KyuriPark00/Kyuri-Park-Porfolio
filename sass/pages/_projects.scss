@@ -1,6 +1,11 @@
 @use '../abstracts' as a;
 
 /*-------------- Default  --------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /*-- Profile Con --*/
 #profile-con {
   text-align: center;
@@ -21,10 +26,10 @@
       border: solid 3px a.$main-blue;
       border-radius: 10px;
       font-family: a.$body-font-family;
-      font-weight: a.$navButton-font-weight;
+      font-weight: a.$Button-font-weight;
       color: a.$main-blue;
       transition: all 0.3s ease;
-      padding: 4px 8px; 
+      padding: 5px 10px; 
 
       &:hover {
         background-color: a.$main-blue;
@@ -41,12 +46,22 @@
   background-color: a.$main-blue;
   color: a.$secondary-color;
 
-  #full-name-box {
-    font-size: a.$h2-weight;
+  .social-media {
+    a {
+      color: a.$secondary-color; 
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.3s ease;
+      i {
+        &:hover {
+          border-bottom: solid 3px a.$orange-color;
+          transform: scale(1.2); /* Slightly enlarge the icon on hover */
+        }
+      }
+    }
   }
 
-  #profile-text-desktop {
-    display: none;
+  #full-name-box {
+    font-size: a.$h2-weight;
   }
 }
 
@@ -166,7 +181,7 @@
 
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
   /*-- Profile Con --*/  
   #profile-con {
     margin-top: a.$first-sec-margin-mobile;
@@ -184,41 +199,60 @@
   
     #professional-sns-box{
       button {
-        font-size: a.$navButton-font-size-mobile;
+        font-size: a.$Button-font-size-mobile;
         margin-right: 10px;
       }
     }
   }
   /*-- About Con --*/ 
   #about-con {
-    margin-top: a.$first-sec-margin-mobile;
+    margin-top: a.$second-sec-margin-mobile;
+    padding: 10px;
     background-color: a.$main-blue;
     justify-items: center;
+
+    #profile-text-desktop {
+      display: none;
+    }
     
     #full-name-box {
-      font-size: 50px;
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     #profile-pic-box {
       display: flex;
+      overflow: hidden;
       img {
-        max-width: 250px;
+        max-width: 200px;
+        height: auto;
+        object-fit: contain;
       }
 
       #profile-text-mobile {
-        margin-top: 50px;
+        margin-top: 0;
         p {
           font-size: a.$p-font-size-mobile;
           font-weight: a.$p-font-weight-mobile;
-          margin-bottom: 20px;
+          margin-bottom: 6px;
 
           &:first-of-type {
            position: relative;
            right: 35px;  
+           margin-top: 20px;
           }
 
           &:last-child {
             margin-bottom: 0;
+          }
+        }
+
+        .social-media {
+          position: relative;
+          right: 35px; 
+          a {
+            font-size: 30px;
+            margin-right: 12px;
           }
         }
       }
@@ -249,9 +283,16 @@
   
     #professional-sns-box{
       button {
-        font-size: a.$navButton-font-size-tablet;
+        font-size: a.$Button-font-size-tablet;
         margin-right: 20px;
       }
+    }
+  }
+
+  /*-- About Con --*/ 
+  #about-con {
+    #profile-text-mobile {
+      display: none;
     }
   }
 }
@@ -274,7 +315,7 @@
   
     #professional-sns-box{
       button {
-        font-size: a.$navButton-font-size-desktop;
+        font-size: a.$Button-font-size-desktop;
         margin-right: 20px;
       }
     }

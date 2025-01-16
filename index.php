@@ -72,10 +72,10 @@ $projects_result = $conn->query($query_projects);
     <div id="profile-pic-box">
       <img src="images/profilePicTransparentBG2.png" alt="Profile picture">
       <div id="profile-text-mobile">
-        <div id="social-media">
-          <span>fa</span>
-          <span>ig</span>
-          <span>in</span>
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p>I believe that a great developer should also have a strong artistic sense,</p>
         <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
@@ -83,12 +83,14 @@ $projects_result = $conn->query($query_projects);
     </div>
 
     <div id="profile-text-desktop">
-        <div id="social-media">
-            
+        <div class="social-media">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p>I believe that a great developer should also have a strong artistic sense,</p>
         <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
-      </div>
+    </div>
   </section>
 
   
