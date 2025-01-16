@@ -18,7 +18,7 @@ header {
                     text-decoration: none;
                     color: a.$primary-color;
                     font-weight: 700;
-                    font-size: 18px;
+                    font-size: a.$nav-font-size-desktop;
                     &:hover {
                         color: a.$accent-color;
                     }
@@ -29,7 +29,7 @@ header {
 }
 
 /*-- Mobile --*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 360px) {
     #hamburger{
        display: flex;
     }
