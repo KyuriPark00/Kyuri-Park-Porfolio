@@ -67,30 +67,22 @@ $projects_result = $conn->query($query_projects);
 
   <!-- About Con -->
   <section id="about-con">
-    <div id="full-name-box"><i>Kyuri Hailie Park</i></div>
-
-    <div id="profile-pic-box">
-      <img src="images/profilePicTransparentBG2.png" alt="Profile picture">
-      <div id="profile-text-mobile">
-        <div class="social-media">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <p>I believe that a great developer should also have a strong artistic sense,</p>
-        <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
+      <div id="profile-pic-box">
+        <img src="images/profilepic_longer.png" alt="Profile picture">
       </div>
-    </div>
-
-    <div id="profile-text-desktop">
+  
+      <div id="profile-text">
+        <h2 id="full-name"><i>Kyuri Hailie Park</i></h2>
+        <div>
+          <p>I believe that a great developer should also have a strong artistic sense,</p>
+          <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
+        </div>
         <div class="social-media">
           <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <a href="#"><i class="fa-brands fa-linkedin"></i></a>
           <a href="#"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <p>I believe that a great developer should also have a strong artistic sense,</p>
-        <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
-    </div>
+      </div>
   </section>
 
   
