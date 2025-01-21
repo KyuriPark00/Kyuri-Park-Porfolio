@@ -160,7 +160,7 @@ body {
   background-color: a.$main-blue;
   color: a.$secondary-color;
   display: flex;
-
+  
   #profile-text {
     display: flex;
     flex-direction: column;
@@ -216,11 +216,12 @@ body {
   /*-- About Con --*/
   #about-con {
     margin-top: a.$second-sec-margin-mobile;
-    padding: 25px 6px;
+    padding: 25px 10px;
+    column-gap: 10px;
 
     #profile-pic-box {
       img {
-        max-width: 140px;
+        max-width: 120px;
       }
     }
 
@@ -273,8 +274,9 @@ body {
 
   /*-- About Con --*/
   #about-con {
-    margin-top: a.$second-sec-margin-table;
-    padding: 0 50px;
+    margin-top: a.$second-sec-margin-tablet;
+    padding: 25px 50px;
+    column-gap: 40px;
 
     #profile-pic-box {
       position: relative;
@@ -327,6 +329,39 @@ body {
       }
     }
   }
+
+  /*-- About Con --*/
+  #about-con {
+    margin-top: a.$second-sec-margin-desktop;
+    padding: 25px 140px;
+    column-gap: 50px;
+
+    #profile-pic-box {
+      position: relative;
+      bottom: 70px;
+      img {
+        max-width: 400px;
+      }
+    }
+
+    #profile-text {
+      row-gap: 36px;
+      margin-top: 30px;
+
+      #full-name {
+        font-size: 60px;
+      }
+
+      p {
+        font-size: a.$p-font-size-desktop;
+        font-weight: a.$p-font-weight-desktop;
+      }
+
+      .social-media {
+        font-size: 40px;
+      }
+    }
+  }  
 }
 
 
