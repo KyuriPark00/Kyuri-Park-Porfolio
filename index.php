@@ -86,6 +86,72 @@ $projects_result = $conn->query($query_projects);
       </div>
   </section>
 
+  <!-- Skill Con -->
+  <section id="skill-con">
+      <div id="skill-first-row">
+        <img src="images/orange-1.png" alt="design-icon-orange">
+        <h2 class="skill-heading">Designer</h2>
+        <div id="designing">
+          <p class="skill-sub-heading">I love designing:</p>
+          <p>logo</p>
+          <p>UX/UI</p>
+          <p>Web/Apps</p>
+        </div>
+        <div id="designing-tools">
+          <p class="sub-heading-blue">Design Tools:</p>
+          <p>Photoshop</p>
+          <p>Illustrator</p>
+          <p>Indesign</p>
+          <p>Figma</p>
+          <p>Adobe XD</p>
+        </div>
+      </div>
+
+      <div class="skill-divider-online"></div>
+
+      <div id="skill-second-row">
+        <img src="images/orange-2.png" alt="development-icon-orange">
+        <h2 class="skill-heading">Frontend Developer</h2>
+        <div id="front-language">
+          <p class="skill-sub-heading">Languages I speak</p>
+          <p>HTML</p>
+          <p>CSS3 / SASS</p>
+          <p>JavaScript</p>
+        </div>
+        <div id="front-dev-tools">
+          <p class="sub-heading-blue">Dev Tools:</p>
+          <p>Tailwind CSS</p>
+          <p>Github</p>
+          <p>VS Code</p>
+        </div>
+        <div id="front-libraries">
+          <p class="sub-heading-blue">Libraries:</p>
+          <p>Vue.js</p>
+        </div>
+      </div>
+
+      <div class="skill-divider-online"></div>
+
+      <div id="skill-third-row">
+        <img src="images/orange-2.png" alt="development-icon-orange">
+        <h2 class="skill-heading">Backend Developer</h2>
+        <div id="back-language">
+          <p class="skill-sub-heading">Languages I speak</p>
+          <p>PHP</p>
+          <p>MySQL</p>
+          <p>Python</p>
+        </div>
+        <div id="back-dev-tools">
+          <p class="sub-heading-blue">Dev Tools:</p>
+          <p>Github</p>
+          <p>VS Code</p>
+        </div>
+        <div id="back-libraries">
+          <p class="sub-heading-blue">Libraries:</p>
+          <p>Lumen</p>
+        </div>
+      </div>
+  </section>
   
 
     <!-- Project Con -->

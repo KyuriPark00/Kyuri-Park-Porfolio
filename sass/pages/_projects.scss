@@ -41,8 +41,64 @@ body {
   }
 }
 
+/*-- About Con --*/ 
+#about-con {
+  background-color: a.$main-blue;
+  color: a.$secondary-color;
+  display: flex;
+  
+  #profile-text {
+    display: flex;
+    flex-direction: column;
 
-/*-- Project Con --*/
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .social-media {
+      a {
+        color: a.$secondary-color; 
+        text-decoration: none;
+        transition: color 0.3s ease, transform 0.3s ease;
+        i {
+          &:hover {
+            border-bottom: solid 3px a.$orange-color;
+            transform: scale(1.2); /* Slightly enlarge the icon on hover */
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-- Skill Con --*/
+#skill-con {
+  display: flex;
+  border: 2px solid #e1e1e1a0;
+  border-radius: 15px;
+
+  #skill-first-row,#skill-second-row,#skill-third-row {
+    background: a.$secondary-color;
+    border-radius: 13px;
+  }
+
+  .skill-heading {
+    font-weight: a.$h2-weight;
+    color: a.$accent-color !important;
+  }
+
+  .skill-sub-heading {
+    font-weight: a.$h2-weight;
+    color: a.$main-blue;
+  }
+
+  p {
+    font-weight: a.$p-font-weight-mobile;
+  }
+}
+
+/*-- Project Cn --*/
 #projects-con {
 
   #project-heading {
@@ -155,37 +211,6 @@ body {
   
 }
 
-/*-- About Con --*/ 
-#about-con {
-  background-color: a.$main-blue;
-  color: a.$secondary-color;
-  display: flex;
-  
-  #profile-text {
-    display: flex;
-    flex-direction: column;
-
-    p {
-      margin: 0;
-      padding: 0;
-    }
-
-    .social-media {
-      a {
-        color: a.$secondary-color; 
-        text-decoration: none;
-        transition: color 0.3s ease, transform 0.3s ease;
-        i {
-          &:hover {
-            border-bottom: solid 3px a.$orange-color;
-            transform: scale(1.2); /* Slightly enlarge the icon on hover */
-          }
-        }
-      }
-    }
-  }
-}
-
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
 @media screen and (min-width: 360px) {
@@ -216,20 +241,30 @@ body {
   /*-- About Con --*/
   #about-con {
     margin-top: a.$second-sec-margin-mobile;
-    padding: 25px 10px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    padding-right: 40px;
+    padding-left: 40px;
     column-gap: 10px;
+    display: block;
 
     #profile-pic-box {
+      text-align: center;
+      position: relative;
+      bottom: 70px;
       img {
-        max-width: 120px;
+        max-width: 190px;
       }
     }
 
     #profile-text {
-      row-gap: 8px;
+      row-gap: 20px;
+      text-align: center;
+      position: relative;
+      bottom: 110px;
 
       #full-name {
-        font-size: a.$h2-size-mobile;
+        font-size: 35px;
       }
 
       p {
@@ -238,11 +273,47 @@ body {
       }
 
       .social-media {
-        font-size: a.$h3-size-mobile;
-
+        height: 35px;
+        font-size: a.$h2-size-mobile;
         a{
-          margin-right: 6px;
+          margin-right: 10px;
         }
+      }
+    }
+  }
+
+  /*-- Skill Con --*/
+  #skill-con {
+    flex-direction: column;
+    position: relative;
+    bottom: 100px;
+    margin: 0 40px;
+
+    .skill-divider-online {
+      border-bottom: 2px solid #e1e1e1a0;
+    }
+
+    #skill-first-row, #skill-second-row, #skill-third-row {
+      text-align: center;
+      padding-bottom: 30px;
+
+      img {
+        max-width: 80px;
+        margin: 30px 0; 
+      }
+
+      .skill-heading {
+        margin-bottom: 10px;
+        font-size: a.$h2-size-mobile;
+      }
+
+      .skill-sub-heading {
+        font-size: a.$h3-size-mobile;
+      }
+
+      p {
+        margin-bottom: 10px;
+        font-size: a.$p-font-size-mobile;
       }
     }
   }
@@ -277,18 +348,23 @@ body {
     margin-top: a.$second-sec-margin-tablet;
     padding: 25px 50px;
     column-gap: 40px;
+    display: flex;
 
     #profile-pic-box {
       position: relative;
-      bottom: 40px;
+      bottom: 80px;
       img {
         max-width: 310px;
+        display: block;
       }
     }
 
     #profile-text {
       row-gap: 16px;
       margin-top: 30px;
+      text-align: left;
+      position: relative;
+      bottom: 0;
 
       #full-name {
         font-size: 45px;
@@ -338,7 +414,7 @@ body {
 
     #profile-pic-box {
       position: relative;
-      bottom: 70px;
+      bottom: 90px;
       img {
         max-width: 400px;
       }
