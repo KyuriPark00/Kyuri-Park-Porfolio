@@ -1,19 +1,21 @@
 <?php
-include('includes/connect.php');  // Database connection
+require_once('includes/connect.php');  // Database connection
 
-// Fetch project data for Industry Night
+// Query to get project data
 $projectQuery = "SELECT * FROM projects WHERE id = 3";
-$projectResult = $conn->query($projectQuery);
-$project = $projectResult->fetch_assoc();
+$projectStmt = $connection->prepare($projectQuery);
+$projectStmt->execute();
+$project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
-// Fetch media data related to Industry Night
+// Query to get media data for the project
 $mediaQuery = "SELECT * FROM media WHERE project_id = 3";
-$mediaResult = $conn->query($mediaQuery);
+$mediaStmt = $connection->prepare($mediaQuery);
+$mediaStmt->execute();
 
-// Store images and videos in arrays
+// Store media dat in arrays
 $images = [];
 $videos = [];
-while ($media = $mediaResult->fetch_assoc()) {
+while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     if ($media['type'] == 'image') {
         $images[] = $media['file_path'];
     } elseif ($media['type'] == 'video') {

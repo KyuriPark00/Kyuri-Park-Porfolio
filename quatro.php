@@ -1,19 +1,21 @@
 <?php
-require_once('../includes/connect.php');
+require_once('includes/connect.php');
 
 // Query to get project data
 $projectQuery = "SELECT * FROM projects WHERE id = 1";
-$projectResult = $conn->query($projectQuery);
-$project = $projectResult->fetch_assoc();
+$projectStmt = $connection->prepare($projectQuery);
+$projectStmt->execute();
+$project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
 $mediaQuery = "SELECT * FROM media WHERE project_id = 1";
-$mediaResult = $conn->query($mediaQuery);
+$mediaStmt = $connection->prepare($mediaQuery);
+$mediaStmt->execute();
 
 // Store media data in arrays
 $images = [];
 $videos = [];
-while ($media = $mediaResult->fetch_assoc()) {
+while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     if ($media['type'] == 'image') {
         $images[] = $media['file_path'];
     } elseif ($media['type'] == 'video') {
