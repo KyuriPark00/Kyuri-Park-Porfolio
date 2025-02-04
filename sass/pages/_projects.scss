@@ -299,16 +299,19 @@ body {
 
       img {
         max-width: 80px;
-        margin: 30px 0; 
+        margin-top: 30px; 
+        margin-bottom: 20px;
       }
 
       .skill-heading {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: a.$h2-size-mobile;
+        padding: 0;
       }
 
       .skill-sub-heading {
         font-size: a.$h3-size-mobile;
+        margin-bottom: 20px;
       }
 
       p {
@@ -401,21 +404,23 @@ body {
 
       img {
         max-width: 80px;
-        margin: 30px 0; 
+        margin-top: 40px; 
+        margin-bottom: 30px; 
       }
 
       .skill-heading {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
         font-size: a.$h2-size-mobile;
       }
 
       .skill-sub-heading {
-        font-size: a.$h3-size-mobile;
+        margin-bottom: 30px;
+        font-size: a.$p-font-size-tablet;
       }
 
       p {
         margin-bottom: 10px;
-        font-size: a.$p-font-size-mobile;
+        font-size: a.$p-font-size-tablet;
       }
     }
   }
