@@ -1,19 +1,21 @@
 <?php
-include('includes/connect.php');  // 데이터베이스 연결 포함
+require_once('includes/connect.php');  // 데이터베이스 연결 포함
 
-// 프로젝트 데이터 가져오기
+// Query to get project data
 $projectQuery = "SELECT * FROM projects WHERE id = 4";
-$projectResult = $conn->query($projectQuery);
-$project = $projectResult->fetch_assoc();
+$projectStmt = $connection->prepare($projectQuery);
+$projectStmt->execute();
+$project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
-// 미디어 데이터 가져오기
-$mediaQuery = "SELECT * FROM media WHERE project_id = 4";
-$mediaResult = $conn->query($mediaQuery);
+// Query to get media data for the project
+$mediaQuery = "SELECT * FROM media WHERE project_id = 1";
+$mediaStmt = $connection->prepare($mediaQuery);
+$mediaStmt->execute();
 
-// 미디어 데이터를 배열로 저장
+// Store media data in arrays
 $images = [];
 $videos = [];
-while ($media = $mediaResult->fetch_assoc()) {
+while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     if ($media['type'] == 'image') {
         $images[] = $media['file_path'];
     } elseif ($media['type'] == 'video') {
