@@ -1,5 +1,5 @@
 <?php
-include('includes/connect.php');  // Include the database connection
+require_once('../includes/connect.php');
 
 // Query to get project data
 $projectQuery = "SELECT * FROM projects WHERE id = 1";

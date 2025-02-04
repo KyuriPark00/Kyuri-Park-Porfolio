@@ -1,9 +1,15 @@
 <?php
-include('includes/connect.php');
-
+//include('includes/connect.php');
 // Fetch projects from the database 데이터베이스에서 프로젝트 테이블 페치!
-$query_projects = "SELECT * FROM projects ORDER BY year DESC";
-$projects_result = $conn->query($query_projects);
+// $query_projects = "SELECT * FROM projects ORDER BY year DESC";
+// $projects_result = $conn->query($query_projects);
+require_once('includes/connect.php');
+
+// 프로젝트 데이터 가져오기
+$stmt = $connection->prepare('SELECT * FROM projects ORDER BY year ASC');
+$stmt->execute();
+// 왜 fetchAll인지 fetch로는 안되는지 
+$projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -153,50 +159,52 @@ $projects_result = $conn->query($query_projects);
       </div>
   </section>
   
-
     <!-- Project Con -->
     <section id="projects-con" class="grid-con">
-        <h2 id="project-heading" class="col-span-full">Case Study</h2>
-        <?php
-        $project_links = [
-            1 => 'quatro.php',  
-            2 => 'vybe.php',    
-            3 => 'industry.php',  
-            4 => 'demoreel.php'   
-        ];
+      <h2 id="project-heading" class="col-span-full">Case Study</h2>
+      <?php
+      require_once 'includes/connect.php'; // DB 연결 파일 포함
 
-        $column_counter = 1;
+      $project_links = [
+          1 => 'quatro.php',  
+          2 => 'vybe.php',    
+          3 => 'industry.php',  
+          4 => 'demoreel.php'   
+      ];
 
-        while ($project = $projects_result->fetch_assoc()) {
-            $media_query = "SELECT * FROM media WHERE project_id = " . $project['id'];
-            $media_result = $conn->query($media_query);
+      $column_counter = 1;
 
-            $thumbnail = 'images/default-thumbnail.jpg'; // Default thumbnail
-            while ($media = $media_result->fetch_assoc()) {
-                if ($media['type'] === 'image') {
-                    $thumbnail = $media['file_path'];
-                    break;
-                }
-            }
+      foreach ($projects as $project) {
+          // 미디어 데이터 가져오기
+          $media_stmt = $connection->prepare("SELECT * FROM media WHERE project_id = :project_id");
+          $media_stmt->execute(['project_id' => $project['id']]);
+          $media_items = $media_stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            // Bring the project link based on project ID
-            $project_link = $project_links[$project['id']] ?? '#';
+          $thumbnail = 'images/default-thumbnail.jpg'; // 기본 썸네일 설정
+          foreach ($media_items as $media) {
+              if ($media['type'] === 'image') {
+                  $thumbnail = $media['file_path'];
+                  break;
+              }
+          }
 
-            $grid_start = ($column_counter % 2 === 1) ? 1 : 8;
-            $grid_end = ($column_counter % 2 === 1) ? 7 : 14;
+          $project_link = $project_links[$project['id']] ?? '#';
+          $grid_start = ($column_counter % 2 === 1) ? 1 : 8;
+          $grid_end = ($column_counter % 2 === 1) ? 7 : 14;
 
-            echo '<div class="col-span-full m-col-start-' . $grid_start . ' m-col-end-' . $grid_end . '">';
-            echo '<a href="' . $project_link . '" class="project_link">';
-            echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . $project['title'] . '">';
-            echo '<div class="overlay">';
-            echo '<h3 class="title">' . $project['title'] . '</h3>';
-            echo '<p class="short_description">' . $project['short_description'] . '</p>';
-            echo '</div></a></div>';
+          echo '<div class="col-span-full m-col-start-' . $grid_start . ' m-col-end-' . $grid_end . '">';
+          echo '<a href="' . $project_link . '" class="project_link">';
+          echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . htmlspecialchars($project['title']) . '">';
+          echo '<div class="overlay">';
+          echo '<h3 class="title">' . htmlspecialchars($project['title']) . '</h3>';
+          echo '<p class="short_description">' . htmlspecialchars($project['short_description']) . '</p>';
+          echo '</div></a></div>';
 
-            $column_counter++;
-        }
-        ?>
+          $column_counter++;
+      }
+      ?>
     </section>
+
 
   <div class="grid-con">
     <button class="col-span-full" id="top-button">
@@ -217,7 +225,3 @@ $projects_result = $conn->query($query_projects);
   <script src="js/main.js"></script>
 </body>
 </html>
-
-<?php
-$conn->close();
-?>
