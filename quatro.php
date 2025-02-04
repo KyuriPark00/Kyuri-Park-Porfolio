@@ -39,42 +39,30 @@ while ($media = $mediaResult->fetch_assoc()) {
 <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
     <!-- Main Nav -->
-    <div id="sticky-nav-con">
-      <header class="grid-con" id="main-header">
-        <div id="logo" class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8">
-            <a href="index.php"><img src="images/logo.svg" alt="KP Logo" /></a>
-        </div>
+    <header>
+      <div id="logo"><a href="index.php"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <button id="hamburger">&#9776;</button>
 
-
-        <?php
-        $current_page = basename($_SERVER['PHP_SELF']); // 현재 파일 이름 가져오기
-        ?>
-        <nav id="main-nav" class="col-start-5 col-end-6 m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9">
-          <div id="burger-con">
-            <h2 class="hidden">Main Nav</h2>
-            <ul>
-              <li><a href="index.php" class="<?= $current_page == 'index.php' ? 'active' : '' ?>">Projects</a></li>
-              <li><a href="about.html" class="<?= $current_page == 'about.html' ? 'active' : '' ?>">About</a></li>
-              <li><a href="contact.php" class="<?= $current_page == 'contact.php' ? 'active' : '' ?>">Contact</a></li>
-            </ul>
-          </div>
-          <div class="toggle_button">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        
-        <div id="mobile_dropdown_menu">
+      <nav id="desktop-nav">
           <ul>
-            <li><a href="index.php">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
           </ul>
-        </div>
-      </header>
+      </nav>
+    </header>
+    <div id="menu" class="overlay">
+      <button id="close">&times;</button>
+      <nav>
+          <ul>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
+          </ul>
+      </nav>
     </div>
 
-    <br><br><br>
-
+    
     <div class="case-study-body">
         <!-- Hero Image -->
         <section id="quatro-hero">

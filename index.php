@@ -28,14 +28,14 @@ $projects_result = $conn->query($query_projects);
 
  <!-- Main Nav -->
  <header>
-      <div id="logo"><a href="#"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <div id="logo"><a href="index.php"><img src="images/logo_thin.png" alt="logo"></a></div>
       <button id="hamburger">&#9776;</button>
 
       <nav id="desktop-nav">
           <ul>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
           </ul>
       </nav>
   </header>
@@ -43,9 +43,9 @@ $projects_result = $conn->query($query_projects);
       <button id="close">&times;</button>
       <nav>
           <ul>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Articles</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
           </ul>
       </nav>
   </d>
@@ -197,12 +197,6 @@ $projects_result = $conn->query($query_projects);
         }
         ?>
     </section>
-
-  <!-- Resume Section -->
-  <section id="resume">
-    <h2>Thank You</h2>
-    <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn">Download Resume</a>
-  </section>
 
   <div class="grid-con">
     <button class="col-span-full" id="top-button">

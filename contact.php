@@ -18,44 +18,29 @@
   </head>
   <body>
     <h1 class="hidden">Contact</h1>
-    <!-- Main Nav -->
-    <div id="sticky-nav-con">
-      <header class="grid-con" id="main-header">
-        <div
-          id="logo"
-          class="col-start-3 col-end-4 m-col-start-7 m-col-end-8 l-col-start-7 l-col-end-8 xl-col-start-7 xl-col-end-8"
-        >
-          <a href="index.php"><img src="images/logo.svg" alt="KP Logo" /></a>
-        </div>
-        <nav
-          id="main-nav"
-          class="col-start-5 col-end-6 m-col-start-6 m-col-end-9 l-col-start-6 l-col-end-9 xl-col-start-6 xl-col-end-9"
-        >
-          <div id="burger-con">
-            <!-- Close button -->
-            <h2 class="hidden">Main Nav</h2>
-            <!-- UL inside lightbox -->
-            <ul>
-              <li><a href="index.php">Projects</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.php">Contact</a></li>
-            </ul>
-          </div>
-          <div class="toggle_button">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        </nav>
-        <div id="mobile_dropdown_menu">
-          <ul>
-            <li><a href="index.php">Projects</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
+        <!-- Main Nav -->
+    <header>
+      <div id="logo"><a href="index.php"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <button id="hamburger">&#9776;</button>
 
-    <br><br><br><br><br>
+      <nav id="desktop-nav">
+          <ul>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+    <div id="menu" class="overlay">
+      <button id="close">&times;</button>
+      <nav>
+          <ul>
+              <li><a href="index.php">Projects</a></li>
+              <li><a href="articles.php">Articles</a></li>
+              <li><a href="contact.php">Contact</a></li>
+          </ul>
+      </nav>
+    </div>
 
     <div class="case-study-body">
         <section id="contact-form-con" class="grid-con">
