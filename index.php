@@ -8,7 +8,7 @@ require_once('includes/connect.php');
 // 프로젝트 데이터 가져오기
 $stmt = $connection->prepare('SELECT * FROM projects ORDER BY year ASC');
 $stmt->execute();
-// 왜 fetchAll인지 fetch로는 안되는지 
+// fetchAll() 씀. 어차피 데이터양도 적어서
 $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
@@ -45,7 +45,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </ul>
       </nav>
   </header>
-  <d iv id="menu" class="overlay">
+  <div id="menu" class="overlay">
       <button id="close">&times;</button>
       <nav>
           <ul>
@@ -54,7 +54,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <li><a href="contact.php">Contact</a></li>
           </ul>
       </nav>
-  </d>
+  </div>
 
   <!-- Profile Con -->
   <section id="profile-con" class="grid-con">
