@@ -1,7 +1,7 @@
 @use '../abstracts' as a;  // abstracts SCSS 파일을 'a' 네임스페이스로 사용
 
 #thankyou-body {
-  background-color: #D7F3F5;
+  background-color: a.$primary-color;
 }
 
 .thank-you-wrapper {
@@ -17,7 +17,7 @@
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+    background-color: a.$secondary-color;
 
     img {
       max-width: 100px;
