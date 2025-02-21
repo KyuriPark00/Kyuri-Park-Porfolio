@@ -88,7 +88,7 @@ body {
     color: a.$accent-color !important;
   }
 
-  .skill-sub-heading {
+  .sub-heading-blue {
     font-weight: a.$h2-weight;
     color: a.$main-blue;
   }
@@ -98,122 +98,10 @@ body {
   }
 }
 
-/*-- Project Cn --*/
-#projects-con {
-
-  #project-heading {
-    color: a.$main-blue;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 30px;
-  }
-
-  div {
-    position: relative; /* overlay를 위해 position 설정 */
-
-    img {
-      border-radius: 1.5;
-      transition: transform 0.3s ease, filter 0.3s ease; /* 애니메이션 추가 */
-    }
-
-    .overlay {
-      position: absolute;
-      margin: 0;
-      padding: 0;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      opacity: 0; /* 기본적으로 숨김 */
-      transition: opacity 0.3s ease;
-      border-radius: 15px;; /* 이미지와 동일한 모서리 둥글기 */
-    }
-
-    &:hover {
-      img {
-        border-radius: 1.5;
-        transform: scale(1.1); /* 이미지 확대 */
-        filter: brightness(20%); /* 이미지 밝기 감소 */
-      }
-
-      .overlay {
-        opacity: 1; /* 텍스트와 배경 보이기 */
-      }
-    }
-
-    p {
-      border: 3px solid a.$main-blue;
-      border-radius: 15px;
-      padding: 5px 18px;
-      margin-top: 10px;
-    }
-  }
- 
-  #professional-sns-box{
-    button {
-      margin-right: 10px;
-      padding: 4px 10px;
-    }
-  }
-
-  h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  p {
-      font-weight: 500;
-      margin-bottom: 20px;
-      font-size: 15px;
-  }
-}
-
-  #projects-con {
-    padding-right: 40px;
-    padding-left: 40px;
-    padding-top: 40px;
-
-    #project-heading {
-      margin-bottom: 40px !important;
-    }
-    div {
-
-      margin-top: 60px;
-
-      &:nth-of-type(1) {
-        margin-top: 0 !important;
-      }
-
-      img {
-        width: 100%;
-        border-radius: 15px;;
-        height: 250px;
-      }
-
-      .overlay {
-      
-        h3 {
-          font-size: 30px;
-        }
-
-        p {
-          font-size: 20px;
-          font-weight: 500;
-        }
-      }
-    }
-  
-}
-
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
 @media screen and (min-width: 360px) {
+
   /*-- Profile Con --*/  
   #profile-con {
     margin-top: a.$first-sec-margin-mobile;
@@ -309,7 +197,7 @@ body {
         padding: 0;
       }
 
-      .skill-sub-heading {
+      .sub-heading-blue {
         font-size: a.$h3-size-mobile;
         margin-bottom: 20px;
       }
@@ -319,6 +207,112 @@ body {
         font-size: a.$p-font-size-mobile;
       }
     }
+  }
+
+  /*-- Project Con(case study) --*/
+  #projects-con {
+    
+    #project-heading {
+      color: a.$main-blue;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 30px;
+    }
+
+    div {
+      position: relative; /* overlay를 위해 position 설정 */
+
+      img {
+        border-radius: 1.5;
+        transition: transform 0.3s ease, filter 0.3s ease; /* 애니메이션 추가 */
+      }
+
+      .overlay {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0; /* 기본적으로 숨김 */
+        transition: opacity 0.3s ease;
+        border-radius: 15px;; /* 이미지와 동일한 모서리 둥글기 */
+      }
+
+      &:hover {
+        img {
+          border-radius: 1.5;
+          transform: scale(1.02);
+          filter: brightness(100%); /* 이미지 밝기 감소 */
+        }
+
+        .overlay {
+          opacity: 0.9; /* 텍스트와 배경 보이기 */
+          transform: scale(1.02);
+        }
+      }
+
+      p {
+        border: 3px solid a.$main-blue;
+        border-radius: 15px;
+        padding: 5px 18px;
+        margin-top: 10px;
+      }
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    p {
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-size: 15px;
+    }
+  }
+
+    #projects-con {
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-top: 40px;
+
+      #project-heading {
+        margin-bottom: 40px !important;
+      }
+      div {
+
+        margin-top: 60px;
+
+        &:nth-of-type(1) {
+          margin-top: 0 !important;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 15px;;
+          height: 250px;
+        }
+
+        .overlay {
+        
+          h3 {
+            font-size: 30px;
+          }
+
+          p {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      } 
   }
 }
 
@@ -413,7 +407,7 @@ body {
         font-size: a.$h2-size-mobile;
       }
 
-      .skill-sub-heading {
+      .sub-heading-blue {
         margin-bottom: 30px;
         font-size: a.$p-font-size-tablet;
       }
@@ -469,7 +463,7 @@ body {
       margin-top: 30px;
 
       #full-name {
-        font-size: 60px;
+        font-size: 50px;
       }
 
       p {
@@ -482,44 +476,78 @@ body {
       }
     }
   }  
-}
-
-
-
-// Resume
-#resume {
-  text-align: center;
-  margin: 100px 0;
-
-  h2 {
-    color: a.$accent-color;
-    font-weight: 900;
-    margin-bottom: 20px;
-  }
-
-  .download-btn {
-    display: inline-block;
-    padding: 15px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: a.$main-blue; /* 버튼 색상 */
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-
-    &:hover {
-      background-color: a.$orange-color; /* hover 색상 */
-      transform: scale(1.05); /* 확대 효과 */
+  /*-- Project Con(case study) --*/
+  #projects-con {
+    
+    #project-heading {
+      color: a.$main-blue;
+      text-align: center;
     }
 
-    &:active {
-      transform: scale(0.95); /* 클릭 효과 */
+    div {
+      height: 90%;
+      position: relative; /* overlay를 위해 position 설정 */
+
+      img {
+        height: 90%;
+        width: 100%; /* 너비도 100%로 맞춰줌 */
+        border-radius: 1.5;
+        transition: transform 0.3s ease, filter 0.3s ease;
+        will-change: transform, filter;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0; /* img의 top에 맞추기 */
+        left: 0; /* img의 left에 맞추기 */
+        width: 100%; /* 이미지의 너비와 맞춤 */
+        height: 100%; /* 이미지의 높이와 맞춤 */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: scale(1); /* hover 시 scale 적용 */
+        border-radius: 15px;
+        z-index: 1; /* overlay가 img 위에 위치하도록 설정 */
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.02); /* 이미지 확대 */
+          filter: brightness(100%);
+        }
+
+        .overlay {
+          opacity: 1; /* overlay 보이기 */
+          transform: scale(1.02); /* overlay 확대 */
+        }
+      }
+
+      p {
+        border: 3px solid a.$main-blue;
+        border-radius: 15px;
+        padding: 5px 18px;
+        margin-top: 10px;
+      }
     }
-  }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+  } 
 }
+
 
 
 

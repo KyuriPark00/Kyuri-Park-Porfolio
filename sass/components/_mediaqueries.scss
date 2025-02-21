@@ -446,28 +446,6 @@
     #demo-reel-description {
       margin: 0;
 
-      #professional-sns-box{
-
-        margin-top: 10px;
-        
-        button {
-          background-color: transparent;
-          padding: 5px 10px;
-          margin-right: 15px;
-          font-weight: 500;
-          font-size: 15px;
-          margin-top: 10px;
-          transition: all 0.3s ease;  // 부드러운 변화를 위한 트랜지션
-  
-          &:hover {
-            background-color: a.$main-blue;
-            color: #fff;
-            border-radius: 10px;
-            transform: scale(1.1);
-          }
-        }
-      }
-
       h2 {
         font-size: 20px;
         margin-bottom: 20px;
@@ -853,26 +831,7 @@
     #demo-reel-description {
 
       margin-top: 30px;
-
-      #professional-sns-box{
-
-        button {
-          background-color: transparent;
-          padding: 5px 15px;
-          margin-right: 20px;
-          font-weight: 500;
-          font-size: 18px;
-          margin-top: 10px;
-  
-          &:hover {
-            background-color: a.$main-blue;
-            color: #fff;
-            border-radius: 10px;
-            transform: scale(1.1);
-          }
-        }
-      }
-
+      
       h2 {
         font-size: 24px;
         margin-bottom: 30px;
