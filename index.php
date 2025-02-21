@@ -98,7 +98,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <img src="images/orange-1.png" alt="design-icon-orange">
         <h2 class="skill-heading">Designer</h2>
         <div id="designing">
-          <p class="skill-sub-heading">I love designing:</p>
+          <p class="sub-heading-blue">I love designing:</p>
           <p>logo</p>
           <p>UX/UI</p>
           <p>Web/Apps</p>
@@ -119,7 +119,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <img src="images/orange-2.png" alt="development-icon-orange">
         <h2 class="skill-heading">Frontend Developer</h2>
         <div id="front-language">
-          <p class="skill-sub-heading">Languages I speak</p>
+          <p class="sub-heading-blue">Languages I speak</p>
           <p>HTML</p>
           <p>CSS3 / SASS</p>
           <p>JavaScript</p>
@@ -142,7 +142,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <img src="images/orange-2.png" alt="development-icon-orange">
         <h2 class="skill-heading">Backend Developer</h2>
         <div id="back-language">
-          <p class="skill-sub-heading">Languages I speak</p>
+          <p class="sub-heading-blue">Languages I speak</p>
           <p>PHP</p>
           <p>MySQL</p>
           <p>Python</p>
@@ -159,7 +159,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </div>
   </section>
   
-    <!-- Project Con -->
+  <!-- Project Con -->
     <section id="projects-con" class="grid-con">
       <h2 id="project-heading" class="col-span-full">Case Study</h2>
       <?php
