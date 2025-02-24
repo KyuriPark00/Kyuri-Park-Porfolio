@@ -1,4 +1,5 @@
 (() => {
+    // Hamburger menu
     const hamburger = document.querySelector("#hamburger");
     const menu = document.querySelector("#menu");
     const closeButton = document.querySelector("#close");
@@ -14,12 +15,68 @@
     menuLinks.forEach(link => {
      link.addEventListener("click", toggleMenu);
     })
+
+    // GSAP header scroll animation
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.registerPlugin(ScrollTrigger);
+    
+        // [1] 페이지 로드 시 헤더 등장 애니메이션
+        gsap.from("header", {
+            y: 0,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+        });
+    
+        // [2] 스크롤 시 헤더 숨기기 & 다시 나타내기
+        let lastScrollTop = 0;
+        const header = document.querySelector("header");
+    
+        window.addEventListener("scroll", function () {
+            let currentScroll = window.scrollY;
+    
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
+                // 아래로 스크롤 시 헤더 숨김
+                gsap.to(header, { y: -100, duration: 0.5, ease: "power2.out" });
+            } else if (currentScroll < lastScrollTop) {
+                // 위로 스크롤 시 헤더 다시 나타남
+                gsap.to(header, { y: 0, duration: 0.5, ease: "power2.out" });
+            }
+    
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 모바일에서 음수 값 방지
+        });
+    });
+    
+    // GSAP - SplitText
+    gsap.registerPlugin(SplitText);
+
+    const split = new SplitText('.introduce', {type: 'words'});
+
+    const typingText = gsap.timeline()
+    .from(split.words, {
+        duration: .5,
+        autoAlpha: 0,
+        stagger: {
+            each: .2
+        }
+    })
+    
+    // Top Button(Scroll button)
+    document.addEventListener("DOMContentLoaded", function() {
+    const topButton = document.getElementById("top-button");
+
+    topButton.addEventListener("click", function(){
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  });
+
+})();
  
- 
-   
- })();
- 
- 
+
+
 // (function() {
 //   document.addEventListener("DOMContentLoaded", () => {
 //     // Menu
@@ -133,15 +190,5 @@
 //     });
 //   });
 
-//   // Top Button(Scroll button)
-//   document.addEventListener("DOMContentLoaded", function() {
-//     const topButton = document.getElementById("top-button");
-
-//     topButton.addEventListener("click", function(){
-//       window.scrollTo({
-//         top: 0,
-//         behavior: "smooth"
-//       });
-//     });
-//   });
+  
 // })();
