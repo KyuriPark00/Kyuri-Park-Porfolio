@@ -1,6 +1,13 @@
 @use '../abstracts' as a;
 
 header {
+    position: sticky;  /* 또는 sticky를 사용할 수 있음 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: transform 0.5s ease-out; /* 선택 사항 */
+    // background-color: a.$secondary-color;
     
     #desktop-nav {
         ul {

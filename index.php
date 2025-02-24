@@ -25,10 +25,22 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Font Awesome CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+  <!-- GSAP & Plugins -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="https://assets.codepen.io/16327/SplitText3.min.js"></script> 
+  <!-- SplitText 최신 버전 (CodePen CDN) -->
+
+  <!-- 기타 라이브러리 -->
+  <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+  <!-- 사용자 스크립트 -->
+  <script defer src="js/main.js"></script>
+
   <title>Kyuri Park</title>
 </head>
+
 <body>
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
@@ -59,7 +71,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <!-- Profile Con -->
   <section id="profile-con" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-      <h2>It’s Kyuri,<br>Your Designer, Software Engineer</h2>
+      <h2 class="introduce">It’s Kyuri,<br>Your Designer, Software Engineer</h2>
       <h3>Designing with purpose, developing with precision.</h3>
 
       <div id="professional-sns-box">
@@ -221,9 +233,5 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </a>
   </footer>
 
-  <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>
