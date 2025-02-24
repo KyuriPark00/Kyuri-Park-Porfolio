@@ -81,7 +81,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2 id="full-name"><i>Kyuri Hailie Park</i></h2>
         <div>
           <p>I believe that a great developer should also have a strong artistic sense,</p>
-          <p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
+          <br><p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
         </div>
         
         <div class="social-media">
@@ -103,6 +103,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <p>UX/UI</p>
           <p>Web/Apps</p>
         </div>
+
         <div id="designing-tools">
           <p class="sub-heading-blue">Design Tools:</p>
           <p>Photoshop</p>

@@ -98,6 +98,14 @@ body {
   }
 }
 
+/*-- Project Con(case study) --*/
+#project-heading {
+  text-align: center;
+  color: a.$accent-color;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
 @media screen and (min-width: 360px) {
@@ -207,13 +215,18 @@ body {
         font-size: a.$p-font-size-mobile;
       }
     }
+
+    
+    #designing-tools, #front-dev-tools, #front-libraries,
+    #back-dev-tools, #back-libraries {
+      margin-top: 30px;
+    }
   }
 
   /*-- Project Con(case study) --*/
   #projects-con {
     
     #project-heading {
-      color: a.$main-blue;
       text-align: center;
       margin-bottom: 10px;
       font-size: 30px;
@@ -418,6 +431,56 @@ body {
       }
     }
   }
+
+    /* ------------ projects-con ------------ */
+    #projects-con {
+  
+      #project-heading {
+        margin-bottom: 40px !important;
+      }
+      div {
+  
+        margin-top: 0 !important;
+        margin-bottom: 50px;
+  
+        img {
+          width: 100%;
+          border-radius: 15px;;
+          height: 250px;
+        }
+  
+        .overlay {
+        
+          h3 {
+            font-size: 30px;
+          }
+  
+          p {
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+  
+      div {
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 250px; /* 이미지 높이 줄이기 */
+        }
+  
+        .overlay {
+          h3 {
+            font-size: 30px;
+          }
+  
+          p {
+            font-weight: 500;
+            font-size: 15px;
+          }
+        }
+      }
+    }  
 }
   
 /*-- Desktop --*/
@@ -480,7 +543,6 @@ body {
   #projects-con {
     
     #project-heading {
-      color: a.$main-blue;
       text-align: center;
     }
 
@@ -545,7 +607,48 @@ body {
       margin-bottom: 20px;
       font-size: 15px;
     }
-  } 
+  }
+  
+  /*-- Skill Con --*/
+    #skill-con {
+      flex-direction: row;
+      position: relative;
+      bottom: 210px;
+      padding: 0;
+      background-color: a.$secondary-color;
+  
+      .skill-divider-online {
+        border-right: solid 2px #e1e1e1a0;
+      }
+  
+      #skill-first-row, #skill-second-row, #skill-third-row {
+        text-align: center;
+        padding-bottom: 30px;
+        width: 100%;
+    
+  
+        img {
+          max-width: 80px;
+          margin-top: 40px; 
+          margin-bottom: 30px; 
+        }
+  
+        .skill-heading {
+          margin-bottom: 30px;
+          font-size: a.$h2-size-mobile;
+        }
+  
+        .sub-heading-blue {
+          margin-bottom: 30px;
+          font-size: a.$p-font-size-desktop;
+        }
+  
+        p {
+          margin-bottom: 10px;
+          font-size: a.$p-font-size-desktop;
+        }
+      }
+    }
 }
 
 
