@@ -459,58 +459,6 @@
     }
   }
 
-  /* ------------ projects-con ------------ */
-  #projects-con {
-    padding-right: 30px;
-    padding-left: 30px;
-    padding-top: 60px;
-
-    #project-heading {
-      margin-bottom: 40px !important;
-    }
-    div {
-
-      margin-top: 0 !important;
-      margin-bottom: 50px;
-
-      img {
-        width: 100%;
-        border-radius: 15px;;
-        height: 250px;
-      }
-
-      .overlay {
-      
-        h3 {
-          font-size: 30px;
-        }
-
-        p {
-          font-size: 20px;
-          font-weight: 500;
-        }
-      }
-    }
-
-    div {
-      img {
-        width: 100%;
-        object-fit: cover;
-        height: 250px; /* 이미지 높이 줄이기 */
-      }
-
-      .overlay {
-        h3 {
-          font-size: 30px;
-        }
-
-        p {
-          font-weight: 500;
-          font-size: 15px;
-        }
-      }
-    }
-  }
 
    /* ------------ Quatro Page ------------ */
    #quatro-hero {
