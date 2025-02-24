@@ -99,11 +99,19 @@ body {
 }
 
 /*-- Project Con(case study) --*/
-#project-heading {
-  text-align: center;
-  color: a.$accent-color;
-  margin-bottom: 10px;
-  font-size: 30px;
+#projects-con {
+  #project-heading {
+    text-align: center;
+    font-weight: a.$h2-weight;
+    color: a.$accent-color;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #project-sub-heading {
+    color: a.$primary-color;
+    text-align: center;
+  }
 }
 
 /*-------------- Media Queries  --------------*/
@@ -225,11 +233,16 @@ body {
 
   /*-- Project Con(case study) --*/
   #projects-con {
-    
+
     #project-heading {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 30px;
+      padding: 0;
+      margin: 0;
+      font-size: a.$h2-size-mobile;
+    }
+    
+    #project-sub-heading {
+      font-size: a.$h3-size-mobile;
+      margin-bottom: 20px;
     }
 
     div {
@@ -297,9 +310,6 @@ body {
       padding-left: 40px;
       padding-top: 40px;
 
-      #project-heading {
-        margin-bottom: 40px !important;
-      }
       div {
 
         margin-top: 60px;
@@ -432,12 +442,20 @@ body {
     }
   }
 
-    /* ------------ projects-con ------------ */
+  /* ------------ projects-con ------------ */
     #projects-con {
-  
+
       #project-heading {
-        margin-bottom: 40px !important;
+        padding: 0;
+        margin: 0;
+        font-size: a.$h2-size-tablet;
       }
+      
+      #project-sub-heading {
+        font-size: a.$h3-size-tablet;
+        margin-bottom: 40px;
+      }
+
       div {
   
         margin-top: 0 !important;
@@ -543,7 +561,14 @@ body {
   #projects-con {
     
     #project-heading {
-      text-align: center;
+      padding: 0;
+      margin: 0;
+      font-size: a.$h2-size-tablet;
+    }
+    
+    #project-sub-heading {
+      font-size: a.$h3-size-desktop;
+      margin-bottom: 40px;
     }
 
     div {

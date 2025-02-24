@@ -163,6 +163,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <!-- Project Con -->
     <section id="projects-con" class="grid-con">
       <h2 id="project-heading" class="col-span-full">Case Study</h2>
+      <h3 id="project-sub-heading" class="col-span-full">My current projects</h3>
       <?php
       require_once 'includes/connect.php'; // DB 연결 파일 포함
 
