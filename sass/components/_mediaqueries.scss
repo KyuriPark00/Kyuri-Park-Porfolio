@@ -3,10 +3,7 @@
 
 /* ---Mobile Library Grid Style--- */
 @media screen and (min-width: 360px) {
-  .case-study-body {
-    margin-left: 35px;
-    margin-right: 35px;
-  }
+
 
   .Heading {
     font-size: 30px !important;
@@ -428,10 +425,6 @@
 
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
-  .case-study-body {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
   
   .Heading {
     font-size: 30px !important;
@@ -762,8 +755,8 @@
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
   .case-study-body {
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-left: 60px;
+    margin-right: 90px;
   }
 
   .Heading {

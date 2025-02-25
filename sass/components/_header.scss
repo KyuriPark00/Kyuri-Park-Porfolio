@@ -6,10 +6,24 @@ header {
     left: 0;
     width: 100%;
     z-index: 9999;
+    margin: 0;
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: transform 0.5s ease-out; /* 선택 사항 */
-    // background-color: a.$secondary-color;
+    //background-color: rgb(224, 232, 232) !important;
+
+    #logo {
+        padding-top: 22px;
+        padding-bottom: 14px;
+
+        a img { width: 70px }
+    }
+    
     
     #desktop-nav {
+        
         ul {
             display: flex;
             list-style: none;
@@ -17,7 +31,9 @@ header {
             padding: 0;
 
             li {
-                margin-right: 3em;
+                padding: 1px 4px; 
+                margin-right: 1em;
+                border: solid 4px a.$bg-color;
                 &:last-child {
                     margin-right: 0;
                 }
@@ -29,6 +45,14 @@ header {
                     &:hover {
                         color: a.$accent-color;
                     }
+                }
+
+                &.scrolled {
+                    background-color: a.$secondary-color;
+                    border: solid 4px a.$accent-color;
+                    border-radius: 10px;
+
+                    a { color: a.$main-blue; }
                 }
             }
         }
@@ -48,13 +72,13 @@ header {
 
 /*-- Tablet --*/
 @media screen and (min-width: 768px) {
-   #hamburger {
-       display: none;
-   }
-
-   #desktop-nav {
-       display: block;
-   }
+    #hamburger{
+        display: flex;
+     }
+ 
+     #desktop-nav {
+        display: none;
+     }
 }
 
 

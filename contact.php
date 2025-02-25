@@ -20,7 +20,7 @@
     <h1 class="hidden">Contact</h1>
         <!-- Main Nav -->
     <header>
-      <div id="logo"><a href="index.php"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
       <button id="hamburger">&#9776;</button>
 
       <nav id="desktop-nav">

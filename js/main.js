@@ -16,37 +16,37 @@
      link.addEventListener("click", toggleMenu);
     })
 
-    // GSAP header scroll animation
+
+    // GSAP - header
     document.addEventListener("DOMContentLoaded", () => {
         gsap.registerPlugin(ScrollTrigger);
-    
-        // [1] 페이지 로드 시 헤더 등장 애니메이션
+      
+        // [1] 페이지 로드 시 헤더 등장 애니메이션 (유지)
         gsap.from("header", {
-            y: 0,
-            opacity: 0,
-            duration: 0.8,
-            ease: "power2.out"
+          opacity: 0,
+          duration: 0.8,
+          ease: "power2.out"
         });
-    
-        // [2] 스크롤 시 헤더 숨기기 & 다시 나타내기
-        let lastScrollTop = 0;
-        const header = document.querySelector("header");
-    
+      
+        // [2] 스크롤 시 스타일 변경 (헤더 이동 효과 제거!)
+        const navItems = document.querySelectorAll("#desktop-nav ul li");
+        const hamburger = document.querySelector("#hamburger");
+      
         window.addEventListener("scroll", function () {
-            let currentScroll = window.scrollY;
-    
-            if (currentScroll > lastScrollTop && currentScroll > 100) {
-                // 아래로 스크롤 시 헤더 숨김
-                gsap.to(header, { y: -100, duration: 0.5, ease: "power2.out" });
-            } else if (currentScroll < lastScrollTop) {
-                // 위로 스크롤 시 헤더 다시 나타남
-                gsap.to(header, { y: 0, duration: 0.5, ease: "power2.out" });
-            }
-    
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // 모바일에서 음수 값 방지
+          let currentScroll = window.scrollY;
+      
+          // [3] 스크롤 일정 이상 시 li 요소와 햄버거 버튼에 클래스 토글
+          if (currentScroll > 300) {
+            navItems.forEach(item => item.classList.add("scrolled"));
+            hamburger.classList.add("scrolled");
+          } else {
+            navItems.forEach(item => item.classList.remove("scrolled"));
+            hamburger.classList.remove("scrolled");
+          }
         });
-    });
-    
+      });
+      
+      
     // GSAP - SplitText
     gsap.registerPlugin(SplitText);
 
