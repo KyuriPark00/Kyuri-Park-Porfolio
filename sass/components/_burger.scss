@@ -1,27 +1,21 @@
 @use '../abstracts' as a;
-  
-  header {
-      margin-top: 20px;
-      padding: 0 20px 0 20px;
-    //   background: linear-gradient(0deg, hsla(145, 84%, 73%, 1) 0%, hsla(150, 61%, 48%, 1) 100%);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    
-      #logo {
-        // background-color: aqua;
-        a img {
-          width: 70px
-        }
-      }
-    }
     
     #hamburger{
-      font-size: 32px;
+      font-size: 30px;
       background: none;
       border: none;
       color: a.$primary-color;
       cursor: pointer;
+      transition: all 0.3s ease; // 부드러운 변화 효과 추가
+      border: solid 4px a.$bg-color;
+
+      &.scrolled {
+        background-color: a.$secondary-color;
+        border: solid 4px a.$accent-color;
+        color: a.$main-blue;
+        padding: 0 5px;
+        border-radius: 5px;
+      }
     }
     
     #close {
@@ -43,7 +37,7 @@
       color: a.$secondary-color;
       justify-content: center;
       align-items: center;
-      z-index: 999;
+      z-index: 9999;
     }
     
     //js에서 쓰기위해 css에서 정의

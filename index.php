@@ -44,15 +44,15 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
- <!-- Main Nav -->
+  <!-- Main Nav -->
  <header>
-      <div id="logo"><a href="index.php"><img src="images/logo_thin.png" alt="logo"></a></div>
+      <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
       <button id="hamburger">&#9776;</button>
 
       <nav id="desktop-nav">
           <ul>
               <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
+              <!-- <li><a href="articles.php">Articles</a></li> -->
               <li><a href="contact.php">Contact</a></li>
           </ul>
       </nav>
@@ -173,7 +173,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </section>
   
   <!-- Project Con -->
-    <section id="projects-con" class="grid-con">
+    <section id="projects-con" class="grid-con case-study-body">
       <h2 id="project-heading" class="col-span-full">Case Study</h2>
       <h3 id="project-sub-heading" class="col-span-full">My current projects</h3>
       <?php
@@ -209,7 +209,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           echo '<div class="col-span-full m-col-start-' . $grid_start . ' m-col-end-' . $grid_end . '">';
           echo '<a href="' . $project_link . '" class="project_link">';
           echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . htmlspecialchars($project['title']) . '">';
-          echo '<div class="overlay">';
+          // echo '<div class="overlay">';
+          echo '<div id="overlay">';
           echo '<h3 class="title">' . htmlspecialchars($project['title']) . '</h3>';
           echo '<p class="short_description">' . htmlspecialchars($project['short_description']) . '</p>';
           echo '</div></a></div>';
