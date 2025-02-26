@@ -16,6 +16,13 @@
      link.addEventListener("click", toggleMenu);
     })
 
+    // Projects menu - desktop
+    document.querySelector('a[href="#projects-con"]').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('#projects-con').scrollIntoView({
+          behavior: 'smooth'
+      });
+    });
 
     // GSAP - header
     document.addEventListener("DOMContentLoaded", () => {
