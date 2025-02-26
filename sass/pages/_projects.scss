@@ -75,6 +75,9 @@ body {
 /*-- Skill Con --*/
 #skill-con {
   display: flex;
+  border: 2px solid a.$subtle-gray;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
   #skill-first-row,#skill-second-row,#skill-third-row {
     background: a.$secondary-color;
@@ -281,7 +284,7 @@ body {
     margin: 0 40px;
 
     .skill-divider-online {
-      border-bottom: 2px solid #e1e1e1a0;
+      border-bottom: 2px solid a.$subtle-gray;
     }
 
     #skill-first-row {
@@ -408,7 +411,7 @@ body {
     border-radius: 15px;
 
     .skill-divider-online {
-      border-right: solid 2px #e1e1e1a0;
+      border-right: solid 2px a.$subtle-gray;
     }
 
     #skill-first-row, #skill-second-row, #skill-third-row {
@@ -508,11 +511,10 @@ body {
       bottom: 210px;
       padding: 0;
       background-color: a.$secondary-color;
-      border-radius: 15px;
       margin: 0 100px;
   
       .skill-divider-online {
-        border-right: solid 2px #e1e1e1a0;
+        border-right: solid 2px a.$subtle-gray;
       }
 
       #skill-first-row, #skill-second-row, #skill-third-row {

@@ -7,7 +7,7 @@
       color: a.$primary-color;
       cursor: pointer;
       transition: all 0.3s ease; // 부드러운 변화 효과 추가
-      border: solid 4px a.$bg-color;
+      border: solid 4px a.$secondary-color;
 
       &.scrolled {
         background-color: a.$secondary-color;

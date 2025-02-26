@@ -51,7 +51,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <nav id="desktop-nav">
           <ul>
-              <li><a href="index.php">Projects</a></li>
+              <li><a href="#projects-con">Projects</a></li>
               <!-- <li><a href="articles.php">Articles</a></li> -->
               <li><a href="contact.php">Contact</a></li>
           </ul>
@@ -62,7 +62,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <nav>
           <ul>
               <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
+              <!-- <li><a href="articles.php">Articles</a></li> -->
               <li><a href="contact.php">Contact</a></li>
           </ul>
       </nav>
