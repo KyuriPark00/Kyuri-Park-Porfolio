@@ -206,27 +206,24 @@ body {
 
 /*-- Testimonials Con --*/
 
-// 테스티모니얼 컨테이너
 #testimonial-con {
    text-align: center;
 
-  // 제목 스타일
-  .section-title {
+  h2 {
     color: a.$main-blue;
   }
 
-  .section-subtitle {
+  #testimonial-subtitle {
     color: a.$accent-color;
   }
 
-  .testimonial-container {
+  #testimonial-container {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
   }
 
-  // 테스티모니얼 카드
   .testimonial-card {
     display: none;
     max-width: 900px;
@@ -239,7 +236,7 @@ body {
       display: block;
     }
 
-    // 인용문 스타일
+    // Blockquote
     blockquote {
       position: relative;
       font-style: italic;
@@ -251,7 +248,7 @@ body {
       }
     }
 
-    // 작성자 정보
+    // Testimonial author
     .testimonial-author {
       display: flex;
       flex-direction: column;
@@ -260,8 +257,8 @@ body {
       margin-top: 15px;
 
       img {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
         margin-right: 15px;
       }
@@ -279,7 +276,7 @@ body {
     }
   }
 
-  // 네비게이션 점
+  // Navigation dots
   .dots {
     display: inline-block; /* .dots 요소가 인라인 블록으로 처리되어 가운데 정렬 */
   }
