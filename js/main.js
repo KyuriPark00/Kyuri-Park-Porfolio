@@ -1,4 +1,5 @@
 (() => {
+
     // Hamburger menu
     const hamburger = document.querySelector("#hamburger");
     const menu = document.querySelector("#menu");
@@ -45,7 +46,7 @@
           console.log(currentScroll);  // 확인용 로그
     
           // [3] 스크롤 일정 이상 시 li 요소와 햄버거 버튼에 클래스 토글
-          if (currentScroll > 300) {
+          if (currentScroll > 50) {
               navItems.forEach(item => item.classList.add("scrolled"));
               hamburger.classList.add("scrolled");
           } else {
@@ -69,6 +70,29 @@
         }
     })
     
+    // Testimonials slide
+    document.addEventListener("DOMContentLoaded", function () {
+      let currentIndex = 0;
+      const testimonials = document.querySelectorAll(".testimonial-card");
+      const dots = document.querySelectorAll(".dot");
+  
+      function showTestimonial(index) {
+          testimonials.forEach((testimonial, i) => {
+              testimonial.classList.toggle("active", i === index);
+              dots[i].classList.toggle("active", i === index);
+          });
+      }
+  
+      dots.forEach((dot, index) => {
+          dot.addEventListener("click", () => {
+              currentIndex = index;
+              showTestimonial(currentIndex);
+          });
+      });
+  
+      showTestimonial(currentIndex);
+  });
+
     // Top Button(Scroll button)
     document.addEventListener("DOMContentLoaded", function() {
     const topButton = document.getElementById("top-button");

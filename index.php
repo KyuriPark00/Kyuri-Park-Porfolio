@@ -172,7 +172,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </section>
   
   <!-- Project Con -->
-    <section id="projects-con" class="grid-con case-study-body">
+  <section id="projects-con" class="grid-con case-study-body">
       <h2 id="project-heading" class="col-span-full">Case Study</h2>
       <h3 id="project-sub-heading" class="col-span-full">My current projects</h3>
       <?php
@@ -217,14 +217,78 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           $column_counter++;
       }
       ?>
-    </section>
+  </section>
+
+  <!-- Testimonial Con -->
+  <section id="testimonial-con">
+      <h2>Testimonials</h2>
+      <p id="testimonial-subtitle">Stories from my Happy Clients</p>
+
+      <div id="testimonial-container">
+        <div class="testimonial-card active">
+          <blockquote>
+            <span class="quote-mark">❝</span>
+            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+            <span class="quote-mark">❞</span>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="images/Luke.png" alt="Muhammad Lastname">
+            <div class="author-info">
+              <h3>Muhammad Lastname</h3>
+              <p>CEO</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <span class="quote-mark">❝</span>
+            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+            <span class="quote-mark">❞</span>
+            <span class="quote-mark">❞</span>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="iamges/" alt="Henry Giesbrecht">
+            <div class="author-info">
+              <h3>Henry Giesbrecht</h3>
+              <p>Pastor</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <blockquote>
+            <span class="quote-mark">❝</span>
+            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+            <span class="quote-mark">❞</span>
+            <span class="quote-mark">❞</span>
+          </blockquote>
+          <div class="testimonial-author">
+            <img src="iamges/" alt="Henry Giesbrecht">
+            <div class="author-info">
+              <h3>Henry Giesbrecht</h3>
+              <p>Pastor</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+      </div>
+  </section>
 
 
+
+  <!-- Top Button -->
   <div class="grid-con">
     <button class="col-span-full" id="top-button">
       <img src="images/top-button.png" alt="top button">
     </button>
   </div>
+
   
   <footer>
     <p>© 2024 Kyuri Park. All Rights Reserved.</p>
