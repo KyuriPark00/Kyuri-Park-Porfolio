@@ -91,8 +91,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div id="profile-text">
         <h2 id="full-name"><i>Kyuri Hailie Park</i></h2>
         <div>
-          <p>I believe that a great developer should also have a strong artistic sense,</p>
-          <br><p>so you’re looking for someone with a creative edge, you’re in the right place!</p>
+          <p>I believe that a great developer should not only have strong technical skills but also a keen artistic sense to create visually appealing and user-friendly designs.</p>
+          <br><p>If you're looking for someone with a creative edge who can bring innovation to every project, you are at the right place!</p>
         </div>
         
         <div class="social-media">
@@ -172,7 +172,53 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </section>
   
   <!-- Project Con -->
-  <section id="projects-con" class="grid-con case-study-body">
+  <section id="projects-con" class="case-study-body">
+    <div class="header">
+        <h2 id="project-heading">Case Study</h2>
+        <h3 id="project-sub-heading">My current projects</h3>
+    </div>
+    <?php
+    require_once 'includes/connect.php'; // DB 연결 파일 포함
+
+    $project_links = [
+        1 => 'quatro.php',  
+        2 => 'vybe.php',    
+        3 => 'industry.php',  
+        4 => 'demoreel.php'   
+    ];
+
+    $column_counter = 1;
+
+    foreach ($projects as $project) {
+        // 미디어 데이터 가져오기
+        $media_stmt = $connection->prepare("SELECT * FROM media WHERE project_id = :project_id");
+        $media_stmt->execute(['project_id' => $project['id']]);
+        $media_items = $media_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        $thumbnail = 'images/default-thumbnail.jpg'; // 기본 썸네일 설정
+        foreach ($media_items as $media) {
+            if ($media['type'] === 'image') {
+                $thumbnail = $media['file_path'];
+                break;
+            }
+        }
+
+        $project_link = $project_links[$project['id']] ?? '#';
+
+        echo '<div>';
+        echo '<a href="' . $project_link . '" class="project_link">';
+        echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . htmlspecialchars($project['title']) . '">';
+        echo '<div id="overlay">';
+        echo '<h3 class="title">' . htmlspecialchars($project['title']) . '</h3>';
+        echo '<p class="short_description">' . htmlspecialchars($project['short_description']) . '</p>';
+        echo '</div></a></div>';
+
+        $column_counter++;
+    }
+    ?>
+</section>
+
+  <!-- <section id="projects-con" class="grid-con case-study-body">
       <h2 id="project-heading" class="col-span-full">Case Study</h2>
       <h3 id="project-sub-heading" class="col-span-full">My current projects</h3>
       <?php
@@ -217,79 +263,76 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           $column_counter++;
       }
       ?>
-  </section>
+  </section> -->
 
   <!-- Testimonial Con -->
-  <section id="testimonial-con">
+  <section id="testimonial-con" class="grid-con">
+    <div class="col-span-full m-col-start-4 m-col-end-11">
       <h2>Testimonials</h2>
-      <p id="testimonial-subtitle">Stories from my Happy Clients</p>
+        <p id="testimonial-subtitle">Stories from my Happy Clients</p>
 
-      <div id="testimonial-container">
-        <div class="testimonial-card active">
-          <blockquote>
-            <span class="quote-mark">❝</span>
-            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-            <span class="quote-mark">❞</span>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="images/Luke.png" alt="Muhammad Lastname">
-            <div class="author-info">
-              <h3>Muhammad Lastname</h3>
-              <p>CEO</p>
+        <div id="testimonial-container">
+          <div class="testimonial-card active">
+            <blockquote>
+              <span class="quote-mark">❝</span>
+              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+              <span class="quote-mark">❞</span>
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="images/Luke.png" alt="Muhammad Lastname">
+              <div class="author-info">
+                <h3>Muhammad Lastname</h3>
+                <p>CEO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <blockquote>
+              <span class="quote-mark">❝</span>
+              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+              <span class="quote-mark">❞</span>
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="images/Luke.png" alt="Henry Giesbrecht">
+              <div class="author-info">
+                <h3>Henry Giesbrecht</h3>
+                <p>Pastor</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <blockquote>
+              <span class="quote-mark">❝</span>
+              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
+              <span class="quote-mark">❞</span>
+            </blockquote>
+            <div class="testimonial-author">
+              <img src="images/Luke.png" alt="Henry Giesbrecht">
+              <div class="author-info">
+                <h3>Henry Giesbrecht</h3>
+                <p>Pastor</p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="testimonial-card">
-          <blockquote>
-            <span class="quote-mark">❝</span>
-            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-            <span class="quote-mark">❞</span>
-            <span class="quote-mark">❞</span>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="iamges/" alt="Henry Giesbrecht">
-            <div class="author-info">
-              <h3>Henry Giesbrecht</h3>
-              <p>Pastor</p>
-            </div>
-          </div>
+        <div class="dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
         </div>
-
-        <div class="testimonial-card">
-          <blockquote>
-            <span class="quote-mark">❝</span>
-            <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-            <span class="quote-mark">❞</span>
-            <span class="quote-mark">❞</span>
-          </blockquote>
-          <div class="testimonial-author">
-            <img src="iamges/" alt="Henry Giesbrecht">
-            <div class="author-info">
-              <h3>Henry Giesbrecht</h3>
-              <p>Pastor</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-      </div>
+    </div>
   </section>
 
-
-
-  <!-- Top Button -->
+  <!-- Top Button --> 
   <div class="grid-con">
     <button class="col-span-full" id="top-button">
       <img src="images/top-button.png" alt="top button">
     </button>
   </div>
 
-  
   <footer>
     <p>© 2024 Kyuri Park. All Rights Reserved.</p>
     <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
