@@ -74,7 +74,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <h3>Designing with purpose, developing with precision.</h3>
 
       <div id="professional-sns-box">
-          <a href="https://github.com/KyuriPark00?tab=repositories"><button>Github</button></a>
+          <a href="https://github.com/KyuriPark00"><button>Github</button></a>
           <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
           <a href="demoreel.php"><button>Demoreel</button></a>
@@ -96,10 +96,11 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         
         <div class="social-media">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+          <a href="https://github.com/KyuriPark00"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:hailiepark1216@gmail.com?subject=Inquiry&body=Hello, I have a question.">
+          <i class="fa-solid fa-square-envelope"></i>
+          </a>
       </div>
   </section>
 
@@ -232,11 +233,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <div id="testimonial-container">
           <div class="testimonial-card active">
-            <blockquote>
-              <span class="quote-mark">❝</span>
-              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-              <span class="quote-mark">❞</span>
-            </blockquote>
+            <i class="fa-solid fa-quote-left big-quote-mark"></i>
             <div class="testimonial-author">
               <img src="images/Luke.png" alt="Muhammad Lastname">
               <div class="author-info">
@@ -244,42 +241,34 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <p>CEO</p>
               </div>
             </div>
+
+            <div id="divider"></div>
+
+            <blockquote>
+              <p><span class="quote-mark">❝</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy<span class="quote-mark">❞</span></p>
+            </blockquote>
           </div>
 
           <div class="testimonial-card">
-            <blockquote>
-              <span class="quote-mark">❝</span>
-              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-              <span class="quote-mark">❞</span>
-            </blockquote>
+            <i class="fa-solid fa-quote-left big-quote-mark"></i>
             <div class="testimonial-author">
-              <img src="images/Luke.png" alt="Henry Giesbrecht">
+              <img src="images/Luke.png" alt="Muhammad Lastname">
               <div class="author-info">
-                <h3>Henry Giesbrecht</h3>
-                <p>Pastor</p>
+                <h3>Muhammad Lastname</h3>
+                <p>CEO</p>
               </div>
             </div>
-          </div>
 
-          <div class="testimonial-card">
+            <div id="divider"></div>
+
             <blockquote>
-              <span class="quote-mark">❝</span>
-              <p class="testimonial-text">"is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy"</p>
-              <span class="quote-mark">❞</span>
+              <p><span class="quote-mark">❝</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy<span class="quote-mark">❞</span></p>
             </blockquote>
-            <div class="testimonial-author">
-              <img src="images/Luke.png" alt="Henry Giesbrecht">
-              <div class="author-info">
-                <h3>Henry Giesbrecht</h3>
-                <p>Pastor</p>
-              </div>
-            </div>
           </div>
         </div>
 
         <div class="dots">
               <span class="dot active"></span>
-              <span class="dot"></span>
               <span class="dot"></span>
         </div>
     </div>
@@ -292,12 +281,23 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </button>
   </div>
 
+  <div class="start-project">
+    <h2>Let’s Collaborate</h2>
+    <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+    <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  </div>
+
   <footer>
-    <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-    <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
-      <img src="images/linkedin_2.svg" alt="LinkedIn icon">
-    </a>
+    <div class="footer-container">
+      <p>&copy; 2025 Your Company. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
   </footer>
+
 
 </body>
 </html>
