@@ -303,16 +303,16 @@ body {
       display: block;
     }
 
-    // Blockquote
-    blockquote {
-      position: relative;
-      font-style: italic;
-      line-height: 1.5;
-
-      .quote-mark {
-        font-size: 2rem;
-        color: a.$main-blue;
-      }
+    .big-quote-mark {
+      font-size: 3em;
+      margin: 0;
+      //background-color: blueviolet;
+      padding: 5px 0 0 20px; //trbl
+      color: a.$main-blue;
+      text-align: left;
+      justify-self: left;
+      display: block;
+      
     }
 
     // Testimonial author
@@ -323,8 +323,8 @@ body {
       margin-top: 15px;
 
       img {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         margin-right: 15px;
         margin-bottom: 10px;
@@ -332,13 +332,34 @@ body {
 
       .author-info {
         h3 {
-          margin: 0;
+          margin: 5px 0 10px 0; //trbl
           color: a.$main-blue;
         }
 
         p {
           margin: 0;
         }
+      }
+    }
+
+    #divider {
+      width: 85%;
+      border-bottom: 2px solid a.$subtle-gray;
+      margin: 30px 0 30px 0; //trbl
+      display: flex;
+      justify-self: center;
+    }
+
+
+    // Blockquote
+    blockquote {
+      position: relative;
+      font-style: italic;
+      line-height: 1.5;
+      margin: 0 20px 20px 20px; //trbl
+    
+    .quote-mark {
+      color: a.$orange-color;
       }
     }
   }
@@ -494,98 +515,19 @@ body {
     }
   }
 
-
   /*-- Testimonials Con --*/
   #testimonial-con {
-    text-align: center;
+      text-align: center;
 
-  h2 {
-    font-size: a.$h2-size-tablet;
-  }
-
-  #testimonial-subtitle {
-    font-size: a.$h3-size-mobile;
-  }
-
-  #testimonial-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .testimonial-card {
-    display: none;
-    max-width: 900px;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-
-    &.active {
-      display: block;
+    h2 {
+      font-size: a.$h2-size-tablet;
     }
 
-    // Blockquote
-    blockquote {
-      position: relative;
-      font-style: italic;
-      line-height: 1.5;
-
-      .quote-mark {
-        font-size: 2rem;
-        color: a.$main-blue;
-      }
-    }
-
-    // Testimonial author
-    .testimonial-author {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-top: 15px;
-
-      img {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-right: 15px;
-      }
-
-      .author-info {
-        h3 {
-          margin: 0;
-          color: a.$main-blue;
-        }
-
-        p {
-          margin: 0;
-        }
-      }
+    #testimonial-subtitle {
+      font-size: a.$h3-size-mobile;
     }
   }
-
-  // Navigation dots
-  .dots {
-    display: inline-block; /* .dots 요소가 인라인 블록으로 처리되어 가운데 정렬 */
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px;
-    background-color: a.$subtle-gray;
-    border-radius: 50%;
-    cursor: pointer;
-  
-    &.active {
-      background-color: a.$orange-color;
-    }
-  }
-  }
-  }
+}
 
 /*-- Tablet --*/
 @media screen and (min-width: 768px) {
