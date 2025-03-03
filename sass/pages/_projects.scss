@@ -102,10 +102,12 @@ body {
 
 /*-- Project Con(case study) -*/
 #projects-con {
+  
   padding: 40px;
   text-align: center;
   position: relative;
   bottom: 100px;
+  margin: 0 auto;
 
   .header {
     width: 100%;
@@ -154,6 +156,8 @@ body {
     @media (min-width: 768px) {
       justify-content: space-between; /* 태블릿에서 2개씩 배치 */
       flex-direction: row;
+      padding-right: 20px;
+      padding-left: 20px;
     }
 
     @media (min-width: 1024px) {
@@ -174,6 +178,7 @@ body {
     cursor: pointer;
     position: relative;
     margin-bottom: 20px; /* 카드 간 간격 */
+    
 
     &:hover {
       transform: translateY(-5px);
