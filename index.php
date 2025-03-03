@@ -43,7 +43,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <h1 class="hidden">Kyuri Park Portfolio</h1>
 
-  <!-- Main Nav -->
+ <!-- Main Nav -->
  <header>
       <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
       <button id="hamburger">&#9776;</button>
