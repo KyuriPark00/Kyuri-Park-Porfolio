@@ -83,6 +83,11 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </section>
 
   <!-- About Con -->
+   <!-- SVG Wave -->
+  <svg id="wave-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#008993" d="M0,50 Q360,100 720,50 T1440,50 V100 H0 Z"></path>
+  </svg>
+
   <section id="about-con">
       <div id="profile-pic-box">
         <img src="images/profilepic.png" alt="Profile picture">
