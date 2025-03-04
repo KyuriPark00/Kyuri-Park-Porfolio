@@ -27,43 +27,49 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/grid.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <title><?php echo $project['title']; ?> Details</title>
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+  <link href="css/main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title><?php echo $project['title']; ?> Details</title>
+    
+    <!-- GSAP & Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script defer src="https://assets.codepen.io/16327/SplitText3.min.js"></script> 
+    <!-- SplitText 최신 버전 (CodePen CDN) -->
+
+    <!-- 기타 라이브러리 -->
+    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
 </head>
 <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
     <!-- Main Nav -->
     <header>
-      <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
-      <button id="hamburger">&#9776;</button>
+        <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
+        <button id="hamburger">&#9776;</button>
 
-      <nav id="desktop-nav">
-          <ul>
-              <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          </ul>
-      </nav>
+        <nav id="desktop-nav">
+            <ul>
+                <li><a href="index.php">Projects</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <div id="menu" class="overlay">
-      <button id="close">&times;</button>
-      <nav>
-          <ul>
-              <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          </ul>
-      </nav>
+        <button id="close">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="index.php">Projects</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
     </div>
-
     
     <div class="case-study-body">
         <!-- Hero Image -->
@@ -160,7 +166,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="Heading">Devices</h2>
             <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
             <div id="devices-con-img-box">
-                <img src="<?php echo $images[5]; ?>" alt="images of quatro page by devices">
+                <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
             </div>
 
             <h2 class="entry-point">Web - Entry Points</h2>
@@ -180,14 +186,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="branding-video-con">
             <h2 class="Heading">Quatro - Branding Video</h2>
             <div id="player-container">
-                <video class="player" controls preload="metadata" poster="<?php echo $images[4]; ?>">
+                <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
                     <source src="<?php echo $video[0]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
         </section>
     </div>
-
 
     <br><br><br>
     <br><br><br>
@@ -198,16 +203,26 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </button>
     </div>
 
-    <footer>
-        <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-        <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
-            <img src="images/linkedin_2.svg" alt="Linkedin icon">
-        </a>
-    </footer>
 
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="js/main.js"></script>
+    <div class="collaborate">
+        <h2>Let’s Collaborate</h2>
+        <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+        <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+    </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="logo"><a href="index.php"><img src="images/kp_logo_thicker_white.png" alt="logo"></a></div>
+      <p>&copy; 2025 Kyuri Hailie Park</p>
+      <div class="social-media">
+          <a href="https://github.com/KyuriPark00"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="mailto:hailiepark1216@gmail.com?subject=Inquiry&body=Hello, I have a question.">
+          <i class="fa-solid fa-square-envelope"></i>
+          </a>
+      </div>
+    </div>
+  </footer>
+<script defer src="js/main.js"></script>
 </body>
 </html>

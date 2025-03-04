@@ -5,7 +5,7 @@
   footer {
     background-color: a.$main-blue;
     color: #fff;
-    padding: 200px 0 40px 0; //trbl
+    padding: 150px 0 40px 0; //trbl
     text-align: center;
     font-size: 14px;
     position: relative;
@@ -15,25 +15,43 @@
       flex-direction: column;
       align-items: center;
       gap: 10px;
-    }
+
+      p {
+        font-weight: a.$p-font-weight;
+        font-size: a.$p-font-size-tablet;
+        margin: 5px 0;
+      }
+
+      .logo {
+        margin: 0;
+        padding: 0;
+
+        a img { width: 70px }
+      }
+
+      .social-media {
+        height: 35px;
+        font-size: a.$h2-size-tablet;
+        margin: 0;
+        padding: 0;
   
-    .social-icons {
-      display: flex;
-      gap: 15px;
-  
-      a {
-        color: #fff;
-        font-size: 20px;
-        transition: color 0.3s ease;
-  
-        &:hover {
-          color: #f39c12; // 강조 색상
+        a {
+          margin-right: 10px;
+          color: a.$secondary-color; 
+          text-decoration: none;
+          transition: color 0.3s ease, transform 0.3s ease;
+          i {
+            &:hover {
+              border-bottom: solid 3px a.$orange-color;
+              transform: scale(1.2); /* Slightly enlarge the icon on hover */
+            }
+          }
         }
       }
     }
   }
   
-  .start-project {
+  .collaborate {
     position: relative;
     z-index: 999;
     top: 100px;
@@ -54,7 +72,6 @@
 
     h2 {
       padding: 0;
-      //background-color: #e67e22;
       font-size: a.$h2-size-mobile;
     }
   
@@ -68,7 +85,7 @@
       background-color: transparent;
       border: solid 3px a.$main-blue;
       border-radius: 8px;
-      padding: 8px 10px;
+      padding: 8px 12px;
       font-size: a.$p-font-size-mobile;
       cursor: pointer;
   
@@ -87,10 +104,16 @@
 
 // Tablet
 @media screen and (min-width: 768px) {
-  .start-project {
+  footer {
+    padding: 120px 0 50px 0; //trbl
+  }
+
+  .collaborate {
     flex-direction: row;
     top: 70px;
     max-width: fit-content; // 컨텐츠 크기에 맞춤
     column-gap: 20px; // 요소 간 간격 조정
+    width: 90%;
+    padding: 40px;
   }
 }

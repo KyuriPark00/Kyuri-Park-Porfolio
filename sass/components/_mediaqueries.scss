@@ -392,7 +392,7 @@
   padding: 0 !important;
   cursor: pointer !important;
   display: inline-block !important;
-  max-width: 150px;
+  max-width: 120px;
   transition: transform 0.3s ease, opacity 0.3s ease; /* 애니메이션 전환 추가 */
 
   img {
@@ -755,7 +755,7 @@
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
   .case-study-body {
-    margin-left: 60px;
+    margin-left: 90px;
     margin-right: 90px;
   }
 

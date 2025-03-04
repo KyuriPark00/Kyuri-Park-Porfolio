@@ -2,7 +2,8 @@
 
 /*-- Main Nav --*/
 header {
-    position: sticky;
+    // position: sticky;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
@@ -47,13 +48,13 @@ header {
                     }
                 }
 
-                &.scrolled {
-                    background-color: a.$secondary-color;
-                    border: solid 4px a.$accent-color;
-                    border-radius: 10px;
+                // &.scrolled {
+                //     background-color: a.$secondary-color;
+                //     border: solid 4px a.$accent-color;
+                //     border-radius: 10px;
 
-                    a { color: a.$main-blue; }
-                }
+                //     a { color: a.$main-blue; }
+                // }
             }
         }
     }
@@ -69,13 +70,13 @@ header {
   transition: all 0.3s ease; // 부드러운 변화 효과 추가
   border: solid 4px a.$secondary-color;
 
-  &.scrolled {
-    background-color: a.$secondary-color;
-    border: solid 4px a.$accent-color;
-    color: a.$main-blue;
-    padding: 0 5px;
-    border-radius: 5px;
-  }
+  // &.scrolled {
+  //   background-color: a.$secondary-color;
+  //   border: solid 4px a.$accent-color;
+  //   color: a.$main-blue;
+  //   padding: 0 5px;
+  //   border-radius: 5px;
+  // }
 }
 
 /*-- Overlay --*/
