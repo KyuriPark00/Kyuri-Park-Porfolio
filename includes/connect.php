@@ -4,7 +4,7 @@
 $dsn = "mysql:host=localhost;dbname=afgmsu91_portfolio;charset=utf8";
 
 try {
-$connection = new PDO($dsn, 'root', '');
+$connection = new PDO($dsn, 'afgmsu91', '');
 } catch (Exception $e) {
     error_log($e->getMessage());
     exit('unable to connect');
