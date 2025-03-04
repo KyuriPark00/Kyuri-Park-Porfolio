@@ -41,30 +41,28 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
 
-       <!-- Main Nav -->
-      <header>
+    <!-- Main Nav -->
+    <header>
         <div id="logo"><a href="index.php"><img src="images/logo_thicker_with_bg.png" alt="logo"></a></div>
         <button id="hamburger">&#9776;</button>
 
         <nav id="desktop-nav">
-          <ul>
-              <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.php">Projects</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
         </nav>
-      </header>
-      <div id="menu" class="overlay">
+    </header>
+    <div id="menu" class="overlay">
         <button id="close">&times;</button>
         <nav>
-          <ul>
-              <li><a href="index.php">Projects</a></li>
-              <li><a href="articles.php">Articles</a></li>
-              <li><a href="contact.php">Contact</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.php">Projects</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
         </nav>
-      </div>
-
+    </div>
+    
     <div class="case-study-body">
         <!-- Hero 섹션 -->
         <section class="vybe-hero">
@@ -212,11 +210,24 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </button>
     </div>
     
+    <div class="collaborate">
+        <h2>Let’s Collaborate</h2>
+        <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+        <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+    </div>
+
     <footer>
-      <p>© 2024 Kyuri Park. All Rights Reserved.</p>
-      <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/">
-        <img src="images/linkedin_2.svg" alt="LinkedIn icon">
-      </a>
+      <div class="footer-container">
+        <div class="logo"><a href="index.php"><img src="images/kp_logo_thicker_white.png" alt="logo"></a></div>
+        <p>&copy; 2025 Kyuri Hailie Park</p>
+        <div class="social-media">
+            <a href="https://github.com/KyuriPark00"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:hailiepark1216@gmail.com?subject=Inquiry&body=Hello, I have a question.">
+            <i class="fa-solid fa-square-envelope"></i>
+            </a>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>

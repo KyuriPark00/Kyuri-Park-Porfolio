@@ -26,35 +26,35 @@
     });
 
 
-    // GSAP - header
-    document.addEventListener("DOMContentLoaded", () => {
-      gsap.registerPlugin(ScrollTrigger);
+    // // GSAP - header
+    // document.addEventListener("DOMContentLoaded", () => {
+    //   gsap.registerPlugin(ScrollTrigger);
     
-      // [1] 페이지 로드 시 헤더 등장 애니메이션 (유지)
-      gsap.from("header", {
-          opacity: 0,
-          duration: 0.8,
-          ease: "power2.out"
-      });
+    //   // [1] 페이지 로드 시 헤더 등장 애니메이션 (유지)
+    //   gsap.from("header", {
+    //       opacity: 0,
+    //       duration: 0.8,
+    //       ease: "power2.out"
+    //   });
     
-      // [2] 스크롤 시 스타일 변경 (헤더 이동 효과 제거!)
-      const navItems = document.querySelectorAll("#desktop-nav ul li");
-      const hamburger = document.querySelector("#hamburger");
+    //   // [2] 스크롤 시 스타일 변경 (헤더 이동 효과 제거!)
+    //   const navItems = document.querySelectorAll("#desktop-nav ul li");
+    //   const hamburger = document.querySelector("#hamburger");
     
-      window.addEventListener("scroll", function () {
-          let currentScroll = window.scrollY;
-          console.log(currentScroll);  // 확인용 로그
+    //   window.addEventListener("scroll", function () {
+    //       let currentScroll = window.scrollY;
+    //       console.log(currentScroll);  // 확인용 로그
     
-          // [3] 스크롤 일정 이상 시 li 요소와 햄버거 버튼에 클래스 토글
-          if (currentScroll > 50) {
-              navItems.forEach(item => item.classList.add("scrolled"));
-              hamburger.classList.add("scrolled");
-          } else {
-              navItems.forEach(item => item.classList.remove("scrolled"));
-              hamburger.classList.remove("scrolled");
-          }
-        });
-    });
+    //       // [3] 스크롤 일정 이상 시 li 요소와 햄버거 버튼에 클래스 토글
+    //       if (currentScroll > 50) {
+    //           navItems.forEach(item => item.classList.add("scrolled"));
+    //           hamburger.classList.add("scrolled");
+    //       } else {
+    //           navItems.forEach(item => item.classList.remove("scrolled"));
+    //           hamburger.classList.remove("scrolled");
+    //       }
+    //     });
+    // });
         
     // GSAP - SplitText
     gsap.registerPlugin(SplitText);
