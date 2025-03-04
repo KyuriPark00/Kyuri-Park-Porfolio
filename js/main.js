@@ -69,6 +69,28 @@
             each: .2
         }
     })
+
+    // Wave animation
+    document.addEventListener("DOMContentLoaded", function () {
+      // 기본 파도 애니메이션
+      gsap.to("#wave-svg path", {
+          attr: { d: "M0,50 Q360,10 720,50 T1440,50 V100 H0 Z" }, // 부드러운 파도 형태
+          duration: 2, // 애니메이션 지속 시간
+          repeat: -1, // 무한 반복
+          yoyo: true, // 앞뒤로 반복
+          ease: "sine.inOut" // 자연스러운 움직임
+      });
+
+      // 마우스 움직임에 따라 파도 형태 변경
+      document.addEventListener("mousemove", function (event) {
+          let waveHeight = event.clientY / window.innerHeight * 50; // 마우스 Y값에 따라 파도 높이 변경
+          gsap.to("#wave-svg path", {
+              attr: { d: `M0,50 Q360,${waveHeight} 720,50 T1440,50 V100 H0 Z` },
+              duration: 0.5, // 파도 형태 변경 속도
+              ease: "power1.out" // 빠르게 변하는 느낌
+            });
+        });
+    });
     
     // Testimonials slide
     document.addEventListener("DOMContentLoaded", function () {
