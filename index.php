@@ -75,7 +75,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <div id="professional-sns-box">
           <a href="https://github.com/KyuriPark00"><button>Github</button></a>
-          <a href="files/resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
+          <a href="assets/Park_Kyuri_Resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
           <a href="demoreel.php"><button>Demoreel</button></a>
       </div>
