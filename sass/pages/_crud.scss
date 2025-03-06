@@ -1,0 +1,82 @@
+@use '../abstracts' as a;
+
+// Project_list.php
+body {
+  background-color: a.$secondary-color;
+  color: a.$accent-color;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.project-list {
+  font-weight: a.$p-font-weight;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: a.$secondary-color;
+  padding: 10px 20px;
+  margin: 10px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  a {
+    text-decoration: none;
+    // color: $secondary-color;
+    font-weight: bold;
+    margin-left: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+form {
+  background: a.$secondary-color;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    background: a.$primary-color;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    &:hover {
+      background: darken(a.$primary-color, 10%);
+    }
+  }
+}
+
+a[href="logout.php"] {
+  display: inline-block;
+  margin-top: 20px;
+  color: a.$secondary-color;
+  background-color: a.$main-blue;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
