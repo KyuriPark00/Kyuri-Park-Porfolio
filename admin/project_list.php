@@ -13,21 +13,15 @@ $stmt->execute();
 ?>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-  <link href="../css/main.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS Main Page</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
 
-  <title>Kyuri Park</title>
 </head>
+<body class="crud-body">
 
-
-<body>
-  <?php
+<?php
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 

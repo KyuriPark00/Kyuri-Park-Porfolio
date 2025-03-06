@@ -1,6 +1,3 @@
-<!-- 이미 project_list.php에서 프로젝트 추가 폼이 구현되어
- 있으므로, 버튼 누르면 바로 실행할 페이지 하나만 필요 -->
-
 <?php
 require_once('../includes/connect.php');
 
