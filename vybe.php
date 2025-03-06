@@ -36,6 +36,9 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="js/main.js"></script>
     <title><?php echo $project['title']; ?> Details</title>
 </head>
 <body>
@@ -180,7 +183,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-        <section class="grid-con" id="slider-wrap">
+        <!-- <section class="grid-con" id="slider-wrap">
         <h2 id="slider-heading" class="col-span-full Heading">Promitional Posters</h2>
         <div class="col-span-full m-col-start-1 m-col-end-8" id="poster-slider">
           <div id="image-slider">
@@ -198,17 +201,9 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
           <h3>Seamlessly Connecting Vybe Pro Max to Digital</h3>
           <p>In this project, the focus was on establishing a seamless connection between the Vybe Pro Max earbuds and their digital presence. Guided by the principles of ergonomics, minimalism, and modern design, we created a product that blends comfort with functionality. The digital platform features intuitive navigation, interactive elements like a 3D model viewer, and dynamic animations, ensuring an engaging and immersive user experience that highlights the earbuds' innovative features.</p>
         </div>
-      </section>
+      </section> -->
     </div>
 
-    <br><br><br>
-    <br><br><br>
-
-    <div class="grid-con">
-        <button class="col-span-full" id="top-button">
-        <img src="images/top-button.png" alt="top button">
-        </button>
-    </div>
     
     <div class="collaborate">
         <h2>Let’s Collaborate</h2>
@@ -229,8 +224,5 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </div>
       </div>
     </footer>
-
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

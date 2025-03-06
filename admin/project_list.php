@@ -22,48 +22,12 @@ $stmt->execute();
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- GSAP & Plugins -->
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="https://assets.codepen.io/16327/SplitText3.min.js"></script> 
-  <!-- SplitText 최신 버전 (CodePen CDN) -->
-
-  <!-- 기타 라이브러리 -->
-  <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-
-  <!-- 사용자 스크립트 -->
-  <script defer src="js/main.js"></script>
-
   <title>Kyuri Park</title>
 </head>
 
 
 <body>
-   <!-- Main Nav -->
-  <header>
-        <div id="logo"><a href="../index.php"><img src="../images/logo_thicker_with_bg.png" alt="logo"></a></div>
-        <button id="hamburger">&#9776;</button>
-
-        <nav id="desktop-nav">
-            <ul>
-                <li><a href="../index.php">Projects</a></li>
-                <!-- <li><a href="articles.php">Articles</a></li> -->
-                <li><a href="../contact.php">Contact</a></li>
-            </ul>
-        </nav>
-  </header>
-  <div id="menu" class="overlay">
-    <button id="close">&times;</button>
-      <nav>
-        <ul>
-          <li><a href="../index.php">Projects</a></li>
-          <!-- <li><a href="articles.php">Articles</a></li> -->
-          <li><a href="../contact.php">Contact</a></li>
-        </ul>
-      </nav>
-  </div>
-
-<?php
+  <?php
 
 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 

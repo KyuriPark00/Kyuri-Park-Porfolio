@@ -27,9 +27,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <!-- GSAP & Plugins -->
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script defer src="https://assets.codepen.io/16327/SplitText3.min.js"></script> 
-  <!-- SplitText 최신 버전 (CodePen CDN) -->
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+  <script defer src="js/SplitText.js"></script>
 
   <!-- 기타 라이브러리 -->
   <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
@@ -83,7 +82,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </section>
 
   <!-- About Con -->
-   <!-- SVG Wave -->
+  <!-- SVG Wave -->
   <svg id="wave-svg" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
       <path fill="#008993" d="M0,50 Q360,100 720,50 T1440,50 V100 H0 Z"></path>
   </svg>
