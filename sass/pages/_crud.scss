@@ -1,12 +1,9 @@
 @use '../abstracts' as a;
 
 // Project_list.php
-body {
-  background-color: a.$secondary-color;
-  color: a.$accent-color;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
+.crud-body {
+ text-align: center;
+ font-weight: a.$p-font-weight;
 }
 
 .project-list {
