@@ -241,7 +241,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="testimonial-author">
               <img src="images/Luke.png" alt="Muhammad Lastname">
               <div class="author-info">
-                <h3>Muhammad Lastname</h3>
+                <h3>Muhammad Roshan</h3>
                 <p>CEO</p>
               </div>
             </div>
@@ -249,24 +249,24 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div id="divider"></div>
 
             <blockquote>
-              <p><span class="quote-mark">❝</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy<span class="quote-mark">❞</span></p>
+              <p><span class="quote-mark">❝</span>Hailie has been an outstanding UX/UI Design Intern, bringing creativity, precision, and a user-focused mindset to every project. Their ability to craft intuitive designs and collaborate effectively made a significant impact on our team. A talented designer with a bright future ahead!</span></p>
             </blockquote>
           </div>
 
           <div class="testimonial-card">
             <i class="fa-solid fa-quote-left big-quote-mark"></i>
             <div class="testimonial-author">
-              <img src="images/Luke.png" alt="Muhammad Lastname">
+              <img src="images/Leia-Organa.png" alt="Muhammad Lastname">
               <div class="author-info">
-                <h3>Muhammad Lastname</h3>
-                <p>CEO</p>
+                <h3>Tina Yam</h3>
+                <p>Backend Developer</p>
               </div>
             </div>
 
             <div id="divider"></div>
 
             <blockquote>
-              <p><span class="quote-mark">❝</span>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy<span class="quote-mark">❞</span></p>
+              <p><span class="quote-mark">❝</span> crafted content that perfectly aligned with our design goals and user needs. Their creativity and strategic thinking added immense value to the project. A true asset to the team!"</span></p>
             </blockquote>
           </div>
         </div>
