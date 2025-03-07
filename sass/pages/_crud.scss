@@ -3,7 +3,9 @@
 // Project_list.php
 .crud-body {
  text-align: center;
- font-weight: a.$p-font-weight;
+ font-weight: a.$p-font-weight !important;
+ margin: 100px;
+ font-family: sans-serif;
 }
 
 .project-list {
@@ -20,7 +22,7 @@
   
   a {
     text-decoration: none;
-    // color: $secondary-color;
+    text-align: center;
     font-weight: bold;
     margin-left: 10px;
     &:hover {
@@ -69,7 +71,7 @@ a[href="logout.php"] {
   margin-top: 20px;
   color: a.$secondary-color;
   background-color: a.$main-blue;
-  padding: 6px 8px;
+  padding: 8px 12px;
   border-radius: 6px;
   font-weight: bold;
   text-decoration: none;

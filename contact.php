@@ -42,8 +42,8 @@
     </div>
 
 
-    <div class="case-study-body">
-        <section id="contact-form-con" class="grid-con">
+    <div class="grid-con">
+        <section id="contact-form-con" class="col-span-full">
             <form action="sendmail.php" method="POST" class="col-span-full m-col-start-4 m-col-end-11">
             <label for="first_name">First Name:</label>
             <input type="text" id="first_name" name="first_name" placeholder="Your First Name" required>
