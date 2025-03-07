@@ -25,14 +25,14 @@ picture {
 }
 
 
-Video Custom
 :root {
-  --plyr-color-main: #008993; /* 메인 색상 */
-  --plyr-control-icon-size: 18px; /* 아이콘 크기 */
-  --plyr-control-spacing: 12px; /* 컨트롤 간 간격 */
-  --plyr-control-radius: 10px; /* 컨트롤 모서리 둥글기 */
-  --plyr-font-family: "Arial", sans-serif; /* 폰트 */
+  --plyr-color-main: #008993 !important; /* 메인 색상 */
+  --plyr-control-icon-size: 40px !important; /* 아이콘 크기 */
+  --plyr-control-spacing: 12px !important; /* 컨트롤 간 간격 */
+  --plyr-control-radius: 10px !important; /* 컨트롤 모서리 둥글기 */
+  --plyr-font-family: "Arial", sans-serif !important; /* 폰트 */
 }
+
 
 html {
   box-sizing: border-box;
