@@ -27,7 +27,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   <link href="css/main.css" rel="stylesheet">
@@ -35,16 +35,27 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <title><?php echo $project['title']; ?> Details</title>
-    
-    <!-- GSAP & Plugins -->
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script defer src="https://assets.codepen.io/16327/SplitText3.min.js"></script> 
-    <!-- SplitText 최신 버전 (CodePen CDN) -->
 
-    <!-- 기타 라이브러리 -->
-    <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Hailie" />
+<link rel="manifest" href="images/site.webmanifest" />
+
+  <!-- GSAP & Plugins -->
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <!-- <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+  <script defer src="js/SplitText.js"></script>
+
+  <!-- 기타 라이브러리 -->
+  <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+
+  <!-- 사용자 스크립트 -->
+  <script defer src="js/main.js"></script>
+
+  <title><?php echo $project['title']; ?> Details</title> 
 
 </head>
 <body>

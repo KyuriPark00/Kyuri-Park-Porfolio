@@ -1,7 +1,7 @@
 # Kyuri Park's Portfolio
 <br>
 
-<img src="images/logo-white.svg" alt="Kyuri Park Logo" width="100" /> Welcome to my portfolio! This project showcases my skills and work as a **front-end developer** and **designer**. The portfolio includes various sections to highlight my **case studies**, **demo reel**, and **contact information**. 
+<img src="images/kp_logo_thicker_white.png" alt="Kyuri Park Logo" width="100" /> Welcome to my portfolio! This project showcases my skills and work as a **front-end developer** and **designer**. The portfolio includes various sections to highlight my **case studies**, **demo reel**, and **contact information**. 
 
 
 ---
