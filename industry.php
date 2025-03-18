@@ -27,7 +27,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   <link href="css/main.css" rel="stylesheet">
@@ -54,8 +54,8 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
   <!-- 사용자 스크립트 -->
   <script defer src="js/main.js"></script>
-
-  <title><?php echo $project['title']; ?> Details</title>
+  
+    <title><?php echo $project['title']; ?> Details</title>
 </head>
 <body>
     <h1 class="hidden">Industry Night Details</h1>
@@ -157,15 +157,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div> 
         </section>
     </div>
-    
-    <br><br><br>
-    <br><br><br>
-
-    <div class="grid-con">
-        <button class="col-span-full" id="top-button">
-        <img src="images/top-button.png" alt="top button">
-        </button>
-    </div>
 
     <div class="collaborate">
         <h2>Let’s Collaborate</h2>
@@ -186,8 +177,5 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </div>
     </div>
   </footer>
-
-    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>

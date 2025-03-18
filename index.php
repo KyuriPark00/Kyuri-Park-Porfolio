@@ -23,8 +23,15 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="Hailie" />
+<link rel="manifest" href="images/site.webmanifest" />
 
   <!-- GSAP & Plugins -->
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -70,7 +77,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <!-- Profile Con -->
   <section id="profile-con" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-      <h2 class="introduce">It’s Kyuri,<br>Your Designer, Software Engineer</h2>
+      <h2 class="introduce">It’s Kyuri,<br>Your Designer, Frontend Developer</h2>
       <h3>Designing with purpose, developing with precision.</h3>
 
       <div id="professional-sns-box">
