@@ -27,7 +27,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
   <link href="css/main.css" rel="stylesheet">
@@ -55,7 +55,8 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <!-- 사용자 스크립트 -->
   <script defer src="js/main.js"></script>
   
-  <title><?php echo $project['title']; ?> Details</title>
+
+    <title><?php echo $project['title']; ?> Details</title>
 </head>
 <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
@@ -144,15 +145,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </section>
     </div>
     
-    <br><br><br>
-    <br><br><br>
-
-    <div class="grid-con">
-        <button class="col-span-full" id="top-button">
-        <img src="images/top-button.png" alt="top button">
-        </button>
-    </div>
-    
     <div class="collaborate">
         <h2>Let’s Collaborate</h2>
         <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
@@ -175,7 +167,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

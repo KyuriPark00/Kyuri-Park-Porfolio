@@ -107,14 +107,14 @@ body {
 
 /*-- Project Con(case study) -*/
 #projects-con {
-  padding: 40px;
+  padding: 40px; // 이 섹션 감싸는 패딩딩
   text-align: center;
   position: relative;
   margin: 0 auto;
 
   @media (min-width: 380px) {
     font-size: a.$h2-size-mobile;
-    bottom: 100px;
+    bottom: 100px; //섹션 아래 마진
    }
 
   @media (min-width: 780px) {
