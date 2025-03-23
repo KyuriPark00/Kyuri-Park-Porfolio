@@ -78,7 +78,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <section id="profile-con" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
       <h2 class="introduce">It’s Kyuri,<br>Your Designer, Frontend Developer</h2>
-      <h3>Designing with purpose, developing with precision.</h3>
+      <!-- <h3>Designing with purpose, developing with precision.</h3> -->
+       <br><br>
 
       <div id="professional-sns-box">
           <a href="https://github.com/KyuriPark00"><button>Github</button></a>

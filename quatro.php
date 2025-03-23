@@ -81,18 +81,18 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </ul>
         </nav>
     </div>
-    
-    <div class="case-study-body">
-        <!-- Hero Image -->
-        <section id="quatro-hero">
+
+    <!-- Hero Image -->
+    <section id="quatro-hero">
         <img src="<?php echo $images[1]; ?>" alt="hero image of quatro">
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
                 <button>Github Repo</button>
             </a>
         <?php endif; ?>
-        </section>
-
+    </section>
+    
+    <div class="case-study-body">
         <!-- Project Details -->
         <section id="quatro-details-con">
             <div id="quatro-details">
