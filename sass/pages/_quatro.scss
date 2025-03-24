@@ -2,15 +2,10 @@
 
 #quatro-hero {
     text-align: center;
+    display: flex;
+    flex-direction: column;
     
     button {
-        display: flex;
-        // justify-items: center;
-        // justify-content: center;
-        // align-items: center;
-        // align-self: center;
-        // align-content: center;
-
         padding: 10px 15px;
         font-weight: bold;
         color: #ffffff;
@@ -182,7 +177,15 @@
               max-height: 50px;
             }
         }
+      }
+
+    // Resarch Section
+    .emoji-con-desktop { display: none; }
+
+    .emoji-con-mobile {
+      display: flex;
     }
+
     
     #design-principal-con {
     
@@ -357,6 +360,16 @@
         }
       }
     
+      // Research Section
+      .emoji-con-desktop { display: grid; }
+
+      .emoji-con-mobile {
+        display: none;
+      }
+  
+
+      .emoji-con-mobile { display: none; }
+
       #design-principal-con {
     
         margin-top: 80px;
@@ -505,6 +518,16 @@
         }
       }
     
+      // Research Section
+      // emoji-con-desktop
+      .emoji-con-desktop { display: grid; }
+
+      .emoji-con-mobile {
+        display: none;
+      }
+
+      .emoji-con-mobile { display: none; }
+
       #design-principal-con {
     
         margin-top: 80px;
