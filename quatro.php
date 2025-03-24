@@ -85,6 +85,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     <!-- Hero Image -->
     <section id="quatro-hero">
         <img src="<?php echo $images[1]; ?>" alt="hero image of quatro">
+
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
                 <button>Github Repo</button>
@@ -135,6 +136,61 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             ?>
         </section>
 
+        <!-- Research Section -->
+        <section id="research-con">
+            <h2 class="Heading">Research</h2>
+
+            <div>
+                <h3 class="sub-heading">Needs & Goals</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
+            </div>
+
+            <div class="target-audience-con">
+                <h3 class="sub-heading">Target Audience</h3>
+
+                <div class="emoji-des-con-desktop">
+                    <div class=emoji-con-desktop>
+                        <div class="emoji-first-row">
+                            <img src="images/athlete-man.png" alt="Athlete man image">
+                            <img src="images/athlete-woman.png" alt="Athlete woman image">
+                        </div>
+
+                        <div class="emoji-second-row">
+                            <img src="images/constructor-woman.png" alt="Athlete man image">
+                            <img src="images/student-boy.png" alt="Athlete woman image">
+                        </div>
+                    </div>
+
+                    <div class="des-con col-span-full">
+                        <p><b>Age Range:</b>13-40</p>
+                        <p><b>Gender:</b>All</p>
+                        <p><b>Location</b>North Ameria</p>
+                        <p><b>Occupation/Industry:</b>Sports, leisure, Construction</p>
+                        <p><b>Education Level:</b>All</p>
+                        <p><b>Psychographics</b></p>
+                    </div>
+                </div>
+
+                <div class="emoji-des-con-mobile">
+                    <div class="emoji-con-mobile">
+                        <img src="images/athlete-man.png" alt="Athlete man image">
+                        <img src="images/athlete-woman.png" alt="Athlete woman image">       
+                        <img src="images/constructor-woman.png" alt="Athlete man image">
+                        <img src="images/student-boy.png" alt="Athlete woman image">
+                    </div>
+
+                    <div class="des-con col-span-full">
+                        <p><b>Age Range:</b>13-40</p>
+                        <p><b>Gender:</b>All</p>
+                        <p><b>Location</b>North Ameria</p>
+                        <p><b>Occupation/Industry:</b>Sports, leisure, Construction</p>
+                        <p><b>Education Level:</b>All</p>
+                        <p><b>Psychographics</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Design Principle Section -->
         <section id="design-principal-con">
             <h2 class="Heading">Design Principal</h2>
@@ -170,6 +226,11 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
                 </div>
             </div>
+        </section>
+
+        <!-- Label Design -->
+        <section id="label-design-con">
+            <h2 class="Heading">Label Design</h2>
         </section>
 
         <!-- Devices Section -->
