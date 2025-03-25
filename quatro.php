@@ -137,10 +137,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
 
         <!-- Research Section -->
-        <section id="research-con">
-            <h2 class="Heading">Research</h2>
+        <div class="heading-line">
+                <h2 class="Heading">Research<img src="images/research.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+            </div>
 
-            <div>
+        <!-- Research Section -->
+        <section class="research-con">
+            <div class="needs-goals-con">
                 <h3 class="sub-heading">Needs & Goals</h3>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
             </div>
@@ -161,7 +165,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                         </div>
                     </div>
 
-                    <div class="des-con col-span-full">
+                    <div class="des-con col-span-full blue-box">
                         <p><b>Age Range:</b>13-40</p>
                         <p><b>Gender:</b>All</p>
                         <p><b>Location</b>North Ameria</p>
@@ -179,7 +183,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                         <img src="images/student-boy.png" alt="Athlete woman image">
                     </div>
 
-                    <div class="des-con col-span-full">
+                    <div class="des-con col-span-full blue-box">
                         <p><b>Age Range:</b>13-40</p>
                         <p><b>Gender:</b>All</p>
                         <p><b>Location</b>North Ameria</p>
@@ -191,19 +195,24 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
+        <div class="heading-line">
+                <h2 class="Heading">Design - Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+        </div>
+
         <!-- Design Principle Section -->
         <section id="design-principal-con">
-            <h2 class="Heading">Design Principal</h2>
+            <h2 class="sub-heading">Design Principal</h2>
             <div id="design-principal-box">
-                <div class="design-principal">
+                <div class="design-principal blue-box">
                     <h3>Tropical</h3>
                     <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
                 </div>
-                <div class="design-principal">
+                <div class="design-principal blue-box">
                     <h3>Consistent</h3>
                     <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
                 </div>
-                <div class="design-principal">
+                <div class="design-principal blue-box">
                     <h3>Clear</h3>
                     <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
                 </div>
@@ -212,7 +221,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Logo Specs Section -->
         <section id="logo-specs-con">
-            <h2 class="Heading">Logo Specs</h2>
+            <h2 class="sub-heading">Logo Specs</h2>
             <div id="logo-specs-img-box">
                 <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
             </div>
@@ -230,12 +239,17 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Label Design -->
         <section id="label-design-con">
-            <h2 class="Heading">Label Design</h2>
+            <h2 class="sub-heading">Label Design</h2>
         </section>
+
+        <div class="heading-line">
+                <h2 class="Heading">Design - Website<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+        </div>
 
         <!-- Devices Section -->
         <section id="devices-con">
-            <h2 class="Heading">Devices</h2>
+            <h2 class="sub-heading">Devices</h2>
             <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
             <div id="devices-con-img-box">
                 <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
@@ -248,7 +262,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Wireframes Section -->
         <section id="wireframingSketches">
-            <h2 class="Heading">Wireframing</h2>
+            <h2 class="sub-heading">Wireframing</h2>
             <div>
                 <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
             </div>
@@ -256,7 +270,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Branding Video Section -->
         <section id="branding-video-con">
-            <h2 class="Heading">Quatro - Branding Video</h2>
+            <h2 class="sub-heading">Branding Video</h2>
             <div id="player-container">
                 <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
                     <source src="<?php echo $video[0]; ?>" type="video/mp4">
