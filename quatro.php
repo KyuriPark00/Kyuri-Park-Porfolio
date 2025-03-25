@@ -152,20 +152,22 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="target-audience-con">
                 <h3 class="sub-heading">Target Audience</h3>
 
-                <div class="emoji-des-con-desktop">
-                    <div class=emoji-con-desktop>
-                        <div class="emoji-first-row">
-                            <img src="images/athlete-man.png" alt="Athlete man image">
-                            <img src="images/athlete-woman.png" alt="Athlete woman image">
-                        </div>
+                <div class="emoji-des-con-desktop grid-con">
+                    <div class="emoji-con-desktop m-col-span-4 m-col-start-1">
+                        <div class="row-wrap">
+                            <div class="emoji-first-row">
+                                <img src="images/athlete-man.png" alt="Athlete man image">
+                                <img src="images/athlete-woman.png" alt="Athlete woman image">
+                            </div>
 
-                        <div class="emoji-second-row">
-                            <img src="images/constructor-woman.png" alt="Athlete man image">
-                            <img src="images/student-boy.png" alt="Athlete woman image">
+                            <div class="emoji-second-row">
+                                <img src="images/constructor-woman.png" alt="Athlete man image">
+                                <img src="images/student-boy.png" alt="Athlete woman image">
+                            </div>
                         </div>
                     </div>
 
-                    <div class="des-con col-span-full blue-box">
+                    <div class="des-con blue-box m-col-start-6 m-col-end-14">
                         <p><b>Age Range:</b>13-40</p>
                         <p><b>Gender:</b>All</p>
                         <p><b>Location</b>North Ameria</p>
@@ -240,12 +242,47 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Label Design -->
         <section id="label-design-con">
             <h2 class="sub-heading">Label Design</h2>
+
+            <div class="grid-con">
+                <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
+                <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
+                <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
+                <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
+            </div>
+        </section>
+
+        <!-- Posters & Can -->
+        <section id="poster-can-con">
+            <div class="poster-wrap grid-con">
+                <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
+                    <h2 class="sub-heading">Posters</h2>
+                    <img src="images/limeposter.png" alt="Quatro Poster 1">
+                </div>
+
+                <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
+                    <h2 class="sub-heading">Can Design</h2>
+                    <img src="images/can-image.png" alt="Quatro Can Pineapple">
+                </div>
+            </div>
         </section>
 
         <div class="heading-line">
                 <h2 class="Heading">Design - Website<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
         </div>
+
+        <!-- UX UI Section --> 
+        <section id="ux-ui-con">
+            <div class="grid-con">
+                <div class="col-span-full m-col-span-6 m-col-start-1"><img src="images/can-image.png" alt="Quatro Can Pineapple"></div>
+                
+                <div class="col-span-full m-col-span-6 m-col-start-8">
+                    <h2 class="entry-point">Web - Entry Points</h2>
+                    <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
+                     <p><?php echo $project['entry_point_p']; ?></p>
+                </div>
+            </div>
+        </section>        
 
         <!-- Devices Section -->
         <section id="devices-con">

@@ -40,6 +40,17 @@ p {
   background-color: #D7F3F5;
 }
 
+.entry-point {
+  color: a.$main-blue !important;
+}
+
+.entry-point-h3 {
+  color: a.$orange-color !important;
+}
+p {
+  font-weight: 500;
+}
+
 #quatro-hero {
     text-align: center;
     display: flex;
@@ -107,6 +118,13 @@ p {
     }
 }
 
+// Poster & Can
+// #poster-can-con {
+//   img {
+//     width: 100%;
+//   }
+// }
+
 #devices-con {
     #devices-con-img-box {
         background: cover no-repeat;
@@ -154,7 +172,6 @@ p {
   } 
   
   #quatro-hero {
-        margin-top: 5px;
         text-align: center;
         
         button {
@@ -165,7 +182,7 @@ p {
     
     
       #quatro-details-con {
-        margin-top: 70px;
+        margin-top: a.$first-sec-margin-mobile;
         display: block;
     
         h2{
@@ -199,12 +216,12 @@ p {
         }
     
         h2 {
-            margin-top: 100px;
             margin-bottom: 20px;
         }
     
         .what-I-did {
-            margin-bottom: 40px;
+            margin-bottom: 40px; // 이모지간 간극
+            &:last-child { margin-bottom: 0;}
     
             #front-end, #logo-design, #web-design, #label-design, #promotional-video {
               div {
@@ -225,7 +242,7 @@ p {
     // Resarch Section
     .research-con {
       .needs-goals-con {
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
       }
     }
     
@@ -258,7 +275,7 @@ p {
     
     #design-principal-con {
     
-      margin-top: 70px;
+      // margin-top: 70px;
     
       #design-principal-box {
         flex-direction: column;
@@ -267,7 +284,7 @@ p {
     }
     
     #logo-specs-con {
-      margin-top: 80px;
+      // margin-top: 80px;
     
       .logo-specs-detail {
         &:first-child {
@@ -287,7 +304,7 @@ p {
     }
     
     #devices-con {
-      margin-top: 80px;
+      // margin-top: 80px;
       
       h2 {
         margin-bottom: 20px;
@@ -308,11 +325,11 @@ p {
     }
     
     #wireframingSketches {
-      margin-top: 80px;
+      // margin-top: 80px;
     }
     
     #branding-video-con {
-      margin-top: 80px;
+      // margin-top: 80px;
     
       h2{
         margin-bottom: 10px;
@@ -338,9 +355,7 @@ p {
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
     #quatro-hero {
-        margin-top: 5px !important;
-        text-align: center;
-        
+
         button {
             margin-top: 20px;
             font-size: 18px;
@@ -387,7 +402,7 @@ p {
         }
     
         .what-I-did {
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
     
             #front-end, #logo-design, #web-design, #label-design, #promotional-video {
               div {
@@ -414,20 +429,25 @@ p {
     
       // Research Section
       .emoji-des-con-desktop {
-        display: block;
+        display: grid;
+
+        .row-wrap {
+          display: flex;
+
+          img {
+            max-width: 150px;
+          }
+        }
       }
 
       .emoji-des-con-mobile { display: none; }
 
       .emoji-con-mobile { display: none; }
 
+
       #design-principal-con {
     
-        margin-top: 80px;
-    
-        h2 {
-          margin-bottom: 40px;
-        }
+        // margin-top: 80px;
     
         #design-principal-box {
           margin-top: 20px;
@@ -453,11 +473,7 @@ p {
       }
     
       #logo-specs-con {
-        margin-top: 80px;
-    
-        h2 {
-          margin-bottom: 40px;
-        }
+        // margin-top: 80px;
     
         .logo-specs-detail {
           &:first-child {
@@ -477,7 +493,7 @@ p {
       }
     
       #devices-con {
-        margin-top: 80px;
+        // margin-top: 80px;
       
         h3 {
           font-size: 18px;
@@ -494,14 +510,13 @@ p {
       }
     
       #wireframingSketches {
-        margin-top: 80px;
+        // margin-top: 80px;
       }    
 }
 
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
     #quatro-hero {
-        margin-top: 5px !important;
         text-align: center;
         
         button {
@@ -540,10 +555,9 @@ p {
     
       #what-I-did-con {
     
-        margin-top: 80px;
+        // margin-top: 80px;
     
         .what-I-did {
-          margin-bottom: 40px;
     
           #front-end, #logo-design, #web-design, #label-design, #promotional-video {
             div {
@@ -572,14 +586,14 @@ p {
       // Research Section
       // emoji-con-desktop
       .emoji-des-con-desktop {
-        display: block;
+        
       }
 
       .emoji-des-con-mobile { display: none; }
 
       #design-principal-con {
     
-        margin-top: 80px;
+        // margin-top: 80px;
       
         #design-principal-box {
           margin-top: 20px;
@@ -606,7 +620,7 @@ p {
       }
     
       #logo-specs-con {
-        margin-top: 100px;
+        // margin-top: 100px;
       
         .logo-specs-detail {
           &:first-child {
@@ -626,7 +640,7 @@ p {
       }
     
       #devices-con {
-        margin-top: 100px;
+        // margin-top: 100px;
     
         p {
           font-size: 19px;
@@ -648,6 +662,6 @@ p {
       }
       
       #wireframingSketches {
-        margin-top: 100px;
+        // margin-top: 100px;
       }    
 }
