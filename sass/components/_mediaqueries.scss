@@ -1,5 +1,11 @@
 @use '../abstracts' as a;
 
+.Heading {
+  font-size: 30px !important;
+  color: a.$accent-color;
+  margin-bottom: 20px;
+}
+
 
 /* ---Mobile Library Grid Style--- */
 @media screen and (min-width: 360px) {
@@ -8,11 +14,6 @@
     margin-right: 40px;
   }
 
-  .Heading {
-    font-size: 30px !important;
-    color: a.$accent-color;
-  }
-  
   /* ------------ Contact Page ------------ */
   #contact-me-con {
     margin-top: 40px;
@@ -228,10 +229,6 @@
     margin-left: 60px;
     margin-right: 60px;
   }
-  
-  .Heading {
-    font-size: 30px !important;
-  }
 
   body { margin-right: 10px; margin-left: 10px;}
 
@@ -407,10 +404,6 @@
   .case-study-body {
     margin-left: 90px;
     margin-right: 90px;
-  }
-
-  .Heading {
-    font-size: 40px !important;
   }
 
   body { margin-right: 80px; margin-left: 80px;}

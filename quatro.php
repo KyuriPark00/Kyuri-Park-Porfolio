@@ -136,7 +136,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             ?>
         </section>
 
-        <!-- Research Section -->
+        <!-- Research Title -->
         <div class="heading-line">
                 <h2 class="Heading">Research<img src="images/research.png" alt="" class="icon"></h2>
                 <div class="line"></div>
@@ -152,30 +152,25 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="target-audience-con">
                 <h3 class="sub-heading">Target Audience</h3>
 
-                <div class="emoji-des-con-desktop grid-con">
-                    <div class="emoji-con-desktop m-col-span-4 m-col-start-1">
-                        <div class="row-wrap">
-                            <div class="emoji-first-row">
-                                <img src="images/athlete-man.png" alt="Athlete man image">
-                                <img src="images/athlete-woman.png" alt="Athlete woman image">
-                            </div>
-
-                            <div class="emoji-second-row">
-                                <img src="images/constructor-woman.png" alt="Athlete man image">
-                                <img src="images/student-boy.png" alt="Athlete woman image">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="des-con blue-box m-col-start-6 m-col-end-14">
-                        <p><b>Age Range:</b>13-40</p>
-                        <p><b>Gender:</b>All</p>
-                        <p><b>Location</b>North Ameria</p>
-                        <p><b>Occupation/Industry:</b>Sports, leisure, Construction</p>
-                        <p><b>Education Level:</b>All</p>
-                        <p><b>Psychographics</b></p>
+            <div class="emoji-des-con-desktop grid-con">
+                <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
+                    <div class="emoji-grid">
+                        <img src="images/athlete-man.png" alt="Athlete man image">
+                        <img src="images/athlete-woman.png" alt="Athlete woman image">
+                        <img src="images/constructor-woman.png" alt="Constructor woman image">
+                        <img src="images/student-boy.png" alt="Student boy image">
                     </div>
                 </div>
+
+                <div class="des-con blue-box m-col-start-4 m-col-end-14">
+                    <p><b>Age Range:</b> 13-40</p>
+                    <p><b>Gender:</b> All</p>
+                    <p><b>Location:</b> North America</p>
+                    <p><b>Occupation/Industry:</b> Sports, leisure, Construction</p>
+                    <p><b>Education Level:</b> All</p>
+                    <p><b>Psychographics:</b></p>
+                </div>
+            </div>
 
                 <div class="emoji-des-con-mobile">
                     <div class="emoji-con-mobile">
@@ -197,6 +192,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
+        <!-- Design - Branding Title -->
         <div class="heading-line">
                 <h2 class="Heading">Design - Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
@@ -223,27 +219,31 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Logo Specs Section -->
         <section id="logo-specs-con">
-            <h2 class="sub-heading">Logo Specs</h2>
-            <div id="logo-specs-img-box">
-                <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
-            </div>
-            <div id="logo-specs-detail-box">
-                <div class="logo-specs-detail">
-                    <h3>Shape:</h3>
-                    <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
+            <div class="grid-con">
+                <h2 class="sub-heading col-span-full">Logo Specs</h2>
+                <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
+                    <div id="logo-specs-img-box">
+                        <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
+                    </div>
                 </div>
-                <div class="logo-specs-detail">
-                    <h3>Colour</h3>
-                    <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
+
+                <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
+                    <div class="logo-specs-detail">
+                        <h3>Shape:</h3>
+                        <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
+                    </div>
+                    <div class="logo-specs-detail">
+                        <h3>Colour</h3>
+                        <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Label Design -->
         <section id="label-design-con">
-            <h2 class="sub-heading">Label Design</h2>
-
             <div class="grid-con">
+                <h2 class="sub-heading col-span-full">Label Design</h2>
                 <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
                 <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
                 <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
