@@ -101,6 +101,13 @@ p {
     }
 }
 
+.des-con {
+  p {
+    margin-bottom: 10px !important;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
 #design-principal-box {
     display: flex;
 }
@@ -157,18 +164,6 @@ p {
 @media screen and (min-width: 360px) {
   .blue-box {
     padding: 20px;
-    margin-top: 20px;
-
-    h3 {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 15px;
-      padding: 0;
-      margin: 0;
-    }
   } 
   
   #quatro-hero {
@@ -187,16 +182,16 @@ p {
     
         h2{
           margin-bottom: 10px;
-          font-size: 22px;
+          font-size: 22px; // Quatro 제목 사이즈임 파란색색
         }
     
         h3 {
           margin-bottom: 10px;
-          font-size: 18px;
+          font-size: a.$h3-size-mobile; // Subtitle 사이즈임 오렌지색색
         }
     
         p {
-          font-size: 15px;
+          font-size: a.$p-font-size-mobile;
         }
     
     
@@ -205,27 +200,19 @@ p {
           display: flex;
           flex-direction: row;
           column-gap: 100px;
-    
         }
       }
     
       #what-I-did-con {
         padding: 0;
-        h2 {
-          font-size: 22px;
-        }
-    
-        h2 {
-            margin-bottom: 20px;
-        }
-    
+
         .what-I-did {
             margin-bottom: 40px; // 이모지간 간극
             &:last-child { margin-bottom: 0;}
     
             #front-end, #logo-design, #web-design, #label-design, #promotional-video {
               div {
-                font-size: 15px;
+                font-size: a.$p-font-size-mobile;
               }
                 display: flex;
                 font-weight: 500;
@@ -239,14 +226,12 @@ p {
         }
       }
 
-    // Resarch Section
     .research-con {
-      .needs-goals-con {
-        // margin-bottom: 30px;
+      p{
+        font-size: a.$p-font-size-mobile;
       }
     }
     
-
     .emoji-des-con-desktop {
       display: none;
     }
@@ -274,9 +259,8 @@ p {
     }
     
     #design-principal-con {
-    
-      // margin-top: 70px;
-    
+      p { font-size: a.$p-font-size-mobile; }
+
       #design-principal-box {
         flex-direction: column;
         row-gap: 30px;
@@ -284,7 +268,7 @@ p {
     }
     
     #logo-specs-con {
-      // margin-top: 80px;
+      p { font-size: a.$p-font-size-mobile; }
     
       .logo-specs-detail {
         &:first-child {
@@ -294,24 +278,24 @@ p {
           font-size: 18px;
           margin-bottom: 10px;
         }
-    
-        p {
-          font-size: 15px;
-          padding: 0;
-          margin: 0;
-        }
       }
     }
     
+    #ux-ui-con {
+      p { font-size: a.$p-font-size-mobile; }
+
+      h3 { font-size: a.$h3-size-mobile; }
+    }
+
     #devices-con {
-      // margin-top: 80px;
+      p { font-size: a.$p-font-size-mobile; }
       
       h2 {
         margin-bottom: 20px;
       }
     
       h3 {
-        font-size: 15px;
+        font-size: a.$h3-size-mobile;
       }
     
       .entry-point {
@@ -323,21 +307,12 @@ p {
         margin-bottom: 10px;
       }
     }
-    
-    #wireframingSketches {
-      // margin-top: 80px;
-    }
-    
+
     #branding-video-con {
       // margin-top: 80px;
     
       h2{
         margin-bottom: 10px;
-      }
-    
-      h3 {
-        margin-bottom: 10px;
-        font-size: 18px;
       }
     
       p {
@@ -430,15 +405,22 @@ p {
       // Research Section
       .emoji-des-con-desktop {
         display: grid;
-
-        .row-wrap {
-          display: flex;
-
-          img {
-            max-width: 150px;
-          }
+    
+        .emoji-con-desktop {
+            display: flex;
+            align-items: center; // 이모지를 중앙 정렬
+    
+            .emoji-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); // 2x2 그리드 설정
+                grid-template-rows: repeat(2, auto);
+                gap: 10px; // 이미지 간격 조절
+                width: max-content; // 이미지 크기만큼만 공간 차지
+            }
         }
+
       }
+    
 
       .emoji-des-con-mobile { display: none; }
 
