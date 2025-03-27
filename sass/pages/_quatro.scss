@@ -1,100 +1,12 @@
 @use '../abstracts' as a;
 
-p {
-  font-weight: 500;
-  text-align: left;
-}
-
-// 가장 큰 타이틀
-.heading-line {
-  // background-color: blueviolet;
-  margin-top: a.$second-sec-margin-mobile;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 10px;
-  width: 100%;
-
-  h2, img, div { padding:0; margin: 0; }
-  
-  h2 {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-
-    .icon {
-      font-family: "Times New Roman", serif;
-      font-style: italic;
-      width: 60px;
-    }
-  }
-
-  .line {
-    flex-grow: 1;
-    height: 1px;
-    background-color: black;
-  }
-}
-
-// 두번째 큰 타이틀
-.sub-heading {
-  margin-bottom: 15px;
-  font-size: 22px;
-  padding: 0;
-}
-
-// 내부 타이틀, 가장 작음
-.mini-heading {
-  font-size: a.$h3-size-mobile;
-  margin-bottom: 5px;
-  padding: 0;
-}
-
-
-.blue-box {
-  background-color: #D7F3F5;
-}
-
-.entry-point {
-  color: a.$main-blue !important;
-}
-
-.entry-point-h3 {
-  color: a.$orange-color !important;
-}
-p {
-  font-weight: 500;
-}
-
 #quatro-hero {
     text-align: center;
     display: flex;
     flex-direction: column;
-    
-    button {
-        padding: 10px 15px;
-        font-weight: bold;
-        color: #ffffff;
-        background-color: a.$main-blue; /* 버튼 색상 */
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-
-        &:hover {
-        background-color: a.$orange-color; /* hover 색상 */
-        transform: scale(1.05); /* 확대 효과 */
-        }
-
-        &:active {
-        transform: scale(0.95); /* 클릭 효과 */
-        }
-    }
 }
 
-#quatro-details-con {
+.project-details-con {
    padding: 0;
   //  background-color: aquamarine;
    
@@ -128,10 +40,6 @@ p {
     margin-bottom: 10px !important;
     &:last-child { margin-bottom: 0; }
   }
-}
-
-#design-principal-con {
-  // background-color: tan;
 }
 
 #design-principal-box {
@@ -178,7 +86,7 @@ p {
         background: cover no-repeat;
     }
 
-    h3 {
+    .device-top-h3 {
         color: a.$primary-color !important;
         span {
             color: a.$main-blue;
@@ -216,7 +124,7 @@ p {
         }
     
     
-      #quatro-details-con {
+      .project-details-con {
         margin-top: a.$first-sec-margin-mobile;
     
         h3 {
@@ -229,7 +137,7 @@ p {
         }
     
     
-        #quatro-team-year {
+        .project-team-year {
           margin-top: 30px;
           display: flex;
           flex-direction: row;
@@ -328,7 +236,7 @@ p {
       margin-top: a.$inside-sec-margin-mobile;
       p { font-size: a.$p-font-size-mobile; }
     
-      h3 {
+      .device-top-h3 {
         font-size: a.$h3-size-mobile; //디바이스 사진 위에 있는 h3태그임. entry-h3아니라
       }
     }
@@ -356,9 +264,9 @@ p {
             }
         }
     
-       #quatro-details-con {
+       .project-details-con {
     
-        #quatro-team-year {
+        .project-team-year {
           margin-top: 20px;
           display: flex;
           flex-direction: row;
@@ -453,7 +361,7 @@ p {
             }
         }
     
-      #quatro-details-con {
+      .project-details-con {
         // padding: 0 20px;
         // display: flex;
         // column-gap: 100px;
@@ -467,7 +375,7 @@ p {
         }
     
     
-        #quatro-team-year {
+        .project-team-year {
           margin-top: 20px;
           display: flex;
           flex-direction: row;
@@ -503,18 +411,10 @@ p {
           }
         }
       }
-    
-      // Research Section
-      // emoji-con-desktop
-      .emoji-des-con-desktop {
-        
-      }
 
       .emoji-des-con-mobile { display: none; }
 
       #design-principal-con {
-    
-        // margin-top: 80px;
       
         #design-principal-box {
           margin-top: 20px;

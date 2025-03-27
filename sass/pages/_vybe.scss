@@ -1,102 +1,80 @@
 @use '../abstracts' as a;
 
-.vybe-hero {
-    text-align: center;
-    
-    #vybe-github {
-        display: inline-block;
-        padding: 10px 15px;
-        font-weight: bold;
-        color: #ffffff;
-        background-color: a.$main-blue; /* 버튼 색상 */
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
+// .vybe-hero {
+//     text-align: center;
+// }
 
-        &:hover {
-        background-color: a.$orange-color; /* hover 색상 */
-        transform: scale(1.05); /* 확대 효과 */
-        }
-
-        &:active {
-        transform: scale(0.95); /* 클릭 효과 */
-        }
-    }
-}
-
-#vybe-details-con {
-   padding: 0;
+// #vybe-details-con {
+//    padding: 0;
    
-    h2 {
-        color: a.$main-blue;
-    }
+//     h2 {
+//         color: a.$main-blue;
+//     }
 
-    h3 {
-        color: a.$orange-color;
-    }
+//     h3 {
+//         color: a.$orange-color;
+//     }
 
-    p {
-        font-weight: 500;
-    }
-}
+//     p {
+//         font-weight: 500;
+//     }
+// }
 
-#slider-wrap {
+// #slider-wrap {
 
-    #poster-details {
-      h2 {
-        color: a.$main-blue;
-      }
+//     #poster-details {
+//       h2 {
+//         color: a.$main-blue;
+//       }
 
-      h3 {
-        color: a.$orange-color;
-      }
+//       h3 {
+//         color: a.$orange-color;
+//       }
 
-      p {
-        font-weight: 500;
-      }
-    }
-}
+//       p {
+//         font-weight: 500;
+//       }
+//     }
+// }
 
-#poster-slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 15px;
+// #poster-slider {
+//     position: relative;
+//     overflow: hidden;
+//     width: 100%;
+//     border-radius: 15px;
   
-    #image-slider {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-      img {
-        width: 100%;
-        flex-shrink: 0;
-      }
-    }
+//     #image-slider {
+//       display: flex;
+//       transition: transform 0.5s ease-in-out;
+//       width: 100%;
+//       img {
+//         width: 100%;
+//         flex-shrink: 0;
+//       }
+//     }
   
-    button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: a.$main-blue;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-      padding: 8px 12px;
-      cursor: pointer;
-      z-index: 10;
-      &:hover {
-        background: a.$orange-color;
-      }
+//     button {
+//       position: absolute;
+//       top: 50%;
+//       transform: translateY(-50%);
+//       background: a.$main-blue;
+//       color: #fff;
+//       border: none;
+//       border-radius: 10px;
+//       padding: 8px 12px;
+//       cursor: pointer;
+//       z-index: 10;
+//       &:hover {
+//         background: a.$orange-color;
+//       }
   
-      &#prev-btn {
-        left: 10px;
-      }
+//       &#prev-btn {
+//         left: 10px;
+//       }
   
-      &#next-btn {
-        right: 10px;
-      }
-    }
-  }
+//       &#next-btn {
+//         right: 10px;
+//       }
+//     }
+//   }
   

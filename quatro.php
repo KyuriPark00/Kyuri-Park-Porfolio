@@ -88,26 +88,26 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                <button>Github Repo</button>
+                <button class="project-github">Github Repo</button>
             </a>
         <?php endif; ?>
     </section>
     
     <div class="case-study-body">
         <!-- Project Details -->
-        <section id="quatro-details-con" class="grid-con">
-            <div id="quatro-details" class="col-span-full m-col-span-8 m-col-start-1">
+        <section class="project-details-con grid-con">
+            <div class="project-details col-span-full m-col-span-8 m-col-start-1">
                 <h2 class="Heading"><?php echo $project['title']; ?></h2>
                 <h3><?php echo $project['subtitle']; ?></h3>
                 <p><?php echo $project['description']; ?></p>
             </div>
 
-            <div id="quatro-team-year" class="col-span-full m-col-span-4 m-col-start-10">
-                <div id="quatro-team">
+            <div class="project-team-year col-span-full m-col-span-4 m-col-start-10">
+                <div class="project-team">
                     <h2>Team</h2>
                     <p><?php echo $project['team']; ?></p>
                 </div>
-                <div id="quatro-year">
+                <div class="project-year">
                     <h2>Year</h2>
                     <p><?php echo $project['year']; ?></p>
                 </div>
@@ -198,7 +198,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Design - Branding Title -->
         <div class="heading-line">
-                <h2 class="Heading">Design - Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <h2 class="Heading">Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
         </div>
 
@@ -265,7 +265,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
 
         <div class="heading-line">
-                <h2 class="Heading">Design - Website<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
         </div>
 
@@ -291,7 +291,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="devices-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Devices</h2>
-                <!-- <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3> -->
+                <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
                 <div id="devices-con-img-box">
                     <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
                 </div>

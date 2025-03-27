@@ -83,7 +83,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
     
     <div class="case-study-body">
-        <!-- Hero 섹션 -->
+        <!-- Hero Video (it could be replaced) -->
         <section class="vybe-hero">
             <?php if (!empty($video[0])): ?>
               <div id="player-container">
@@ -95,35 +95,60 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <?php endif; ?>
             <?php if (!empty($project['github_link'])): ?>
                 <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                    <button id="vybe-github">Github Repo</button>
+                    <button class="project-github">Github Repo</button>
                 </a>
             <?php endif; ?>
         </section>
 
         <!-- 프로젝트 세부사항 -->
-        <section id="vybe-details-con">
-            <div id="vybe-details">
+        <section id="vybe-details-con" class="grid-con">
+            <div id="vybe-details" class="col-span-full m-col-span-8 m-col-start-1">
                 <h2 class="Heading"><?php echo $project['title']; ?></h2>
                 <h3><?php echo $project['subtitle']; ?></h3>
                 <p><?php echo $project['description']; ?></p>
             </div>
-            <div id="vybe-team-year">
-                <div>
+            <div class="project-team-year col-span-full m-col-span-4 m-col-start-10">
+                <div class="project-team">
                     <h2>Team</h2>
                     <p><?php echo $project['team']; ?></p>
                 </div>
-                <div>
+                <div class="project-year">
                     <h2>Year</h2>
                     <p><?php echo $project['year']; ?></p>
                 </div>
             </div>
         </section>
 
-      <!-- 추가 섹션들 -->
-      <section id="what-I-did-con" class="grid-con">
+              <!-- What I Did Section -->
+        <section id="what-I-did-con" class="grid-con">
+            <h2 class="Heading col-span-full">What I did</h2>
+
+            <div class="col-span-full m-col-span-full">
+                <?php
+                // Repeat the tasks dynamically
+                $tasks = [
+                    ['image' => 'images/2.png', 'title' => 'Front-End Development (HTML, CSS, JS)', 'description' => 'Built responsive web pages, styled layouts, and added interactivity.'],
+                    ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
+                    ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
+                    ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
+                    ['image' => 'images/1.png', 'title' => 'Motion Design', 'description' => '모션디자인'],
+                    ['image' => 'images/3.png', 'title' => 'Promotional Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
+                ];
+                foreach ($tasks as $task) {
+                    echo '<div class="what-I-did col-span-full">';
+                    echo '<div id="front-end">';
+                    echo '<img src="' . $task['image'] . '" alt="front-end-icon">';
+                    echo '<div class="what-I-did-p"><b>' . $task['title'] . ':</b> ' . $task['description'] . '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+        </section>
+      <!-- <section id="what-I-did-con" class="grid-con">
         <h2 class="Heading col-span-full">What I did</h2>
         
-        <div class="what-I-did col-span-full">
+        <div class="col-span-full m-col-span-full">
           <div id="front-end">
             <img src="images/2.png" alt="front-end-icon">
             <div><b>Front-End Development (HTML, CSS, JS):</b> Built responsive web pages, styled layouts, and added interactivity.</div>
@@ -178,7 +203,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <p>From the earbuds' features to the website's navigation, every detail is crafted to enhance practicality and ease of use.</p>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Devices Section -->
       <section id="devices-con">
