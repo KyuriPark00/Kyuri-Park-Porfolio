@@ -5,17 +5,19 @@ p {
   text-align: left;
 }
 
-.sub-heading {
-  margin-bottom: 10px;
-  font-size: 22px;
-}
-
+// 가장 큰 타이틀
 .heading-line {
+  // background-color: blueviolet;
+  margin-top: a.$second-sec-margin-mobile;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  padding: 0;
   gap: 10px;
   width: 100%;
 
+  h2, img, div { padding:0; margin: 0; }
+  
   h2 {
     display: flex;
     align-items: center;
@@ -33,6 +35,20 @@ p {
     height: 1px;
     background-color: black;
   }
+}
+
+// 두번째 큰 타이틀
+.sub-heading {
+  margin-bottom: 15px;
+  font-size: 22px;
+  padding: 0;
+}
+
+// 내부 타이틀, 가장 작음
+.mini-heading {
+  font-size: a.$h3-size-mobile;
+  margin-bottom: 5px;
+  padding: 0;
 }
 
 
@@ -80,6 +96,7 @@ p {
 
 #quatro-details-con {
    padding: 0;
+  //  background-color: aquamarine;
    
     h2 {
         color: a.$main-blue;
@@ -92,6 +109,7 @@ p {
 
 #what-I-did-con {
     padding: 0;
+    // background-color: aqua;
 
     .what-I-did {
         #front-end, #logo-design, #web-design, #label-design, #promotional-video {
@@ -101,6 +119,10 @@ p {
     }
 }
 
+.research-con {
+  // background-color: #D7F3F5;
+}
+
 .des-con {
   p {
     margin-bottom: 10px !important;
@@ -108,11 +130,17 @@ p {
   }
 }
 
+#design-principal-con {
+  // background-color: tan;
+}
+
 #design-principal-box {
     display: flex;
 }
 
 #logo-specs-con {
+    // background-color: chocolate;
+    padding: 0;
 
     #logo-specs-img-box {
         img {
@@ -125,39 +153,51 @@ p {
     }
 }
 
-// Poster & Can
-// #poster-can-con {
-//   img {
-//     width: 100%;
-//   }
-// }
+#label-design-con {
+  // background-color: yellow;
+  padding: 0;
+}
+
+#poster-can-con {
+  // background-color: cadetblue;
+  padding: 0;
+}
+
+
+#ux-ui-con {
+  // background-color: tan;
+  padding: 0;
+}
 
 #devices-con {
+    // background-color: aquamarine;
+    padding: 0;
+
+
     #devices-con-img-box {
         background: cover no-repeat;
     }
 
     h3 {
-        text-align: left;
-        margin-bottom: 20px;
         color: a.$primary-color !important;
         span {
             color: a.$main-blue;
         }
     }
 
-    
-
-  .entry-point {
-    color: a.$main-blue !important;
-  }
-
-  .entry-point-h3 {
-    color: a.$orange-color !important;
-  }
   p {
     font-weight: 500;
   }
+}
+
+#wireframingSketches {
+  // background-color: bisque;
+  padding: 0;
+}
+
+#branding-video-con {
+  // background-color: aquamarine;
+  padding: 0;
 }
 
 /* ---Mobile Library Grid Style--- */
@@ -171,19 +211,13 @@ p {
         
         button {
             margin-top: 20px;
-            font-size: 15px;
+            font-size: a.$Button-font-size-mobile;
             }
         }
     
     
       #quatro-details-con {
         margin-top: a.$first-sec-margin-mobile;
-        display: block;
-    
-        h2{
-          margin-bottom: 10px;
-          font-size: 22px; // Quatro 제목 사이즈임 파란색색
-        }
     
         h3 {
           margin-bottom: 10px;
@@ -204,6 +238,7 @@ p {
       }
     
       #what-I-did-con {
+        margin-top: a.$second-sec-margin-mobile;
         padding: 0;
 
         .what-I-did {
@@ -230,6 +265,10 @@ p {
       p{
         font-size: a.$p-font-size-mobile;
       }
+    }
+
+    .target-audience-con {
+      margin-top: a.$inside-sec-margin-mobile;
     }
     
     .emoji-des-con-desktop {
@@ -268,98 +307,62 @@ p {
     }
     
     #logo-specs-con {
+      margin-top: a.$inside-sec-margin-mobile;
       p { font-size: a.$p-font-size-mobile; }
-    
-      .logo-specs-detail {
-        &:first-child {
-          margin-bottom: 30px;
-        }
-        h3 {
-          font-size: 18px;
-          margin-bottom: 10px;
-        }
-      }
     }
-    
-    #ux-ui-con {
-      p { font-size: a.$p-font-size-mobile; }
 
-      h3 { font-size: a.$h3-size-mobile; }
+    #label-design-con { margin-top: a.$inside-sec-margin-mobile; }
+    
+    #quatro-posters-con { margin-top: a.$inside-sec-margin-mobile; }
+
+    #quatro-can-con { margin-top: a.$inside-sec-margin-mobile; }
+
+    #player-container {
+      margin-top: a.$inside-sec-margin-mobile;
+      p { font-size: a.$p-font-size-mobile; }
     }
+
+    #entry-con { margin-top: a.$inside-sec-margin-mobile; }
 
     #devices-con {
+      margin-top: a.$inside-sec-margin-mobile;
       p { font-size: a.$p-font-size-mobile; }
-      
-      h2 {
-        margin-bottom: 20px;
-      }
     
       h3 {
-        font-size: a.$h3-size-mobile;
-      }
-    
-      .entry-point {
-        margin-bottom: 10px;
-        margin-top: 30px;
-      }
-    
-      .entry-point-h3  {
-        margin-bottom: 10px;
+        font-size: a.$h3-size-mobile; //디바이스 사진 위에 있는 h3태그임. entry-h3아니라
       }
     }
 
+    #devices-con-img-box { margin-bottom: a.$inside-sec-margin-mobile; }
+
+    #wireframingSketches { margin-top: a.$inside-sec-margin-mobile; }
+
     #branding-video-con {
-      // margin-top: 80px;
-    
-      h2{
-        margin-bottom: 10px;
-      }
-    
-      p {
-        font-size: 15px;
-      }
+      margin-top: a.$inside-sec-margin-mobile;
     }
     
-    #wireframingSketches, #branding-video-con {
-      h2 {
-        margin-bottom: 20px;
-      }
-    }
 }
 
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
+    p { font-size: a.$p-font-size-tablet !important; }
+    .what-I-did-p { font-size: a.$p-font-size-tablet !important; }
+
     #quatro-hero {
 
         button {
             margin-top: 20px;
-            font-size: 18px;
+            font-size: a.$Button-font-size-tablet;
             }
         }
     
        #quatro-details-con {
-        display: flex;
-        column-gap: 90px;
-    
-        h2{
-          margin-bottom: 10px;
-          font-size: 22px;
-        }
-    
-        h3 {
-          margin-bottom: 10px;
-          font-size: 19px;
-        }
-    
-        p {
-          font-size: 18px;
-        }
-    
     
         #quatro-team-year {
           margin-top: 20px;
           display: flex;
           flex-direction: row;
+          justify-content: end;
           column-gap: 50px;
     
         }
@@ -367,22 +370,9 @@ p {
     
       #what-I-did-con {
         padding: 0;
-        h2 {
-          font-size: 22px;
-        }
-    
-        h2 {
-            margin-top: 100px;
-            margin-bottom: 40px;
-        }
-    
-        .what-I-did {
-            // margin-bottom: 40px;
-    
+
+        .what-I-did {  
             #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-              div {
-                font-size: 18px;
-              }
                 display: flex;
                 font-weight: 500;
                 column-gap: 40px;
@@ -441,59 +431,16 @@ p {
             padding: 20px;
         
             h3 {
-              font-size: 18px;
               margin-bottom: 10px;
             }
         
             p {
-              font-size: 18px;
               padding: 0;
               margin: 0;
             }
          }
         }
       }
-    
-      #logo-specs-con {
-        // margin-top: 80px;
-    
-        .logo-specs-detail {
-          &:first-child {
-            margin-bottom: 30px;
-          }
-          h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-          }
-      
-          p {
-            font-size: 18px;
-            padding: 0;
-            margin: 0;
-          }
-        }
-      }
-    
-      #devices-con {
-        // margin-top: 80px;
-      
-        h3 {
-          font-size: 18px;
-        }
-    
-        .entry-point {
-          margin-bottom: 15px;
-          margin-top: 50px;
-        }
-      
-        .entry-point-h3 {
-          margin-bottom: 15px;
-        }
-      }
-    
-      #wireframingSketches {
-        // margin-top: 80px;
-      }    
 }
 
 /* ---Desktop Library Grid Styles--- */
@@ -503,28 +450,22 @@ p {
         
         button {
             margin-top: 20px;
-            font-size: 19px;
             }
         }
     
       #quatro-details-con {
-        padding: 0 20px;
-        display: flex;
-        column-gap: 100px;
+        // padding: 0 20px;
+        // display: flex;
+        // column-gap: 100px;
     
         h2{
           margin-bottom: 10px;
-          font-size: 24px;
         }
     
         h3 {
           margin-bottom: 10px;
-          font-size: 22px;
         }
     
-        p {
-          font-size: 19px;
-        }
     
         #quatro-team-year {
           margin-top: 20px;
@@ -543,7 +484,6 @@ p {
     
           #front-end, #logo-design, #web-design, #label-design, #promotional-video {
             div {
-              font-size: 19px;
             }
               display: flex;
               font-weight: 500;
@@ -552,7 +492,6 @@ p {
     
           #logo-design, #web-design, #label-design {
             div {
-              font-size: 19px;
               position: relative;
               top: 12px
             }
@@ -588,62 +527,14 @@ p {
             padding: 30px 40px;
         
             h3 {
-              font-size: 22px;
               margin-bottom: 20px;
             }
         
             p {
-              font-size: 19px;
               padding: 0;
               margin: 0;
             }
          }
         }
-      }
-    
-      #logo-specs-con {
-        // margin-top: 100px;
-      
-        .logo-specs-detail {
-          &:first-child {
-            margin-bottom: 30px;
-          }
-          h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-          }
-      
-          p {
-            font-size: 19px;
-            padding: 0;
-            margin: 0;
-          }
-        }
-      }
-    
-      #devices-con {
-        // margin-top: 100px;
-    
-        p {
-          font-size: 19px;
-          margin-top: 10px;
-        }
-    
-        .entry-point {
-          margin-bottom: 20px;
-          margin-top: 50px;
-        }
-      
-        h3 {
-          font-size: 20px;
-        }
-    
-        .entry-point-h3 {
-          margin-bottom: 20px;
-        }
-      }
-      
-      #wireframingSketches {
-        // margin-top: 100px;
-      }    
+      }   
 }

@@ -95,13 +95,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     
     <div class="case-study-body">
         <!-- Project Details -->
-        <section id="quatro-details-con">
-            <div id="quatro-details">
+        <section id="quatro-details-con" class="grid-con">
+            <div id="quatro-details" class="col-span-full m-col-span-8 m-col-start-1">
                 <h2 class="Heading"><?php echo $project['title']; ?></h2>
                 <h3><?php echo $project['subtitle']; ?></h3>
                 <p><?php echo $project['description']; ?></p>
             </div>
-            <div id="quatro-team-year">
+
+            <div id="quatro-team-year" class="col-span-full m-col-span-4 m-col-start-10">
                 <div id="quatro-team">
                     <h2>Team</h2>
                     <p><?php echo $project['team']; ?></p>
@@ -116,31 +117,34 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- What I Did Section -->
         <section id="what-I-did-con" class="grid-con">
             <h2 class="Heading col-span-full">What I did</h2>
-            <?php
-            // Repeat the tasks dynamically
-            $tasks = [
-                ['image' => 'images/2.png', 'title' => 'Front-End Development (HTML, CSS, JS)', 'description' => 'Built responsive web pages, styled layouts, and added interactivity.'],
-                ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
-                ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
-                ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
-                ['image' => 'images/3.png', 'title' => 'Promotional Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
-            ];
-            foreach ($tasks as $task) {
-                echo '<div class="what-I-did col-span-full">';
-                echo '<div id="front-end">';
-                echo '<img src="' . $task['image'] . '" alt="front-end-icon">';
-                echo '<div><b>' . $task['title'] . ':</b> ' . $task['description'] . '</div>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
+
+            <div class="col-span-full m-col-span-full">
+                <?php
+                // Repeat the tasks dynamically
+                $tasks = [
+                    ['image' => 'images/2.png', 'title' => 'Front-End Development (HTML, CSS, JS)', 'description' => 'Built responsive web pages, styled layouts, and added interactivity.'],
+                    ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
+                    ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
+                    ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
+                    ['image' => 'images/3.png', 'title' => 'Promotional Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
+                ];
+                foreach ($tasks as $task) {
+                    echo '<div class="what-I-did col-span-full">';
+                    echo '<div id="front-end">';
+                    echo '<img src="' . $task['image'] . '" alt="front-end-icon">';
+                    echo '<div class="what-I-did-p"><b>' . $task['title'] . ':</b> ' . $task['description'] . '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
         </section>
 
         <!-- Research Title -->
         <div class="heading-line">
                 <h2 class="Heading">Research<img src="images/research.png" alt="" class="icon"></h2>
                 <div class="line"></div>
-            </div>
+        </div>
 
         <!-- Research Section -->
         <section class="research-con">
@@ -152,25 +156,25 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="target-audience-con">
                 <h3 class="sub-heading">Target Audience</h3>
 
-            <div class="emoji-des-con-desktop grid-con">
-                <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
-                    <div class="emoji-grid">
-                        <img src="images/athlete-man.png" alt="Athlete man image">
-                        <img src="images/athlete-woman.png" alt="Athlete woman image">
-                        <img src="images/constructor-woman.png" alt="Constructor woman image">
-                        <img src="images/student-boy.png" alt="Student boy image">
+                <div class="emoji-des-con-desktop grid-con">
+                    <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
+                        <div class="emoji-grid">
+                            <img src="images/athlete-man.png" alt="Athlete man image">
+                            <img src="images/athlete-woman.png" alt="Athlete woman image">
+                            <img src="images/constructor-woman.png" alt="Constructor woman image">
+                            <img src="images/student-boy.png" alt="Student boy image">
+                        </div>
+                    </div>
+
+                    <div class="des-con blue-box m-col-start-4 m-col-end-14">
+                        <p><b>Age Range:</b> 13-40</p>
+                        <p><b>Gender:</b> All</p>
+                        <p><b>Location:</b> North America</p>
+                        <p><b>Occupation/Industry:</b> Sports, leisure, Construction</p>
+                        <p><b>Education Level:</b> All</p>
+                        <p><b>Psychographics:</b></p>
                     </div>
                 </div>
-
-                <div class="des-con blue-box m-col-start-4 m-col-end-14">
-                    <p><b>Age Range:</b> 13-40</p>
-                    <p><b>Gender:</b> All</p>
-                    <p><b>Location:</b> North America</p>
-                    <p><b>Occupation/Industry:</b> Sports, leisure, Construction</p>
-                    <p><b>Education Level:</b> All</p>
-                    <p><b>Psychographics:</b></p>
-                </div>
-            </div>
 
                 <div class="emoji-des-con-mobile">
                     <div class="emoji-con-mobile">
@@ -203,66 +207,60 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading">Design Principal</h2>
             <div id="design-principal-box">
                 <div class="design-principal blue-box">
-                    <h3>Tropical</h3>
+                    <h3 class="mini-heading">Tropical</h3>
                     <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
                 </div>
                 <div class="design-principal blue-box">
-                    <h3>Consistent</h3>
+                    <h3 class="mini-heading">Consistent</h3>
                     <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
                 </div>
                 <div class="design-principal blue-box">
-                    <h3>Clear</h3>
+                    <h3 class="mini-heading">Clear</h3>
                     <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
                 </div>
             </div>
         </section>
 
         <!-- Logo Specs Section -->
-        <section id="logo-specs-con">
-            <div class="grid-con">
-                <h2 class="sub-heading col-span-full">Logo Specs</h2>
-                <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
-                    <div id="logo-specs-img-box">
-                        <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
-                    </div>
+        <section id="logo-specs-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Logo Specs</h2>
+            <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
+                <div id="logo-specs-img-box">
+                    <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
                 </div>
+             </div>
 
-                <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
-                    <div class="logo-specs-detail">
-                        <h3>Shape:</h3>
-                        <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
-                    </div>
-                    <div class="logo-specs-detail">
-                        <h3>Colour</h3>
-                        <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
-                    </div>
+            <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
+                <div class="logo-specs-detail">
+                    <h3 class="mini-heading">Shape:</h3>
+                    <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
+                </div>
+                <div class="logo-specs-detail">
+                    <h3 class="mini-heading">Colour</h3>
+                    <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
                 </div>
             </div>
         </section>
 
         <!-- Label Design -->
-        <section id="label-design-con">
-            <div class="grid-con">
-                <h2 class="sub-heading col-span-full">Label Design</h2>
-                <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
-                <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
-                <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
-                <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
-            </div>
+        <section id="label-design-con" class="grid-con">
+        <h2 class="sub-heading col-span-full">Label Design</h2>
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
         </section>
 
         <!-- Posters & Can -->
-        <section id="poster-can-con">
-            <div class="poster-wrap grid-con">
-                <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                    <h2 class="sub-heading">Posters</h2>
-                    <img src="images/limeposter.png" alt="Quatro Poster 1">
-                </div>
+        <section id="poster-can-con" class="grid-con">
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
+                <h2 class="sub-heading">Posters</h2>
+                <img src="images/limeposter.png" alt="Quatro Poster 1">
+            </div>
 
-                <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                    <h2 class="sub-heading">Can Design</h2>
-                    <img src="images/can-image.png" alt="Quatro Can Pineapple">
-                </div>
+            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
+                <h2 class="sub-heading">Can Design</h2>
+                <img src="images/can-image.png" alt="Quatro Can Pineapple">
             </div>
         </section>
 
@@ -272,47 +270,58 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </div>
 
         <!-- UX UI Section --> 
-        <section id="ux-ui-con">
-            <div class="grid-con">
-                <div class="col-span-full m-col-span-6 m-col-start-1"><img src="images/can-image.png" alt="Quatro Can Pineapple"></div>
-                
-                <div class="col-span-full m-col-span-6 m-col-start-8">
-                    <h2 class="entry-point">Web - Entry Points</h2>
-                    <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-                     <p><?php echo $project['entry_point_p']; ?></p>
-                </div>
+        <section id="ux-ui-con" class="grid-con">
+
+            <h2 class="sub-heading col-span-full">UX UI</h2>
+            <div id="player-container" class="col-span-full m-col-span-7 m-col-start-1">
+                <video id="video-player" controls preload="metadata">
+                    <source src="<?php echo $video[1]; ?>" type="video/mp4">
+                    <p>Uh Oh, your browser does not support this Video!</p>
+                </video>
             </div>
-        </section>        
+                        
+            <div id="entry-con" class="col-span-full m-col-span-5 m-col-start-9">
+                <h2 class="entry-point">Web - Entry Points</h2>
+                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
+                <p><?php echo $project['entry_point_p']; ?></p>
+            </div>
+        </section>      
 
         <!-- Devices Section -->
-        <section id="devices-con">
-            <h2 class="sub-heading">Devices</h2>
-            <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
-            <div id="devices-con-img-box">
-                <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
-            </div>
+        <section id="devices-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Devices</h2>
+                <!-- <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3> -->
+                <div id="devices-con-img-box">
+                    <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
+                </div>
 
-            <h2 class="entry-point">Web - Entry Points</h2>
-            <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-            <p><?php echo $project['entry_point_p']; ?></p>
+                <h2 class="entry-point">Web - Entry Points</h2>
+                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
+                <p><?php echo $project['entry_point_p']; ?></p>
+            </div>
         </section>
 
         <!-- Wireframes Section -->
-        <section id="wireframingSketches">
-            <h2 class="sub-heading">Wireframing</h2>
-            <div>
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
+        <section id="wireframingSketches" class="grid-con">
+            <h2 class="sub-heading col-span-full">Wireframing</h2>
+            <div class="col-span-full">
+                <div>
+                    <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
+                </div>
             </div>
         </section>
 
         <!-- Branding Video Section -->
-        <section id="branding-video-con">
-            <h2 class="sub-heading">Branding Video</h2>
-            <div id="player-container">
-                <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
-                    <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                    <p>Uh Oh, your browser does not support this Video!</p>
-                </video>
+        <section id="branding-video-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Branding Video</h2>
+                <div id="player-container">
+                    <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
+                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
+                        <p>Uh Oh, your browser does not support this Video!</p>
+                    </video>
+                </div>
             </div>
         </section>
     </div>
@@ -339,6 +348,5 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </div>
     </div>
   </footer>
-<script defer src="js/main.js"></script>
 </body>
 </html>
