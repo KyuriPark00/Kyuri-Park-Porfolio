@@ -294,10 +294,13 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </button>
   </div>
 
-  <div class="collaborate">
-    <h2>Let’s Collaborate</h2>
-    <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-    <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <!-- Collaborate --> 
+  <div id="collaborate-con" class="grid-con">
+    <div class="collaborate col-span-full">
+      <h2>Let’s Collaborate</h2>
+      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+    </div>
   </div>
 
   <footer>

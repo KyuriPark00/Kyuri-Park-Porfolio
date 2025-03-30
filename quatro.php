@@ -83,7 +83,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     </div>
 
     <!-- Hero Image -->
-    <section id="quatro-hero">
+    <section class="project-hero">
         <img src="<?php echo $images[1]; ?>" alt="hero image of quatro">
 
         <?php if (!empty($project['github_link'])): ?>
@@ -114,7 +114,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-        <!-- What I Did Section -->
+        <!-- What I Did -->
         <section id="what-I-did-con" class="grid-con">
             <h2 class="Heading col-span-full">What I did</h2>
 
@@ -146,82 +146,83 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="line"></div>
         </div>
 
-        <!-- Research Section -->
+        <!-- Research -->
         <section class="research-con">
             <div class="needs-goals-con">
                 <h3 class="sub-heading">Needs & Goals</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived</p>
+                <p>The goal was to establish a strong brand identity for Quatro, a carbonated tropical drink. While designed for all age groups, the primary focus was on athletes and physical workers. The branding utilized vibrant colors and real fruit imagery to enhance its energetic and refreshing appeal.</p>
             </div>
 
             <div class="target-audience-con">
-                <h3 class="sub-heading">Target Audience</h3>
+            <h3 class="sub-heading">Target Audience</h3>
 
-                <div class="emoji-des-con-desktop grid-con">
-                    <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
-                        <div class="emoji-grid">
-                            <img src="images/athlete-man.png" alt="Athlete man image">
-                            <img src="images/athlete-woman.png" alt="Athlete woman image">
-                            <img src="images/constructor-woman.png" alt="Constructor woman image">
-                            <img src="images/student-boy.png" alt="Student boy image">
-                        </div>
-                    </div>
-
-                    <div class="des-con blue-box m-col-start-4 m-col-end-14">
-                        <p><b>Age Range:</b> 13-40</p>
-                        <p><b>Gender:</b> All</p>
-                        <p><b>Location:</b> North America</p>
-                        <p><b>Occupation/Industry:</b> Sports, leisure, Construction</p>
-                        <p><b>Education Level:</b> All</p>
-                        <p><b>Psychographics:</b></p>
+            <div class="emoji-des-con-desktop grid-con">
+                <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
+                    <div class="emoji-grid">
+                        <img src="images/athlete-man.png" alt="Athlete man image">
+                        <img src="images/sport-girl.png" alt="Athlete woman image">
+                        <img src="images/student-boy.png" alt="Student boy image">
+                        <img src="images/construction-mustache.png" alt="Constructor woman image">
                     </div>
                 </div>
 
-                <div class="emoji-des-con-mobile">
-                    <div class="emoji-con-mobile">
-                        <img src="images/athlete-man.png" alt="Athlete man image">
-                        <img src="images/athlete-woman.png" alt="Athlete woman image">       
-                        <img src="images/constructor-woman.png" alt="Athlete man image">
-                        <img src="images/student-boy.png" alt="Athlete woman image">
-                    </div>
+                <div class="des-con blue-box m-col-start-4 m-col-end-14">
+                    <p><b>Age Range:</b> 13-40</p>
+                    <p><b>Gender:</b> All</p>
+                    <p><b>Location:</b> North America</p>
+                    <p><b>Occupation/Industry:</b> Sports, leisure, construction</p>
+                    <p><b>Education Level:</b> All</p>
+                    <p><b>Psychographics:</b> Active and health-conscious individuals who enjoy refreshing, energizing beverages. They seek convenience, bold flavors, and products that complement their active lifestyle.</p>
+                </div>
+            </div>
 
-                    <div class="des-con col-span-full blue-box">
-                        <p><b>Age Range:</b>13-40</p>
-                        <p><b>Gender:</b>All</p>
-                        <p><b>Location</b>North Ameria</p>
-                        <p><b>Occupation/Industry:</b>Sports, leisure, Construction</p>
-                        <p><b>Education Level:</b>All</p>
-                        <p><b>Psychographics</b></p>
-                    </div>
+            <div class="emoji-des-con-mobile">
+                <div class="emoji-con-mobile">
+                    <img src="images/athlete-man.png" alt="Athlete man image">
+                    <img src="images/sport-girl.png" alt="Athlete woman image">
+                    <img src="images/student-boy.png" alt="Student boy image">
+                    <img src="images/construction-mustache.png" alt="Constructor woman image">
+                </div>
+
+                <div class="des-con col-span-full blue-box">
+                    <p><b>Age Range:</b> 13-40</p>
+                    <p><b>Gender:</b> All</p>
+                    <p><b>Location:</b> North America</p>
+                    <p><b>Occupation/Industry:</b> Sports, leisure, construction</p>
+                    <p><b>Education Level:</b> All</p>
+                    <p><b>Psychographics:</b> Active and health-conscious individuals who enjoy refreshing, energizing beverages. They seek convenience, bold flavors, and products that complement their active lifestyle.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Design - Branding Title -->
+        <!-- Branding Title -->
         <div class="heading-line">
                 <h2 class="Heading">Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
         </div>
 
-        <!-- Design Principle Section -->
-        <section id="design-principal-con">
-            <h2 class="sub-heading">Design Principal</h2>
-            <div id="design-principal-box">
-                <div class="design-principal blue-box">
-                    <h3 class="mini-heading">Tropical</h3>
-                    <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
-                </div>
-                <div class="design-principal blue-box">
-                    <h3 class="mini-heading">Consistent</h3>
-                    <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
-                </div>
-                <div class="design-principal blue-box">
-                    <h3 class="mini-heading">Clear</h3>
-                    <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
+        <!-- Design Principle -->
+        <section id="design-principal-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Design Principal</h2>
+            <div class="col-span-full">
+                <div id="design-principal-box">
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Tropical</h3>
+                        <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
+                    </div>
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Consistent</h3>
+                        <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
+                    </div>
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Clear</h3>
+                        <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Logo Specs Section -->
+        <!-- Logo Specs -->
         <section id="logo-specs-con" class="grid-con">
             <h2 class="sub-heading col-span-full">Logo Specs</h2>
             <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
@@ -264,12 +265,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
+        <!-- Website  -->
         <div class="heading-line">
                 <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
         </div>
 
-        <!-- UX UI Section --> 
+        <!-- UX UI --> 
         <section id="ux-ui-con" class="grid-con">
 
             <h2 class="sub-heading col-span-full">UX UI</h2>
@@ -287,7 +289,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>      
 
-        <!-- Devices Section -->
+        <!-- Devices -->
         <section id="devices-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Devices</h2>
@@ -302,17 +304,15 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-        <!-- Wireframes Section -->
+        <!-- Wireframes -->
         <section id="wireframingSketches" class="grid-con">
             <h2 class="sub-heading col-span-full">Wireframing</h2>
             <div class="col-span-full">
-                <div>
-                    <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
-                </div>
+                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
             </div>
         </section>
 
-        <!-- Branding Video Section -->
+        <!-- Branding Video -->
         <section id="branding-video-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Branding Video</h2>
@@ -326,14 +326,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
     </div>
 
-    <br><br><br>
-    <br><br><br>
-
-    <div class="collaborate">
-        <h2>Let’s Collaborate</h2>
-        <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-        <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <!-- Collaborate --> 
+  <div id="collaborate-con" class="grid-con">
+    <div class="collaborate col-span-full">
+      <h2>Let’s Collaborate</h2>
+      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
     </div>
+  </div>
 
   <footer>
     <div class="footer-container">

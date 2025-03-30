@@ -1,15 +1,24 @@
 @use '../abstracts' as a;
 
 // ---------- Default ------------- //
-p {
-  font-weight: 500;
-  text-align: left;
+.project-hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
 }
 
-.Heading {
-  font-size: 32px !important;
-  color: a.$accent-color;
-  margin-bottom: 20px;
+
+.project-details-con {
+  //  background-color: aquamarine;
+   
+    h2 {
+        color: a.$main-blue;
+    }
+
+    h3 {
+        color: a.$orange-color;
+    }
 }
 
 //  Github Button 
@@ -32,6 +41,32 @@ p {
   &:active {
   transform: scale(0.95); /* 클릭 효과 */
   }
+}
+
+.des-con {
+  p {
+    margin-bottom: 10px !important;
+    &:last-child { margin-bottom: 0; }
+  }
+}
+
+.emoji-des-con-desktop { padding: 0; }
+
+.emoji-des-con-mobile { padding: 0; }
+
+#design-principal-box {
+    display: flex;
+}
+
+p {
+  font-weight: 500;
+  text-align: left;
+}
+
+.Heading {
+  font-size: 32px !important;
+  color: a.$accent-color;
+  margin-bottom: 20px;
 }
 
 // Bigest Heading With Line
@@ -99,14 +134,171 @@ p {
 }
 
 
+#devices-con {
+  // background-color: aquamarine;
+  padding: 0;
+
+
+  #devices-con-img-box {
+      background: cover no-repeat;
+  }
+
+  .device-top-h3 {
+      color: a.$primary-color !important;
+      span {
+          color: a.$main-blue;
+      }
+  }
+
+p {
+  font-weight: 500;
+}
+}
+
+#wireframingSketches {
+// background-color: bisque;
+padding: 0;
+}
+
+#branding-video-con {
+// background-color: aquamarine;
+padding: 0;
+}
+
+
 /* ---Mobile Library Grid Style--- */
 @media screen and (min-width: 360px) {
   .case-study-body {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
-  /* ------------ Contact Page ------------ */
+  section { padding: 15px !important; }
+
+  .blue-box {
+    padding: 20px;
+  } 
+
+  .project-github {
+    margin-top: 20px;
+    font-size: a.$Button-font-size-mobile;
+  }
+
+
+  .project-details-con {
+    margin-top: a.$first-sec-margin-mobile;
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: a.$h3-size-mobile; // Subtitle 사이즈임 오렌지색색
+    }
+
+    p {
+      font-size: a.$p-font-size-mobile;
+    }
+
+
+    .project-team-year {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 100px;
+    }
+}
+
+#what-I-did-con {
+    margin-top: a.$second-sec-margin-mobile;
+    padding: 0;
+
+    .what-I-did {
+        margin-bottom: 40px; // 이모지간 간극
+        &:last-child { margin-bottom: 0;}
+
+        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            font-size: a.$p-font-size-mobile;
+          }
+            display: flex;
+            font-weight: 500;
+            column-gap: 40px;
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    }
+}
+
+.research-con {
+  p{
+    font-size: a.$p-font-size-mobile;
+  }
+}
+
+.target-audience-con {
+  margin-top: a.$inside-sec-margin-mobile;
+}
+
+.emoji-des-con-desktop {
+  display: none;
+}
+
+.emoji-des-con-mobile { 
+  display: flex; 
+  flex-direction: column;
+
+  .emoji-con-mobile {
+    display: flex;
+    width: 100%;
+
+    img {
+      width: 25%;
+    }
+  }
+}
+
+.des-con {
+  p {
+    margin-bottom: 5px;
+  }&:last-child {
+    margin-bottom: 0;
+  }
+}
+
+#design-principal-con {
+  p { font-size: a.$p-font-size-mobile; }
+
+  #design-principal-box {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}
+
+#logo-specs-con {
+  margin-top: a.$inside-sec-margin-mobile;
+  p { font-size: a.$p-font-size-mobile; }
+}
+
+#entry-con { margin-top: a.$inside-sec-margin-mobile; }
+
+#devices-con {
+    margin-top: a.$inside-sec-margin-mobile;
+    p { font-size: a.$p-font-size-mobile; }
+  
+    .device-top-h3 {
+      font-size: a.$h3-size-mobile; //디바이스 사진 위에 있는 h3태그임. entry-h3아니라
+    }
+}
+
+#devices-con-img-box { margin-bottom: a.$inside-sec-margin-mobile; }
+
+#wireframingSketches { margin-top: a.$inside-sec-margin-mobile; }
+
+
+
+
+/* ------------ Contact Page ------------ */
   #contact-me-con {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -136,90 +328,7 @@ p {
     }
   }
 
-/* ------------ Vybe Page ------------ */
-
-/* ------------ Industry Night Page ------------ */
-#industry-hero {
-  margin-top: 30px;
-  text-align: center;
-  
-  button {
-      margin-top: 20px;
-      font-size: 15px;
-      }
-  }
-
-
-#industry-details-con {
-  margin-top: 70px;
-  display: block;
-
-  h2{
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-
-  h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-
-  #industry-team-year {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 100px;
-
-  }
-}
-
- /* ------------ Demo Reel Page ------------ */
- .demo-hero {
-  margin-top: 30px !important;
-  text-align: center;
-  }
-
-
-#demo-details-con {
-  margin-top: 70px;
-  display: block;
-
-  h2{
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
-
-  h3 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 15px;
-  }
-
-
-  #demo-team-year {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    column-gap: 100px;
-
-  }
-}
-
-
-.storyboard-img {
-  img {
-      margin-bottom: 30px;
-  }
-}
-
+// Top Button
 #top-button {
   margin: 0 auto !important;
   background: transparent !important;
@@ -246,7 +355,6 @@ p {
   }
 }
 
-/* ---Tablet Library Grid Styles--- */
 .thank-you-wrapper {
 
 
@@ -265,109 +373,104 @@ p {
     margin-right: 90px;
   }
 
-  body { margin-right: 10px; margin-left: 10px;}
+  section { padding: 30px !important; }
 
-  // Demo-reel
-  #demo-reel-con {
+  p { font-size: a.$p-font-size-tablet !important; }
+  .what-I-did-p { font-size: a.$p-font-size-tablet !important; }
 
+  .project-github {
     margin-top: 20px;
-    #demo-reel-description {
-      margin: 0;
+    font-size: a.$Button-font-size-tablet;
+  }
 
-      h2 {
-        font-size: 20px;
-        margin-bottom: 20px;
-      }
 
-      p {
-        font-weight: 500;
-        font-size: 15px;
-        margin-bottom: 20px;
-      }
+  .project-details-con {
+    
+    .project-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      column-gap: 50px;
+
     }
   }
-  
-  /* ------------ Industry Page ------------ */
-  #industry-hero {
-    margin-top: 60px !important;
-    text-align: center;
-    
-    button {
-        margin-top: 20px;
-        font-size: 18px;
+
+  #what-I-did-con {
+    padding: 0;
+
+    .what-I-did {  
+        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+            display: flex;
+            font-weight: 500;
+            column-gap: 40px;
+        }
+
+        #logo-design, #web-design, #label-design, #promotional-video {
+          div {
+            position: relative;
+            top: 12px
+          }
+        }
+
+        img {
+          max-width: 50px;
+          max-height: 50px;
+        }
+    }
+  }
+
+  // Research Section
+  .emoji-des-con-desktop {
+    display: grid;
+
+    .emoji-con-desktop {
+        display: flex;
+        align-items: center; // 이모지를 중앙 정렬
+
+        .emoji-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); // 2x2 그리드 설정
+            grid-template-rows: repeat(2, auto);
+            gap: 10px; // 이미지 간격 조절
+            width: max-content; // 이미지 크기만큼만 공간 차지
         }
     }
 
-   #industry-details-con {
-    display: flex;
-    column-gap: 90px;
+  }
 
-    h2{
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
 
-    h3 {
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
+  .emoji-des-con-mobile { display: none; }
 
-    p {
-      font-size: 18px;
-    }
+  .emoji-con-mobile { display: none; }
 
-    #industry-team-year {
+
+  #design-principal-con {
+
+    // margin-top: 80px;
+
+    #design-principal-box {
       margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 50px;
-
-      #industry {
-        width: 170px;
-      }
+      flex-direction: column;
+      row-gap: 30px;
+    
+     .design-principal {
+    
+        padding: 20px;
+    
+        h3 {
+          margin-bottom: 10px;
+        }
+    
+        p {
+          padding: 0;
+          margin: 0;
+        }
+     }
     }
   }
 
-  /* ------------ Demo Reel Page ------------ */
-  .demo-hero {
-    margin-top: 60px !important;
-    text-align: center;
-    }
 
-   #demo-details-con {
-    display: flex;
-    column-gap: 90px;
-
-    h2{
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-
-    #demo-team-year {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 50px;
-
-    }
-  }
-
-  
-.storyboard-img {
-  img {
-      margin-bottom: 40px;
-  }
-}
 
 /* ---Tablet Library Grid Styles--- */
 .thank-you-wrapper {
@@ -387,107 +490,80 @@ p {
     margin-right: 180px;
   }
 
-  body { margin-right: 80px; margin-left: 80px;}
+  .project-github {
+    margin-top: 20px;
+  }
   
-  //Demo reel
-  #demo-reel-con {
+  .project-details-con {
+    
+    h2{
+      margin-bottom: 10px;
+    }
 
-    margin-top: 30px;
-    #demo-reel-description {
+    h3 {
+      margin-bottom: 10px;
+    }
 
-      margin-top: 30px;
-      
-      h2 {
-        font-size: 24px;
-        margin-bottom: 30px;
-      }
 
-      p {
-        font-weight: 500;
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
+    .project-team-year {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      column-gap: 70px;
+
     }
   }
 
-  /* ------------ Industry Night Page ------------ */
-  #industry-hero {
-    margin-top: 60px !important;
-    text-align: center;
-    
-    #industry-github {
-        margin-top: 20px;
-        font-size: 19px;
+  #what-I-did-con {
+
+    // margin-top: 80px;
+
+    .what-I-did {
+
+      #front-end, #logo-design, #web-design, #label-design, #promotional-video {
+          display: flex;
+          font-weight: 500;
+          column-gap: 40px;
+      }
+
+      #logo-design, #web-design, #label-design {
+        div {
+          position: relative;
+          top: 12px
         }
-    }
+      }
 
-  #industry-details-con {
-    padding: 0 20px;
-    display: flex;
-    column-gap: 100px;
-
-    h2{
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 19px;
-    }
-
-    #industry-team-year {
-      margin-top: 20px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 70px;
-
+      img {
+        max-width: 50px;
+        max-height: 50px;
+      }
     }
   }
 
+  .emoji-des-con-mobile { display: none; }
+
+  #design-principal-con {
   
-  /* ------------ Demo Reel Page ------------ */
-  .demo-hero {
-    margin-top: 60px !important;
-    text-align: center;
-    }
-
-  #demo-details-con {
-    padding: 0 20px;
-    display: flex;
-    column-gap: 100px;
-
-    h2{
-      margin-bottom: 10px;
-      font-size: 24px;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
-    }
-
-    p {
-      font-size: 19px;
-    }
-
-    #demo-team-year {
+    #design-principal-box {
       margin-top: 20px;
-      display: flex;
       flex-direction: row;
-      column-gap: 70px;
-
-    }
-  }
+      column-gap: 60px;
     
-.storyboard-img {
-  img {
-      margin-bottom: 50px;
-  }
-}
+     .design-principal {
+
+        width: 400px;
+        padding: 30px 40px;
+    
+        h3 {
+          margin-bottom: 20px;
+        }
+    
+        p {
+          padding: 0;
+          margin: 0;
+        }
+     }
+    }
+  }   
 }
 
