@@ -273,19 +273,41 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- UX UI --> 
         <section id="ux-ui-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
-            <h2 class="sub-heading col-span-full">UX UI</h2>
-            <div id="player-container" class="col-span-full m-col-span-7 m-col-start-1">
-                <video id="video-player" controls preload="metadata">
+            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+                <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[1]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
-            <div id="entry-con" class="col-span-full m-col-span-5 m-col-start-9">
-                <h2 class="entry-point">Web - Entry Points</h2>
-                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-                <p><?php echo $project['entry_point_p']; ?></p>
+            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+                <h3 class="ux-ui-des-h3">Home</h3>
+                <ul>
+                    <li><b>Hero Animation:</b> Smooth CSS animations bring elements to life.</li>
+                    <li><b>Gallery Slider:</b> Interactive JavaScript-powered poster showcase.</li>
+                    <li><b>Lazy Loading:</b> Improves performance with optimized images.</li>
+                </ul>
+
+                <h3 class="ux-ui-des-h3">Flavour</h3>
+                <ul>
+                    <li><b>Image Toggle:</b> 'Back' button allows toggling between front and back images of the flavours.</li>
+                    <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
+                    <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
+                </ul>
+
+                <!-- <h3 class="ux-ui-des-h3">Products</h3>
+                <ul>
+                    <li><b>Hero:</b>Using css animation to </li>
+                    <li><b>Dropdown box</b>Poster Gallery using javascript</li>
+                </ul>
+
+                <h3 class="ux-ui-des-h3">Contact</h3>
+                <ul>
+                    <li><b></b>Using css animation to </li>
+                    <li><b>Gallery Slider</b>Poster Gallery using javascript</li>
+                </ul>   -->
             </div>
         </section>      
 
@@ -325,6 +347,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
     </div>
+
+  <!-- Top Button --> 
+  <div class="grid-con">
+    <button class="col-span-full" id="top-button">
+      <img src="images/top-button.png" alt="top button">
+    </button>
+  </div>
 
   <!-- Collaborate --> 
   <div id="collaborate-con" class="grid-con">
