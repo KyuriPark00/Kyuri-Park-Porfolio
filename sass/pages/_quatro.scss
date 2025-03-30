@@ -1,54 +1,7 @@
 @use '../abstracts' as a;
 
-#quatro-hero {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-details-con {
-   padding: 0;
-  //  background-color: aquamarine;
-   
-    h2 {
-        color: a.$main-blue;
-    }
-
-    h3 {
-        color: a.$orange-color;
-    }
-}
-
-#what-I-did-con {
-    padding: 0;
-    // background-color: aqua;
-
-    .what-I-did {
-        #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-            display: flex;
-            font-weight: 500;
-        }
-    }
-}
-
-.research-con {
-  // background-color: #D7F3F5;
-}
-
-.des-con {
-  p {
-    margin-bottom: 10px !important;
-    &:last-child { margin-bottom: 0; }
-  }
-}
-
-#design-principal-box {
-    display: flex;
-}
-
 #logo-specs-con {
     // background-color: chocolate;
-    padding: 0;
 
     #logo-specs-img-box {
         img {
@@ -71,370 +24,38 @@
   padding: 0;
 }
 
-
 #ux-ui-con {
   // background-color: tan;
   padding: 0;
 }
 
-#devices-con {
-    // background-color: aquamarine;
-    padding: 0;
-
-
-    #devices-con-img-box {
-        background: cover no-repeat;
-    }
-
-    .device-top-h3 {
-        color: a.$primary-color !important;
-        span {
-            color: a.$main-blue;
-        }
-    }
-
-  p {
-    font-weight: 500;
-  }
-}
-
-#wireframingSketches {
-  // background-color: bisque;
-  padding: 0;
-}
-
-#branding-video-con {
-  // background-color: aquamarine;
-  padding: 0;
-}
 
 /* ---Mobile Library Grid Style--- */
 @media screen and (min-width: 360px) {
-  .blue-box {
-    padding: 20px;
-  } 
   
-  #quatro-hero {
-        text-align: center;
-        
-        button {
-            margin-top: 20px;
-            font-size: a.$Button-font-size-mobile;
-            }
-        }
+  #label-design-con { margin-top: a.$inside-sec-margin-mobile; }
     
-    
-      .project-details-con {
-        margin-top: a.$first-sec-margin-mobile;
-    
-        h3 {
-          margin-bottom: 10px;
-          font-size: a.$h3-size-mobile; // Subtitle 사이즈임 오렌지색색
-        }
-    
-        p {
-          font-size: a.$p-font-size-mobile;
-        }
-    
-    
-        .project-team-year {
-          margin-top: 30px;
-          display: flex;
-          flex-direction: row;
-          column-gap: 100px;
-        }
-      }
-    
-      #what-I-did-con {
-        margin-top: a.$second-sec-margin-mobile;
-        padding: 0;
+  #quatro-posters-con { margin-top: a.$inside-sec-margin-mobile; }
 
-        .what-I-did {
-            margin-bottom: 40px; // 이모지간 간극
-            &:last-child { margin-bottom: 0;}
-    
-            #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-              div {
-                font-size: a.$p-font-size-mobile;
-              }
-                display: flex;
-                font-weight: 500;
-                column-gap: 40px;
-            }
-    
-            img {
-              max-width: 50px;
-              max-height: 50px;
-            }
-        }
-      }
+  #quatro-can-con { margin-top: a.$inside-sec-margin-mobile; }
 
-    .research-con {
-      p{
-        font-size: a.$p-font-size-mobile;
-      }
-    }
-
-    .target-audience-con {
-      margin-top: a.$inside-sec-margin-mobile;
-    }
-    
-    .emoji-des-con-desktop {
-      display: none;
-    }
-
-    .emoji-des-con-mobile { 
-      display: flex; 
-      flex-direction: column;
-
-      .emoji-con-mobile {
-        display: flex;
-        width: 100%;
-
-        img {
-          width: 25%;
-        }
-      }
-    }
-
-    .des-con {
-      p {
-        margin-bottom: 5px;
-      }&:last-child {
-        margin-bottom: 0;
-      }
-    }
-    
-    #design-principal-con {
-      p { font-size: a.$p-font-size-mobile; }
-
-      #design-principal-box {
-        flex-direction: column;
-        row-gap: 30px;
-      }
-    }
-    
-    #logo-specs-con {
+  #player-container {
       margin-top: a.$inside-sec-margin-mobile;
       p { font-size: a.$p-font-size-mobile; }
-    }
+  }
 
-    #label-design-con { margin-top: a.$inside-sec-margin-mobile; }
-    
-    #quatro-posters-con { margin-top: a.$inside-sec-margin-mobile; }
-
-    #quatro-can-con { margin-top: a.$inside-sec-margin-mobile; }
-
-    #player-container {
+  #branding-video-con {
       margin-top: a.$inside-sec-margin-mobile;
-      p { font-size: a.$p-font-size-mobile; }
-    }
-
-    #entry-con { margin-top: a.$inside-sec-margin-mobile; }
-
-    #devices-con {
-      margin-top: a.$inside-sec-margin-mobile;
-      p { font-size: a.$p-font-size-mobile; }
-    
-      .device-top-h3 {
-        font-size: a.$h3-size-mobile; //디바이스 사진 위에 있는 h3태그임. entry-h3아니라
-      }
-    }
-
-    #devices-con-img-box { margin-bottom: a.$inside-sec-margin-mobile; }
-
-    #wireframingSketches { margin-top: a.$inside-sec-margin-mobile; }
-
-    #branding-video-con {
-      margin-top: a.$inside-sec-margin-mobile;
-    }
+  }
     
 }
 
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
-    p { font-size: a.$p-font-size-tablet !important; }
-    .what-I-did-p { font-size: a.$p-font-size-tablet !important; }
 
-    #quatro-hero {
-
-        button {
-            margin-top: 20px;
-            font-size: a.$Button-font-size-tablet;
-            }
-        }
-    
-       .project-details-con {
-    
-        .project-team-year {
-          margin-top: 20px;
-          display: flex;
-          flex-direction: row;
-          justify-content: end;
-          column-gap: 50px;
-    
-        }
-      }
-    
-      #what-I-did-con {
-        padding: 0;
-
-        .what-I-did {  
-            #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-                display: flex;
-                font-weight: 500;
-                column-gap: 40px;
-            }
-    
-            #logo-design, #web-design, #label-design, #promotional-video {
-              div {
-                position: relative;
-                top: 12px
-              }
-            }
-    
-            img {
-              max-width: 50px;
-              max-height: 50px;
-            }
-        }
-      }
-    
-      // Research Section
-      .emoji-des-con-desktop {
-        display: grid;
-    
-        .emoji-con-desktop {
-            display: flex;
-            align-items: center; // 이모지를 중앙 정렬
-    
-            .emoji-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr); // 2x2 그리드 설정
-                grid-template-rows: repeat(2, auto);
-                gap: 10px; // 이미지 간격 조절
-                width: max-content; // 이미지 크기만큼만 공간 차지
-            }
-        }
-
-      }
-    
-
-      .emoji-des-con-mobile { display: none; }
-
-      .emoji-con-mobile { display: none; }
-
-
-      #design-principal-con {
-    
-        // margin-top: 80px;
-    
-        #design-principal-box {
-          margin-top: 20px;
-          flex-direction: column;
-          row-gap: 30px;
-        
-         .design-principal {
-        
-            padding: 20px;
-        
-            h3 {
-              margin-bottom: 10px;
-            }
-        
-            p {
-              padding: 0;
-              margin: 0;
-            }
-         }
-        }
-      }
 }
 
 /* ---Desktop Library Grid Styles--- */
 @media screen and (min-width: 1200px) {
-    #quatro-hero {
-        text-align: center;
-        
-        button {
-            margin-top: 20px;
-            }
-        }
-    
-      .project-details-con {
-        // padding: 0 20px;
-        // display: flex;
-        // column-gap: 100px;
-    
-        h2{
-          margin-bottom: 10px;
-        }
-    
-        h3 {
-          margin-bottom: 10px;
-        }
-    
-    
-        .project-team-year {
-          margin-top: 20px;
-          display: flex;
-          flex-direction: row;
-          column-gap: 70px;
-    
-        }
-      }
-    
-      #what-I-did-con {
-    
-        // margin-top: 80px;
-    
-        .what-I-did {
-    
-          #front-end, #logo-design, #web-design, #label-design, #promotional-video {
-            div {
-            }
-              display: flex;
-              font-weight: 500;
-              column-gap: 40px;
-          }
-    
-          #logo-design, #web-design, #label-design {
-            div {
-              position: relative;
-              top: 12px
-            }
-          }
-    
-          img {
-            max-width: 50px;
-            max-height: 50px;
-          }
-        }
-      }
 
-      .emoji-des-con-mobile { display: none; }
-
-      #design-principal-con {
-      
-        #design-principal-box {
-          margin-top: 20px;
-          flex-direction: row;
-          column-gap: 60px;
-        
-         .design-principal {
-    
-            width: 400px;
-            padding: 30px 40px;
-        
-            h3 {
-              margin-bottom: 20px;
-            }
-        
-            p {
-              padding: 0;
-              margin: 0;
-            }
-         }
-        }
-      }   
 }

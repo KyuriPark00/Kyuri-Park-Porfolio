@@ -82,31 +82,32 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </nav>
     </div>
 
-    <div class="case-study-body">
-        <!-- Hero Section -->
-         <!-- Hero Image -->
-         <section id="quatro-hero">
-        <img src="<?php echo $images[0]; ?>" alt="hero image of quatro">
+    <!-- Hero Image -->
+    <section class="project-hero">
+        <img src="<?php echo $images[0]; ?>" alt="hero image of Industry Night">
+
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                <button>Github Repo</button>
+                <button class="project-github">Github Repo</button>
             </a>
         <?php endif; ?>
-        </section>
+    </section>
 
+    <div class="case-study-body">
         <!-- Project Details -->
-        <section id="industry-details-con">
-            <div id="industry-details">
+        <section class="project-details-con grid-con">
+            <div class="project-details col-span-full m-col-span-8 m-col-start-1">
                 <h2 class="Heading"><?php echo $project['title']; ?></h2>
                 <h3><?php echo $project['subtitle']; ?></h3>
                 <p><?php echo $project['description']; ?></p>
             </div>
-            <div id="industry-team-year">
-                <div>
+
+            <div class="project-team-year col-span-full m-col-span-4 m-col-start-10">
+                <div class="project-team">
                     <h2>Team</h2>
                     <p><?php echo $project['team']; ?></p>
                 </div>
-                <div>
+                <div class="project-year">
                     <h2>Year</h2>
                     <p><?php echo $project['year']; ?></p>
                 </div>
@@ -116,25 +117,38 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- What I Did Section -->
         <section id="what-I-did-con" class="grid-con">
             <h2 class="Heading col-span-full">What I did</h2>
-            <div class="what-I-did col-span-full">
-                <div id="front-end">
-                    <img src="images/2.png" alt="front-end-icon">
-                    <div><b>Front-End Development (HTML, CSS, JS):</b> Built responsive web pages, styled layouts, and added interactivity.</div>
-                </div>
+
+            <div class="col-span-full m-col-span-full">
+                <?php
+                // Repeat the tasks dynamically
+                $tasks = [
+                    ['image' => 'images/2.png', 'title' => 'Front-End Development (HTML, CSS, JS)', 'description' => 'Built responsive web pages, styled layouts, and added interactivity.']
+                ];
+                foreach ($tasks as $task) {
+                    echo '<div class="what-I-did col-span-full">';
+                    echo '<div id="front-end">';
+                    echo '<img src="' . $task['image'] . '" alt="front-end-icon">';
+                    echo '<div class="what-I-did-p"><b>' . $task['title'] . ':</b> ' . $task['description'] . '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </section>
 
         <!-- Devices Section -->
-        <section id="devices-con">
-            <h2 class="Heading">Devices</h2>
-            <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
-            <div id="devices-con-img-box">
-                <img src="<?php echo $images[1]; ?>" alt="images of industry night on devices">
-            </div>
+        <section id="devices-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Devices</h2>
+                <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
+                <div id="devices-con-img-box">
+                    <img src="<?php echo $images[1]; ?>" alt="images of industry night on devices">
+                </div>
 
-            <h2 class="entry-point">Web - Entry Points</h2>
-            <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-            <p><?php echo $project['entry_point_p']; ?></p>
+                <h2 class="entry-point">Web - Entry Points</h2>
+                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
+                <p><?php echo $project['entry_point_p']; ?></p>
+            </div>
         </section>
 
         <!-- Wireframes Section -->
@@ -158,11 +172,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
     </div>
 
-    <div class="collaborate">
-        <h2>Let’s Collaborate</h2>
-        <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-        <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <!-- Collaborate --> 
+  <div id="collaborate-con" class="grid-con">
+    <div class="collaborate col-span-full">
+      <h2>Let’s Collaborate</h2>
+      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
+      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
     </div>
+  </div>
 
   <footer>
     <div class="footer-container">

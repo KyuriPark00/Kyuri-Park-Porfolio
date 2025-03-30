@@ -82,31 +82,26 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </nav>
     </div>
     
-    <div class="case-study-body">
-        <!-- Hero Video (it could be replaced) -->
-        <section class="vybe-hero">
-            <?php if (!empty($video[0])): ?>
-              <div id="player-container">
-                <video class="player" controls preload="metadata" poster="<?php echo $images[2]; ?>">
-                    <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                    <p>Uh Oh, your browser does not support this Video!</p>
-                </video>
-              </div>
-            <?php endif; ?>
-            <?php if (!empty($project['github_link'])): ?>
-                <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                    <button class="project-github">Github Repo</button>
-                </a>
-            <?php endif; ?>
-        </section>
+    <!-- Hero Image -->
+    <section class="project-hero">
+        <img src="<?php echo $images[3]; ?>" alt="hero image of vybe">
 
-        <!-- 프로젝트 세부사항 -->
-        <section id="vybe-details-con" class="grid-con">
-            <div id="vybe-details" class="col-span-full m-col-span-8 m-col-start-1">
+        <?php if (!empty($project['github_link'])): ?>
+            <a href="<?php echo $project['github_link']; ?>" target="_blank">
+                <button class="project-github">Github Repo</button>
+            </a>
+        <?php endif; ?>
+    </section>
+    
+    <div class="case-study-body">
+        <!-- Project Details -->
+        <section class="project-details-con grid-con">
+            <div class="project-details col-span-full m-col-span-8 m-col-start-1">
                 <h2 class="Heading"><?php echo $project['title']; ?></h2>
                 <h3><?php echo $project['subtitle']; ?></h3>
                 <p><?php echo $project['description']; ?></p>
             </div>
+
             <div class="project-team-year col-span-full m-col-span-4 m-col-start-10">
                 <div class="project-team">
                     <h2>Team</h2>
@@ -119,7 +114,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-              <!-- What I Did Section -->
+              <!-- What I Did -->
         <section id="what-I-did-con" class="grid-con">
             <h2 class="Heading col-span-full">What I did</h2>
 
@@ -131,7 +126,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
                     ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
                     ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
-                    ['image' => 'images/1.png', 'title' => 'Motion Design', 'description' => '모션디자인'],
+                    ['image' => 'images/1.png', 'title' => '3D Modeling', 'description' => ' Created product labels with branding elements and essential details.'],
                     ['image' => 'images/3.png', 'title' => 'Promotional Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
                 ];
                 foreach ($tasks as $task) {
@@ -145,84 +140,117 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 ?>
             </div>
         </section>
-      <!-- <section id="what-I-did-con" class="grid-con">
-        <h2 class="Heading col-span-full">What I did</h2>
-        
-        <div class="col-span-full m-col-span-full">
-          <div id="front-end">
-            <img src="images/2.png" alt="front-end-icon">
-            <div><b>Front-End Development (HTML, CSS, JS):</b> Built responsive web pages, styled layouts, and added interactivity.</div>
-          </div>
+
+        <!-- Research Title -->
+        <div class="heading-line">
+            <h2 class="Heading">Research<img src="images/research.png" alt="" class="icon"></h2>
+            <div class="line"></div>
         </div>
 
-        <div class="what-I-did col-span-full">
-          <div id="logo-design">
-            <img src="images/1.png" alt="front-end-icon">
-            <div><b>Logo Design:</b> Designed a brand logo reflecting the target audience and identity.</div>
-          </div>
-        </div>
-
-        <div class="what-I-did col-span-full">
-          <div id="web-design">
-            <img src="images/1.png" alt="front-end-icon">
-            <div><b>Web Design:</b> Developed a cohesive design system and user-friendly interface.</div>
-          </div>
-        </div>
-
-        <div class="what-I-did col-span-full">
-          <div id="label-design">
-            <img src="images/1.png" alt="front-end-icon">
-            <div><b>3D Modeling</b> Created product labels with branding elements and essential details.</div>
-          </div>
-        </div>
-
-        <div class="what-I-did col-span-full">
-          <div id="promotional-video">
-            <img src="images/3.png" alt="front-end-icon">
-            <div><b>Promotional Video:</b> Produced and edited a video highlighting key features with motion graphics and music.</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="design-principal-con">
-        <h2 class="Heading">Design Principal</h2>
-
-        <div id="design-principal-box">
-          <div class="design-principal">
-            <h3>Ergonomics</h3>
-            <p>The earbuds and website are designed for effortless comfort and intuitive usability, ensuring a seamless experience.</p>
-          </div>
-          
-          <div class="design-principal">
-            <h3>Minimalism</h3>
-            <p>Both the earbuds and website embody simplicity, with clean lines and a focus on essential elements.</p>
-          </div>
-
-          <div class="design-principal">
-            <h3>Functionality</h3>
-            <p>From the earbuds' features to the website's navigation, every detail is crafted to enhance practicality and ease of use.</p>
-          </div>
-        </div>
-      </section> -->
-
-      <!-- Devices Section -->
-      <section id="devices-con">
-            <h2 class="Heading">Devices</h2>
-            <h3>Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
-            <div id="devices-con-img-box">
-                <img src="<?php echo $images[0]; ?>" alt="images of vybe page by devices">
+        <!-- Research -->
+        <section class="research-con">
+            <div class="needs-goals-con">
+                <h3 class="sub-heading">Needs & Goals</h3>
+                <p>The goal was to design the Vybe Pro Max, wireless earphones that combine a trendy, modern aesthetic with advanced functionality for young adults. Additionally, a promotional website was created to effectively showcase its features and enhance brand presence.</p>
             </div>
 
-            <h2 class="entry-point">Web - Entry Points</h2>
-            <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-            <p><?php echo $project['entry_point_p']; ?></p>
+
+            <div class="target-audience-con">
+                <h3 class="sub-heading">Target Audience</h3>
+
+                <div class="emoji-des-con-desktop grid-con">
+                    <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
+                        <div class="emoji-grid">
+                            <img src="images/office-worker-rich.png" alt="Office worker man image">
+                            <img src="images/asian-woman.png" alt="Asian woman image">
+                            <img src="images/blonde-woman.png" alt="Blonde woman image">
+                            <img src="images/office-worker.png" alt="Office worker man image 2">
+                        </div>
+                    </div>
+
+                    <div class="des-con blue-box m-col-start-4 m-col-end-14">
+                        <p><b>Age Range:</b> 18-30</p>
+                        <p><b>Gender:</b> All</p>
+                        <p><b>Location:</b> Urban areas, tech-savvy consumers</p>
+                        <p><b>Occupation/Industry:</b> Students, young professionals, creatives</p>
+                        <p><b>Education Level:</b> All</p>
+                        <p><b>Psychographics:</b> Trend-conscious, values style & functionality</p>
+                    </div>
+                </div>
+
+                <div class="emoji-des-con-mobile">
+                    <div class="emoji-con-mobile">
+                        <img src="images/office-worker-rich.png" alt="Office worker man image">
+                        <img src="images/asian-woman.png" alt="Asian woman image">
+                        <img src="images/blonde-woman.png" alt="Blonde woman image">
+                        <img src="images/office-worker.png" alt="Office worker man image 2">
+                    </div>
+
+                    <div class="des-con col-span-full blue-box">
+                        <p><b>Age Range:</b> 18-30</p>
+                        <p><b>Gender:</b> All</p>
+                        <p><b>Location:</b> Urban areas, tech-savvy consumers</p>
+                        <p><b>Occupation/Industry:</b> Students, young professionals, creatives</p>
+                        <p><b>Education Level:</b> All</p>
+                        <p><b>Psychographics:</b> Trend-conscious, values style & functionality</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- Wireframes Section -->
-        <section id="wireframingSketches">
-            <h2 class="Heading">Sketches</h2>
-            <div>
-                <img src="<?php echo $images[1]; ?>" alt="wireframes of quatro">
+        <!-- Branding Title -->
+        <div class="heading-line">
+                <h2 class="Heading">Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+        </div>
+
+        <!-- Design Principle -->
+        <section id="design-principal-con">
+          <h2 class="sub-heading">Design Principal</h2>
+          <div id="design-principal-box">
+            <div class="design-principal blue-box">
+              <h3 class="mini-heading">Ergonomics</h3>
+              <p>The earbuds and website are designed for effortless comfort and intuitive usability, ensuring a seamless experience.</p>
+            </div>
+            
+            <div class="design-principal blue-box">
+              <h3 class="mini-heading">Minimalism</h3>
+              <p>Both the earbuds and website embody simplicity, with clean lines and a focus on essential elements.</p>
+            </div>
+
+            <div class="design-principal blue-box">
+              <h3 class="mini-heading">Functionality</h3>
+              <p>From the earbuds' features to the website's navigation, every detail is crafted to enhance practicality and ease of use.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sketches -->
+        <section id="wireframingSketches" class="grid-con">
+            <h2 class="sub-heading col-span-full">Sketches</h2>
+            <div class="col-span-full">
+                <img src="<?php echo $images[1]; ?>" alt="wireframes of vybe">
+            </div>
+        </section>
+
+        <!-- Website -->
+        <div class="heading-line">
+                <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+        </div>
+
+        <!-- Devices -->
+        <section id="devices-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Devices</h2>
+                <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
+                <div id="devices-con-img-box">
+                    <img src="<?php echo $images[0]; ?>" alt="images of vybe page by devices">
+                </div>
+
+                <h2 class="entry-point">Web - Entry Points</h2>
+                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
+                <p><?php echo $project['entry_point_p']; ?></p>
             </div>
         </section>
 
@@ -245,13 +273,28 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
           <p>In this project, the focus was on establishing a seamless connection between the Vybe Pro Max earbuds and their digital presence. Guided by the principles of ergonomics, minimalism, and modern design, we created a product that blends comfort with functionality. The digital platform features intuitive navigation, interactive elements like a 3D model viewer, and dynamic animations, ensuring an engaging and immersive user experience that highlights the earbuds' innovative features.</p>
         </div>
       </section> -->
+
+        <!-- Branding Video -->
+        <section id="branding-video-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Branding Video</h2>
+                <div id="player-container">
+                    <video class="player" controls preload="metadata" poster="<?php echo $images[2]; ?>">
+                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
+                        <p>Uh Oh, your browser does not support this Video!</p>
+                    </video>
+                </div>
+            </div>
+        </section>
     </div>
 
-    
-    <div class="collaborate">
+    <!-- Collaborate --> 
+    <div id="collaborate-con" class="grid-con">
+        <div class="collaborate col-span-full">
         <h2>Let’s Collaborate</h2>
         <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
         <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+        </div>
     </div>
 
     <footer>

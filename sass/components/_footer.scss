@@ -111,9 +111,9 @@
   .collaborate {
     flex-direction: row;
     top: 70px;
-    max-width: fit-content; // 컨텐츠 크기에 맞춤
+    //max-width: fit-content; // 컨텐츠 크기에 맞춤
     column-gap: 20px; // 요소 간 간격 조정
-    width: 90%;
+    // width: 90%;
     padding: 40px;
   }
 }
