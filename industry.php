@@ -2,13 +2,13 @@
 require_once('includes/connect.php');  // Database connection
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 3";
+$projectQuery = "SELECT * FROM projects WHERE id = 9";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 3";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 9";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -136,6 +136,12 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
+        <!-- Website  -->
+        <div class="heading-line">
+            <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
+            <div class="line"></div>
+        </div>
+
         <!-- Devices Section -->
         <section id="devices-con" class="grid-con">
             <div class="col-span-full">
@@ -151,25 +157,40 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-        <!-- Wireframes Section -->
-        <section id="wireframingSketches">
-            <h2 class="Heading">Wireframing</h2>
-            <div>
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of industry night">
+        <!-- Wireframes -->
+        <section id="wireframingSketches" class="grid-con">
+            <h2 class="sub-heading col-span-full">Wireframing</h2>
+            <div class="col-span-full">
+                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
             </div>
         </section>
 
         <!-- Promotional Video Section -->
-        <section id="branding-video-con">
-            <h2 class="Heading">Industry Night - Promotional Video</h2>
-            <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
-                <video class="player" controls preload="metadata" poster="images/industry-night-thumbnail.jpg">
-                    <source src="video/Hackathon-Video-Draft.webm" type="video/mp4">
-                    <source src="video/Hackathon-Video-Draft.mp4" type="video/webm">
-                    <p>Uh Oh, your browser does not support this Video!</p>
-                </video>
-            </div> 
+        <section id="branding-video-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Branding Video</h2>
+                <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
+                    <video class="player" controls preload="metadata" poster="images/industry-night-thumbnail.jpg">
+                        <source src="video/Hackathon-Video-Draft.webm" type="video/mp4">
+                        <source src="video/Hackathon-Video-Draft.mp4" type="video/webm">
+                        <p>Uh Oh, your browser does not support this Video!</p>
+                    </video>
+                </div> 
+            </div>
         </section>
+
+        <!-- Branding Video -->
+        <!-- <section id="branding-video-con" class="grid-con">
+            <div class="col-span-full">
+                <h2 class="sub-heading">Branding Video</h2>
+                <div id="player-container">
+                    <video class="player" controls preload="metadata" poster="<?php echo $images[0]; ?>">
+                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
+                        <p>Uh Oh, your browser does not support this Video!</p>
+                    </video>
+                </div>
+            </div>
+        </section> -->
     </div>
 
   <!-- Collaborate --> 
