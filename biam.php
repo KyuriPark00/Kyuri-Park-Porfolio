@@ -2,13 +2,13 @@
 require_once('includes/connect.php');
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 1";
+$projectQuery = "SELECT * FROM projects WHERE id = 6";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 1";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 6";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -148,7 +148,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="needs-goals-con">
                 <h3 class="sub-heading">Needs & Goals</h3>
                 <p>The Brothers in Arms Memorial is about honoring the deep connection between Indian and Canadian soldiers who fought side by side during World War I. Our goal is to bring their stories to life through a powerful brand identity and a compelling marketing campaign that raises awareness, drives donations, and ensures their sacrifices are never forgotten.</p>
-
+                <br>
                 <h3>To achieve this, we:</h3>
                 <ul>
                     <li>Created a strong and meaningful brand that connected with people on an emotional level.</li>
@@ -165,10 +165,10 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="emoji-des-con-desktop grid-con">
                 <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
                     <div class="emoji-grid">
-                        <img src="images/athlete-man.png" alt="Athlete man image">
-                        <img src="images/sport-girl.png" alt="Athlete woman image">
-                        <img src="images/student-boy.png" alt="Student boy image">
-                        <img src="images/construction-mustache.png" alt="Constructor woman image">
+                        <img src="images/canadian-soldier.png" alt="Soldier image">
+                        <img src="images/lady.png" alt="Lady image">
+                        <img src="images/turban-guy.png" alt="Indian man image">
+                        <img src="images/old-man.png" alt="Old man image">
                     </div>
                 </div>
 
@@ -184,10 +184,10 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
             <div class="emoji-des-con-mobile">
                 <div class="emoji-con-mobile">
-                    <img src="images/athlete-man.png" alt="Athlete man image">
-                    <img src="images/sport-girl.png" alt="Athlete woman image">
-                    <img src="images/student-boy.png" alt="Student boy image">
-                    <img src="images/construction-mustache.png" alt="Constructor woman image">
+                    <img src="images/canadian-soldier.png" alt="Soldier image">
+                    <img src="images/lady.png" alt="Lady image">
+                    <img src="images/turban-guy.png" alt="Indian man image">
+                    <img src="images/old-man.png" alt="Old man image">
                 </div>
 
                 <div class="des-con col-span-full blue-box">
@@ -237,28 +237,39 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 </div>
              </div>
 
-            <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
+             <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Shape:</h3>
-                    <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
+                    <h3 class="mini-heading">Logo Structure:</h3>
+                    <p>The logo consists of a symmetrical emblem combined with a serif typeface. The emblem features a circular floral-inspired design with a central maple leaf, reinforcing the brand’s heritage and elegance.</p>
                 </div>
+                <br>
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Colour</h3>
-                    <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
+                    <h3 class="mini-heading">Typography:</h3>
+                    <p>A classic serif font is used for "BROTHERS IN ARMS MEMORIAL" to maintain a timeless and formal appearance. Font scaling ensures readability at various sizes.</p>
+                </div>
+                <br>
+                <div class="logo-specs-detail">
+                    <h3 class="mini-heading">Sizing & Proportions:</h3>
+                    <p>The logo is optimized for various display sizes, with the ideal web usage being <strong>220px x 87px</strong>. It maintains clarity even at a minimum size of <strong>154px x 61px</strong>. Proper whitespace around the logo enhances visibility and balance.</p>
+                </div>
+                <br>
+                <div class="logo-specs-detail">
+                    <h3 class="mini-heading">Color Scheme:</h3>
+                    <p>The logo is designed in a monochromatic black-and-white scheme, ensuring high contrast and versatility across different backgrounds and materials.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Label Design -->
+        <!-- Campaign & Merch -->
         <section id="label-design-con" class="grid-con">
-        <h2 class="sub-heading col-span-full">Label Design</h2>
+        <h2 class="sub-heading col-span-full">Campaign & Merchandise</h2>
             <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
             <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
             <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
             <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
         </section>
 
-        <!-- Posters & Can -->
+        <!-- Posters & Parallax -->
         <section id="poster-can-con" class="grid-con">
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
                 <h2 class="sub-heading">Posters</h2>
@@ -266,19 +277,33 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <h2 class="sub-heading">Can Design</h2>
+                <h2 class="sub-heading">Parallax Effect Backdrop</h2>
+                <img src="images/can-image.png" alt="Quatro Can Pineapple">
+            </div>
+        </section>
+
+        <!-- Social media -->
+        <section id="poster-can-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Social Media Presents</h2>
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
+                <h2 class="sub-heading">Instagram</h2>
+                <img src="images/limeposter.png" alt="Quatro Poster 1">
+            </div>
+
+            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
+                <h2 class="sub-heading">Facebook</h2>
                 <img src="images/can-image.png" alt="Quatro Can Pineapple">
             </div>
         </section>
 
         <!-- Website  -->
-        <div class="heading-line">
+        <!-- <div class="heading-line">
                 <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
-        </div>
+        </div> -->
 
         <!-- UX UI --> 
-        <section id="ux-ui-con" class="grid-con">
+        <!-- <section id="ux-ui-con" class="grid-con">
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
             <div class="project-section col-span-full m-col-span-7 m-col-start-1">
@@ -302,23 +327,11 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
                     <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
                 </ul>
-
-                <!-- <h3 class="ux-ui-des-h3">Products</h3>
-                <ul>
-                    <li><b>Hero:</b>Using css animation to </li>
-                    <li><b>Dropdown box</b>Poster Gallery using javascript</li>
-                </ul>
-
-                <h3 class="ux-ui-des-h3">Contact</h3>
-                <ul>
-                    <li><b></b>Using css animation to </li>
-                    <li><b>Gallery Slider</b>Poster Gallery using javascript</li>
-                </ul>   -->
             </div>
-        </section>      
+        </section>       -->
 
         <!-- Devices -->
-        <section id="devices-con" class="grid-con">
+        <!-- <section id="devices-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Devices</h2>
                 <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
@@ -330,15 +343,15 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
             </div>
-        </section>
+        </section> -->
 
         <!-- Wireframes -->
-        <section id="wireframingSketches" class="grid-con">
+        <!-- <section id="wireframingSketches" class="grid-con">
             <h2 class="sub-heading col-span-full">Wireframing</h2>
             <div class="col-span-full">
                 <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
             </div>
-        </section>
+        </section> -->
 
         <!-- Branding Video -->
         <section id="branding-video-con" class="grid-con">

@@ -86,6 +86,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <a href="assets/Park_Kyuri_Resume.pdf" download="Kyuri_Park_Resume.pdf" class="download-btn"><button>Resume</button></a>
           <a href="https://www.linkedin.com/in/hailie-park-93a6a2328/"><button>LinkedIn</button></a>
           <a href="demoreel.php"><button>Demoreel</button></a>
+          <!-- Demo reel section 인덱스 페이지에 만들기 -->
       </div>
     </div>
   </section>
@@ -197,10 +198,11 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
     require_once 'includes/connect.php'; // DB 연결 파일 포함
 
     $project_links = [
-        1 => 'quatro.php',  
-        2 => 'vybe.php',    
-        3 => 'industry.php',
-        4 => 'demoreel.php'
+        6 => 'biam.php',  
+        7 => 'quatro.php',    
+        8 => 'vybe.php',
+        9 => 'industry.php',
+        10 => 'elin.php'
     ];
 
     foreach ($projects as $project) {

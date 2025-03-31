@@ -2,13 +2,13 @@
 require_once('includes/connect.php');  // 데이터베이스 연결 포함
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 2";
+$projectQuery = "SELECT * FROM projects WHERE id = 8";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 2";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 8";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -127,7 +127,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
                     ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
                     ['image' => 'images/1.png', 'title' => '3D Modeling', 'description' => ' Created product labels with branding elements and essential details.'],
-                    ['image' => 'images/3.png', 'title' => 'Promotional Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
+                    ['image' => 'images/3.png', 'title' => 'Branding Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
                 ];
                 foreach ($tasks as $task) {
                     echo '<div class="what-I-did col-span-full">';
@@ -286,6 +286,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 </div>
             </div>
         </section>
+    </div>
+
+    <!-- Top Button --> 
+    <div class="grid-con">
+        <button class="col-span-full" id="top-button">
+        <img src="images/top-button.png" alt="top button">
+        </button>
     </div>
 
     <!-- Collaborate --> 

@@ -2,13 +2,13 @@
 require_once('includes/connect.php');
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 7";
+$projectQuery = "SELECT * FROM projects WHERE id = 10";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 7";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 10";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -122,11 +122,9 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <?php
                 // Repeat the tasks dynamically
                 $tasks = [
-                    ['image' => 'images/2.png', 'title' => 'Front-End Development (HTML, CSS, JS)', 'description' => 'Built responsive web pages, styled layouts, and added interactivity.'],
                     ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
-                    ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
-                    ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
-                    ['image' => 'images/3.png', 'title' => 'Branding Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
+                    ['image' => 'images/1.png', 'title' => 'Package Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
+                    ['image' => 'images/1.png', 'title' => 'Banner Design', 'description' => 'Created product labels with branding elements and essential details.']
                 ];
                 foreach ($tasks as $task) {
                     echo '<div class="what-I-did col-span-full">';
@@ -150,7 +148,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section class="research-con">
             <div class="needs-goals-con">
                 <h3 class="sub-heading">Needs & Goals</h3>
-                <p>The goal was to establish a strong brand identity for Quatro, a carbonated tropical drink. While designed for all age groups, the primary focus was on athletes and physical workers. The branding utilized vibrant colors and real fruit imagery to enhance its energetic and refreshing appeal.</p>
+                <p>MOISTURE BARRIER aims to provide young women with high-quality, gentle skincare solutions that enhance their natural beauty while promoting a sophisticated, youthful glow. The brand focuses on hydration, skin protection, and long-term skin health, ensuring that users feel confident and radiant every day. Our goal is to establish a skincare line that is both effective and luxurious, resonating with the aspirations of our target audience.</p>
             </div>
 
             <div class="target-audience-con">
@@ -159,38 +157,38 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="emoji-des-con-desktop grid-con">
                 <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
                     <div class="emoji-grid">
-                        <img src="images/athlete-man.png" alt="Athlete man image">
-                        <img src="images/sport-girl.png" alt="Athlete woman image">
-                        <img src="images/student-boy.png" alt="Student boy image">
-                        <img src="images/blue-collar.png" alt="Blue collar worker image">
+                        <img src="images/indian-girl.png" alt="Indian girl image">
+                        <img src="images/white-girl-makeup.png" alt="White girl image">
+                        <img src="images/muslim-woman.png" alt="Muslim woman image">
+                        <img src="images/black-girl-makeup.png" alt="Black girl image">
                     </div>
                 </div>
 
                 <div class="des-con blue-box m-col-start-4 m-col-end-14">
-                    <p><b>Age Range:</b> 13-40</p>
-                    <p><b>Gender:</b> All</p>
+                    <p><b>Age Range:</b> 16 - 25</p>
+                    <p><b>Gender:</b> Primarily female</p>
                     <p><b>Location:</b> North America</p>
-                    <p><b>Occupation/Industry:</b> Sports, leisure, construction</p>
-                    <p><b>Education Level:</b> All</p>
-                    <p><b>Psychographics:</b> Active and health-conscious individuals who enjoy refreshing, energizing beverages. They seek convenience, bold flavors, and products that complement their active lifestyle.</p>
+                    <p><b>Occupation/Industry:</b> Students, young professionals, beauty enthusiasts</p>
+                    <p><b>Education Level:</b> High school, college, or early career stage</p>
+                    <p><b>Psychographics:</b> Trend-conscious, socially active individuals who value skincare as part of their self-care routine. They seek high-quality, gentle, and aesthetically pleasing products that reflect their youthful and sophisticated lifestyle.</p>
                 </div>
             </div>
 
             <div class="emoji-des-con-mobile">
                 <div class="emoji-con-mobile">
-                    <img src="images/athlete-man.png" alt="Athlete man image">
-                    <img src="images/sport-girl.png" alt="Athlete woman image">
-                    <img src="images/student-boy.png" alt="Student boy image">
-                    <img src="images/blue-collar.png" alt="Blue collar worker image">
+                    <img src="images/indian-girl.png" alt="Indian girl image">
+                    <img src="images/white-girl-makeup.png" alt="White girl image">
+                    <img src="images/muslim-woman.png" alt="Muslim woman image">
+                    <img src="images/black-girl-makeup.png" alt="Black girl image">
                 </div>
 
                 <div class="des-con col-span-full blue-box">
-                    <p><b>Age Range:</b> 13-40</p>
-                    <p><b>Gender:</b> All</p>
+                    <p><b>Age Range:</b> 16 - 25</p>
+                    <p><b>Gender:</b> Primarily female</p>
                     <p><b>Location:</b> North America</p>
-                    <p><b>Occupation/Industry:</b> Sports, leisure, construction</p>
-                    <p><b>Education Level:</b> All</p>
-                    <p><b>Psychographics:</b> Active and health-conscious individuals who enjoy refreshing, energizing beverages. They seek convenience, bold flavors, and products that complement their active lifestyle.</p>
+                    <p><b>Occupation/Industry:</b> Students, young professionals, beauty enthusiasts</p>
+                    <p><b>Education Level:</b> High school, college, or early career stage</p>
+                    <p><b>Psychographics:</b> Trend-conscious, socially active individuals who value skincare as part of their self-care routine. They seek high-quality, gentle, and aesthetically pleasing products that reflect their youthful and sophisticated lifestyle.</p>
                 </div>
             </div>
         </section>
@@ -201,6 +199,8 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="line"></div>
         </div>
 
+
+        <!-- Rewrite it -->
         <!-- Design Principle -->
         <section id="design-principal-con" class="grid-con">
             <h2 class="sub-heading col-span-full">Design Principal</h2>
@@ -214,7 +214,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                         <h3 class="mini-heading">Consistent</h3>
                         <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
                     </div>
-
                     <div class="design-principal blue-box">
                         <h3 class="mini-heading">Clear</h3>
                         <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
@@ -237,9 +236,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <h3 class="mini-heading">Shape:</h3>
                     <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
                 </div>
-
-                <br>
-
                 <div class="logo-specs-detail">
                     <h3 class="mini-heading">Colour</h3>
                     <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
@@ -339,7 +335,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
 
         <!-- Branding Video -->
-        <section id="branding-video-con" class="grid-con">
+        <!-- <section id="branding-video-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Branding Video</h2>
                 <div id="player-container">
@@ -349,7 +345,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     </video>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 
   <!-- Top Button --> 
