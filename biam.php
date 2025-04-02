@@ -239,22 +239,22 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
              <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Logo Structure:</h3>
+                    <h3 class="mini-heading">Logo Structure</h3>
                     <p>The logo consists of a symmetrical emblem combined with a serif typeface. The emblem features a circular floral-inspired design with a central maple leaf, reinforcing the brand’s heritage and elegance.</p>
                 </div>
                 <br>
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Typography:</h3>
+                    <h3 class="mini-heading">Typography</h3>
                     <p>A classic serif font is used for "BROTHERS IN ARMS MEMORIAL" to maintain a timeless and formal appearance. Font scaling ensures readability at various sizes.</p>
                 </div>
                 <br>
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Sizing & Proportions:</h3>
+                    <h3 class="mini-heading">Sizing & Proportions</h3>
                     <p>The logo is optimized for various display sizes, with the ideal web usage being <strong>220px x 87px</strong>. It maintains clarity even at a minimum size of <strong>154px x 61px</strong>. Proper whitespace around the logo enhances visibility and balance.</p>
                 </div>
                 <br>
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Color Scheme:</h3>
+                    <h3 class="mini-heading">Color Scheme</h3>
                     <p>The logo is designed in a monochromatic black-and-white scheme, ensuring high contrast and versatility across different backgrounds and materials.</p>
                 </div>
             </div>

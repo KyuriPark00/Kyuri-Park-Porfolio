@@ -77,9 +77,9 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <!-- Profile Con -->
   <section id="profile-con" class="grid-con">
     <div class="col-start-1 col-end-6 m-col-start-3 m-col-end-12 l-col-start-3 l-col-end-12">
-      <h2 class="introduce">It’s Kyuri,<br>Your Designer, Frontend Developer</h2>
+      <h2 class="introduce">It’s Kyuri,</h2>
+      <h3 class="introduce">Your Designer, Front-end Developer</h3>
       <!-- <h3>Designing with purpose, developing with precision.</h3> -->
-       <br><br>
 
       <div id="professional-sns-box">
           <a href="https://github.com/KyuriPark00"><button>Github</button></a>
@@ -124,8 +124,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <img src="images/orange-1.png" alt="design-icon-orange">
         <h2 class="skill-heading">Designer</h2>
         <div id="designing">
-          <p class="sub-heading-blue">I love designing:</p>
-          <p>logo</p>
+          <p class="sub-heading-blue">I Love Designing:</p>
+          <p>Logo</p>
           <p>UX/UI</p>
           <p>Web/Apps</p>
         </div>
@@ -144,9 +144,9 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <div id="skill-second-row">
         <img src="images/orange-2.png" alt="development-icon-orange">
-        <h2 class="skill-heading">Frontend Developer</h2>
+        <h2 class="skill-heading">Front-end Developer</h2>
         <div id="front-language">
-          <p class="sub-heading-blue">Languages I speak</p>
+          <p class="sub-heading-blue">Languages I Speak</p>
           <p>HTML</p>
           <p>CSS3 / SASS</p>
           <p>JavaScript</p>
@@ -167,9 +167,9 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <div id="skill-third-row">
         <img src="images/orange-2.png" alt="development-icon-orange">
-        <h2 class="skill-heading">Backend Developer</h2>
+        <h2 class="skill-heading">Back-end Developer</h2>
         <div id="back-language">
-          <p class="sub-heading-blue">Languages I speak</p>
+          <p class="sub-heading-blue">Languages I Speak</p>
           <p>PHP</p>
           <p>MySQL</p>
           <p>Python</p>
@@ -190,8 +190,8 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <!-- Project Con -->
 <section id="projects-con" class="case-study-body">
     <div class="header">
-        <h2 id="project-heading">Case Study</h2>
-        <h3 id="project-sub-heading">My current projects</h3>
+        <h2 id="project-heading">Case Studies</h2>
+        <h3 id="project-sub-heading">A Deep Dive into My Projects</h3>
     </div>
     <div class="projects-wrapper"> <!-- 프로젝트 전체 컨테이너 -->
     <?php
@@ -260,7 +260,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div id="divider"></div>
 
             <blockquote>
-              <p><span class="quote-mark">❝</span>Hailie has been an outstanding UX/UI Design Intern, bringing creativity, precision, and a user-focused mindset to every project. Their ability to craft intuitive designs and collaborate effectively made a significant impact on our team. A talented designer with a bright future ahead!</span></p>
+              <p><span class="quote-mark">❝</span>Hailie has been an outstanding UX/UI Design Intern, bringing creativity, precision, and a user-focused mindset to every project. Their ability to craft intuitive designs and collaborate effectively made a significant impact on our team. A talented designer with a bright future ahead!<span class="quote-mark">❞</span></p>
             </blockquote>
           </div>
 
@@ -277,7 +277,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div id="divider"></div>
 
             <blockquote>
-              <p><span class="quote-mark">❝</span> crafted content that perfectly aligned with our design goals and user needs. Their creativity and strategic thinking added immense value to the project. A true asset to the team!"</span></p>
+              <p><span class="quote-mark">❝</span> crafted content that perfectly aligned with our design goals and user needs. Their creativity and strategic thinking added immense value to the project. A true asset to the team!<span class="quote-mark">❞</span></p>
             </blockquote>
           </div>
         </div>

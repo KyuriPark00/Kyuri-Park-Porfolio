@@ -234,7 +234,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
             <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Shape:</h3>
+                    <h3 class="mini-heading">Shape</h3>
                     <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
                 </div>
 

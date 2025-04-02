@@ -413,20 +413,20 @@ body {
 
   /*-- Profile Con --*/  
   #profile-con {
-    margin-top: a.$first-sec-margin-mobile;
+    margin-top: 0;
   
     h2 {
-      font-weight: a.$h2-weight;
-      font-size: a.$h2-size-mobile;
+      font-size: 30px;
     }
   
     h3 {
-      font-weight: a.$h3-weight;
-      font-size: a.$h3-size-mobile;
-      margin: 20px 0;
+      font-size: 23px;
+      padding-right: 2px;
+      padding-left: 2px;
     }
   
     #professional-sns-box{
+      margin-top: 20px;
       display: block;
       button {
         font-size: a.$Button-font-size-mobile;
@@ -466,7 +466,7 @@ body {
       bottom: 110px;
 
       #full-name {
-        font-size: 35px;
+        font-size: 30px;
       }
 
       p {
@@ -559,20 +559,18 @@ body {
 /*-- Tablet --*/
 @media screen and (min-width: 768px) {
   #profile-con {
-    margin-top: a.$first-sec-margin-tablet;
+    margin-top: 5px;
   
     h2 {
-      font-weight: a.$h2-weight;
-      font-size: a.$h2-size-tablet;
+      font-size: 40px;
     }
   
     h3 {
-      font-weight: a.$h3-weight;
-      font-size: a.$h3-size-tablet;
-      margin: 30px 0;
+      font-size: 33px;
     }
   
     #professional-sns-box{
+      margin-top: 30px;
       button {
         font-size: a.$Button-font-size-tablet;
         margin-right: 20px;
@@ -603,7 +601,7 @@ body {
 
     #profile-text {
       row-gap: 16px;
-      margin-top: 30px;
+      margin-top: 10px;
       text-align: left;
       position: relative;
       bottom: 0;
@@ -613,7 +611,7 @@ body {
       }
 
       p {
-        font-size: a.$p-font-size-tablet;
+        font-size: a.$p-font-size-mobile !important;
       }
 
       .social-media {
@@ -655,12 +653,12 @@ body {
 
       .sub-heading-blue {
         margin-bottom: 30px;
-        font-size: a.$p-font-size-tablet;
+        font-size: a.$h3-size-mobile;
       }
 
       p {
         margin-bottom: 10px;
-        font-size: a.$p-font-size-tablet;
+        font-size: a.$p-font-size-mobile;
       }
     }
   }
@@ -672,18 +670,7 @@ body {
 /*-- Desktop --*/
 @media screen and (min-width: 1200px) {
   #profile-con {
-    margin-top: a.$first-sec-margin-destop;
-  
-    h2 {
-      font-weight: a.$h2-weight;
-      font-size: a.$h2-size-desktop;
-    }
-  
-    h3 {
-      font-weight: a.$h3-weight;
-      font-size: a.$h3-size-desktop;
-      margin: 30px 0;
-    }
+    margin-top: 25px;
   
     #professional-sns-box{
       button {
@@ -715,14 +702,15 @@ body {
 
     #profile-text {
       row-gap: 36px;
-      margin-top: 30px;
+      margin-top: 20px;
 
       #full-name {
-        font-size: 50px;
+        font-size: 45px;
       }
 
       p {
-        font-size: a.$p-font-size-desktop;
+        font-size: a.$p-font-size-desktop !important;
+        line-height: 28px;
       }
 
       .social-media {
@@ -757,17 +745,17 @@ body {
   
         .skill-heading {
           margin-bottom: 30px;
-          font-size: a.$h2-size-mobile;
+          font-size: a.$h2-size-tablet;
         }
   
         .sub-heading-blue {
           margin-bottom: 30px;
-          font-size: a.$p-font-size-desktop;
+          font-size: a.$h3-size-tablet !important;
         }
   
         p {
           margin-bottom: 10px;
-          font-size: a.$p-font-size-desktop;
+          font-size: a.$p-font-size-tablet !important;
         }
       }
     }
