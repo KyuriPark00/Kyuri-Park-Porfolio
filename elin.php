@@ -199,7 +199,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="line"></div>
         </div>
 
-
         <!-- Rewrite it -->
         <!-- Design Principle -->
         <section id="design-principal-con" class="grid-con">
@@ -207,16 +206,16 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="col-span-full">
                 <div id="design-principal-box">
                     <div class="design-principal blue-box">
-                        <h3 class="mini-heading">Tropical</h3>
-                        <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
+                        <h3 class="mini-heading">Elegant</h3>
+                        <p>Utilize soft, feminine tones (#FF8888, #FFC7C7, #201D26) to create a luxurious and sophisticated brand identity.</p>
                     </div>
                     <div class="design-principal blue-box">
-                        <h3 class="mini-heading">Consistent</h3>
-                        <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
+                        <h3 class="mini-heading">Harmonious</h3>
+                        <p>Ensure typography and visuals align with the brand’s delicate and modern aesthetic, using a refined cursive font for the logo.</p>
                     </div>
                     <div class="design-principal blue-box">
-                        <h3 class="mini-heading">Clear</h3>
-                        <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
+                        <h3 class="mini-heading">Minimal</h3>
+                        <p>Maintain clean layouts, subtle design elements, and an intuitive user experience to enhance brand clarity and appeal.</p>
                     </div>
                 </div>
             </div>
@@ -233,12 +232,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
             <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
                 <div class="logo-specs-detail">
-                    <h3 class="mini-heading">Shape:</h3>
-                    <p>Create the "Q" logo using the font 'Bubbley Neue' to maintain consistency with the rest of the text. Ensure that the "quatro" text within the logo is also in the same font.</p>
+                    <h3 class="mini-heading">Typography</h3>
+                    <p>The "elin" logo is styled in an elegant script font with a floral accent, enhancing its delicate and premium aesthetic.</p>
                 </div>
+                <br>
                 <div class="logo-specs-detail">
                     <h3 class="mini-heading">Colour</h3>
-                    <p>#7ED957(light green), #39B54A(darker green), #00338C(navy) are the main color for the logo but they could be changed based on the flavours of the drink.</p>
+                    <p>The primary colors include #FF8888 (soft coral), #FFC7C7 (blush pink), and #201D26 (deep charcoal) to evoke warmth, femininity, and luxury.</p>
                 </div>
             </div>
         </section>
@@ -265,85 +265,11 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
-        <!-- Website  -->
-        <div class="heading-line">
-                <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
-                <div class="line"></div>
-        </div>
-
-        <!-- UX UI --> 
-        <section id="ux-ui-con" class="grid-con">
-            <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
-
-            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
-                <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
-                    <source src="<?php echo $video[1]; ?>" type="video/mp4">
-                    <p>Uh Oh, your browser does not support this Video!</p>
-                </video>
-            </div>
-                        
-            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
-                <h3 class="ux-ui-des-h3">Home</h3>
-                <ul>
-                    <li><b>Hero Animation:</b> Smooth CSS animations bring elements to life.</li>
-                    <li><b>Gallery Slider:</b> Interactive JavaScript-powered poster showcase.</li>
-                    <li><b>Lazy Loading:</b> Improves performance with optimized images.</li>
-                </ul>
-
-                <h3 class="ux-ui-des-h3">Flavour</h3>
-                <ul>
-                    <li><b>Image Toggle:</b> 'Back' button allows toggling between front and back images of the flavours.</li>
-                    <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
-                    <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
-                </ul>
-
-                <!-- <h3 class="ux-ui-des-h3">Products</h3>
-                <ul>
-                    <li><b>Hero:</b>Using css animation to </li>
-                    <li><b>Dropdown box</b>Poster Gallery using javascript</li>
-                </ul>
-
-                <h3 class="ux-ui-des-h3">Contact</h3>
-                <ul>
-                    <li><b></b>Using css animation to </li>
-                    <li><b>Gallery Slider</b>Poster Gallery using javascript</li>
-                </ul>   -->
-            </div>
-        </section>      
-
-        <!-- Devices -->
-        <section id="devices-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Devices</h2>
-                <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
-                <div id="devices-con-img-box">
-                    <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
-                </div>
-
-                <h2 class="entry-point">Web - Entry Points</h2>
-                <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
-                <p><?php echo $project['entry_point_p']; ?></p>
-            </div>
-        </section>
-
         <!-- Wireframes -->
-        <section id="wireframingSketches" class="grid-con">
+        <!-- <section id="wireframingSketches" class="grid-con">
             <h2 class="sub-heading col-span-full">Wireframing</h2>
             <div class="col-span-full">
                 <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
-            </div>
-        </section>
-
-        <!-- Branding Video -->
-        <!-- <section id="branding-video-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Branding Video</h2>
-                <div id="player-container">
-                    <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
-                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                        <p>Uh Oh, your browser does not support this Video!</p>
-                    </video>
-                </div>
             </div>
         </section> -->
     </div>

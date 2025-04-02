@@ -1,13 +1,15 @@
 @use '../abstracts' as a;
 
 // ---------- Default ------------- //
-p {
-  font-weight: 500;
-  text-align: left;
+.case-study-body {
+  p {
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  li { font-weight: 500;
+    text-align: left; }
 }
-
-li { font-weight: 500;
-  text-align: left; }
 
 .Heading {
   font-size: 28px !important;
@@ -209,13 +211,15 @@ padding: 0;
   .case-study-body {
     margin-left: 20px;
     margin-right: 20px;
+
+    section { padding: 15px !important; }
   }
 
   li {
     font-size: a.$p-font-size-mobile;
   }
 
-  section { padding: 15px !important; }
+  
 
   .blue-box {
     padding: 20px;
@@ -421,13 +425,13 @@ padding: 0;
   .case-study-body {
     margin-left: 90px;
     margin-right: 90px;
+
+    section { padding: 30px !important; }
   }
 
   li {
     font-size: a.$p-font-size-tablet !important;
   }
-
-  section { padding: 30px !important; }
 
   p { font-size: a.$p-font-size-tablet !important; }
   .what-I-did-p { font-size: a.$p-font-size-tablet !important; }
