@@ -354,7 +354,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section> -->
 
         <!-- Branding Video -->
-        <section id="branding-video-con" class="grid-con">
+        <!-- <section id="branding-video-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Branding Video</h2>
                 <div id="player-container">
@@ -364,7 +364,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     </video>
                 </div>
             </div>
-        </section>
+        </section> -->
     </div>
 
   <!-- Top Button --> 
