@@ -128,6 +128,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <p>Logo</p>
           <p>UX/UI</p>
           <p>Web/Apps</p>
+          <p>Print Ads</p>
         </div>
 
         <div id="designing-tools">
@@ -185,14 +186,21 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
       </div>
   </section>
-  
+
+  <section id="heading-line-index-con" class="grid-con">
+    <div class="heading-line-index col-span-full">
+        <div class="line"></div>
+        <h2 class="Heading">Case Studies<img src="images/research.png" alt="" class="icon"></h2>
+        <div class="line"></div>
+    </div>
+
+    <h3 class="sub-heading col-span-full">A Deep Dive Into My Projects</h3>
+  </section>
 
 <!-- Project Con -->
 <section id="projects-con" class="case-study-body">
-    <div class="header">
-        <h2 id="project-heading">Case Studies</h2>
-        <h3 id="project-sub-heading">A Deep Dive into My Projects</h3>
-    </div>
+
+    
     <div class="projects-wrapper"> <!-- 프로젝트 전체 컨테이너 -->
     <?php
     require_once 'includes/connect.php'; // DB 연결 파일 포함
