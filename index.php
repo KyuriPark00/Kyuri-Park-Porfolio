@@ -6,7 +6,7 @@
 require_once('includes/connect.php');
 
 // 프로젝트 데이터 가져오기
-$stmt = $connection->prepare('SELECT * FROM projects ORDER BY year ASC');
+$stmt = $connection->prepare('SELECT * FROM projects ORDER BY id ASC');
 $stmt->execute();
 // fetchAll() 씀. 어차피 데이터양도 적어서
 $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -118,145 +118,156 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
   </section>
 
-  <!-- Skill Con -->
-  <section id="skill-con">
-      <div id="skill-first-row">
-        <img src="images/orange-1.png" alt="design-icon-orange">
-        <h2 class="skill-heading">Designer</h2>
-        <div id="designing">
-          <p class="sub-heading-blue">I Love Designing:</p>
-          <p>Logo</p>
-          <p>UX/UI</p>
-          <p>Web/Apps</p>
-          <p>Print Ads</p>
+  <div class="index-body">
+    <!-- Skill Con -->
+    <section id="skill-con">
+        <div id="skill-first-row">
+          <img src="images/orange-1.png" alt="design-icon-orange">
+          <h2 class="skill-heading">Designer</h2>
+          <div id="designing">
+            <p class="sub-heading-blue">I Love Designing:</p>
+            <p>Logo</p>
+            <p>UX/UI</p>
+            <p>Web/Apps</p>
+            <p>Print Ads</p>
+          </div>
+
+          <div id="designing-tools">
+            <p class="sub-heading-blue">Design Tools:</p>
+            <p>Photoshop</p>
+            <p>Illustrator</p>
+            <p>Indesign</p>
+            <p>Figma</p>
+            <p>Adobe XD</p>
+          </div>
         </div>
 
-        <div id="designing-tools">
-          <p class="sub-heading-blue">Design Tools:</p>
-          <p>Photoshop</p>
-          <p>Illustrator</p>
-          <p>Indesign</p>
-          <p>Figma</p>
-          <p>Adobe XD</p>
+        <div class="skill-divider-online"></div>
+
+        <div id="skill-second-row">
+          <img src="images/orange-2.png" alt="development-icon-orange">
+          <h2 class="skill-heading">Front-end Developer</h2>
+          <div id="front-language">
+            <p class="sub-heading-blue">Languages I Speak</p>
+            <p>HTML</p>
+            <p>CSS3 / SASS</p>
+            <p>JavaScript</p>
+          </div>
+          <div id="front-dev-tools">
+            <p class="sub-heading-blue">Dev Tools:</p>
+            <p>Tailwind CSS</p>
+            <p>Github</p>
+            <p>VS Code</p>
+          </div>
+          <div id="front-libraries">
+            <p class="sub-heading-blue">Libraries:</p>
+            <p>Vue.js</p>
+          </div>
         </div>
+
+        <div class="skill-divider-online"></div>
+
+        <div id="skill-third-row">
+          <img src="images/orange-2.png" alt="development-icon-orange">
+          <h2 class="skill-heading">Back-end Developer</h2>
+          <div id="back-language">
+            <p class="sub-heading-blue">Languages I Speak</p>
+            <p>PHP</p>
+            <p>MySQL</p>
+            <p>Python</p>
+          </div>
+          <div id="back-dev-tools">
+            <p class="sub-heading-blue">Dev Tools:</p>
+            <p>Github</p>
+            <p>VS Code</p>
+          </div>
+          <div id="back-libraries">
+            <p class="sub-heading-blue">Libraries:</p>
+            <p>Lumen</p>
+          </div>
+        </div>
+    </section>
+
+    <section id="heading-line-index-con" class="grid-con">
+      <div class="heading-line-index col-span-full">
+          <div class="line"></div>
+          <h2 class="Heading">Case Studies<img src="images/research.png" alt="" class="icon"></h2>
+          <div class="line"></div>
       </div>
 
-      <div class="skill-divider-online"></div>
+      <h3 class="sub-heading col-span-full">A Deep Dive Into My Projects</h3>
+    </section>
 
-      <div id="skill-second-row">
-        <img src="images/orange-2.png" alt="development-icon-orange">
-        <h2 class="skill-heading">Front-end Developer</h2>
-        <div id="front-language">
-          <p class="sub-heading-blue">Languages I Speak</p>
-          <p>HTML</p>
-          <p>CSS3 / SASS</p>
-          <p>JavaScript</p>
-        </div>
-        <div id="front-dev-tools">
-          <p class="sub-heading-blue">Dev Tools:</p>
-          <p>Tailwind CSS</p>
-          <p>Github</p>
-          <p>VS Code</p>
-        </div>
-        <div id="front-libraries">
-          <p class="sub-heading-blue">Libraries:</p>
-          <p>Vue.js</p>
-        </div>
+    <!-- Project Con -->
+    <section id="projects-con">
+      <div class="projects-wrapper"> <!-- 프로젝트 전체 컨테이너 -->
+      <?php
+      require_once 'includes/connect.php'; // DB 연결 파일 포함
+
+      $project_links = [
+          1 => 'biam.php',  
+          2 => 'quatro.php',    
+          3 => 'vybe.php',
+          4 => 'industry.php',
+          5 => 'demoreel.php',
+          6 => 'elin.php',
+          
+      ];
+
+      foreach ($projects as $project) {
+          // 미디어 데이터 가져오기
+          $media_stmt = $connection->prepare("SELECT * FROM media WHERE project_id = :project_id");
+          $media_stmt->execute(['project_id' => $project['id']]);
+          $media_items = $media_stmt->fetchAll(PDO::FETCH_ASSOC);
+
+          $thumbnail = 'images/default-thumbnail.jpg'; // 기본 썸네일 설정
+          foreach ($media_items as $media) {
+              if ($media['type'] === 'image') {
+                  $thumbnail = $media['file_path'];
+                  break;
+              }
+          }
+
+          $project_link = $project_links[$project['id']] ?? '#';
+
+          echo '<div class="project-card">'; // 개별 프로젝트 카드
+          echo '<a href="' . $project_link . '" class="project_link">';
+          echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . htmlspecialchars($project['title']) . '">';
+          echo '</a>'; // 🔥 a 태그 닫음
+
+          echo '<div class="description">'; // 설명 컨테이너
+          echo '<h3 class="title">' . htmlspecialchars($project['title']) . '</h3>';
+          echo '<div class="info">'; // info div 추가
+          echo '<h3 class="year">' . htmlspecialchars($project['year']) . '</h3>';
+          echo '<p class="short_description">' . htmlspecialchars($project['short_description']) . '</p>';
+          echo '</div>';
+          echo '</div>'; // 설명 div 닫기
+
+          echo '</div>'; // 프로젝트 카드 닫기
+      }
+      ?>
+      </div>
+    </section>
+
+    <section id="heading-line-index-con-2" class="grid-con">
+      <div class="heading-line-index col-span-full">
+          <div class="line"></div>
+          <h2 class="Heading">Testimonial<i class="fa-solid fa-quote-right big-quote-mark"></i></h2>
+          <div class="line"></div>
       </div>
 
-      <div class="skill-divider-online"></div>
-
-      <div id="skill-third-row">
-        <img src="images/orange-2.png" alt="development-icon-orange">
-        <h2 class="skill-heading">Back-end Developer</h2>
-        <div id="back-language">
-          <p class="sub-heading-blue">Languages I Speak</p>
-          <p>PHP</p>
-          <p>MySQL</p>
-          <p>Python</p>
-        </div>
-        <div id="back-dev-tools">
-          <p class="sub-heading-blue">Dev Tools:</p>
-          <p>Github</p>
-          <p>VS Code</p>
-        </div>
-        <div id="back-libraries">
-          <p class="sub-heading-blue">Libraries:</p>
-          <p>Lumen</p>
-        </div>
-      </div>
-  </section>
-
-  <section id="heading-line-index-con" class="grid-con">
-    <div class="heading-line-index col-span-full">
-        <div class="line"></div>
-        <h2 class="Heading">Case Studies<img src="images/research.png" alt="" class="icon"></h2>
-        <div class="line"></div>
-    </div>
-
-    <h3 class="sub-heading col-span-full">A Deep Dive Into My Projects</h3>
-  </section>
-
-<!-- Project Con -->
-<section id="projects-con" class="case-study-body">
-
+      <h3 class="sub-heading col-span-full">Stories from my Happy Clients</h3>
+    </section>
     
-    <div class="projects-wrapper"> <!-- 프로젝트 전체 컨테이너 -->
-    <?php
-    require_once 'includes/connect.php'; // DB 연결 파일 포함
-
-    $project_links = [
-        6 => 'biam.php',  
-        7 => 'quatro.php',    
-        8 => 'vybe.php',
-        9 => 'industry.php',
-        10 => 'elin.php'
-    ];
-
-    foreach ($projects as $project) {
-        // 미디어 데이터 가져오기
-        $media_stmt = $connection->prepare("SELECT * FROM media WHERE project_id = :project_id");
-        $media_stmt->execute(['project_id' => $project['id']]);
-        $media_items = $media_stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        $thumbnail = 'images/default-thumbnail.jpg'; // 기본 썸네일 설정
-        foreach ($media_items as $media) {
-            if ($media['type'] === 'image') {
-                $thumbnail = $media['file_path'];
-                break;
-            }
-        }
-
-        $project_link = $project_links[$project['id']] ?? '#';
-
-        echo '<div class="project-card">'; // 개별 프로젝트 카드
-        echo '<a href="' . $project_link . '" class="project_link">';
-        echo '<img class="thumbnail_image" src="' . $thumbnail . '" alt="Thumbnail of ' . htmlspecialchars($project['title']) . '">';
-        echo '</a>'; // 🔥 a 태그 닫음
-
-        echo '<div class="description">'; // 설명 컨테이너
-        echo '<h3 class="title">' . htmlspecialchars($project['title']) . '</h3>';
-        echo '<div class="info">'; // info div 추가
-        echo '<h3 class="year">' . htmlspecialchars($project['year']) . '</h3>';
-        echo '<p class="short_description">' . htmlspecialchars($project['short_description']) . '</p>';
-        echo '</div>';
-        echo '</div>'; // 설명 div 닫기
-
-        echo '</div>'; // 프로젝트 카드 닫기
-    }
-    ?>
-    </div>
-</section>
-
-  <!-- Testimonial Con -->
-  <section id="testimonial-con" class="grid-con">
-    <div class="col-span-full m-col-start-4 m-col-end-11">
-      <h2>Testimonials</h2>
-        <h3 id="testimonial-subtitle">Stories from my Happy Clients</h3>
+    <!-- Testimonial Con -->
+    <section id="testimonial-con" class="grid-con">
+      <div class="col-span-full m-col-start-4 m-col-end-11">
+        <!-- <h2>Testimonials</h2>
+        <h3 id="testimonial-subtitle">Stories from my Happy Clients</h3> -->
 
         <div id="testimonial-container">
           <div class="testimonial-card active">
-            <i class="fa-solid fa-quote-left big-quote-mark"></i>
+            <!-- <i class="fa-solid fa-quote-left big-quote-mark"></i> -->
             <div class="testimonial-author">
               <img src="images/Luke.png" alt="Muhammad Lastname">
               <div class="author-info">
@@ -294,23 +305,28 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
               <span class="dot active"></span>
               <span class="dot"></span>
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Top Button --> 
-  <div class="grid-con">
-    <button class="col-span-full" id="top-button">
-      <img src="images/top-button.png" alt="top button">
-    </button>
-  </div>
+      <br><br><br>
 
-  <!-- Collaborate --> 
-  <div id="collaborate-con" class="grid-con">
-    <div class="collaborate col-span-full">
-      <h2>Let’s Collaborate</h2>
-      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+    <!-- Top Button --> 
+    <div class="grid-con">
+      <button class="col-span-full" id="top-button">
+        <img src="images/top-button.png" alt="top button">
+      </button>
     </div>
+
+    <!-- Collaborate --> 
+    <section id="collaborate-con">
+      <div class="col-span-full">
+        <div class="collaborate">
+          <h2>Let’s Collaborate</h2>
+          <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
+          <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+        </div>
+      </div>
+    </section>
   </div>
 
   <footer>

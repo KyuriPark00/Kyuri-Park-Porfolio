@@ -2,13 +2,13 @@
 require_once('includes/connect.php');  // Database connection
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 9";
+$projectQuery = "SELECT * FROM projects WHERE id = 4";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 9";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 4";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 

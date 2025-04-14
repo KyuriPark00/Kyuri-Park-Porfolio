@@ -2,13 +2,13 @@
 require_once('includes/connect.php');  // 데이터베이스 연결 포함
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 8";
+$projectQuery = "SELECT * FROM projects WHERE id = 3";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 8";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 3";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -84,7 +84,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
     
     <!-- Hero Image -->
     <section class="project-hero">
-        <img src="<?php echo $images[3]; ?>" alt="hero image of vybe">
+        <img src="<?php echo $images[2]; ?>" alt="hero image of vybe">
 
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
@@ -229,7 +229,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="wireframingSketches" class="grid-con">
             <h2 class="sub-heading col-span-full">Sketches</h2>
             <div class="col-span-full">
-                <img src="<?php echo $images[1]; ?>" alt="wireframes of vybe">
+                <img src="<?php echo $images[3]; ?>" alt="wireframes of vybe">
             </div>
         </section>
 
@@ -245,7 +245,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <h2 class="sub-heading">Devices</h2>
                 <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
                 <div id="devices-con-img-box">
-                    <img src="<?php echo $images[0]; ?>" alt="images of vybe page by devices">
+                    <img src="<?php echo $images[4]; ?>" alt="images of vybe page by devices">
                 </div>
 
                 <h2 class="entry-point">Web - Entry Points</h2>
@@ -275,17 +275,17 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </section> -->
 
         <!-- Branding Video -->
-        <section id="branding-video-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Branding Video</h2>
-                <div id="player-container">
-                    <video class="player" controls preload="metadata" poster="<?php echo $images[2]; ?>">
-                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                        <p>Uh Oh, your browser does not support this Video!</p>
-                    </video>
-                </div>
-            </div>
-        </section>
+        <!--<section id="branding-video-con" class="grid-con">-->
+        <!--    <div class="col-span-full">-->
+        <!--        <h2 class="sub-heading">Branding Video</h2>-->
+        <!--        <div id="player-container">-->
+        <!--            <video class="player" controls preload="metadata" poster="<?php echo $images[2]; ?>">-->
+        <!--                <source src="<?php echo $video[0]; ?>" type="video/mp4">-->
+        <!--                <p>Uh Oh, your browser does not support this Video!</p>-->
+        <!--            </video>-->
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</section>-->
     </div>
 
     <!-- Top Button --> 
