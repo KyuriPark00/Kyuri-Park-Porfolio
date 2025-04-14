@@ -61,8 +61,6 @@
     flex-direction: column;
     column-gap: 40px;
     justify-self: center; // 박스 중앙정렬
-    width: fit-content;
-    max-width: 90%;
     color: a.$secondary-color;
     text-align: center;
     padding: 40px 20px;
@@ -75,8 +73,8 @@
       font-size: a.$h2-size-mobile;
     }
   
-    h3 {
-      
+    p {
+      padding: 0;
       font-size: a.$p-font-size-mobile;
       margin: 20px 10px 20px 10px; //trbl
     }
@@ -109,11 +107,63 @@
   }
 
   .collaborate {
+    display: flex;
     flex-direction: row;
-    top: 70px;
-    //max-width: fit-content; // 컨텐츠 크기에 맞춤
-    column-gap: 20px; // 요소 간 간격 조정
-    // width: 90%;
-    padding: 40px;
+    column-gap: 30px;
+    padding: 60px 30px; // tb/lr
+
+    h2 {
+      padding: 0;
+      font-size: a.$h2-size-mobile;
+    }
+  
+    p {
+      padding: 0;
+      font-size: a.$p-font-size-tablet !important;
+      margin: 0;
+  
+    button {
+      a {
+        .talk-icon {
+          color: a.$orange-color;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #collaborate-con {
+    margin: 0;
+    padding: 0;
+  }
+
+  .collaborate {
+    display: flex;
+    flex-direction: row;
+    column-gap: 70px;
+    padding: 60px 100px; // tb/lr
+
+    h2 {
+      padding: 0;
+      font-size: a.$h2-size-tablet;
+    }
+  
+    p {
+      padding: 0;
+      font-size: a.$p-font-size-mobile;
+      margin: 0;
+  
+    button {
+      a {
+        .talk-icon {
+          color: a.$orange-color;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
   }
 }

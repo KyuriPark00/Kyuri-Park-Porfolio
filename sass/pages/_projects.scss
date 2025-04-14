@@ -107,26 +107,25 @@ body {
 
 /*-- Project Con(case study) -*/
 #projects-con {
-  //padding: 40px; // 이 섹션 감싸는 패딩딩
   text-align: center;
   position: relative;
   margin: 0 auto;
 
   @media (min-width: 380px) {
     font-size: a.$h2-size-mobile;
-    bottom: 100px; //섹션 아래 마진
-    padding: 40px;
+    bottom: 60px; //섹션 아래 마진
+    // padding: 40px;
    }
 
   @media (min-width: 780px) {
      font-size: a.$h2-size-tablet;
-     padding: 22px;
+    //  padding: 22px;
    }
 
   @media (min-width: 1200px) {
       font-size: a.$h2-size-tablet;
-      bottom: 150px;
-      padding: 80px;
+      bottom: 110px;
+      // padding: 80px;
    }
 
   .header {
@@ -149,8 +148,8 @@ body {
     @media (min-width: 768px) {
       justify-content: space-between; /* 태블릿에서 2개씩 배치 */
       flex-direction: row;
-      padding-right: 20px;
-      padding-left: 20px;
+      // padding-right: 20px;
+      // padding-left: 20px;
     }
 
     @media (min-width: 1024px) {
@@ -271,6 +270,18 @@ body {
    position: relative;
    bottom: 100px;
 
+  @media screen and (min-width: 360px) {
+    bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: -7px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    bottom: 17px;
+  }
+
   p {font-weight: a.$p-font-weight;}
 
   h2 {
@@ -294,23 +305,11 @@ body {
     max-width: 900px;
     background: white;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    // border-radius: 15px;
+    //box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
     &.active {
       display: block;
-    }
-
-    .big-quote-mark {
-      font-size: 3em;
-      margin: 0;
-      //background-color: blueviolet;
-      padding: 5px 0 0 20px; //trbl
-      color: a.$main-blue;
-      text-align: left;
-      justify-self: left;
-      display: block;
-      
     }
 
     // Testimonial author
@@ -342,7 +341,7 @@ body {
 
     #divider {
       width: 85%;
-      border-bottom: 2px solid a.$subtle-gray;
+      // border-bottom: 2px solid a.$subtle-gray;
       margin: 30px 0 30px 0; //trbl
       display: flex;
       justify-self: center;
@@ -386,7 +385,10 @@ body {
 /*-------------- Media Queries  --------------*/
 /*-- Mobile --*/
 @media screen and (min-width: 360px) {
-
+  .index-body {
+    margin: 0 40px;
+  }
+  
   /*-- Profile Con --*/  
   #profile-con {
     margin-top: 0;
@@ -464,7 +466,7 @@ body {
     flex-direction: column;
     position: relative;
     bottom: 100px;
-    margin: 0 40px;
+    // margin: 0 40px;
 
     .skill-divider-online {
       border-bottom: 2px solid a.$subtle-gray;
@@ -645,6 +647,10 @@ body {
   
 /*-- Desktop --*/
 @media screen and (min-width: 1200px) {
+  .index-body {
+    margin: 0 60px;
+  }
+
   #profile-con {
     margin-top: 25px;
   
@@ -711,7 +717,7 @@ body {
       bottom: 210px;
       padding: 0;
       background-color: a.$secondary-color;
-      margin: 0 100px;
+      // margin: 0 100px;
   
       .skill-divider-online {
         border-right: solid 2px a.$subtle-gray;

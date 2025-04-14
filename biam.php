@@ -2,13 +2,13 @@
 require_once('includes/connect.php');
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 6";
+$projectQuery = "SELECT * FROM projects WHERE id = 1";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 6";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 1";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -84,7 +84,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
     <!-- Hero Image -->
     <section class="project-hero">
-        <img src="<?php echo $images[1]; ?>" alt="hero image of quatro">
+        <img src="<?php echo $images[0]; ?>" alt="hero image of quatro">
 
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
@@ -233,7 +233,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">Logo Specs</h2>
             <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
                 <div id="logo-specs-img-box">
-                    <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
+                    <img src="<?php echo $images[1]; ?>" alt="logo specs for quatro">
                 </div>
              </div>
 
@@ -263,22 +263,22 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Campaign & Merch -->
         <section id="label-design-con" class="grid-con">
         <h2 class="sub-heading col-span-full">Campaign & Merchandise</h2>
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/biam-goods-1.png" alt="Goods or biam 1">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/biam-goods-2.png" alt="Goods or biam 2">
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/biam-goods-3.png" alt="Goods or biam 3">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/biam-goods-4.png" alt="Goods or biam 4">
         </section>
 
         <!-- Posters & Parallax -->
         <section id="poster-can-con" class="grid-con">
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
                 <h2 class="sub-heading">Posters</h2>
-                <img src="images/limeposter.png" alt="Quatro Poster 1">
+                <img src="images/biam-poster.png" alt="Biam poster 1">
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
                 <h2 class="sub-heading">Parallax Effect Backdrop</h2>
-                <img src="images/can-image.png" alt="Quatro Can Pineapple">
+                <img src="images/biam-para.png" alt="Biam parallax">
             </div>
         </section>
 
@@ -287,12 +287,12 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">Social Media Presents</h2>
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
                 <h2 class="sub-heading">Instagram</h2>
-                <img src="images/limeposter.png" alt="Quatro Poster 1">
+                <img src="images/biam-ig.png" alt="Biam ig image">
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
                 <h2 class="sub-heading">Facebook</h2>
-                <img src="images/can-image.png" alt="Quatro Can Pineapple">
+                <img src="images/biam-facebook.png" alt="Biam facebook image">
             </div>
         </section>
 

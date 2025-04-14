@@ -2,13 +2,13 @@
 require_once('includes/connect.php');
 
 // Query to get project data
-$projectQuery = "SELECT * FROM projects WHERE id = 10";
+$projectQuery = "SELECT * FROM projects WHERE id = 6";
 $projectStmt = $connection->prepare($projectQuery);
 $projectStmt->execute();
 $project = $projectStmt->fetch(PDO::FETCH_ASSOC);
 
 // Query to get media data for the project
-$mediaQuery = "SELECT * FROM media WHERE project_id = 10";
+$mediaQuery = "SELECT * FROM media WHERE project_id = 6";
 $mediaStmt = $connection->prepare($mediaQuery);
 $mediaStmt->execute();
 
@@ -88,7 +88,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
-                <button class="project-github">Github Repo</button>
+                <!--<button class="project-github">Github Repo</button>-->
             </a>
         <?php endif; ?>
     </section>
@@ -206,15 +206,15 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <div class="col-span-full">
                 <div id="design-principal-box">
                     <div class="design-principal blue-box">
-                        <h3 class="mini-heading">Elegant</h3>
-                        <p>Utilize soft, feminine tones (#FF8888, #FFC7C7, #201D26) to create a luxurious and sophisticated brand identity.</p>
+                        <h3 class="mini-heading">Feminine</h3>
+                        <p>Utilize soft, feminine tones (#FF8888, #FFC7C7, #201D26) to create a vibrant and feminine brand identity.</p>
                     </div>
                     <div class="design-principal blue-box">
                         <h3 class="mini-heading">Harmonious</h3>
                         <p>Ensure typography and visuals align with the brand’s delicate and modern aesthetic, using a refined cursive font for the logo.</p>
                     </div>
                     <div class="design-principal blue-box">
-                        <h3 class="mini-heading">Minimal</h3>
+                        <h3 class="mini-heading">Natural</h3>
                         <p>Maintain clean layouts, subtle design elements, and an intuitive user experience to enhance brand clarity and appeal.</p>
                     </div>
                 </div>
@@ -226,44 +226,72 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">Logo Specs</h2>
             <div class="col-span-full col-span-full m-col-span-6 m-col-start-1">
                 <div id="logo-specs-img-box">
-                    <img src="<?php echo $images[3]; ?>" alt="logo specs for quatro">
+                    <img src="<?php echo $images[2]; ?>" alt="logo specs for quatro">
                 </div>
              </div>
 
             <div id="logo-specs-detail-box" class="col-span-full col-span-full m-col-span-6 m-col-start-8">
                 <div class="logo-specs-detail">
                     <h3 class="mini-heading">Typography</h3>
-                    <p>The "elin" logo is styled in an elegant script font with a floral accent, enhancing its delicate and premium aesthetic.</p>
+                    <p>The "elin" logo is styled in an elegant cursive script font with a floral accent, enhancing its delicate and premium aesthetic.</p>
                 </div>
                 <br>
                 <div class="logo-specs-detail">
                     <h3 class="mini-heading">Colour</h3>
                     <p>The primary colors include #FF8888 (soft coral), #FFC7C7 (blush pink), and #201D26 (deep charcoal) to evoke warmth, femininity, and luxury.</p>
                 </div>
+                <br>
+                <div class="logo-specs-detail">
+                    <h3 class="mini-heading">Scalability</h3>
+                    <p>The "elin" logo maintains clarity and visual balance across various sizes, from 0.25 inches to 2 inches, ensuring consistent branding across digital and print media.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Label Design -->
+        <!-- Package Design -->
         <section id="label-design-con" class="grid-con">
-        <h2 class="sub-heading col-span-full">Label Design</h2>
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
+        <h2 class="sub-heading col-span-full">Package Design</h2>
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/package-1.png" alt="Elin package 1">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/package-2.png" alt="Elin package 2">
+            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/package-3.png" alt="Elin package 3">
+            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/package-4.png" alt="Elin package 4">
         </section>
 
-        <!-- Posters & Can -->
+        <!-- Print Ads -->
         <section id="poster-can-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Prind Ads</h2>
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <h2 class="sub-heading">Posters</h2>
-                <img src="images/limeposter.png" alt="Quatro Poster 1">
+                <img src="images/elin-print-1.png" alt="Quatro Poster 1">
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <h2 class="sub-heading">Can Design</h2>
-                <img src="images/can-image.png" alt="Quatro Can Pineapple">
+                <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">
             </div>
         </section>
+
+        <!-- Instagram -->
+        <!--<section id="poster-can-con" class="grid-con">-->
+        <!--    <h2 class="sub-heading col-span-full">Instagram Banners</h2>-->
+        <!--    <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">-->
+        <!--        <img src="images/elin-print-1.png" alt="Quatro Poster 1">-->
+        <!--    </div>-->
+
+        <!--    <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">-->
+        <!--        <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">-->
+        <!--    </div>-->
+        <!--</section>-->
+
+        <!-- Facebook -->
+        <!--<section id="poster-can-con" class="grid-con">-->
+        <!--    <h2 class="sub-heading col-span-full">Facebook Banners</h2>-->
+        <!--    <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">-->
+        <!--        <img src="images/elin-print-1.png" alt="Quatro Poster 1">-->
+        <!--    </div>-->
+
+        <!--    <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">-->
+        <!--        <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">-->
+        <!--    </div>-->
+        <!--</section>-->
 
         <!-- Wireframes -->
         <!-- <section id="wireframingSketches" class="grid-con">
