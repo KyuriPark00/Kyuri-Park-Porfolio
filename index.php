@@ -284,7 +284,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
           </div>
 
           <div class="testimonial-card">
-            <i class="fa-solid fa-quote-left big-quote-mark"></i>
+            <!-- <i class="fa-solid fa-quote-left big-quote-mark"></i> -->
             <div class="testimonial-author">
               <img src="images/Leia-Organa.png" alt="Muhammad Lastname">
               <div class="author-info">
@@ -296,7 +296,7 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div id="divider"></div>
 
             <blockquote>
-              <p><span class="quote-mark">❝</span> crafted content that perfectly aligned with our design goals and user needs. Their creativity and strategic thinking added immense value to the project. A true asset to the team!<span class="quote-mark">❞</span></p>
+              <p><span class="quote-mark">❝</span>Hailie crafted content that perfectly aligned with our design goals and user needs. Their creativity and strategic thinking added immense value to the project. A true asset to the team!<span class="quote-mark">❞</span></p>
             </blockquote>
           </div>
         </div>

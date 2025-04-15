@@ -84,7 +84,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
     <!-- Hero Image -->
     <section class="project-hero">
-        <img src="<?php echo $images[0]; ?>" alt="hero image of quatro">
+        <img src="<?php echo $images[6]; ?>" alt="hero image of quatro">
 
         <?php if (!empty($project['github_link'])): ?>
             <a href="<?php echo $project['github_link']; ?>" target="_blank">
