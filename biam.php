@@ -53,7 +53,10 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
   <!-- 사용자 스크립트 -->
-  <script defer src="js/main.js"></script>
+  <!-- <script defer src="js/main.js"></script> -->
+  <script type="module" src="js/global.js"></script>
+  <script type="module" src="js/biam.js"></script>
+
   
   <title><?php echo $project['title']; ?> Details</title>
 
@@ -273,7 +276,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="poster-can-con" class="grid-con">
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
                 <h2 class="sub-heading">Posters</h2>
-                <img src="images/biam-poster.png" alt="Biam poster 1">
+                <div id="image-slider">
+                    <img src="images/biam-poster-1.png" alt="Biam poster 1">
+                    <img src="images/biam-poster-2.png" alt="Biam poster 2">
+                    <img src="images/biam-poster-3.png" alt="Biam poster 3">
+                </div>
+
+                <button id="prev-btn">&#10094;</button>
+                <button id="next-btn">&#10095;</button>
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
