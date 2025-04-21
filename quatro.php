@@ -53,7 +53,10 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
   <!-- 사용자 스크립트 -->
-  <script defer src="js/main.js"></script>
+  <!-- <script defer src="js/main.js"></script> -->
+  <script type="module" src="js/global.js"></script>
+  <script type="module" src="js/quatro.js"></script>
+
   
   <title><?php echo $project['title']; ?> Details</title>
 

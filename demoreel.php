@@ -53,10 +53,10 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <script defer src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
   <!-- 사용자 스크립트 -->
-  <script defer src="js/main.js"></script>
+  <!-- <script defer src="js/main.js"></script> -->
+  <script type="module" src="js/global.js"></script>
   
-
-    <title><?php echo $project['title']; ?> Details</title>
+  <title><?php echo $project['title']; ?> Details</title>
 </head>
 <body>
     <h1 class="hidden">Kyuri Park Portfolio</h1>
@@ -145,6 +145,13 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </section>
     </div>
     
+    <!-- Top Button --> 
+    <div class="grid-con">
+      <button class="col-span-full" id="top-button">
+        <img src="images/top-button.png" alt="top button">
+      </button>
+    </div>
+
     <div class="collaborate">
         <h2>Let’s Collaborate</h2>
         <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
