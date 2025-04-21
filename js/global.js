@@ -31,4 +31,21 @@ function initMenu() {
   
   initMenu();
   initTopButton();
+
+// 프로젝트 섹션 자동 재생 (Biam, Quatro, Vybe, Industry)
+const video = document.getElementById("project-video");
+  
+if (video) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video.style.visibility = "visible";
+          video.play();
+        }
+      });
+    }, { threshold: 0.5 });
+  
+    observer.observe(video);
+}
+  
   

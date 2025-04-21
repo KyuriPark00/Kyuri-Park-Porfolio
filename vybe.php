@@ -127,8 +127,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     ['image' => 'images/1.png', 'title' => 'Logo Design', 'description' => 'Designed a brand logo reflecting the target audience and identity.'],
                     ['image' => 'images/1.png', 'title' => 'Web Design', 'description' => 'Developed a cohesive design system and user-friendly interface.'],
                     ['image' => 'images/1.png', 'title' => 'Label Design', 'description' => 'Created product labels with branding elements and essential details.'],
-                    ['image' => 'images/1.png', 'title' => '3D Modeling', 'description' => ' Created product labels with branding elements and essential details.'],
-                    ['image' => 'images/3.png', 'title' => 'Branding Video', 'description' => 'Produced and edited a video highlighting key features with motion graphics and music.']
+                    ['image' => 'images/1.png', 'title' => '3D Modeling', 'description' => ' Created product labels with branding elements and essential details.']
                 ];
                 foreach ($tasks as $task) {
                     echo '<div class="what-I-did col-span-full">';
@@ -240,6 +239,51 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="line"></div>
         </div>
 
+        <!-- Wireframes -->
+        <section id="wireframingSketches" class="grid-con">
+                <h2 class="sub-heading col-span-full">Wireframing</h2>
+                <div class="col-span-full">
+                    <img src="<?php echo $images[5]; ?>" alt="wireframes of quatro">
+                </div>
+        </section>
+
+        <!-- UX UI --> 
+        <section id="ux-ui-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
+
+            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+                <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
+                    <source src="<?php echo $video[0]; ?>" type="video/mp4">
+                    <p>Uh Oh, your browser does not support this Video!</p>
+                </video>
+            </div>
+                        
+            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+                <h3 class="ux-ui-des-h3">🎥 3D Model Integration</h3>
+                <ul>
+                    <li><b>Embedded .gltf models</b> provide an immersive 3D viewing experience.</li>
+                    <li><b>Real-time controls</b> for rotating, zooming, and interacting with the model.</li>
+                </ul>
+
+                <h3 class="ux-ui-des-h3">📍 Interactive Hotspots</h3>
+                <ul>
+                    <li><b>Hotspots</b> highlight key features of the earbuds</li>
+                </ul>
+
+                <h3 class="ux-ui-des-h3">🎢 GSAP Scroll Animation</h3>
+                <ul>
+                    <li><b>Smooth scrolling effects</b> and scroll-triggered animations are implemented using GSAP (GreenSock Animation Platform).</li>
+                    <li><b>Smooth Transitions:</b> Sections animate as you browse for a seamless flow.</li>
+                    <li><b>Scroll Animation:</b> Earbuds break apart on scroll to reveal inner parts.</li>
+                </ul>
+
+                <h3 class="ux-ui-des-h3">🎨 Customization Options</h3>
+                <ul>
+                    <li><b>Choose a color:</b> Blue, Black, White, or Pink to see the earbuds in that style.</li>
+                </ul>
+            </div>
+        </section> 
+
         <!-- Devices -->
         <section id="devices-con" class="grid-con">
             <div class="col-span-full">
@@ -274,19 +318,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
           <p>In this project, the focus was on establishing a seamless connection between the Vybe Pro Max earbuds and their digital presence. Guided by the principles of ergonomics, minimalism, and modern design, we created a product that blends comfort with functionality. The digital platform features intuitive navigation, interactive elements like a 3D model viewer, and dynamic animations, ensuring an engaging and immersive user experience that highlights the earbuds' innovative features.</p>
         </div>
       </section> -->
-
-        <!-- Branding Video -->
-        <!--<section id="branding-video-con" class="grid-con">-->
-        <!--    <div class="col-span-full">-->
-        <!--        <h2 class="sub-heading">Branding Video</h2>-->
-        <!--        <div id="player-container">-->
-        <!--            <video class="player" controls preload="metadata" poster="<?php echo $images[2]; ?>">-->
-        <!--                <source src="<?php echo $video[0]; ?>" type="video/mp4">-->
-        <!--                <p>Uh Oh, your browser does not support this Video!</p>-->
-        <!--            </video>-->
-        <!--        </div>-->
-        <!--    </div>-->
-        <!--</section>-->
     </div>
 
     <!-- Top Button --> 

@@ -278,6 +278,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <div class="line"></div>
         </div>
 
+        <!-- Wireframes -->
+        <section id="wireframingSketches" class="grid-con">
+            <h2 class="sub-heading col-span-full">Wireframing</h2>
+            <div class="col-span-full">
+                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
+            </div>
+        </section>
+
         <!-- UX UI --> 
         <section id="ux-ui-con" class="grid-con">
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
@@ -303,18 +311,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
                     <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
                 </ul>
-
-                <!-- <h3 class="ux-ui-des-h3">Products</h3>
-                <ul>
-                    <li><b>Hero:</b>Using css animation to </li>
-                    <li><b>Dropdown box</b>Poster Gallery using javascript</li>
-                </ul>
-
-                <h3 class="ux-ui-des-h3">Contact</h3>
-                <ul>
-                    <li><b></b>Using css animation to </li>
-                    <li><b>Gallery Slider</b>Poster Gallery using javascript</li>
-                </ul>   -->
             </div>
         </section>      
 
@@ -330,14 +326,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <h2 class="entry-point">Web - Entry Points</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
-            </div>
-        </section>
-
-        <!-- Wireframes -->
-        <section id="wireframingSketches" class="grid-con">
-            <h2 class="sub-heading col-span-full">Wireframing</h2>
-            <div class="col-span-full">
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
             </div>
         </section>
 
