@@ -55,8 +55,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   <!-- 사용자 스크립트 -->
   <!-- <script defer src="js/main.js"></script> -->
   <script type="module" src="js/global.js"></script>
-  <script type="module" src="js/biam.js"></script>
-
   
   <title><?php echo $project['title']; ?> Details</title>
 
@@ -273,108 +271,80 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         </section>
 
         <!-- Posters & Parallax -->
-        <section id="poster-can-con" class="grid-con">
-            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <h2 class="sub-heading">Posters</h2>
-                <div id="image-slider">
-                    <img src="images/biam-poster-1.png" alt="Biam poster 1">
-                    <img src="images/biam-poster-2.png" alt="Biam poster 2">
-                    <img src="images/biam-poster-3.png" alt="Biam poster 3">
-                </div>
-
-                <button id="prev-btn">&#10094;</button>
-                <button id="next-btn">&#10095;</button>
-            </div>
-
-            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <h2 class="sub-heading">Parallax Effect Backdrop</h2>
-                <img src="images/biam-para.png" alt="Biam parallax">
+        <section id="biam-poster-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Print Ads</h2>
+            <div class="col-span-full m-col-span-full">
+                <img src="images/biam-posters.png" alt="Posters of BIAM">
             </div>
         </section>
 
         <!-- Social media -->
-        <section id="poster-can-con" class="grid-con">
+        <section id="social-media-con" class="grid-con">
             <h2 class="sub-heading col-span-full">Social Media Presents</h2>
-            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <h2 class="sub-heading">Instagram</h2>
+            <div id="biam-ig" class="col-span-full m-col-span-6 m-col-start-1">
+                <h3>Instagram</h3>
                 <img src="images/biam-ig.png" alt="Biam ig image">
             </div>
 
-            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <h2 class="sub-heading">Facebook</h2>
+            <div id="biam-fb" class="col-span-full m-col-span-6 m-col-start-8">
+                <h3>Facebook</h3>
                 <img src="images/biam-facebook.png" alt="Biam facebook image">
             </div>
         </section>
 
-        <!-- Website  -->
-        <!-- <div class="heading-line">
+        <!-- Website -->
+        <div class="heading-line">
                 <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
                 <div class="line"></div>
-        </div> -->
+        </div>
+
+        <!-- Wireframes -->
+        <section id="wireframingSketches" class="grid-con">
+                <h2 class="sub-heading col-span-full">Wireframing</h2>
+                <div class="col-span-full">
+                    <img src="<?php echo $images[7]; ?>" alt="wireframes of quatro">
+                </div>
+        </section>
 
         <!-- UX UI --> 
-        <!-- <section id="ux-ui-con" class="grid-con">
+        <section id="ux-ui-con" class="grid-con">
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
             <div class="project-section col-span-full m-col-span-7 m-col-start-1">
                 <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
-                    <source src="<?php echo $video[1]; ?>" type="video/mp4">
+                    <source src="<?php echo $video[0]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
             <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
-                <h3 class="ux-ui-des-h3">Home</h3>
+                <h3 class="ux-ui-des-h3">🎥 3D Model Integration</h3>
                 <ul>
-                    <li><b>Hero Animation:</b> Smooth CSS animations bring elements to life.</li>
-                    <li><b>Gallery Slider:</b> Interactive JavaScript-powered poster showcase.</li>
-                    <li><b>Lazy Loading:</b> Improves performance with optimized images.</li>
+                    <li><b>Embedded .gltf models</b> provide an immersive 3D viewing experience.</li>
+                    <li><b>Real-time controls</b> for rotating, zooming, and interacting with the model.</li>
                 </ul>
 
-                <h3 class="ux-ui-des-h3">Flavour</h3>
+                <h3 class="ux-ui-des-h3">📍 Interactive Hotspots</h3>
                 <ul>
-                    <li><b>Image Toggle:</b> 'Back' button allows toggling between front and back images of the flavours.</li>
-                    <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
-                    <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
+                    <li><b>Hotspots</b> highlight key features of the earbuds</li>
                 </ul>
             </div>
-        </section>       -->
+        </section> 
 
         <!-- Devices -->
-        <!-- <section id="devices-con" class="grid-con">
+        <section id="devices-con" class="grid-con">
             <div class="col-span-full">
                 <h2 class="sub-heading">Devices</h2>
                 <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
                 <div id="devices-con-img-box">
-                    <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
+                    <img src="<?php echo $images[4]; ?>" alt="images of vybe page by devices">
                 </div>
 
                 <h2 class="entry-point">Web - Entry Points</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
             </div>
-        </section> -->
-
-        <!-- Wireframes -->
-        <!-- <section id="wireframingSketches" class="grid-con">
-            <h2 class="sub-heading col-span-full">Wireframing</h2>
-            <div class="col-span-full">
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
-            </div>
-        </section> -->
-
-        <!-- Branding Video -->
-        <!-- <section id="branding-video-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Branding Video</h2>
-                <div id="player-container">
-                    <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
-                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                        <p>Uh Oh, your browser does not support this Video!</p>
-                    </video>
-                </div>
-            </div>
-        </section> -->
+        </section>
     </div>
 
   <!-- Top Button --> 
@@ -406,5 +376,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
       </div>
     </div>
   </footer>
+
+  <script type="module" src="js/biam.js"></script>
 </body>
 </html>
