@@ -322,7 +322,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </a>
         </div>
     </div>
-   </section>
+  </section>
 
   <footer>
     <div class="footer-container">

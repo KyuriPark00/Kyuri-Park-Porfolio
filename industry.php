@@ -137,11 +137,102 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
         </section>
 
+        <!-- Research Title -->
+        <div class="heading-line">
+            <h2 class="Heading">Research<img src="images/research.png" alt="" class="icon"></h2>
+            <div class="line"></div>
+        </div>
+
+        <!-- Research -->
+        <section class="research-con">
+            <div class="needs-goals-con">
+                <h3 class="sub-heading">Needs & Goals</h3>
+                <p>The goal was to design and develop a website for Industry Night 2025 that not only showcases the diverse and innovative portfolios of graduating students but also serves as a digital platform to highlight the strengths of the Fanshawe Interactive Media Design program. The site is tailored to attract and inform industry professionals, potential employers, and faculty members, offering them an engaging and accessible way to explore student work, connect with emerging talent, and recognize the program’s emphasis on creativity, technical skills, and real-world application.</p>
+            </div>
+
+            <div class="target-audience-con">
+            <h3 class="sub-heading">Target Audience</h3>
+
+            <div class="emoji-des-con-desktop grid-con">
+                <div class="emoji-con-desktop m-col-start-1 m-col-end-4">
+                    <div class="emoji-grid">
+                        <img src="images/lady.png" alt="Lady image">
+                        <img src="images/office-worker-rich.png" alt="Office worker man image">
+                        <img src="images/asian-woman.png" alt="Asian woman image">
+                        <img src="images/student-boy.png" alt="Student boy image">   
+                    </div>
+                </div>
+
+                <div class="des-con blue-box m-col-start-4 m-col-end-14">
+                    <p><b>Age Range:</b> 20–65</p>
+                    <p><b>Gender:</b> All genders</p>
+                    <p><b>Location:</b> Canada</p>
+                    <p><b>Occupation/Industry:</b> Graphic Design, Web Development, Motion Design, Software Engineering</p>
+                    <p><b>Education Level:</b> Varies (from college students to industry professionals)</p>
+                    <p><b>Psychographics:</b> Creatively driven individuals who value innovation, aesthetics, and emerging digital trends. They seek inspiration, networking opportunities, and insight into the next generation of talent.</p>
+                </div>
+            </div>
+
+            <div class="emoji-des-con-mobile">
+                <div class="emoji-con-mobile">
+                    <img src="images/lady.png" alt="Lady image">
+                    <img src="images/office-worker-rich.png" alt="Office worker man image">
+                    <img src="images/asian-woman.png" alt="Asian woman image">
+                    <img src="images/student-boy.png" alt="Student boy image">
+                </div>
+
+                <div class="des-con col-span-full blue-box">
+                    <p><b>Age Range:</b> 20–65</p>
+                    <p><b>Gender:</b> All genders</p>
+                    <p><b>Location:</b> Canada</p>
+                    <p><b>Occupation/Industry:</b> Graphic Design, Web Development, Motion Design, Software Engineering</p>
+                    <p><b>Education Level:</b> Varies (from college students to industry professionals)</p>
+                    <p><b>Psychographics:</b> Creatively driven individuals who value innovation, aesthetics, and emerging digital trends. They seek inspiration, networking opportunities, and insight into the next generation of talent.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Branding Title -->
+        <div class="heading-line">
+                <h2 class="Heading">Branding<img src="images/design-heading.png" alt="" class="icon"></h2>
+                <div class="line"></div>
+        </div>
+
+        <!-- Design Principle -->
+        <section id="design-principal-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Design Principal</h2>
+            <div class="col-span-full">
+                <div id="design-principal-box">
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Tropical</h3>
+                        <p>Use vibrant, adaptable colors (e.g., #7ED957, #39B54A, #00338C) for a lively, flavor-specific vibe across the website and branding.</p>
+                    </div>
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Consistent</h3>
+                        <p>Apply 'Bubbley Neue' font throughout the logo, website text, and branding for a unified, playful identity.</p>
+                    </div>
+
+                    <div class="design-principal blue-box">
+                        <h3 class="mini-heading">Clear</h3>
+                        <p>Ensure clean layouts, white space, simple language, and intuitive navigation for an engaging and trustworthy user experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Website  -->
         <div class="heading-line">
             <h2 class="Heading">Website<img src="images/design-heading.png" alt="" class="icon"></h2>
             <div class="line"></div>
         </div>
+
+        <!-- Wireframes -->
+        <section id="wireframingSketches" class="grid-con">
+            <h2 class="sub-heading col-span-full">Wireframing</h2>
+            <div class="col-span-full">
+                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
+            </div>
+        </section>
 
         <!-- Devices Section -->
         <section id="devices-con" class="grid-con">
@@ -155,28 +246,6 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <h2 class="entry-point">Web - Entry Points</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
-            </div>
-        </section>
-
-        <!-- Wireframes -->
-        <section id="wireframingSketches" class="grid-con">
-            <h2 class="sub-heading col-span-full">Wireframing</h2>
-            <div class="col-span-full">
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
-            </div>
-        </section>
-
-        <!-- Promotional Video Section -->
-        <section id="branding-video-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Branding Video</h2>
-                <div id="player-container" class="col-span-full m-col-start1 m-col-end-7">
-                    <video class="player" controls preload="metadata" poster="images/industry-night-thumbnail.jpg">
-                        <source src="video/Hackathon-Video-Draft.webm" type="video/mp4">
-                        <source src="video/Hackathon-Video-Draft.mp4" type="video/webm">
-                        <p>Uh Oh, your browser does not support this Video!</p>
-                    </video>
-                </div> 
             </div>
         </section>
 

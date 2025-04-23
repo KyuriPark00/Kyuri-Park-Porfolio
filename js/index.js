@@ -1,3 +1,5 @@
+// js/index.js
+
 (() => {
   // Projects menu - desktop
   const projectLink = document.querySelector('a[href="#projects-con"]');
