@@ -318,18 +318,21 @@ $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <img src="images/top-button.png" alt="top button">
       </button>
     </div>
-
-    <!-- Collaborate --> 
-    <section id="collaborate-con">
-      <div class="col-span-full">
-        <div class="collaborate">
-          <h2>Let’s Collaborate</h2>
-          <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
-          <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
-        </div>
-      </div>
-    </section>
   </div>
+
+  <!-- Collaborate --> 
+  <section id="collaborate-con" class="grid-con">
+    <div class="col-span-full l-col-span-full">
+      <div class="collaborate">
+        <h2>Let’s Collaborate</h2>
+        <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
+        <a href="contact.php" class="talk-btn">
+          <i class="fa-regular fa-comments talk-icon"></i>
+          Let’s Talk
+        </a>
+      </div>
+    </div>
+  </section>
 
   <footer>
     <div class="footer-container">

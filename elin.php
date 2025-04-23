@@ -311,13 +311,18 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   </div>
 
   <!-- Collaborate --> 
-  <div id="collaborate-con" class="grid-con">
-    <div class="collaborate col-span-full">
-      <h2>Let’s Collaborate</h2>
-      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <section id="collaborate-con" class="grid-con">
+    <div class="col-span-full l-col-span-full">
+        <div class="collaborate">
+            <h2>Let’s Collaborate</h2>
+            <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
+            <a href="contact.php" class="talk-btn">
+            <i class="fa-regular fa-comments talk-icon"></i>
+            Let’s Talk
+            </a>
+        </div>
     </div>
-  </div>
+   </section>
 
   <footer>
     <div class="footer-container">

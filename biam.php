@@ -281,12 +281,12 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Social media -->
         <section id="social-media-con" class="grid-con">
             <h2 class="sub-heading col-span-full">Social Media Presents</h2>
-            <div id="biam-ig" class="col-span-full m-col-span-6 m-col-start-1">
+            <div id="biam-ig" class="col-span-full">
                 <h3>Instagram</h3>
                 <img src="images/biam-ig.png" alt="Biam ig image">
             </div>
 
-            <div id="biam-fb" class="col-span-full m-col-span-6 m-col-start-8">
+            <div id="biam-fb" class="col-span-full">
                 <h3>Facebook</h3>
                 <img src="images/biam-facebook.png" alt="Biam facebook image">
             </div>
@@ -301,7 +301,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Wireframes -->
         <section id="wireframingSketches" class="grid-con">
                 <h2 class="sub-heading col-span-full">Wireframing</h2>
-                <div class="col-span-full">
+                <div class="col-span-full" id="biam-wireframe-img">
                     <img src="<?php echo $images[7]; ?>" alt="wireframes of quatro">
                 </div>
         </section>
@@ -311,22 +311,37 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
             <div class="project-section col-span-full m-col-span-7 m-col-start-1">
-                <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
+                <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[0]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
             <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
-                <h3 class="ux-ui-des-h3">🎥 3D Model Integration</h3>
+                <h3 class="ux-ui-des-h3">Home</h3>
                 <ul>
-                    <li><b>Embedded .gltf models</b> provide an immersive 3D viewing experience.</li>
-                    <li><b>Real-time controls</b> for rotating, zooming, and interacting with the model.</li>
+                    <li><b>Parallax Animation:</b> The hero image uses layered elements to create depth and smooth animation</li>
+                    <li><b>Readability:</b> Adjustable font size for easier reading</li>
+                    <li><b>Accessibility:</b> Selected text can be read aloud for better accessibility</li>
+                    <li><b>Contact Form:</b> Can select subject based on divers inqueries</li>
+                    <li><b>Contact Form:</b> Lets users choose a subject based on different inquiries</li>
                 </ul>
+            </div>
 
-                <h3 class="ux-ui-des-h3">📍 Interactive Hotspots</h3>
+            <!-- Second ux ui section -->
+            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+                <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
+                    <source src="<?php echo $video[1]; ?>" type="video/mp4">
+                    <p>Uh Oh, your browser does not support this Video!</p>
+                </video>
+            </div>
+                        
+            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+                <h3 class="ux-ui-des-h3">History</h3>
                 <ul>
-                    <li><b>Hotspots</b> highlight key features of the earbuds</li>
+                    <li><b>Interactive Yellow Line:</b> As you scroll, the yellow line in the middle extends, enhancing the visual flow of the page.</li>
+                    <li><b>Battle Image and Description:</b> On either side of the yellow line, each battle image and its description transition from black and white to full color. They grow larger and become sharper as they appear on the screen.</li>
+                    <li><b>Chronological Order:</b> As you continue scrolling, more battles and their details are revealed in order, arranged chronologically from top to bottom.</li>
                 </ul>
             </div>
         </section> 
@@ -337,7 +352,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                 <h2 class="sub-heading">Devices</h2>
                 <h3 class="device-top-h3">Creating designs optimized for various devices, including mobile <span>phones,</span> <span>tablets,</span> and <span>web platforms.</span></h3>
                 <div id="devices-con-img-box">
-                    <img src="<?php echo $images[4]; ?>" alt="images of vybe page by devices">
+                    <img src="<?php echo $images[8]; ?>" alt="images of vybe page by devices">
                 </div>
 
                 <h2 class="entry-point">Web - Entry Points</h2>
@@ -355,13 +370,18 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   </div>
 
   <!-- Collaborate --> 
-  <div id="collaborate-con" class="grid-con">
-    <div class="collaborate col-span-full">
-      <h2>Let’s Collaborate</h2>
-      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <section id="collaborate-con" class="grid-con">
+    <div class="col-span-full l-col-span-full">
+      <div class="collaborate">
+        <h2>Let’s Collaborate</h2>
+        <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
+        <a href="contact.php" class="talk-btn">
+          <i class="fa-regular fa-comments talk-icon"></i>
+          Let’s Talk
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <footer>
     <div class="footer-container">

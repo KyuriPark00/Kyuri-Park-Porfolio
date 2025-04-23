@@ -291,7 +291,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
             <div class="project-section col-span-full m-col-span-7 m-col-start-1">
-                <video id="project-video" class="hidden-video" autoplay loop muted playsinline>>
+                <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[1]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
@@ -351,13 +351,18 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
   </div>
 
   <!-- Collaborate --> 
-  <div id="collaborate-con" class="grid-con">
-    <div class="collaborate col-span-full">
-      <h2>Let’s Collaborate</h2>
-      <h3>I’m excited to bring my energy and expertise to your next project. Let’s talk!</h3>
-      <button><a href="contact.php"><i class="fa-regular fa-comments talk-icon"></i>Let’s Talk</a></button>
+  <section id="collaborate-con" class="grid-con">
+    <div class="col-span-full l-col-span-full">
+      <div class="collaborate">
+        <h2>Let’s Collaborate</h2>
+        <p>I’m excited to bring my energy and expertise to your next project. Let’s talk!</p>
+        <a href="contact.php" class="talk-btn">
+          <i class="fa-regular fa-comments talk-icon"></i>
+          Let’s Talk
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <footer>
     <div class="footer-container">
