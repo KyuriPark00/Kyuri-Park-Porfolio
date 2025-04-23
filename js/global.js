@@ -1,5 +1,6 @@
 // js/global.js
 
+(() => {
 function initMenu() {
     const hamburger = document.querySelector("#hamburger");
     const menu = document.querySelector("#menu");
@@ -47,5 +48,52 @@ if (video) {
   
     observer.observe(video);
 }
+
+  // Plyr video player initialization (즉시 실행)
+  const player = new Plyr(".player", {
+    controls: [
+      "play-large",
+      "play",
+      "progress",
+      "current-time",
+      "mute",
+      "volume",
+      "settings",
+      "fullscreen",
+    ],
+    settings: ["captions", "quality", "speed"],
+    autoplay: false,
+    volume: 0.8,
+  });
   
+    // Ajax for contact form
+    const form = document.querySelector("#contact-form-con form");
+    if (form) {
+      const submitBtn = form.querySelector("button[type='submit']");
   
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+  
+        const formData = new FormData(form);
+        submitBtn.disabled = true;
+  
+        fetch("process_contact.php", {
+          method: "POST",
+          body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            alert("Message sent successfully!");
+            form.reset();
+          } else {
+            alert("Error: " + data.error);
+          }
+        })
+        .catch(error => alert("An unexpected error occurred."))
+        .finally(() => {
+          submitBtn.disabled = false;
+        });
+      });
+    }
+})();

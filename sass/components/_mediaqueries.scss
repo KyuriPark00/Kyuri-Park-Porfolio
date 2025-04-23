@@ -1,5 +1,15 @@
 @use '../abstracts' as a;
 
+#player-container {
+  margin-top: a.$inside-sec-margin-mobile;
+  p { font-size: a.$p-font-size-mobile; }
+}
+
+#branding-video-con {
+  margin-top: a.$inside-sec-margin-mobile;
+  // background-color: aquamarine;
+}
+
 #heading-line-index-con {
   text-align: center;
   //background-color: blueviolet;
@@ -294,11 +304,6 @@ padding: 0;
 
 #biam-wireframe-img {
   text-align: center;
-}
-
-#branding-video-con {
-// background-color: aquamarine;
-padding: 0;
 }
 
 
