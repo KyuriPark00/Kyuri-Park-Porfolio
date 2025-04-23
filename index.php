@@ -6,7 +6,8 @@
 require_once('includes/connect.php');
 
 // 프로젝트 데이터 가져오기
-$stmt = $connection->prepare('SELECT * FROM projects ORDER BY id ASC');
+// $stmt = $connection->prepare('SELECT * FROM projects ORDER BY id ASC');
+$stmt = $connection->prepare('SELECT * FROM projects WHERE id NOT IN (4, 5) ORDER BY id ASC');
 $stmt->execute();
 // fetchAll() 씀. 어차피 데이터양도 적어서
 $projects = $stmt->fetchAll(PDO::FETCH_ASSOC);

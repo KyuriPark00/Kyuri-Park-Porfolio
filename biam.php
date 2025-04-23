@@ -321,14 +321,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="ux-ui-con" class="grid-con">
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
-            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+            <div class="project-section col-span-full l-col-span-7 l-col-start-1">
                 <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[0]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
-            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+            <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">Home</h3>
                 <ul>
                     <li><b>Parallax Animation:</b> The hero image uses layered elements to create depth and smooth animation</li>
@@ -340,14 +340,14 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
 
             <!-- Second ux ui section -->
-            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+            <div class="project-section col-span-full l-col-span-7 l-col-start-1">
                 <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[1]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
-            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+            <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">History</h3>
                 <ul>
                     <li><b>Interactive Yellow Line:</b> As you scroll, the yellow line in the middle extends, enhancing the visual flow of the page.</li>

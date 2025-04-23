@@ -261,7 +261,7 @@
   
   li { 
     font-weight: 500;
-    margin-bottom: 5px; 
+    margin-bottom: 15px; 
     list-style: none;
   }
 }
@@ -535,8 +535,8 @@ padding: 0;
 /* ---Tablet Library Grid Styles--- */
 @media screen and (min-width: 768px) {
   .case-study-body {
-    margin-left: 90px;
-    margin-right: 90px;
+    margin-left: 30px;
+    margin-right: 30px;
 
     section { padding: 30px !important; }
   }

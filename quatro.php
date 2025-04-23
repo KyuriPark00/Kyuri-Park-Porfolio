@@ -273,22 +273,22 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             </div>
 
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8">  
-                <img src="<?php echo $images[11]; ?>" alt="Quatro Poster 1">
+                <img src="<?php echo $images[11]; ?>" alt="Quatro Poster 2">
             </div>
 
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
-                <img src="<?php echo $images[12]; ?>" alt="Quatro Poster 1">
+                <img src="<?php echo $images[12]; ?>" alt="Quatro Poster 3">
             </div>
 
             <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8">  
-                <img src="<?php echo $images[13]; ?>" alt="Quatro Poster 1">
+                <img src="<?php echo $images[13]; ?>" alt="Quatro Poster 4">
             </div>
 
-            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <img src="<?php echo $images[16]; ?>" alt="Quatro Poster 1">
+            <div id="quatro-can-con" class="col-span-full l-col-span-6 l-col-start-1">
+                <img src="<?php echo $images[16]; ?>" alt="Quatro can">
             </div>
 
-            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
+            <div id="quatro-can-con" class="col-span-full l-col-span-6 l-col-start-8">
                 <h3 class="mini-heading">3D Modeling with Cinema 4D</h3>
                 <p>The Quatro can designs are brought to life with vibrant and modern <span class="blue-highlight">3D visuals</span>, expertly modeled using <span class="blue-highlight">Cinema 4D</span>. Each can showcases the refreshing and <span class="blue-highlight">natural essence</span> of its respective fruit flavor, including Pineapple, Grape, Lime, and Peach. The use of <span class="blue-highlight">dynamic textures</span> and <span class="blue-highlight">lighting</span> highlights the <span class="blue-highlight">natural appeal</span> of the ingredients, making each can visually enticing and full of life. The sleek, <span class="blue-highlight">glossy finish</span> adds a contemporary feel, while the <span class="blue-highlight">vibrant fruit imagery</span> on the cans communicates the fresh, delicious flavors inside. The design also ensures clear readability of essential product details, such as the <span class="blue-highlight">flavor name</span> and <span class="blue-highlight">nutritional information</span>, combining aesthetics with functionality for a cohesive brand experience.</p>
             </div>
@@ -312,26 +312,41 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <section id="ux-ui-con" class="grid-con">
             <h2 class="sub-heading col-span-full">UX UI - Key Features</h2>
 
-            <div class="project-section col-span-full m-col-span-7 m-col-start-1">
+            <div class="project-section col-span-full l-col-span-7 l-col-start-1">
                 <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
                     <source src="<?php echo $video[1]; ?>" type="video/mp4">
                     <p>Uh Oh, your browser does not support this Video!</p>
                 </video>
             </div>
                         
-            <div id="ux-ui-des" class="col-span-full m-col-span-5 m-col-start-9">
+            <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">Home</h3>
                 <ul>
                     <li><b>Hero Animation:</b> Smooth CSS animations bring elements to life.</li>
                     <li><b>Gallery Slider:</b> Interactive JavaScript-powered poster showcase.</li>
                     <li><b>Lazy Loading:</b> Improves performance with optimized images.</li>
+                    <li><b>Custom SVG Icons:</b> Enhances visual identity with animated fruit elements and branding assets.</li>
+                    <li><b>Interactive Flavour Section:</b> Hover effects and clear product CTAs make flavor discovery engaging.</li>
+                    <li><b>Integrated Subscription Form:</b> Simple and inviting design for newsletter signup.</li>
                 </ul>
+            </div>
 
+            <div class="project-section col-span-full l-col-span-7 l-col-start-1">
+                <video class="project-video" class="hidden-video" autoplay loop muted playsinline>>
+                    <source src="<?php echo $video[2]; ?>" type="video/mp4">
+                    <p>Uh Oh, your browser does not support this Video!</p>
+                </video>
+            </div>
+                        
+            <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">Flavour</h3>
                 <ul>
-                    <li><b>Image Toggle:</b> 'Back' button allows toggling between front and back images of the flavours.</li>
-                    <li><b>Nutrition Display:</b> 'View Nutrition' button triggers a pop-up or modal with the flavour's nutrition information.</li>
-                    <li><b>Promotion Interaction:</b> 'Promo' button triggers an overlay that displays current promotions.</li>
+                    <li><b>Scroll Animation:</b> Text inside the hero section reacts to scrolling for a more dynamic experience.</li>
+                    <li><b>Image Toggle:</b> 'Back' button allows users to toggle between front and back views of the cans.</li>
+                    <li><b>Nutrition Display:</b> Collapsible panels reveal detailed nutritional facts on demand.</li>
+                    <li><b>Promotion Interaction:</b> 'Promo' buttons launch a lightbox with promotional content.</li>
+                    <!-- <li><b>Consistent Product UI:</b> Each flavour follows the same interface layout for intuitive browsing.</li> -->
+                    <li><b>Optimized Images:</b> All product visuals use responsive `srcset` for performance across devices.</li>
                 </ul>
             </div>
         </section>      
