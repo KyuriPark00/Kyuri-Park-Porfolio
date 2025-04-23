@@ -1,5 +1,65 @@
 @use '../abstracts' as a;
 
+.collaborate {
+  position: relative;
+  top: 100px; // 유지
+  z-index: 999;
+  background-color: a.$accent-color;
+  border-radius: 14px;
+  color: a.$secondary-color;
+  text-align: center;
+
+  // 📌 좌우 여백 확보
+  margin: 0 auto;
+  padding: 40px 20px;
+  max-width: 1200px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  h2 {
+    font-size: a.$h2-size-mobile;
+    margin: 0;
+  }
+
+  p {
+    font-size: a.$p-font-size-mobile;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .talk-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 10px 16px;
+    border: 3px solid a.$main-blue;
+    border-radius: 8px;
+    font-size: a.$p-font-size-mobile;
+    font-weight: a.$p-font-weight;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+
+    // ✨ 호버 애니메이션 추가
+    &:hover {
+      background-color: a.$main-blue;
+      transform: scale(1.05);
+    }
+
+    .talk-icon {
+      color: a.$orange-color;
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+  }
+}
+
 // 반응형 디자인
 @media screen and (min-width: 360px) {
   footer {
@@ -50,54 +110,6 @@
       }
     }
   }
-  
-  .collaborate {
-    position: relative;
-    z-index: 999;
-    top: 100px;
-    background-color: a.$accent-color;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    column-gap: 40px;
-    justify-self: center; // 박스 중앙정렬
-    color: a.$secondary-color;
-    text-align: center;
-    padding: 40px 20px;
-    position: relative;
-  
-    align-items: center;
-
-    h2 {
-      padding: 0;
-      font-size: a.$h2-size-mobile;
-    }
-  
-    p {
-      padding: 0;
-      font-size: a.$p-font-size-mobile;
-      margin: 20px 10px 20px 10px; //trbl
-    }
-  
-    button {
-      background-color: transparent;
-      border: solid 3px a.$main-blue;
-      border-radius: 8px;
-      padding: 8px 12px;
-      font-size: a.$p-font-size-mobile;
-      cursor: pointer;
-  
-      a {
-        text-decoration: none;
-        color: #fff;
-
-        .talk-icon {
-          color: a.$orange-color;
-          margin-right: 10px;
-        }
-      }
-    }
-  } 
 }
 
 // Tablet
@@ -107,63 +119,26 @@
   }
 
   .collaborate {
-    display: flex;
+    top: 80px; // 유지
+    padding: 60px 50px;
     flex-direction: row;
-    column-gap: 30px;
-    padding: 60px 30px; // tb/lr
+    justify-content: space-between;
+    text-align: left;
 
     h2 {
-      padding: 0;
-      font-size: a.$h2-size-mobile;
+      font-size: a.$h2-size-tablet;
     }
-  
+
     p {
-      padding: 0;
-      font-size: a.$p-font-size-tablet !important;
-      margin: 0;
-  
-    button {
-      a {
-        .talk-icon {
-          color: a.$orange-color;
-          margin-right: 10px;
-        }
-      }
+      font-size: a.$p-font-size-tablet;
+      max-width: 400px;
     }
-  }
   }
 }
 
 @media screen and (min-width: 1200px) {
-  #collaborate-con {
-    margin: 0;
-    padding: 0;
-  }
-
   .collaborate {
-    display: flex;
-    flex-direction: row;
-    column-gap: 70px;
-    padding: 60px 100px; // tb/lr
-
-    h2 {
-      padding: 0;
-      font-size: a.$h2-size-tablet;
-    }
-  
-    p {
-      padding: 0;
-      font-size: a.$p-font-size-mobile;
-      margin: 0;
-  
-    button {
-      a {
-        .talk-icon {
-          color: a.$orange-color;
-          margin-right: 10px;
-        }
-      }
-    }
-  }
+    padding: 60px 80px;
+    gap: 70px;
   }
 }

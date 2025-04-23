@@ -1,19 +1,18 @@
-// js/contact.js
+  // Ajax for contact form
+  const form = document.querySelector("#contact-form-con form");
+  if (form) {
+    const submitBtn = form.querySelector("button[type='submit']");
 
-const form = document.querySelector("#contact-form-con form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-if (form) {
-  const submitBtn = form.querySelector("button[type='submit']");
+      const formData = new FormData(form);
+      submitBtn.disabled = true;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    submitBtn.disabled = true;
-
-    fetch("process_contact.php", {
-      method: "POST",
-      body: formData
-    })
+      fetch("process_contact.php", {
+        method: "POST",
+        body: formData,
+      })
       .then(response => response.json())
       .then(data => {
         if (data.success) {
@@ -23,9 +22,9 @@ if (form) {
           alert("Error: " + data.error);
         }
       })
-      .catch(() => alert("An unexpected error occurred."))
+      .catch(error => alert("An unexpected error occurred."))
       .finally(() => {
         submitBtn.disabled = false;
       });
-  });
-}
+    });
+  }

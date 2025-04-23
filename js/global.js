@@ -33,7 +33,7 @@ function initMenu() {
   initTopButton();
 
 // 프로젝트 섹션 자동 재생 (Biam, Quatro, Vybe, Industry)
-const video = document.getElementById("project-video");
+const video = document.getElementsByClassName("project-video");
   
 if (video) {
     const observer = new IntersectionObserver(entries => {
