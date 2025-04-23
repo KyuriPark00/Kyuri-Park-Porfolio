@@ -264,17 +264,28 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Campaign & Merch -->
         <section id="label-design-con" class="grid-con">
         <h2 class="sub-heading col-span-full">Campaign & Merchandise</h2>
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/biam-goods-1.png" alt="Goods or biam 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/biam-goods-2.png" alt="Goods or biam 2">
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/biam-goods-3.png" alt="Goods or biam 3">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/biam-goods-4.png" alt="Goods or biam 4">
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[2]; ?>" alt="Goods of biam 1">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[3]; ?>" alt="Goods of biam 2">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[4]; ?>" alt="Goods of biam 3">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[5]; ?>" alt="Goods of biam 4">
+            </div>
         </section>
 
         <!-- Posters & Parallax -->
         <section id="biam-poster-con" class="grid-con">
             <h2 class="sub-heading col-span-full">Print Ads</h2>
             <div class="col-span-full m-col-span-full">
-                <img src="images/biam-posters.png" alt="Posters of BIAM">
+                <img src="<?php echo $images[9]; ?>" alt="Goods of biam 4">
             </div>
         </section>
 
@@ -283,12 +294,12 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
             <h2 class="sub-heading col-span-full">Social Media Presents</h2>
             <div id="biam-ig" class="col-span-full">
                 <h3>Instagram</h3>
-                <img src="images/biam-ig.png" alt="Biam ig image">
+                <img src="<?php echo $images[10]; ?>" alt="biam ig">
             </div>
 
             <div id="biam-fb" class="col-span-full">
                 <h3>Facebook</h3>
-                <img src="images/biam-facebook.png" alt="Biam facebook image">
+                <img src="<?php echo $images[11]; ?>" alt="biam facebook">
             </div>
         </section>
 
@@ -355,7 +366,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <img src="<?php echo $images[8]; ?>" alt="images of vybe page by devices">
                 </div>
 
-                <h2 class="entry-point">Web - Entry Points</h2>
+                <h2 class="entry-point">Web - Recap</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
             </div>
