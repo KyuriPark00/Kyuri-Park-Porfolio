@@ -253,22 +253,44 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Label Design -->
         <section id="label-design-con" class="grid-con">
         <h2 class="sub-heading col-span-full">Label Design</h2>
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-1.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-2.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/label-3.jpg" alt="Quatro label 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/label-4.jpg" alt="Quatro label 1">
+            <div class="col-span-full m-col-span-6 m-col-start-1"><img src="<?php echo $images[6]; ?>" alt="Quatro label 1"></div>
+            <div class="col-span-full m-col-span-6 m-col-start-8"><img src="<?php echo $images[7]; ?>" alt="Quatro label 2"></div>
+            <div class="col-span-full m-col-span-6 m-col-start-1"><img src="<?php echo $images[8]; ?>" alt="Quatro label 3"></div>
+            <div class="col-span-full m-col-span-6 m-col-start-8"><img src="<?php echo $images[9]; ?>" alt="Quatro label 4"></div>
+            
+            <br>
+            <div id="label-description" class="col-span-full">
+                <p>The Quatro drink labels are designed to showcase the <span class="blue-highlight">natural goodness</span> of each fruit flavor with a fresh and vibrant aesthetic. Each label incorporates bright, appealing colors and images of the fruit in its purest form, emphasizing the product's commitment to using <span class="blue-highlight">real fruit essences</span> without artificial preservatives. The clean design and easy-to-read text ensure the brand's values—natural ingredients, no preservatives, and refreshing flavors—are clearly communicated. Whether it’s the tangy lime, sweet grape, velvety peach, or tropical pineapple, each label reflects the unique character of the flavor inside, appealing to health-conscious consumers who value authenticity and quality.</p>
+            </div>
         </section>
 
         <!-- Posters & Can -->
         <section id="poster-can-con" class="grid-con">
-            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <h2 class="sub-heading">Posters</h2>
-                <img src="images/limeposter.png" alt="Quatro Poster 1">
+            <h2 class="sub-heading col-span-full">Posters & Can Design</h2>   
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
+                <img src="<?php echo $images[10]; ?>" alt="Quatro Poster 1">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8">  
+                <img src="<?php echo $images[11]; ?>" alt="Quatro Poster 1">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
+                <img src="<?php echo $images[12]; ?>" alt="Quatro Poster 1">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8">  
+                <img src="<?php echo $images[13]; ?>" alt="Quatro Poster 1">
+            </div>
+
+            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-1">
+                <img src="<?php echo $images[16]; ?>" alt="Quatro Poster 1">
             </div>
 
             <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <h2 class="sub-heading">Can Design</h2>
-                <img src="images/can-image.png" alt="Quatro Can Pineapple">
+                <h3 class="mini-heading">3D Modeling with Cinema 4D</h3>
+                <p>The Quatro can designs are brought to life with vibrant and modern <span class="blue-highlight">3D visuals</span>, expertly modeled using <span class="blue-highlight">Cinema 4D</span>. Each can showcases the refreshing and <span class="blue-highlight">natural essence</span> of its respective fruit flavor, including Pineapple, Grape, Lime, and Peach. The use of <span class="blue-highlight">dynamic textures</span> and <span class="blue-highlight">lighting</span> highlights the <span class="blue-highlight">natural appeal</span> of the ingredients, making each can visually enticing and full of life. The sleek, <span class="blue-highlight">glossy finish</span> adds a contemporary feel, while the <span class="blue-highlight">vibrant fruit imagery</span> on the cans communicates the fresh, delicious flavors inside. The design also ensures clear readability of essential product details, such as the <span class="blue-highlight">flavor name</span> and <span class="blue-highlight">nutritional information</span>, combining aesthetics with functionality for a cohesive brand experience.</p>
             </div>
         </section>
 
@@ -323,24 +345,11 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <img src="<?php echo $images[4]; ?>" alt="images of quatro page by devices">
                 </div>
 
-                <h2 class="entry-point">Web - Entry Points</h2>
+                <h2 class="entry-point">Web - Recap</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
             </div>
         </section>
-
-        <!-- Branding Video -->
-        <!-- <section id="branding-video-con" class="grid-con">
-            <div class="col-span-full">
-                <h2 class="sub-heading">Branding Video</h2>
-                <div id="player-container">
-                    <video class="player" controls preload="metadata" poster="<?php echo $images[5]; ?>">
-                        <source src="<?php echo $video[0]; ?>" type="video/mp4">
-                        <p>Uh Oh, your browser does not support this Video!</p>
-                    </video>
-                </div>
-            </div>
-        </section> -->
     </div>
 
   <!-- Top Button --> 

@@ -243,7 +243,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                     <img src="<?php echo $images[1]; ?>" alt="images of industry night on devices">
                 </div>
 
-                <h2 class="entry-point">Web - Entry Points</h2>
+                <h2 class="entry-point">Web - Recap</h2>
                 <h3 class="entry-point-h3"><?php echo $project['entry_point_h3']; ?></h3>
                 <p><?php echo $project['entry_point_p']; ?></p>
             </div>
