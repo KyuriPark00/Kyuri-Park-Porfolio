@@ -321,7 +321,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                         
             <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">Home</h3>
-                <ul>
+                <ul class="ux-ui-first-ul">
                     <li><b>Hero Animation:</b> Smooth CSS animations bring elements to life.</li>
                     <li><b>Gallery Slider:</b> Interactive JavaScript-powered poster showcase.</li>
                     <li><b>Lazy Loading:</b> Improves performance with optimized images.</li>

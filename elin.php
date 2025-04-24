@@ -252,55 +252,59 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
         <!-- Package Design -->
         <section id="label-design-con" class="grid-con">
         <h2 class="sub-heading col-span-full">Package Design</h2>
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/package-1.png" alt="Elin package 1">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/package-2.png" alt="Elin package 2">
-            <img class="col-span-full m-col-span-6 m-col-start-1" src="images/package-3.png" alt="Elin package 3">
-            <img class="col-span-full m-col-span-6 m-col-start-8" src="images/package-4.png" alt="Elin package 4">
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
+                <img src="<?php echo $images[3]; ?>" alt="Cream">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8"> 
+                <img src="<?php echo $images[4]; ?>" alt="Soap">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
+                <img src="<?php echo $images[5]; ?>" alt="Serum">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8"> 
+                <img src="<?php echo $images[6]; ?>" alt="All together">
+            </div>
+
+            <br>
+            <div id="label-description" class="col-span-full">
+                <p>The Elin skincare package design blends <span class="blue-highlight">elegance and functionality</span> to reflect the brand’s commitment to natural beauty and high-quality ingredients. The <span class="blue-highlight">minimalistic yet sophisticated</span>  design uses soft pastel colors and modern typography to create a premium feel. The product containers, such as the moisture barrier sleeping mask and the moisturizing toner, are sleek and easy to use, with clear labeling and intuitive packaging. The use of natural wood textures on some packaging elements adds a touch of <span class="blue-highlight">organic charm,</span>  while the vibrant floral imagery reinforces the fresh and rejuvenating essence of the product line. The overall design communicates a sense of <span class="blue-highlight">purity, simplicity, and care,</span> perfect for consumers looking for luxury skincare with an eco-conscious twist.</p>
+            </div>
         </section>
 
         <!-- Print Ads -->
-        <section id="poster-can-con" class="grid-con">
-            <h2 class="sub-heading col-span-full">Prind Ads</h2>
-            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">
-                <img src="images/elin-print-1.png" alt="Quatro Poster 1">
+        <section id="label-design-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Ads - Prints</h2>
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1"> 
+                <img src="<?php echo $images[7]; ?>" alt="print ads 1">
             </div>
 
-            <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">
-                <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">
+            <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-8"> 
+                <img src="<?php echo $images[8]; ?>" alt="print ads 2">
+            </div>
+        </section>
+
+        <!-- Banner Ads -->
+        <section id="label-design-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Ads - Banner</h2>
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[13]; ?>" alt="Goods of biam 1">
+            </div>
+
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[14]; ?>" alt="Goods of biam 1">
             </div>
         </section>
 
         <!-- Instagram -->
-        <!--<section id="poster-can-con" class="grid-con">-->
-        <!--    <h2 class="sub-heading col-span-full">Instagram Banners</h2>-->
-        <!--    <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">-->
-        <!--        <img src="images/elin-print-1.png" alt="Quatro Poster 1">-->
-        <!--    </div>-->
-
-        <!--    <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">-->
-        <!--        <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">-->
-        <!--    </div>-->
-        <!--</section>-->
-
-        <!-- Facebook -->
-        <!--<section id="poster-can-con" class="grid-con">-->
-        <!--    <h2 class="sub-heading col-span-full">Facebook Banners</h2>-->
-        <!--    <div id="quatro-posters-con" class="col-span-full m-col-span-6 m-col-start-1">-->
-        <!--        <img src="images/elin-print-1.png" alt="Quatro Poster 1">-->
-        <!--    </div>-->
-
-        <!--    <div id="quatro-can-con" class="col-span-full m-col-span-6 m-col-start-8">-->
-        <!--        <img src="images/elin-print-2.png" alt="Quatro Can Pineapple">-->
-        <!--    </div>-->
-        <!--</section>-->
-
-        <!-- Wireframes -->
-        <!-- <section id="wireframingSketches" class="grid-con">
-            <h2 class="sub-heading col-span-full">Wireframing</h2>
-            <div class="col-span-full">
-                <img src="<?php echo $images[2]; ?>" alt="wireframes of quatro">
+        <section id="label-design-con" class="grid-con">
+            <h2 class="sub-heading col-span-full">Ads - Instagram</h2>
+            <div id="quatro-posters-con" class="col-span-full"> 
+                <img src="<?php echo $images[12]; ?>" alt="Elin ig">
             </div>
-        </section> -->
+        </section>
     </div>
 
   <!-- Top Button --> 
