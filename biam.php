@@ -263,7 +263,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
 
         <!-- Campaign & Merch -->
         <section id="label-design-con" class="grid-con">
-        <h2 class="sub-heading col-span-full">Campaign & Merchandise</h2>
+            <h2 class="sub-heading col-span-full">Campaign & Merchandise</h2>
             <div id="quatro-posters-con" class="col-span-full"> 
                 <img src="<?php echo $images[2]; ?>" alt="Goods of biam 1">
             </div>
@@ -330,7 +330,7 @@ while ($media = $mediaStmt->fetch(PDO::FETCH_ASSOC)) {
                         
             <div id="ux-ui-des" class="col-span-full l-col-span-5 l-col-start-9">
                 <h3 class="ux-ui-des-h3">Home</h3>
-                <ul>
+                <ul class="ux-ui-first-ul">
                     <li><b>Parallax Animation:</b> The hero image uses layered elements to create depth and smooth animation</li>
                     <li><b>Readability:</b> Adjustable font size for easier reading</li>
                     <li><b>Accessibility:</b> Selected text can be read aloud for better accessibility</li>

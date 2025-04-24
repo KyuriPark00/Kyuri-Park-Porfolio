@@ -438,6 +438,10 @@ padding: 0;
   margin-top: a.$inside-sec-margin-mobile; 
 }
 
+.ux-ui-first-ul {
+  margin-bottom: 40px !important;
+}
+
 #entry-con { margin-top: a.$inside-sec-margin-mobile; }
 
 #devices-con {
@@ -644,6 +648,10 @@ padding: 0;
         }
      }
     }
+  }
+
+  .ux-ui-first-ul {
+    margin-bottom: 0 !important;
   }
 
 /* ---Tablet Library Grid Styles--- */
